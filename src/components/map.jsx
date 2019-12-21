@@ -20,19 +20,17 @@ const MapView = compose(withScriptjs, withGoogleMap)(props => {
     <GoogleMap 
       defaultZoom={12}
       defaultCenter={{ lat: 48.856614, lng: 2.352222 }}>
-      {markers.map((marker, i) => {
+      {markers.map(marker => {
         const onMarkerClick = onClick.bind(this, marker)
         return (
           <Marker
-            key={i}
+            key={marker.id}
             onClick={onMarkerClick}
             position={{ lat: marker.lat, lng: marker.lng }}
           >
             {selectedMarker === marker &&
               <InfoWindow>
-                <div>
-                  {marker.name}
-                </div>
+                <div>{marker.name}</div>
               </InfoWindow>}
           </Marker>
         )
@@ -44,12 +42,16 @@ const MapView = compose(withScriptjs, withGoogleMap)(props => {
 const MapContainer = props =>{
   const { selectFlat, selectedFlat, flats } = props;
 
+  const onClick = marker => {
+    selectFlat(marker)
+  }
+  
   return (
     <div className="google-map">
       <MapView
         selectedMarker={selectedFlat}
         markers={flats}
-        onClick={selectFlat}
+        onClick={onClick}
         googleMapURL={process.env.REACT_APP_GOOGLE_API_KEY}
         loadingElement={<div style={{ height: `100%` }} />}
         containerElement={<div style={{ height: `100%` }} />}
@@ -62,7 +64,7 @@ const MapContainer = props =>{
 const mapStateToProps = state => {
   return {
     flats: state.flats,
-    selectedFlat: state.selectedFlat
+    selectedFlat: state.selectedFlat,
   };
 };
 

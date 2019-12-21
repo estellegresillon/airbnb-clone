@@ -14,7 +14,7 @@ import selectedFlatReducer from "./reducers/selected_flat_reducer";
 
 const reducers = combineReducers({
   flats: flatsReducer,
-  selectedFlat: selectedFlatReducer
+  selectedFlat: selectedFlatReducer,
 });
 
 // render an instance of the component in the DOM

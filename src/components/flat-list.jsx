@@ -1,34 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 
 import Flat from "./flat";
 import { setFlats } from "../actions";
 
-class FlatList extends React.Component {
-  componentWillMount() {
-    const { setFlats } = this.props;
-    setFlats();
-  }
+const FlatList = props => {
+  const { setFlats, flats } = props;
 
-  render() {
-    const { flats } = this.props;
-    
-    return (
-      <div className="flat-list">
-        {flats.map((flat, i) => <Flat key={i} flat={flat} tabIndex={i} />)}
-      </div>
-    );
-  };
+  useEffect(() => { setFlats(); }, [setFlats]);
+  
+  return (
+    <div className="flat-list">
+      {flats.map((flat, i) => <Flat key={flat.id} flat={flat} tabIndex={i} />)}
+    </div>
+  );
 };
 
-function mapStateToProps(state) {
-  return {
-    flats: state.flats
-  };
+const mapStateToProps = state => {
+  return { flats: state.flats };
 };
 
-function mapDispatchToProps(dispatch) {
+const mapDispatchToProps = dispatch => {
   return bindActionCreators({ setFlats }, dispatch);
 };
 

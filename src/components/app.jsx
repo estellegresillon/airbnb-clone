@@ -1,4 +1,5 @@
 import React from "react";
+import Select from "react-select";
 
 import FlatList from "./flat-list";
 import Map from "./map";
@@ -6,8 +7,11 @@ import Map from "./map";
 const App = () => {
   return (
     <>
-      <FlatList />
-      <Map />
+      <Select />
+      <div className="map-view">
+        <FlatList />
+        <Map />
+      </div>
     </>
   );
 };
