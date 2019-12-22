@@ -60,6 +60,7 @@ const MapView = compose(withScriptjs, withGoogleMap)(props => {
                     <span className="marker-rating">{marker.rate} ({marker.votes}+)</span>
                   </div>
                   <div className="marker-flat-name">{marker.name}</div>
+                  <div className="marker-flat-type">{marker.type}</div>
                 </div>
               </InfoWindow>}
           </Marker>

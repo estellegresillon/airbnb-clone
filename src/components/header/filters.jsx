@@ -141,7 +141,12 @@ const SearchByName = props => {
       </div>
       <div className="filters-right">
         <button className="button-filter-reinitialize" onClick={reinitializeFilters}>Réinitialiser</button>
-        <button className="button-toggle-map" onClick={handleToggleMap}>{showMap ? "Cacher la map" : "Afficher la map"}</button>
+        <div className="button-toggle-map" onClick={handleToggleMap}>
+          {showMap ? "Cacher la carte" : "Afficher la carte"}
+          <div style={{ justifyContent: showMap ? "flex-start" : "flex-end" }} className="switch-toggle-map">
+            <div className="toggle-circle" />
+          </div>
+        </div>
       </div>
     </div>
   );

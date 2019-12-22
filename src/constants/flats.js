@@ -35,7 +35,7 @@ export default [
   },
   {
     name: "Guilo Guilo",
-    type: "Japonaise",
+    type: "Japonais",
     address: "8 Rue Garreau, 75018 Paris",
     phone: "09 51 47 11 66",
     arr: 18,
@@ -52,7 +52,7 @@ export default [
   },
   {
     name: "Pierre Sang in Oberkampf",
-    type: "Française",
+    type: "Français",
     rate: 4.5,
     votes: 1000,
     address: "55 Rue Oberkampf, 75011 Paris",

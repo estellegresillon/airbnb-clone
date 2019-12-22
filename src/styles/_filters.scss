@@ -12,11 +12,57 @@
     justify-content: space-between;
     margin-left: 35px;
   } 
+
   .filters-right {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-right: 35px;
+
+    .button-filter-reinitialize {
+      border: 1px solid hsl(0,0%,80%);
+      height: 40px;
+      border-radius: 32px;
+      cursor: pointer;
+      font-weight: 300;
+      font-family: "Roboto";
+      color: rgb(128, 128, 128);
+      font-size: 12px;
+      -webkit-font-smoothing: antialiased;
+      padding: 0 15px;
+    }
+
+    .button-toggle-map {
+      display: flex;
+      align-items: center;
+      margin-left: 15px;
+      font-weight: 300;
+      font-family: "Roboto";
+      color: rgb(128, 128, 128);
+      font-size: 12px;
+      -webkit-font-smoothing: antialiased;
+
+      .switch-toggle-map {
+        display: flex;
+        align-items: center;
+        background: #e8e8e8;
+        height: 36px;
+        border-radius: 32px;
+        cursor: pointer;
+        color: rgb(128, 128, 128);
+        padding: 0 3px;
+        margin-left: 5px;
+        min-width: 60px;
+        transition: all 2s ease;
+
+        .toggle-circle {
+          background: #fff;
+          height: 30px;
+          width: 30px;
+          border-radius: 50%;
+        }
+      }
+    }
   }
 
   //////// AUTOCOMPLETE SEARCH BY NAME
