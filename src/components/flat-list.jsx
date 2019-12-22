@@ -16,7 +16,7 @@ const FlatList = props => {
         <Flat flat={searchedFlat} tabIndex={1} /> :
           sortedFlats.length ?
           sortedFlats.map((flat, i) => <Flat key={flat.id} flat={flat} tabIndex={i} />) :
-          flats.map((flat, i) => <Flat key={flat.id} flat={flat} tabIndex={i} />)
+          flats.map((flat, i) => <Flat key={flat.id} flat={flat} displayFirst tabIndex={i} />)
       }
     </div>
   );

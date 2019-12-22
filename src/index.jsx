@@ -13,12 +13,14 @@ import flatsReducer from "./reducers/flats_reducer";
 import selectedFlatReducer from "./reducers/selected_flat_reducer";
 import searchFlatReducer from "./reducers/search_flat_reducer";
 import sortFlatsReducer from "./reducers/sort_flats_reducer";
+import toggleMapReducer from "./reducers/toggle_map_reducer";
 
 const reducers = combineReducers({
   flats: flatsReducer,
   selectedFlat: selectedFlatReducer,
   searchedFlat: searchFlatReducer,
-  sortedFlats: sortFlatsReducer
+  sortedFlats: sortFlatsReducer,
+  showMap: toggleMapReducer,
 });
 
 // render an instance of the component in the DOM

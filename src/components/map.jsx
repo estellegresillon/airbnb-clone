@@ -10,9 +10,30 @@ import {
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 
-import { setFlats } from "../actions";
-import { selectFlat } from "../actions";
+import { setFlats, selectFlat } from "../actions";
 import googleMapCustomSkin from "../constants/google_map_skin";
+
+const MapContainer = props =>{
+  const { selectFlat, selectedFlat, flats, showMap } = props;
+
+  const onClick = marker => {
+    selectFlat(marker)
+  }
+
+  return showMap ? (
+    <div className="google-map">
+      <MapView
+        selectedMarker={selectedFlat}
+        markers={flats}
+        onClick={onClick}
+        googleMapURL={process.env.REACT_APP_GOOGLE_API_KEY}
+        loadingElement={<div style={{ height: `100%` }} />}
+        containerElement={<div style={{ height: `100%` }} />}
+        mapElement={<div style={{ height: `100%` }} />}
+      />
+    </div>
+  ) : null;
+};
 
 const MapView = compose(withScriptjs, withGoogleMap)(props => {
   const { markers, onClick, selectedMarker } = props;
@@ -20,9 +41,7 @@ const MapView = compose(withScriptjs, withGoogleMap)(props => {
   return (
     <GoogleMap 
       defaultZoom={13}
-      defaultOptions={{
-        styles: googleMapCustomSkin,
-      }}
+      defaultOptions={{ styles: googleMapCustomSkin }}
       defaultCenter={{ lat: 48.868614, lng: 2.362222 }}>
       {markers.map(marker => {
         const onMarkerClick = onClick.bind(this, marker)
@@ -46,32 +65,11 @@ const MapView = compose(withScriptjs, withGoogleMap)(props => {
   );
 });
 
-const MapContainer = props =>{
-  const { selectFlat, selectedFlat, flats } = props;
-
-  const onClick = marker => {
-    selectFlat(marker)
-  }
-
-  return (
-    <div className="google-map">
-      <MapView
-        selectedMarker={selectedFlat}
-        markers={flats}
-        onClick={onClick}
-        googleMapURL={process.env.REACT_APP_GOOGLE_API_KEY}
-        loadingElement={<div style={{ height: `100%` }} />}
-        containerElement={<div style={{ height: `100%` }} />}
-        mapElement={<div style={{ height: `100%` }} />}
-      />
-    </div>
-  );
-};
-
 const mapStateToProps = state => {
   return {
     flats: state.flats,
     selectedFlat: state.selectedFlat,
+    showMap: state.showMap,
   };
 };
 

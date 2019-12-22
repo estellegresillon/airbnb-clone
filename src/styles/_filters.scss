@@ -1,0 +1,64 @@
+.filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  padding-top: 2px;
+
+  .filters-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 35px;
+  } 
+  .filters-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 35px;
+  }
+
+  //////// AUTOCOMPLETE SEARCH BY NAME
+  .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] {
+    padding: 2px 2px 2px 4px !important;
+    border-radius: 32px;
+    margin-top: -1px;
+    font-size: 12px;
+    height: 39px;
+  }
+  
+  .MuiOutlinedInput-root[class*="MuiOutlinedInput-root"]:hover {
+    .MuiOutlinedInput-notchedOutline {
+      border-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  .MuiAutocomplete-popupIndicator {
+    .MuiIconButton-label {
+      display: none;
+    }
+  }
+  
+  .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] .MuiAutocomplete-input:first-child {
+    padding-left: 15px !important;
+  }
+
+  //////// REACT-SELECTS ARR & TYPE FILTERS
+  .filters-react-select {
+    width: 150px;
+  }
+  .css-yk16xz-control, .css-1pahdxg-control {
+    border-radius: 32px !important;
+    padding-left: 8px !important;
+    font-size: 12px;
+    margin-right: 10px;
+    height: 40px !important;
+  }
+  .css-yk16xz-control:focus-within, .css-1pahdxg-control:focus-within {
+    border: none;
+  }
+  .css-tlfecz-indicatorContainer, .css-1okebmr-indicatorSeparator {
+    display: none;
+  }  
+}

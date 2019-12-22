@@ -2,13 +2,15 @@ import React from "react";
 
 import FlatList from "./flat-list";
 import Map from "./map";
-import Header from "./header";
+import Header from "./header/header";
+import Filters from "./header/filters";
 
 const App = () => {
   return (
     <>
       <Header />
-      <div className="map-view">
+      <Filters />
+      <div className="main-view">
         <FlatList />
         <Map />
       </div>

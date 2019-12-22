@@ -5,8 +5,8 @@ import { connect } from "react-redux";
 import { selectFlat } from "../actions";
 
 const Flat = props => {
-  const { selectFlat, selectedFlat, flat, tabIndex } = props;
-  
+  const { selectFlat, selectedFlat, flat, tabIndex, displayFirst } = props;
+
   const handleClick = () => {
     selectFlat(flat);
   };
@@ -21,6 +21,7 @@ const Flat = props => {
     >
       <div className="card">
         <img src={flat.imageUrl} alt="flat-overview" width="200" />
+        {displayFirst && tabIndex === 0 && <i className="fas fa-award" />}
         <div className="card-description">
           <div className="card-header">
             <div>{flat.type}</div>
