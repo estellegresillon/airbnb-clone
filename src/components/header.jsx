@@ -8,7 +8,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 
-import { searchFlat, sortFlats } from "../actions";
+import { setFlats, searchFlat, sortFlats } from "../actions";
 
 const SearchByName = props => {
   const { flats, searchFlat, sortFlats } = props;
@@ -20,9 +20,11 @@ const SearchByName = props => {
     setSearchedFlat(value)
     setArr('');
     setType('');
-
     if (value) {
       searchFlat(value);
+    } else {
+      searchFlat(null)
+      setFlats()
     }
   }
 
@@ -32,20 +34,20 @@ const SearchByName = props => {
 
     const sortedFlats = [...flats].filter(val => {
       if (val.arr) {
-        return val.arr === arr
+        return val.arr === arr;
       } else return null;
     });
 
     if (type) {
       const sortFlatsByType = [...sortedFlats].filter(val => {
         if (val.type) {
-          return val.type === type
+          return val.type === type;
         } else return null;
       });
-      sortFlats(sortFlatsByType)
+      sortFlats(sortFlatsByType);
     } else {
-      sortFlats(sortedFlats)
-    }
+      sortFlats(sortedFlats);
+    };
   }
 
   const filterByType = (type) => {
@@ -61,13 +63,13 @@ const SearchByName = props => {
     if (arr) {
       const sortFlatsByArr = [...sortedFlats].filter(val => {
         if (val.arr) {
-          return val.arr === arr
+          return val.arr === arr;
         } else return null;
       });
-      sortFlats(sortFlatsByArr)
+      sortFlats(sortFlatsByArr);
     } else {
-      sortFlats(sortedFlats)
-    }
+      sortFlats(sortedFlats);
+    };
   }
 
   const handleArrChange = e => {
@@ -141,7 +143,7 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => {
-  return bindActionCreators({ searchFlat, sortFlats }, dispatch);
+  return bindActionCreators({ setFlats, searchFlat, sortFlats }, dispatch);
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(SearchByName);

@@ -11,6 +11,34 @@
 ::after,
 ::before {
   outline: 0;
+  font-family: "Roboto";
+}
+
+.marker-info-window {
+  max-height: 150px;
+  
+  img {
+    max-height: 200px;
+  }
+}
+
+.marker-flat-name {
+  position: absolute;
+  color: white;
+  bottom: 15px;
+  left: 15px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.gm-style .gm-style-iw-c {
+  padding: 0 !important;
+}
+.gm-style .gm-style-iw-d {
+  overflow: hidden !important;
+}
+.gm-ui-hover-effect {
+  margin: 5px !important;
 }
 
 .header {
@@ -48,7 +76,7 @@
   }
   
   .selected {
-    box-shadow: 5px 5px 8px 0 rgba(28, 15, 125, 0.3);
+    background-color: #f7f7f7;
   }
 }
 

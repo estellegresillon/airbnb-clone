@@ -12,6 +12,7 @@ import { connect } from "react-redux";
 
 import { setFlats } from "../actions";
 import { selectFlat } from "../actions";
+import googleMapCustomSkin from "../constants/google_map_skin";
 
 const MapView = compose(withScriptjs, withGoogleMap)(props => {
   const { markers, onClick, selectedMarker } = props;
@@ -19,6 +20,9 @@ const MapView = compose(withScriptjs, withGoogleMap)(props => {
   return (
     <GoogleMap 
       defaultZoom={12}
+      defaultOptions={{
+        styles: googleMapCustomSkin,
+      }}
       defaultCenter={{ lat: 48.856614, lng: 2.352222 }}>
       {markers.map(marker => {
         const onMarkerClick = onClick.bind(this, marker)
@@ -29,12 +33,10 @@ const MapView = compose(withScriptjs, withGoogleMap)(props => {
             position={{ lat: marker.lat, lng: marker.lng }}
           >
             {selectedMarker === marker &&
-              <InfoWindow>
-                <div style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('${
-      marker.imageUrl
-    }')` }}>
-                  <div>{marker.imageUrl}</div>
-                  <div>{marker.name}</div>
+              <InfoWindow style={{ padding: 0 }}>
+                <div className="marker-info-window">
+                  <img src={marker.imageUrl} alt="flat-preview" />
+                  <div className="marker-flat-name">{marker.name}</div>
                 </div>
               </InfoWindow>}
           </Marker>
