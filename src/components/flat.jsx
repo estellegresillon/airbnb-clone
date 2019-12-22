@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 
@@ -11,12 +11,6 @@ const Flat = props => {
     selectFlat(flat);
   };
 
-  const style = {
-    backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('${
-      flat.imageUrl
-    }')`
-  };
-
   return (
     <div 
       className={`flat card-container ${flat === selectedFlat ? "selected" : null}`}
@@ -25,10 +19,16 @@ const Flat = props => {
       id={`flat-${flat.id}`}
       tabIndex={tabIndex + 1}
     >
-      <div className="card" style={style}>
+      <div className="card">
+        <img src={flat.imageUrl} width="200" />
         <div className="card-description">
+          <div className="card-header">
+            <div>{flat.type}</div>
+            <div>{flat.rate} ({flat.votes})</div>
+          </div>
           <h2>{flat.name}</h2>
-          <p>{flat.price} {flat.priceCurrency}</p>
+          <div>{flat.price}</div>
+          <div>{flat.address}</div>
         </div>
       </div>
     </div>

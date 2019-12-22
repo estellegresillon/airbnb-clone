@@ -30,7 +30,12 @@ const MapView = compose(withScriptjs, withGoogleMap)(props => {
           >
             {selectedMarker === marker &&
               <InfoWindow>
-                <div>{marker.name}</div>
+                <div style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('${
+      marker.imageUrl
+    }')` }}>
+                  <div>{marker.imageUrl}</div>
+                  <div>{marker.name}</div>
+                </div>
               </InfoWindow>}
           </Marker>
         )
@@ -45,7 +50,7 @@ const MapContainer = props =>{
   const onClick = marker => {
     selectFlat(marker)
   }
-  
+
   return (
     <div className="google-map">
       <MapView

@@ -6,19 +6,28 @@ import Flat from "./flat";
 import { setFlats } from "../actions";
 
 const FlatList = props => {
-  const { setFlats, flats } = props;
+  const { setFlats, flats, sortedFlats, searchedFlat } = props;
 
   useEffect(() => { setFlats(); }, [setFlats]);
   
   return (
     <div className="flat-list">
-      {flats.map((flat, i) => <Flat key={flat.id} flat={flat} tabIndex={i} />)}
+      {searchedFlat ? 
+        <Flat flat={searchedFlat} tabIndex={1} /> :
+          sortedFlats.length ?
+          sortedFlats.map((flat, i) => <Flat key={flat.id} flat={flat} tabIndex={i} />) :
+          flats.map((flat, i) => <Flat key={flat.id} flat={flat} tabIndex={i} />)
+      }
     </div>
   );
 };
 
 const mapStateToProps = state => {
-  return { flats: state.flats };
+  return { 
+    flats: state.flats,
+    searchedFlat: state.searchedFlat,
+    sortedFlats: state.sortedFlats,
+  };
 };
 
 const mapDispatchToProps = dispatch => {

@@ -13,3 +13,17 @@ export function selectFlat(flat) {
     payload: flat
   };
 }
+
+export function searchFlat(flat) {
+  return {
+    type: "SEARCH_FLAT",
+    payload: flat
+  };
+}
+
+export function sortFlats(flats) {
+  return {
+    type: "SORT_FLATS",
+    payload: flats
+  };
+}

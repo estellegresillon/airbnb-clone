@@ -1,13 +1,13 @@
 import React from "react";
-import Select from "react-select";
 
 import FlatList from "./flat-list";
 import Map from "./map";
+import Header from "./header";
 
 const App = () => {
   return (
     <>
-      <Select />
+      <Header />
       <div className="map-view">
         <FlatList />
         <Map />

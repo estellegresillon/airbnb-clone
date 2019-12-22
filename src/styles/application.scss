@@ -13,6 +13,11 @@
   outline: 0;
 }
 
+.header {
+  display: flex;
+  width: 100%;
+}
+
 .flat-list {
   position: relative;
   overflow: scroll;
@@ -22,7 +27,6 @@
   .flat {
     width: 100%;
     cursor: pointer;
-    margin: 15px;
   }
   
   .selected {
