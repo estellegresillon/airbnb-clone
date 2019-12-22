@@ -54,7 +54,7 @@ const MapView = compose(withScriptjs, withGoogleMap)(props => {
             {selectedMarker === marker &&
               <InfoWindow style={{ padding: 0 }}>
                 <div onClick={() => console.log(marker.id)} className="marker-info-window">
-                  <img src={marker.imageUrl} alt="flat-preview" />
+                  <div src={marker.imageUrl} alt="flat-preview" />
                   <div className="marker-header">
                     <i className="fas fa-star" />
                     <span className="marker-rating">{marker.rate} ({marker.votes}+)</span>
