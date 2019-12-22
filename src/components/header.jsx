@@ -84,48 +84,54 @@ const SearchByName = props => {
 
   return (
     <div className="header">
-      Foodlab
-      <Autocomplete
-        id="search-by-name"
-        options={flats}
-        getOptionLabel={option => option.name}
-        style={{ width: "40%", marginRight: "20px"}}
-        value={searchedFlat}
-        onChange={handleSearchChange}
-        renderInput={params => (
-          <TextField {...params} value={searchedFlat} placeholder="What are you hungry for ?" variant="outlined" fullWidth />
-        )}
-      />
+      <div className="header-left">
+        <div className="food-lab-logo">Foodlab</div>
+        <Autocomplete
+          id="search-by-name"
+          options={flats}
+          getOptionLabel={option => option.name}
+          style={{ width: "20%", marginRight: "20px"}}
+          value={searchedFlat}
+          onChange={handleSearchChange}
+          renderInput={params => (
+            <TextField {...params} value={searchedFlat} placeholder="What are you hungry for ?" variant="outlined" fullWidth />
+          )}
+        />
 
-      <FormControl style={{ width: "20%", marginRight: "20px" }}>
-        <InputLabel id="category-filter-by-arr-label">Arrondissement :</InputLabel>
-        <Select
-          labelId="category-filter-by-arr-label"
-          id="category-filter-by-arr"
-          value={arr}
-          onChange={handleArrChange}
-        >
-          {[...Array(20)].map((e, i) => <MenuItem value={i + 1} key={i + 1}>{i + 1}</MenuItem>)}
-        </Select>
-      </FormControl>
-      
-      <FormControl style={{ width: "15%", marginRight: "20px" }}>
-        <InputLabel id="category-filter-by-type-label">Type :</InputLabel>
-        <Select
-          labelId="category-filter-by-type-label"
-          id="category-filter-by-type"
-          value={type}
-          onChange={handleTypeChange}
-        >
-          <MenuItem value="Japonais">Japonais</MenuItem>
-          <MenuItem value="Français">Français</MenuItem>
-          <MenuItem value="Coréen">Coréen</MenuItem>
-          <MenuItem value="Brunch">Brunch</MenuItem>
-          <MenuItem value="Américain">Américain</MenuItem>
-          <MenuItem value="Irlandais">Irlandais</MenuItem>
-          <MenuItem value="Café">Café</MenuItem>
-        </Select>
-      </FormControl>
+        <FormControl style={{ width: "12%", marginRight: "20px" }}>
+          <InputLabel id="category-filter-by-arr-label">Arrondissement :</InputLabel>
+          <Select
+            labelId="category-filter-by-arr-label"
+            id="category-filter-by-arr"
+            value={arr}
+            onChange={handleArrChange}
+          >
+            {[...Array(20)].map((e, i) => <MenuItem value={i + 1} key={i + 1}>{i + 1}e</MenuItem>)}
+          </Select>
+        </FormControl>
+        
+        <FormControl style={{ width: "12%", marginRight: "20px" }}>
+          <InputLabel id="category-filter-by-type-label">Type :</InputLabel>
+          <Select
+            labelId="category-filter-by-type-label"
+            id="category-filter-by-type"
+            value={type}
+            onChange={handleTypeChange}
+          >
+            <MenuItem value="Japonais">Japonais</MenuItem>
+            <MenuItem value="Français">Français</MenuItem>
+            <MenuItem value="Coréen">Coréen</MenuItem>
+            <MenuItem value="Brunch">Brunch</MenuItem>
+            <MenuItem value="Américain">Américain</MenuItem>
+            <MenuItem value="Irlandais">Irlandais</MenuItem>
+            <MenuItem value="Café">Café</MenuItem>
+          </Select>
+        </FormControl>
+      </div>
+      <div className="header-right">
+        <div className="subscribe">Subscribe</div>
+        <div className="about">About</div>
+      </div>
     </div>
   );
 }
