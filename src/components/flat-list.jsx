@@ -6,12 +6,12 @@ import Flat from "./flat";
 import { setFlats } from "../actions";
 
 const FlatList = props => {
-  const { setFlats, flats, sortedFlats, searchedFlat } = props;
+  const { setFlats, flats, sortedFlats, searchedFlat, showMap } = props;
 
   useEffect(() => { setFlats(); }, [setFlats]);
   
   return (
-    <div className="flat-list">
+    <div className={showMap ? "flat-list-with-rows" : "flat-list-with-grid"}>
       {searchedFlat ? 
         <Flat flat={searchedFlat} tabIndex={1} /> :
           sortedFlats.length ?
@@ -27,6 +27,7 @@ const mapStateToProps = state => {
     flats: state.flats,
     searchedFlat: state.searchedFlat,
     sortedFlats: state.sortedFlats,
+    showMap: state.showMap
   };
 };
 

@@ -143,7 +143,13 @@ const SearchByName = props => {
         <button className="button-filter-reinitialize" onClick={reinitializeFilters}>Réinitialiser</button>
         <div className="button-toggle-map" onClick={handleToggleMap}>
           {showMap ? "Cacher la carte" : "Afficher la carte"}
-          <div style={{ justifyContent: showMap ? "flex-start" : "flex-end" }} className="switch-toggle-map">
+          <div 
+            style={{ 
+              justifyContent: showMap ? "flex-end" : "flex-start",
+              backgroundColor: showMap ? "#c1c1c1" : "#e8e8e8"
+              // backgroundColor: showMap ? "#ea4235" : "#ffb0be"
+            }}
+            className="switch-toggle-map">
             <div className="toggle-circle" />
           </div>
         </div>

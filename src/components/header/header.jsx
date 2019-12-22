@@ -8,8 +8,8 @@ const Header = () => (
       </div>
     </div>
     <div className="header-right">
-      <div className="subscribe">Subscribe</div>
-      <div className="about">About</div>
+      <div className="subscribe">Newsletter</div>
+      <div className="about">Le lab</div>
     </div>
   </div>
 );
