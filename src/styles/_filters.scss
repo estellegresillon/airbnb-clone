@@ -4,7 +4,7 @@
   justify-content: space-between;
   width: 100%;
   height: 60px;
-  padding-top: 2px;
+  padding-top: 10px;
 
   .filters-left {
     display: flex;
@@ -94,6 +94,7 @@
   .filters-react-select {
     width: 150px;
   }
+
   .css-yk16xz-control, .css-1pahdxg-control {
     border-radius: 32px !important;
     padding-left: 8px !important;
@@ -101,9 +102,11 @@
     margin-right: 10px;
     height: 40px !important;
   }
+
   .css-yk16xz-control:focus-within, .css-1pahdxg-control:focus-within {
     border: none;
   }
+
   .css-tlfecz-indicatorContainer, .css-1okebmr-indicatorSeparator {
     display: none;
   }  

@@ -122,7 +122,6 @@ const SearchByName = props => {
             <TextField {...params} style={{ width: "100%", marginRight: "20px", padding: "0px"}} value={searchedFlat} placeholder="Rechercher un nom de restaurant..." variant="outlined" fullWidth />
           )}
         />
-
         <Select
           value={arr}
           options={arrOptions}
@@ -130,7 +129,6 @@ const SearchByName = props => {
           placeholder={arr || "Filtrer par arr."}
           className="filters-react-select filter-arr"
         />
-
         <Select
           value={type}
           options={typeOptions} 
@@ -146,8 +144,8 @@ const SearchByName = props => {
           <div 
             style={{ 
               justifyContent: showMap ? "flex-end" : "flex-start",
-              backgroundColor: showMap ? "#c1c1c1" : "#e8e8e8"
-              // backgroundColor: showMap ? "#ea4235" : "#ffb0be"
+              // backgroundColor: showMap ? "#c1c1c1" : "#e8e8e8"
+              backgroundColor: showMap ? "#ea4235" : "#ffb0be"
             }}
             className="switch-toggle-map">
             <div className="toggle-circle" />
