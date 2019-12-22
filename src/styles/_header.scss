@@ -17,9 +17,14 @@
       font-family: "Ceviche One";
       font-size: 32px;
       margin: 0 35px;
-      color: #ff91dd;
+      color: #ffb0be;
       letter-spacing: -1px;
       cursor: pointer;
+
+      &:hover {
+        transition: all 1s ease;
+        color: #ff4ac7;
+      }
 
       i { font-size: 20px; }
     }
