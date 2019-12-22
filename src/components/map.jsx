@@ -45,6 +45,7 @@ const MapView = compose(withScriptjs, withGoogleMap)(props => {
       defaultCenter={{ lat: 48.868614, lng: 2.362222 }}>
       {markers.map(marker => {
         const onMarkerClick = onClick.bind(this, marker)
+
         return (
           <Marker
             key={marker.id}
@@ -54,7 +55,7 @@ const MapView = compose(withScriptjs, withGoogleMap)(props => {
             {selectedMarker === marker &&
               <InfoWindow style={{ padding: 0 }}>
                 <div onClick={() => console.log(marker.id)} className="marker-info-window">
-                  <div src={marker.imageUrl} alt="flat-preview" />
+                  <img src={marker.imageUrl} alt="flat-preview" />
                   <div className="marker-header">
                     <i className="fas fa-star" />
                     <span className="marker-rating">{marker.rate} ({marker.votes}+)</span>

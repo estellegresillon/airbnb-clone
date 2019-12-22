@@ -3,75 +3,75 @@
   position: relative;
   width: 50%;
   height: 100%;
-}
 
-.gm-style .gm-style-iw-c {
-  padding: 0 !important;
-}
-
-.gm-style .gm-style-iw-t:after {
-  // background: linear-gradient(45deg,#ffb0be, 50%,rgba(255,255,255,0) 51%,rgba(255,255,255,0) 100%);
-  background: #ffb0be;
-}
-
-.gm-style .gm-style-iw-d {
-  overflow: hidden !important;
-}
-
-.gm-ui-hover-effect {
-  margin: 5px !important;
-}
-
-.gm-svpc, div[title="Afficher les images satellite"], div[title="Afficher un plan de ville"] {
-  display: none !important;
-}
-
-////// MARKERS WINDOW
-.marker-info-window {
-  max-height: 140px;
-  max-width: 200px;
-  cursor: pointer;
-  background-color: #000;
+  .gm-style .gm-style-iw-c {
+    padding: 0 !important;
+  }
   
-  img {
+  .gm-style .gm-style-iw-t:after {
+    background: linear-gradient(45deg,#ffb0be, 50%,rgba(255,255,255,0) 51%,rgba(255,255,255,0) 100%);
+    //background: #ffb0be;
+  }
+  
+  .gm-style .gm-style-iw-d {
+    overflow: hidden !important;
+  }
+  
+  .gm-ui-hover-effect {
+    margin: 5px !important;
+  }
+  
+  .gm-svpc, div[title="Afficher les images satellite"], div[title="Afficher un plan de ville"] {
+    display: none !important;
+  }
+  
+  ////// MARKERS WINDOW
+  .marker-info-window {
     max-height: 140px;
-    opacity: 0.6;
+    max-width: 200px;
+    cursor: pointer;
+    background-color: #000;
+    
+    img {
+      max-height: 140px;
+      opacity: 0.6;
+    }
   }
-}
-
-.marker-header {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  top: 15px;
-  left: 15px;
-  font-weight: 500;
-  color: #fff;
-
-  .marker-rating {
+  
+  .marker-header {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 15px;
+    left: 15px;
+    font-weight: 500;
+    color: #fff;
+  
+    .marker-rating {
+      font-size: 14px;
+    }
+  
+    .fa-star {
+      margin-right: 1px;
+      font-size: 12px;
+    }
+  }
+  
+  .marker-flat-name {
+    position: absolute;
+    color: white;
+    bottom: 35px;
+    left: 15px;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  
+  .marker-flat-type {
+    position: absolute;
+    color: white;
+    bottom: 15px;
+    left: 15px;
     font-size: 14px;
+    font-weight: 300;
   }
-
-  .fa-star {
-    margin-right: 1px;
-    font-size: 12px;
-  }
-}
-
-.marker-flat-name {
-  position: absolute;
-  color: white;
-  bottom: 35px;
-  left: 15px;
-  font-size: 18px;
-  font-weight: 700;
-}
-
-.marker-flat-type {
-  position: absolute;
-  color: white;
-  bottom: 15px;
-  left: 15px;
-  font-size: 14px;
-  font-weight: 300;
 }
