@@ -96,7 +96,7 @@ const SearchByName = props => {
           value={searchedFlat}
           onChange={handleSearchChange}
           renderInput={params => (
-            <TextField {...params} value={searchedFlat} placeholder="What are you hungry for ?" variant="outlined" fullWidth />
+            <TextField {...params} value={searchedFlat} placeholder="Search by name..." variant="outlined" fullWidth />
           )}
         />
 

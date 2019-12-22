@@ -29,6 +29,7 @@ const Flat = props => {
           <h2>{flat.name}</h2>
           <div>{flat.price}</div>
           <div>{flat.address}</div>
+          <div className="card-see-infos" onClick={() => console.log(flat.id)}>Voir infos</div>
         </div>
       </div>
     </div>

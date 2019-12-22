@@ -34,7 +34,7 @@ const MapView = compose(withScriptjs, withGoogleMap)(props => {
           >
             {selectedMarker === marker &&
               <InfoWindow style={{ padding: 0 }}>
-                <div className="marker-info-window">
+                <div onClick={() => console.log(marker.id)} className="marker-info-window">
                   <img src={marker.imageUrl} alt="flat-preview" />
                   <div className="marker-flat-name">{marker.name}</div>
                 </div>
