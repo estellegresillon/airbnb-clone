@@ -22,11 +22,14 @@ body {
 }
 
 .marker-info-window {
-  max-height: 150px;
+  max-height: 140px;
+  max-width: 200px;
   cursor: pointer;
+  background-color: #000;
   
   img {
-    max-height: 200px;
+    max-height: 140px;
+    opacity: 0.8;
   }
 }
 
@@ -42,6 +45,11 @@ body {
 .gm-style .gm-style-iw-c {
   padding: 0 !important;
 }
+
+.gm-style .gm-style-iw-t:after {
+  background: linear-gradient(45deg,rgb(234, 66, 53) 50%,rgba(255,255,255,0) 51%,rgba(255,255,255,0) 100%);
+}
+
 .gm-style .gm-style-iw-d {
   overflow: hidden !important;
 }
@@ -80,7 +88,7 @@ body {
 .flat-list {
   position: relative;
   overflow: scroll;
-  width: 60%;
+  width: 45%;
 
   .flat {
     width: 100%;
@@ -88,12 +96,12 @@ body {
   }
   
   .selected {
-    background-color: #f7f7f7;
+    background-color: #f9f9f9;
   }
 }
 
 .google-map {
   position: relative;
-  width: 40%;
+  width: 55%;
   height: 100%;
 }

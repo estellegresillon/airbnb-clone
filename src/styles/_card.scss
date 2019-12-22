@@ -1,12 +1,42 @@
+.card-container:hover {
+  background-color: #f9f9f9;
+}
+
 .card {
-  height: 200px;
+  height: 125px;
   color: black;
   display: flex;
-  padding: 30px;
-  border-bottom: 1px solid #efefef;
+  padding: 35px;
+  border-bottom: 1px solid #f3f3f3;
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+
+    .card-header-rate {
+      display: flex;
+      align-items: center;
+
+      i {
+        font-size: 12px;
+        margin-right: 5px;
+        color: red;
+      }
+    }
+  }
 
   .card-description {
-    margin-left: 20px;
+    margin-left: 25px;
+    width: 100%;
+  }
+
+  .card-header-budget {
+    font-weight: 300;
+    font-size: 13px;
+    color: #797979;
+    margin-top: 10px;
   }
 
   .card-user {
@@ -25,6 +55,7 @@
   
   .card-description h2 {
     font-size: 24px;
+    margin: 5px 0 0 0;
   }
 
   .card-description p {
@@ -33,16 +64,15 @@
     font-weight: lighter;
   }
 
-  .card-link {
-    top: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    z-index: 2;
-    background: black;
-    opacity: 0;
+  .card-see-infos {
+    margin-top: 10px;
+    width: 50px;
+    background-color: #f3f3f3;
+    font-size: 12px;
+    padding: 5px 10px;
   }
-  .card-link:hover {
-    opacity: 0.1;
+
+  .card-see-infos:hover {
+    background-color: #d8d8d8;
   }
 }

@@ -19,11 +19,11 @@ const MapView = compose(withScriptjs, withGoogleMap)(props => {
 
   return (
     <GoogleMap 
-      defaultZoom={12}
+      defaultZoom={13}
       defaultOptions={{
         styles: googleMapCustomSkin,
       }}
-      defaultCenter={{ lat: 48.856614, lng: 2.352222 }}>
+      defaultCenter={{ lat: 48.868614, lng: 2.362222 }}>
       {markers.map(marker => {
         const onMarkerClick = onClick.bind(this, marker)
         return (

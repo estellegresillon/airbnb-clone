@@ -24,11 +24,11 @@ const Flat = props => {
         <div className="card-description">
           <div className="card-header">
             <div>{flat.type}</div>
-            <div>{flat.rate} ({flat.votes})</div>
+            <div className="card-header-rate"><i className="fas fa-star"></i> {flat.rate} ({flat.votes}+)</div>
           </div>
           <h2>{flat.name}</h2>
-          <div>{flat.price}</div>
           <div>{flat.address}</div>
+          <div className="card-header-budget">{flat.price}</div>
           <div className="card-see-infos" onClick={() => console.log(flat.id)}>Voir infos</div>
         </div>
       </div>
