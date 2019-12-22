@@ -10,92 +10,63 @@ import Select from '@material-ui/core/Select';
 
 import { searchFlat, sortFlats } from "../actions";
 
-
 const SearchByName = props => {
   const { flats, searchFlat, sortFlats } = props;
-  const [sort, setSort] = useState(null);
-  const [arr, setArr] = useState(null);
-  const [type, setType] = useState(null);
+  const [arr, setArr] = useState('');
+  const [type, setType] = useState('');
+  const [searchedFlat, setSearchedFlat] = useState(null);
 
-  const onChange = (event, values) => {
-    searchFlat(values);
-  }
+  const handleSearchChange = (event, value) => {
+    setSearchedFlat(value)
+    setArr('');
+    setType('');
 
-  const filterByRate = (order) => {
-    const sortedFlats = [...flats].sort((a, b) => {
-      if (a.rate < b.rate) return order === "asc" ? -1 : 1;
-      if (a.rate > b.rate) return order === "asc" ? 1 : -1;
-      return 0;
-    });
-
-    sortFlats(sortedFlats);
-  }
-
-  const filterByVotes = (order) => {
-    const sortedFlats = [...flats].sort((a, b) => {
-      if (a.votes < b.votes) return order === "asc" ? -1 : 1;
-      if (a.votes > b.votes) return order === "asc" ? 1 : -1;
-      return 0;
-    });
-
-    sortFlats(sortedFlats);
-  }
-
-  const filterByBudget = (order) => {
-    const sortedFlats = [...flats].sort((a, b) => {
-      if (a.price_digit < b.price_digit) return order === "asc" ? -1 : 1;
-      if (a.price_digit > b.price_digit) return order === "asc" ? 1 : -1;
-      return 0;
-    });
-
-    sortFlats(sortedFlats);
+    if (value) {
+      searchFlat(value);
+    }
   }
 
   const filterByArr = (arr) => {
+    setSearchedFlat(null);
+    searchFlat(null);
+
     const sortedFlats = [...flats].filter(val => {
       if (val.arr) {
         return val.arr === arr
-      }
+      } else return null;
     });
 
-    sortFlats(sortedFlats)
+    if (type) {
+      const sortFlatsByType = [...sortedFlats].filter(val => {
+        if (val.type) {
+          return val.type === type
+        } else return null;
+      });
+      sortFlats(sortFlatsByType)
+    } else {
+      sortFlats(sortedFlats)
+    }
   }
 
   const filterByType = (type) => {
+    setSearchedFlat(null);
+    searchFlat(null);
+
     const sortedFlats = [...flats].filter(val => {
       if (val.type) {
         return val.type === type
-      }
+      } else return null;
     });
 
-    sortFlats(sortedFlats)
-  }
-
-  const handleSortChange = e => {
-    const selectedSort = e.target.value;
-    setSort(selectedSort);
-    
-    switch (selectedSort) {
-      case "rate-asc":
-        filterByRate("asc");
-        break;
-      case "rate-desc":
-        filterByRate("desc");
-        break;
-      case "votes-asc":
-        filterByVotes("asc");
-        break;
-      case "votes-desc":
-        filterByVotes("desc");
-        break;
-      case "budget-asc":
-        filterByBudget("asc");
-        break;
-      case "budget-desc":
-        filterByBudget("desc");
-        break;
-      default:
-        return;
+    if (arr) {
+      const sortFlatsByArr = [...sortedFlats].filter(val => {
+        if (val.arr) {
+          return val.arr === arr
+        } else return null;
+      });
+      sortFlats(sortFlatsByArr)
+    } else {
+      sortFlats(sortedFlats)
     }
   }
 
@@ -119,27 +90,13 @@ const SearchByName = props => {
         options={flats}
         getOptionLabel={option => option.name}
         style={{ width: "40%", marginRight: "20px"}}
-        onChange={onChange}
+        value={searchedFlat}
+        onChange={handleSearchChange}
         renderInput={params => (
-          <TextField {...params} placeholder="What are you hungry for ?" variant="outlined" fullWidth />
+          <TextField {...params} value={searchedFlat} placeholder="What are you hungry for ?" variant="outlined" fullWidth />
         )}
       />
-      <FormControl style={{ width: "15%", marginRight: "20px" }}>
-        <InputLabel id="category-sort-by-label">Trier par :</InputLabel>
-        <Select
-          labelId="category-sort-by-label"
-          id="category-sort-by"
-          value={sort}
-          onChange={handleSortChange}
-        >
-          <MenuItem value="rate-asc">Note (croissante)</MenuItem>
-          <MenuItem value="rate-desc">Note (décroissante)</MenuItem>
-          <MenuItem value="votes-asc">Nombres d'avis (croissants)</MenuItem>
-          <MenuItem value="votes-desc">Nombres d'avis (décroissants)</MenuItem>
-          <MenuItem value="budget-asc">Budget (croissant)</MenuItem>
-          <MenuItem value="budget-desc">Budget (décroissant)</MenuItem>
-        </Select>
-      </FormControl>
+
       <FormControl style={{ width: "20%", marginRight: "20px" }}>
         <InputLabel id="category-filter-by-arr-label">Arrondissement :</InputLabel>
         <Select
@@ -151,6 +108,7 @@ const SearchByName = props => {
           {[...Array(20)].map((e, i) => <MenuItem value={i + 1} key={i + 1}>{i + 1}</MenuItem>)}
         </Select>
       </FormControl>
+      
       <FormControl style={{ width: "15%", marginRight: "20px" }}>
         <InputLabel id="category-filter-by-type-label">Type :</InputLabel>
         <Select
@@ -173,7 +131,7 @@ const SearchByName = props => {
 }
 
 const mapStateToProps = state => {
-  return { flats: state.flats};
+  return { flats: state.flats };
 };
 
 const mapDispatchToProps = dispatch => {

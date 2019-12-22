@@ -20,7 +20,7 @@ const Flat = props => {
       tabIndex={tabIndex + 1}
     >
       <div className="card">
-        <img src={flat.imageUrl} width="200" />
+        <img src={flat.imageUrl} alt="flat-overview" width="200" />
         <div className="card-description">
           <div className="card-header">
             <div>{flat.type}</div>
