@@ -967,5 +967,90 @@ export default [
     price_digit: 2,
     lat: 48.8718848,
     lng: 2.3673579
+  },
+  {
+    name: "The Beans on Fire",
+    id: 58,
+    type: "Français",
+    rate: 4.3,
+    votes: 250,
+    address: "7 Rue du Général Blaise, 75011",
+    phone: "01 43 55 94 73",
+    arr: 11,
+    openingHours: "12h-21h",
+    imageUrl:
+      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+    price: "€€",
+    price_digit: 2,
+    lat: 48.8615741,
+    lng: 2.3782561
+  },
+  {
+    name: "Les Amis des Messina",
+    id: 59,
+    type: "Sicilien",
+    rate: 4.4,
+    votes: 1000,
+    address: "81 Rue Réaumur, 75002",
+    phone: "01 42 61 13 73",
+    arr: 2,
+    openingHours: "12h-15h30 / 19h-22h30",
+    imageUrl:
+      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+    price: "€€",
+    price_digit: 2,
+    lat: 48.8668704,
+    lng: 2.3482997
+  },
+  {
+    name: "Le Clint",
+    id: 60,
+    type: "Brunch",
+    rate: 4,
+    votes: 500,
+    address: "174 Rue de la Roquette, 75011",
+    phone: "01 73 71 51 55",
+    arr: 11,
+    openingHours: "9h-18h",
+    imageUrl:
+      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+    price: "€€",
+    price_digit: 2,
+    lat: 48.8591592,
+    lng: 2.3864681
+  },
+  {
+    name: "Le Manko",
+    id: 61,
+    type: "Français",
+    rate: 4.1,
+    votes: 500,
+    address: "15 Avenue Montaigne, 75008",
+    phone: "01 82 28 00 15",
+    arr: 8,
+    openingHours: "11h30-14h15 / 19h-2h",
+    imageUrl:
+      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+    price: "€€€",
+    price_digit: 3,
+    lat: 48.8655753,
+    lng: 2.3030293
+  },
+  {
+    name: "Le 975",
+    id: 62,
+    type: "Français",
+    rate: 4.7,
+    votes: 500,
+    address: "25 Rue Guy Môquet, 75017 Paris",
+    phone: "09 53 75 67 71",
+    arr: 17,
+    openingHours: "12h-14h30 / 19h30-22h30",
+    imageUrl:
+      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+    price: "€€",
+    price_digit: 2,
+    lat: 48.8920597,
+    lng: 2.322423
   }
 ];

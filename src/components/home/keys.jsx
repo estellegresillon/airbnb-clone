@@ -25,6 +25,7 @@ const keyList = [
   { selector: "#fa-utensils", icon: "fas fa-utensils", description: "Le meilleur italien" },
   { selector: "#fa-sun", icon: "fas fa-sun", description: "Le meilleur brésilien" },
   { selector: "#fa-torii-gate", icon: "fas fas fa-torii-gate", description: "Le meilleur japonais" },
+  { selector: "#fa-mug-hot", icon: "fas fas fa-mug-hot", description: "Le meilleur torréfacteur" },
 ]
 
 const Keys = () => {

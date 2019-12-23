@@ -68,6 +68,8 @@ const Flat = props => {
             <Badge scroll="fa-crown" icon="fas fa-crown" description="Le plus chic" />}
           {flat.name === "Aki" &&
             <Badge scroll="fa-torii-gate" icon="fas fa-torii-gate" description="Le meilleur japonais" />}
+          {flat.name === "The Beans on Fire" &&
+            <Badge scroll="fa-mug-hot" icon="fas fa-mug-hot" description="Le meilleur torréfacteur" />}
           <div className="card-description">
             <div className="card-header">
               <div className="card-header-type">
