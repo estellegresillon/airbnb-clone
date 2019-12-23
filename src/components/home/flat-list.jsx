@@ -3,7 +3,7 @@ import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 
 import Flat from "./flat";
-import { setFlats } from "../actions";
+import { setFlats } from "../../actions";
 
 const FlatList = props => {
   const { setFlats, flats, sortedFlats, searchedFlat, showMap } = props;

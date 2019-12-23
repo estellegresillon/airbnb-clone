@@ -1,4 +1,7 @@
 import React from "react"
+import { Link } from "react-router-dom";
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
 import { compose } from "recompose"
 import {
   withScriptjs,
@@ -7,11 +10,9 @@ import {
   Marker,
   InfoWindow
 } from "react-google-maps"
-import { bindActionCreators } from "redux";
-import { connect } from "react-redux";
 
-import { setFlats, selectFlat } from "../actions";
-import googleMapCustomSkin from "../constants/google_map_skin";
+import { setFlats, selectFlat } from "../../actions";
+import googleMapCustomSkin from "../../constants/google_map_skin";
 
 const MapContainer = props =>{
   const { selectFlat, selectedFlat, flats, showMap } = props;
@@ -54,15 +55,17 @@ const MapView = compose(withScriptjs, withGoogleMap)(props => {
           >
             {selectedMarker === marker &&
               <InfoWindow style={{ padding: 0 }}>
-                <div onClick={() => console.log(marker.id)} className="marker-info-window">
-                  <img src={marker.imageUrl} alt="flat-preview" />
-                  <div className="marker-header">
-                    <i className="fas fa-star" />
-                    <span className="marker-rating">{marker.rate} ({marker.votes}+)</span>
+                <Link to={{pathname: `/restaurants/${marker.id}`, flat: marker}}>
+                  <div className="marker-info-window">
+                    <img src={marker.imageUrl} alt="flat-preview" />
+                    <div className="marker-header">
+                      <i className="fas fa-star" />
+                      <span className="marker-rating">{marker.rate} ({marker.votes}+)</span>
+                    </div>
+                    <div className="marker-flat-name">{marker.name}</div>
+                    <div className="marker-flat-type">{marker.type}</div>
                   </div>
-                  <div className="marker-flat-name">{marker.name}</div>
-                  <div className="marker-flat-type">{marker.type}</div>
-                </div>
+                </Link>
               </InfoWindow>}
           </Marker>
         )

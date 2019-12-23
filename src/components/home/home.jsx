@@ -3,10 +3,9 @@ import { connect } from "react-redux";
 
 import FlatList from "./flat-list";
 import Map from "./map";
-import Header from "./header/header";
-import Filters from "./header/filters";
+import Filters from "./filters";
 
-const App = props => {
+const Home = props => {
   const { flats, sortedFlats, searchedFlat } = props;
   const [listNumber, setListNumber] = useState(null);
 
@@ -24,7 +23,6 @@ const App = props => {
   
   return (
     <>
-      <Header />
       <Filters />
       <div className="flat-counter">
         {listNumber}
@@ -46,4 +44,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps)(Home);

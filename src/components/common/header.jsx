@@ -1,11 +1,14 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 const Header = () => (
   <div className="header">
     <div className="header-left">
-      <div className="foodlab-logo">
-        <i className="fas fa-award"></i>Foodlab
-      </div>
+      <Link to="/">
+        <div className="foodlab-logo">
+          <i className="fas fa-award"></i>Foodlab
+        </div>
+      </Link>
     </div>
     <div className="header-right">
       <div className="subscribe">Newsletter</div>

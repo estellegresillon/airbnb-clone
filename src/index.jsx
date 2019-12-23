@@ -1,14 +1,14 @@
-// external modules
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
+import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
 import { createStore, combineReducers } from "redux";
 
-// internal modules
 import "./styles/application.scss";
-import App from "./components/app";
+import Home from "./components/home";
+import Header from "./components/common/header";
+import Detail from "./components/detail";
 
-// Reducers
 import flatsReducer from "./reducers/flats_reducer";
 import selectedFlatReducer from "./reducers/selected_flat_reducer";
 import searchFlatReducer from "./reducers/search_flat_reducer";
@@ -23,7 +23,17 @@ const reducers = combineReducers({
   showMap: toggleMapReducer,
 });
 
-// render an instance of the component in the DOM
+const App = () => (
+  <Router>
+    <React.Fragment>
+      <Header />
+      <Route exact path="/" render={() => <Redirect to="/restaurants" />} />
+      <Route exact path="/restaurants" component={Home} />
+      <Route exact path="/restaurants/:id" component={Detail} />
+    </React.Fragment>
+  </Router>
+)
+
 ReactDOM.render(
   <Provider store={createStore(reducers)}>
     <App />
