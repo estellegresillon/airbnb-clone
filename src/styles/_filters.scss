@@ -113,8 +113,10 @@
 }
 
 .counter-keys-wrapper {
+  position: relative;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   font-size: 14px;
 
   i { 
@@ -124,11 +126,57 @@
     &:hover { opacity: 0.6; }
   }
 
-  .fa-award { color:#ffb0be; }
-  .fa-medal, .fa-heart, .fa-crown, .fa-umbrella-beach, .fa-instagram
-  { color:#ea4135; }
-  .fa-pepper-hot, .fa-carrot, .fa-pizza-slice, .fa-hamburger,
-  .fa-bacon, .fa-birthday-cake, .fa-book, .fa-chess, .fa-fish,
-  .fa-hotdog, .fa-frog, .fa-utensils, .fa-leaf, .fa-sun, .fa-torii-gate
-  { color:#ffb832; }
+  .keys-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 45px;
+
+    .selection-button {
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        transition: all 0.7s ease;
+        background-color: #f7f7f7;
+      }
+    }
+  }
+
+  .filter-selection-wrapper {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    z-index: 998;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    max-width: 300px;
+    padding: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .badge-wrapper {
+    position: relative;
+    cursor: pointer;
+
+    .icon-wrapper {
+      box-shadow: none !important;
+      background-color: none !important;
+      padding: 8px;
+    }
+
+    .tooltip-badge {
+      display: none;
+      top: 35px;
+      right: 0px;
+    }
+  
+    &:hover {
+      .tooltip-badge {
+        display: block;
+      }
+    }
+  }
 }
