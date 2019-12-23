@@ -15,6 +15,9 @@ const typeOptions = [
   { label: "Brunch", value: "Brunch"},
   { label: "Irlandais", value: "Irlandais"},
   { label: "Café", value: "Café"},
+  { label: "Italien", value: "Italien"},
+  { label: "Vegan", value: "Vegan"},
+  { label: "Burger", value: "Burger"},
 ]
 
 const arrOptions = [...Array(20)].map((e, i) => (
@@ -106,6 +109,8 @@ const SearchByName = props => {
     sortFlats([]);
     setArr("")
     setType("")
+
+    setFlats()
   }
 
   return (

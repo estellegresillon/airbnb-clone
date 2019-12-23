@@ -402,5 +402,56 @@ export default [
     price_digit: 1,
     lat: 48.827855,
     lng: 2.350774
+  },
+  {
+    name: "Papelli - Fbg Saint Denis",
+    id: 30,
+    type: "Italien",
+    rate: 4.5,
+    votes: 500,
+    address: "74 Rue du Faubourg Saint-Denis, 75010 Paris",
+    phone: "01 48 24 98 05",
+    arr: 10,
+    openingHours: "11h-15h / 18h-00h",
+    imageUrl:
+      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+    price: "€",
+    price_digit: 1,
+    lat: 48.882642399999995,
+    lng: 2.3738259
+  },
+  {
+    name: "Hank Burger - Archives",
+    id: 31,
+    type: "Vegan",
+    rate: 4.5,
+    votes: 3000,
+    address: "55 Rue des Archives, 75003 Paris",
+    phone: "09 72 44 03 99",
+    arr: 3,
+    openingHours: "12h-22h",
+    imageUrl:
+      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+    price: "€",
+    price_digit: 1,
+    lat: 48.8778864,
+    lng: 2.3740273999999997
+  },
+  {
+    name: "B&M - Montmartre",
+    id: 32,
+    type: "Burger",
+    rate: 4.5,
+    votes: 300,
+    address: "98 Rue des Martyrs, 75018 Paris",
+    phone: "01 42 58 39 20",
+    arr: 18,
+    openingHours: "12h-23h30",
+    imageUrl:
+      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+    price: "€",
+    price_digit: 1,
+    lat: 48.88458267731903,
+    lng: 2.3401479963116176
   }
 ];

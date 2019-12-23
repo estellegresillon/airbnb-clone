@@ -21,11 +21,17 @@ const Flat = props => {
         id={`flat-${flat.id}`}
         tabIndex={tabIndex + 1}
       >
-        {!showMap && <Link to={{pathname: `/restaurants/${flat.id}`, flat: flat}}></Link>}
+        {!showMap && <Link to={{pathname: `/restaurants/${flat.id}`, flat: flat}} target="_blank"></Link>}
         <div className="card">
           {!showMap && <div className="grid-img-overlay" />}
           <img src={flat.imageUrl} alt="flat-overview" width="200" />
           {displayFirst && tabIndex === 0 && <i className="fas fa-award" />}
+          {flat.votes > 5000 && <i className="fas fa-medal" />}
+          {flat.name === "Guilo Guilo" && <i className="fas fa-heart" />}
+          {flat.name === "Le Loulou" && <i className="fas fa-crown" />}
+          {flat.name === "Papelli - Fbg Saint Denis" && <i className="fas fa-pizza-slice" />}
+          {flat.name === "Hank Burger - Archives" && <i class="fas fa-carrot" />}
+          {flat.name === "B&M - Montmartre" && <i class="fas fa-hamburger" />}
           <div className="card-description">
             <div className="card-header">
               <div className="card-header-type">
@@ -37,7 +43,7 @@ const Flat = props => {
             <h2>{flat.name}</h2>
             <div className="card-flat-address">{flat.address}</div>
             {showMap && 
-              <Link to={{pathname: `/restaurants/${flat.id}`, flat: flat}}>
+              <Link to={{pathname: `/restaurants/${flat.id}`, flat: flat}} target="_blank">
                 <div className="card-see-infos">Voir infos</div>
               </Link>}
           </div>
