@@ -12,7 +12,8 @@ const Header = () => (
     </div>
     <div className="header-right">
       <div className="our-selection">Notre sélection</div>
-      <div className="subscribe">Newsletter</div>
+      <div className="newsletter">Newsletter</div>
+      <div className="subscribe-pro">Ajouter un resto</div>
       <div className="about">Le lab</div>
     </div>
   </div>

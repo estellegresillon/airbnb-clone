@@ -25,7 +25,7 @@ const Flat = props => {
         <div className="card">
           {!showMap && <div className="grid-img-overlay" />}
           <img src={flat.imageUrl} alt="flat-overview" width="200" />
-          {flat.name === "Siseng" && <i className="fas fa-award" />}
+          {flat.name === "Dilia" && <i className="fas fa-award" />}
           {flat.votes > 5000 && <i className="fas fa-medal" />}
           {flat.name === "Buddha Bar" && <i className="fas fa-heart" />}
           {flat.name === "Benedict" && <i className="fas fa-bacon" />}
@@ -40,9 +40,9 @@ const Flat = props => {
           {flat.name === "Le Nid - Cocon Ludique" && <i className="fas fa-chess" />}
           {flat.name === "Canal Poké - Saint-Martin" && <i className="fas fa-leaf" />}
           {flat.name === "Wunderbär" && <i className="fas fa-hotdog" />}
-          {flat.name === "Presto Fresco" && <i className="fas fa-cheese" />}
+          {flat.name === "Le Jeroboam" && <i className="fas fa-frog" />}
           {flat.name === "La Cevicheria" && <i className="fas fa-fish" />}
-          {flat.name === "Le Jeroboam" && <i className="fas fa-utensils" />}
+          {flat.name === "Presto Fresco" && <i className="fas fa-utensils" />}
           {flat.name === "Boteco Lapa" && <i className="fas fa-sun" />}
           {flat.name === "Café du Musée Jacquemart André" && <i className="fas fa-crown" />}
           {flat.name === "Aki" && <i className="fas fa-torii-gate" />}
