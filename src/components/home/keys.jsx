@@ -1,51 +1,32 @@
 import React from "react";
 
+import Badge from "../common/badge";
+
 const Keys = () => {
   return (
     <div className="keys-wrapper">
       Légende :
-      {/* meilleure note */}
-      <i className="fas fa-award" />
-      {/* plus populaire - nombre de votes */}
-      <i className="fas fa-medal" />
-      {/* notre cdc */}
-      <i className="fas fa-heart" />
-      {/* le plus chic */}
-      <i className="fas fa-crown" />
-      {/* meilleure terrasse */}
-      <i className="fas fa-umbrella-beach" />
-      {/* le plus instagrammable */}
-      <i className="fab fa-instagram" />
-      {/* mexicain */}
-      <i className="fas fa-pepper-hot" />
-      {/* pizza */}
-      <i className="fas fa-pizza-slice" />
-      {/* vegan */}
-      <i className="fas fa-carrot" />
-      {/* burger */}
-      <i className="fas fa-hamburger" />
-      {/* brunch */}
-      <i className="fas fa-bacon" />
-      {/* sucré */}
-      <i className="fas fa-birthday-cake" />
-      {/* pour lire ou bosser */}
-      <i className="fas fa-book" />
-      {/* jeux */}
-      <i className="fas fa-chess" />
-      {/* ceviche */}
-      <i className="fas fa-fish" />
-      {/* allemand */}
-      <i className="fas fa-hotdog" />
-      {/* français */}
-      <i className="fas fa-frog" />
-      {/* italien */}
-      <i className="fas fa-utensils" />
-      {/* poke */}
-      <i className="fas fa-leaf" />
-      {/* brésilien */}
-      <i className="fas fa-sun" />
-      {/* japonais */}
-      <i className="fas fa-torii-gate" />
+      <Badge icon="fas fa-award" description="Le mieux noté" />
+      <Badge icon="fas fa-medal" description="Le plus populaire" />
+      <Badge icon="fas fa-heart" description="Notre coup de coeur" />
+      <Badge icon="fas fa-umbrella-beach" description="La meilleure terrasse" />
+      <Badge icon="fab fa-instagram" description="Le plus instagrammable" />
+      <Badge icon="fas fa-crown" description="Le plus chic" />
+      <Badge icon="fas fa-bacon" description="Le meilleur brunch" />
+      <Badge icon="fas fa-pizza-slice" description="La meilleure pizza" />
+      <Badge icon="fas fa-carrot" description="Le meilleur vegan" />
+      <Badge icon="fas fa-hamburger" description="Le meilleur burger" />
+      <Badge icon="fas fa-pepper-hot" description="Le meilleur méxicain" />
+      <Badge icon="fas fa-birthday-cake" description="La meilleure pâtisserie" />
+      <Badge icon="fas fa-book" description="Pour bouquiner ou travailler" />
+      <Badge icon="fas fa-chess" description="Pour jouer" />
+      <Badge icon="fas fa-leaf" description="Le meilleur poké" />
+      <Badge icon="fas fa-hotdog" description="Le meilleur germanique" />
+      <Badge icon="fas fa-frog" description="Le meilleur français" />
+      <Badge icon="fas fa-fish" description="Le meilleur ceviche" />
+      <Badge icon="fas fa-utensils" description="Le meilleur italien" />
+      <Badge icon="fas fa-sun" description="Le meilleur brésilien" />
+      <Badge icon="fas fa-torii-gate" description="Le meilleur japonais" />
     </div>
   )
 }
