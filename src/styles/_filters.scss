@@ -111,3 +111,25 @@
     display: none;
   }  
 }
+
+.counter-keys-wrapper {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+
+  i { 
+    margin-left: 10px;
+    cursor: pointer;
+
+    &:hover { opacity: 0.6; }
+  }
+
+  .fa-award { color:#ffb0be; }
+  .fa-medal { color:#ea4135; }
+  .fa-heart { color:#ea4135; }
+  .fa-crown { color:#ea4135; }
+  .fa-pepper-hot { color:#ffb832; }
+  .fa-carrot { color:#ffb832; }
+  .fa-pizza-slice { color:#ffb832; }
+  .fa-hamburger { color: #ffb832;}
+}

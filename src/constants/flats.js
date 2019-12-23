@@ -442,7 +442,7 @@ export default [
     id: 32,
     type: "Burger",
     rate: 4.5,
-    votes: 300,
+    votes: 500,
     address: "98 Rue des Martyrs, 75018 Paris",
     phone: "01 42 58 39 20",
     arr: 18,
@@ -453,5 +453,22 @@ export default [
     price_digit: 1,
     lat: 48.88458267731903,
     lng: 2.3401479963116176
+  },
+  {
+    name: "Bocamexa - Oberkampf",
+    id: 33,
+    type: "Méxicain",
+    rate: 4.4,
+    votes: 500,
+    address: "95 Rue Oberkampf, 75011 Paris",
+    phone: "01 77 14 73 24",
+    arr: 11,
+    openingHours: "11h30-22h",
+    imageUrl:
+      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+    price: "€",
+    price_digit: 1,
+    lat: 48.875854,
+    lng: 2.3783156
   }
 ];

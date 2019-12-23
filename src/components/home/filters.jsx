@@ -18,6 +18,7 @@ const typeOptions = [
   { label: "Italien", value: "Italien"},
   { label: "Vegan", value: "Vegan"},
   { label: "Burger", value: "Burger"},
+  { label: "Méxicain", value: "Méxicain"},
 ]
 
 const arrOptions = [...Array(20)].map((e, i) => (

@@ -9,7 +9,7 @@ export default function(state, action) {
       if (a.rate > b.rate) return -1;
       return 0;
     });
-
+    
     return sortedByRate;
   }
   

@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import FlatList from "./flat-list";
 import Map from "./map";
 import Filters from "./filters";
+import Keys from "./keys";
 
 const Home = props => {
   const { flats, sortedFlats, searchedFlat } = props;
@@ -24,9 +25,12 @@ const Home = props => {
   return (
     <>
       <Filters />
-      <div className="flat-counter">
-        {listNumber}
-        {listNumber === 1 ? " résultat correspond à votre recherche." : " résultats correspondent à votre recherche."}
+      <div className="counter-keys-wrapper">
+        <div className="flat-counter">
+          {listNumber}
+          {listNumber === 1 ? " résultat correspond à votre recherche." : " résultats correspondent à votre recherche."}
+        </div>
+        <Keys />
       </div>
       <div className="main-view">
         <FlatList />

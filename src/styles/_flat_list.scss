@@ -75,7 +75,7 @@
 
     .fa-crown {
       position: absolute;
-      color: #ffb832;
+      color: #ea4135;
       background-color: #fff;
       border-radius: 50%;
       top: 42px;
@@ -88,7 +88,7 @@
     .fa-carrot {
       position: absolute;
       color: #fff;
-      background-color: #8fe434;
+      background-color: #ffb832;
       border-radius: 50%;
       top: 42px;
       left: 42px;
@@ -111,6 +111,17 @@
       position: absolute;
       color: #fff;
       background-color: #ffb832;
+      border-radius: 50%;
+      top: 42px;
+      left: 42px;
+      padding: 5px;
+      box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .fa-pepper-hot {
+      position: absolute;
+      color: #ffb832;
+      background-color: #fff;
       border-radius: 50%;
       top: 42px;
       left: 42px;
