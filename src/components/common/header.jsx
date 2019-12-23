@@ -11,6 +11,7 @@ const Header = () => (
       </Link>
     </div>
     <div className="header-right">
+      <div className="our-selection">Notre sélection</div>
       <div className="subscribe">Newsletter</div>
       <div className="about">Le lab</div>
     </div>

@@ -41,7 +41,7 @@ const MapView = compose(withScriptjs, withGoogleMap)(props => {
 
   return (
     <GoogleMap 
-      defaultZoom={13}
+      defaultZoom={14}
       defaultOptions={{ styles: googleMapCustomSkin }}
       defaultCenter={{ lat: 48.868614, lng: 2.362222 }}>
       {markers.map(marker => {

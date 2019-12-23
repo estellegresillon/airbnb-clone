@@ -19,6 +19,18 @@ const typeOptions = [
   { label: "Vegan", value: "Vegan"},
   { label: "Burger", value: "Burger"},
   { label: "Méxicain", value: "Méxicain"},
+  { label: "Inclassable", value: "Inclassable"},
+  { label: "Pâtisserie", value: "Pâtisserie"},
+  { label: "Poké", value: "Poké"},
+  { label: "Jeux de société", value: "Jeux de société"},
+  { label: "Allemand", value: "Allemand"},
+  { label: "Cambodgien", value: "Cambodgien"},
+  { label: "Brésilien", value: "Brésilien"},
+  { label: "Péruvien", value: "Péruvien"},
+  { label: "Thaï", value: "Thaï"},
+  { label: "Colombien", value: "Colombien"},
+  { label: "Algérien", value: "Algérien"},
+  { label: "Scandinave", value: "Scandinave"},
 ]
 
 const arrOptions = [...Array(20)].map((e, i) => (

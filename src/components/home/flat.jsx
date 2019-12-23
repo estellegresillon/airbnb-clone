@@ -27,12 +27,25 @@ const Flat = props => {
           <img src={flat.imageUrl} alt="flat-overview" width="200" />
           {flat.name === "Siseng" && <i className="fas fa-award" />}
           {flat.votes > 5000 && <i className="fas fa-medal" />}
-          {flat.name === "Guilo Guilo" && <i className="fas fa-heart" />}
-          {flat.name === "Le Loulou" && <i className="fas fa-crown" />}
+          {flat.name === "Buddha Bar" && <i className="fas fa-heart" />}
+          {flat.name === "Benedict" && <i className="fas fa-bacon" />}
           {flat.name === "Papelli - Fbg Saint Denis" && <i className="fas fa-pizza-slice" />}
           {flat.name === "Hank Burger - Archives" && <i className="fas fa-carrot" />}
           {flat.name === "B&M - Montmartre" && <i className="fas fa-hamburger" />}
           {flat.name === "Bocamexa - Oberkampf" && <i className="fas fa-pepper-hot" />}
+          {flat.name === "L'Hôtel Amour" && <i className="fas fa-umbrella-beach" />}
+          {flat.name === "La Gare" && <i className="fab fa-instagram" />}
+          {flat.name === "Maison Landemaine - Oberkampf" && <i className="fas fa-birthday-cake" />}
+          {flat.name === "The Used Book Café (Merci)" && <i className="fas fa-book" />}
+          {flat.name === "Le Nid - Cocon Ludique" && <i className="fas fa-chess" />}
+          {flat.name === "Canal Poké - Saint-Martin" && <i className="fas fa-leaf" />}
+          {flat.name === "Wunderbär" && <i className="fas fa-hotdog" />}
+          {flat.name === "Presto Fresco" && <i className="fas fa-cheese" />}
+          {flat.name === "La Cevicheria" && <i className="fas fa-fish" />}
+          {flat.name === "Le Jeroboam" && <i className="fas fa-utensils" />}
+          {flat.name === "Boteco Lapa" && <i className="fas fa-sun" />}
+          {flat.name === "Café du Musée Jacquemart André" && <i className="fas fa-crown" />}
+          {flat.name === "Aki" && <i className="fas fa-torii-gate" />}
           <div className="card-description">
             <div className="card-header">
               <div className="card-header-type">
