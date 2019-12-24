@@ -801,7 +801,7 @@ export default [
   {
     name: "Presto Fresco",
     id: 48,
-    type: "Ialien",
+    type: "Italien",
     rate: 4.3,
     votes: 2000,
     address: "14 Rue Montmartre, 75001",

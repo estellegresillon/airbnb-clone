@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 
 import FlatList from "./flat-list";
@@ -6,22 +7,29 @@ import Map from "./map";
 import Filters from "./filters";
 import Keys from "./keys";
 
-const Home = props => {
-  const { flats, sortedFlats, searchedFlat } = props;
-  const [listNumber, setListNumber] = useState(null);
+import { setFlats } from "../../actions";
 
+const Home = props => {
+  const { flats, setFlats, sortedFlats, searchedFlat } = props;
+  const [listNumber, setListNumber] = useState(null);
+  const [listedFlats, setListedFlats] = useState(flats);
+
+  useEffect(() => { setFlats(); }, [setFlats]);
   useEffect(() => {
     if (searchedFlat) {
       setListNumber(1)
+      setListedFlats(searchedFlat)
     } else {
       if (sortedFlats.length) {
         setListNumber(sortedFlats.length)
+        setListedFlats(sortedFlats)
       } else {
         setListNumber(flats.length)
+        setListedFlats(flats)
       }
     }
   }, [flats, sortedFlats, searchedFlat]);
-  
+
   return (
     <>
       <Filters />
@@ -33,8 +41,8 @@ const Home = props => {
         <Keys />
       </div>
       <div className="main-view">
-        <FlatList />
-        <Map />
+        <FlatList listedFlats={listedFlats} />
+        <Map listedFlats={listedFlats} />
       </div>
     </>
   );
@@ -48,4 +56,8 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps)(Home);
+const mapDispatchToProps = dispatch => {
+  return bindActionCreators({ setFlats }, dispatch);
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

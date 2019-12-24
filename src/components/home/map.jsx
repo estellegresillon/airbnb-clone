@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { Link } from "react-router-dom";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
@@ -11,11 +11,11 @@ import {
   InfoWindow
 } from "react-google-maps"
 
-import { setFlats, selectFlat } from "../../actions";
+import { selectFlat } from "../../actions";
 import googleMapCustomSkin from "../../constants/google_map_skin";
 
 const MapContainer = props =>{
-  const { selectFlat, selectedFlat, flats, showMap } = props;
+  const { selectFlat, selectedFlat, listedFlats, showMap } = props;
 
   const onClick = marker => {
     selectFlat(marker)
@@ -25,7 +25,7 @@ const MapContainer = props =>{
     <div className="google-map">
       <MapView
         selectedMarker={selectedFlat}
-        markers={flats}
+        markers={listedFlats}
         onClick={onClick}
         googleMapURL={process.env.REACT_APP_GOOGLE_API_KEY}
         loadingElement={<div style={{ height: `100%` }} />}
@@ -38,11 +38,21 @@ const MapContainer = props =>{
 
 const MapView = compose(withScriptjs, withGoogleMap)(props => {
   const { markers, onClick, selectedMarker } = props;
+  const [newCenter, setNewCenter] = useState({ lat: 48.868614, lng: 2.362222 })
+
+  useEffect(() => {
+    if (markers.length === 1) {
+      setNewCenter({ lat: markers[0].lat, lng: markers[0].lng })
+    } else {
+      setNewCenter({ lat: 48.868614, lng: 2.362222 })
+    }
+  }, [markers]);
 
   return (
     <GoogleMap 
       defaultZoom={14}
       defaultOptions={{ styles: googleMapCustomSkin }}
+      center={newCenter}
       defaultCenter={{ lat: 48.868614, lng: 2.362222 }}>
       {markers.map(marker => {
         const onMarkerClick = onClick.bind(this, marker)
@@ -76,14 +86,13 @@ const MapView = compose(withScriptjs, withGoogleMap)(props => {
 
 const mapStateToProps = state => {
   return {
-    flats: state.flats,
     selectedFlat: state.selectedFlat,
     showMap: state.showMap,
   };
 };
 
 const mapDispatchToProps = dispatch => {
-  return bindActionCreators({ setFlats, selectFlat }, dispatch);
+  return bindActionCreators({ selectFlat }, dispatch);
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(MapContainer);

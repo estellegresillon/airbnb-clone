@@ -19,10 +19,11 @@ const SearchByName = props => {
 
   const handleSearchChange = (event, value) => {
     setSearchedFlat(value)
-    setArr("");
-    setType("");
+    setArr("Tous les arr.");
+    setType("Toutes les cuisines");
     if (value) {
-      searchFlat(value);
+      // put in an array to map on it on other components
+      searchFlat([value]);
     } else {
       searchFlat(null)
       setFlats()
