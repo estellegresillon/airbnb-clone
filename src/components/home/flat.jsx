@@ -78,7 +78,13 @@ const Flat = props => {
               </div>
               <div className="card-header-rate"><i className="fas fa-star"></i> {flat.rate} ({flat.votes}+)</div>
             </div>
-            <h2>{flat.name}</h2>
+            <h2>
+              {flat.name}
+              <span className="grid-see-infos">
+                Voir infos
+                <i className="fas fa-chevron-right" />
+              </span>
+            </h2>
             <div className="card-flat-address">{flat.address}</div>
             {showMap && 
               <Link to={{pathname: `/restaurants/${flat.id}`, flat: flat}} target="_blank">

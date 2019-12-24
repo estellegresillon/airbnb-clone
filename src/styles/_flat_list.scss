@@ -4,6 +4,8 @@
   overflow: scroll;
   width: 45%;
 
+  .grid-see-infos { display: none; }
+
   .flat {
     width: 100%;
     cursor: pointer;
@@ -150,6 +152,18 @@
     &:hover {
       transition: all 0.7s ease;
       box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .grid-see-infos {
+      font-size: 12px;
+      font-weight: 300;
+      margin-left: 5px;
+
+      .fa-chevron-right {
+        font-size: 10px;
+        margin-left: 3px;
+        color: #b9b9b9;
+      }
     }
 
     .badge-wrapper {
