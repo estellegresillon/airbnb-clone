@@ -8,6 +8,8 @@ const Detail = props => {
   const { setFlats, flats, match, location } = props;
   const [flat, setFlat] = useState({})
   
+  // if a user arrives on the pageId directly 
+  // he doesn't get the flat object in the props so we execute these 2 hooks
   useEffect(() => { 
     if (!location.flat) {
       setFlats(); 

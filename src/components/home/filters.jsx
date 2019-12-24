@@ -54,6 +54,7 @@ const SearchByName = props => {
     });
     setTypeOptions(newTypeOptions);
 
+    // filter only the available locations
     if (type !== "Toutes les cuisines") {
       const sortFlatsByType = [...sortedFlats].filter(val => {
         if (val.type) {
@@ -90,6 +91,7 @@ const SearchByName = props => {
     });
     setArrOptions(newArrOptions);
 
+    // filter only the available cuisine types
     if (arr !== "Tous les arr.") {
       const sortFlatsByArr = [...sortedFlats].filter(val => {
         if (val.arr) {

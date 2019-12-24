@@ -30,6 +30,7 @@ const keyList = [
 ]
 
 const Keys = () => {
+  // hook to click outside div to close it
   const { ref, isComponentVisible, setIsComponentVisible } = useComponentVisible(false);
 
   return (

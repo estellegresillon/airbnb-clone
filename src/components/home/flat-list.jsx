@@ -9,8 +9,7 @@ const FlatList = props => {
   
   return (
     <div className={showMap ? "flat-list-with-rows" : "flat-list-with-grid"}>
-      {listedFlats.map((flat, i) => <Flat key={flat.id} flat={flat} tabIndex={i} />)
-      }
+      {listedFlats.map((flat, i) => <Flat key={flat.id} flat={flat} tabIndex={i} />)}
     </div>
   );
 };

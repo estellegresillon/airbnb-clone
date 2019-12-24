@@ -40,6 +40,7 @@ const MapView = compose(withScriptjs, withGoogleMap)(props => {
   const { markers, onClick, selectedMarker } = props;
   const [newCenter, setNewCenter] = useState({ lat: 48.868614, lng: 2.362222 })
 
+  // center on pin if only one flat is selected, else center to whole paris area
   useEffect(() => {
     if (markers.length === 1) {
       setNewCenter({ lat: markers[0].lat, lng: markers[0].lng })

@@ -14,8 +14,15 @@ const Home = props => {
   const [listNumber, setListNumber] = useState(null);
   const [listedFlats, setListedFlats] = useState(flats);
 
+  // load flats and sort them
   useEffect(() => { setFlats(); }, [setFlats]);
+
+  // filters flats
   useEffect(() => {
+    // 1 - priority on autocomplete, displays only one flat
+    // 2 -  if not any flat is searched, display the filtered flats
+    // 3 - if not any flat is searched nor filtered, displays all flats
+    // never display 0 flats
     if (searchedFlat) {
       setListNumber(1)
       setListedFlats(searchedFlat)
