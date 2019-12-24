@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import ScrollIntoView from 'react-scroll-into-view'
 
 import Badge from "../common/badge";
+import { useComponentVisible } from "../../hooks/useRef"
 
 const keyList = [
   { selector: "#fa-award", icon: "fas fa-award", description: "Le mieux noté" },
@@ -29,19 +30,15 @@ const keyList = [
 ]
 
 const Keys = () => {
-  const [isModalOpened, toggleModal] = useState(false)
-
-  const handleClick = () => {
-    toggleModal(!isModalOpened)
-  }
+  const { ref, isComponentVisible, setIsComponentVisible } = useComponentVisible(false);
 
   return (
     <div className="keys-wrapper">
-      <div className="selection-button" onClick={() => handleClick()}>
+      <div className="selection-button" onClick={() => setIsComponentVisible(true)}> 
         Sélection <i className="fas fa-chevron-down" />
       </div>
-      {isModalOpened &&
-        <div className="filter-selection-wrapper">
+      {isComponentVisible &&
+        <div ref={ref} className="filter-selection-wrapper">
           {keyList.map(key => {
             return (
               <ScrollIntoView key={key.selector} selector={key.selector}>

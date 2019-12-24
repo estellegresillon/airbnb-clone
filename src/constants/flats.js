@@ -4,7 +4,7 @@ export default [
     type: "Coréen",
     address: "82 Quai de Jemmapes, 75010",
     phone: "09 51 55 15 77",
-    arr: 10,
+    arr: "10",
     openingHours: "12h-15h30 / 19h-22h30",
     rate: 4.6,
     votes: 1000,
@@ -21,7 +21,7 @@ export default [
     type: "Français",
     address: "96 Rue Oberkampf, 75011",
     phone: "01 43 57 44 03",
-    arr: 11,
+    arr: "11",
     openingHours: "9h-2h",
     rate: 4.1,
     votes: 500,
@@ -38,7 +38,7 @@ export default [
     type: "Japonais",
     address: "8 Rue Garreau, 75018",
     phone: "09 51 47 11 66",
-    arr: 18,
+    arr: "18",
     rate: 4.6,
     votes: 250,
     openingHours: "19h-00h",
@@ -57,7 +57,7 @@ export default [
     votes: 1000,
     address: "55 Rue Oberkampf, 75011",
     phone: "09 67 31 96 80",
-    arr: 11,
+    arr: "11",
     openingHours: "12h-15h / 19h-23h",
     id: 4,
     imageUrl:
@@ -74,7 +74,7 @@ export default [
     votes: 250,
     address: "14 Boulevard de Sébastopol, 75004",
     phone: "01 48 04 89 88",
-    arr: 4,
+    arr: "4",
     openingHours: "12h-00h",
     id: 5,
     imageUrl:
@@ -91,7 +91,7 @@ export default [
     votes: 2000,
     address: "16 Rue St Sabin, 75011",
     phone: "01 47 00 13 53",
-    arr: 11,
+    arr: "11",
     openingHours: "9h-2h",
     id: 6,
     imageUrl:
@@ -108,7 +108,7 @@ export default [
     votes: 1500,
     address: "90 Boulevard Saint-Germain, 75005",
     phone: "01 46 34 86 64",
-    arr: 5,
+    arr: "5",
     openingHours: "8h-22h30",
     id: 7,
     imageUrl:
@@ -125,7 +125,7 @@ export default [
     votes: 1500,
     address: "19 Rue Sainte-Croix de la Bretonnerie, 75004",
     phone: "01 42 76 91 37",
-    arr: 4,
+    arr: "4",
     openingHours: "12h-5h / 19h-23h",
     id: 8,
     imageUrl:
@@ -142,7 +142,7 @@ export default [
     votes: 1000,
     address: "2 Rue de l'Échelle, 75001",
     phone: "01 47 03 06 21",
-    arr: 1,
+    arr: "1",
     openingHours: "8h-20h",
     id: 9,
     imageUrl:
@@ -159,7 +159,7 @@ export default [
     votes: 1000,
     address: "2 Place du Panthéon, 75005",
     phone: "01 43 54 79 22",
-    arr: 5,
+    arr: "5",
     openingHours: "12h-2h",
     id: 10,
     imageUrl:
@@ -176,7 +176,7 @@ export default [
     votes: 750,
     address: "13 Quai des Grands Augustins, 75006",
     phone: "01 43 29 64 50",
-    arr: 6,
+    arr: "6",
     openingHours: "12h-5h",
     id: 11,
     imageUrl:
@@ -193,7 +193,7 @@ export default [
     votes: 6000,
     address: "5 Parvis Alan Turing, 75013",
     phone: null,
-    arr: 13,
+    arr: "13",
     openingHours: "12h-22h",
     id: 12,
     imageUrl:
@@ -210,7 +210,7 @@ export default [
     votes: 2000,
     address: "39 Quai de la Loire, 75019",
     phone: "01 73 71 82 90",
-    arr: 19,
+    arr: "19",
     openingHours: "10h-1h",
     id: 13,
     imageUrl:
@@ -227,7 +227,7 @@ export default [
     votes: 100,
     address: "46 Rue de Turbigo, 75003",
     phone: "07 71 35 28 77",
-    arr: 3,
+    arr: "3",
     openingHours: "10h-14h / 19h-23h30",
     id: 14,
     imageUrl:
@@ -244,7 +244,7 @@ export default [
     votes: 100,
     address: "72 Quai de Jemmapes, 75010",
     phone: "01 53 16 17 88",
-    arr: 10,
+    arr: "10",
     openingHours: "10h-22h",
     id: 15,
     imageUrl:
@@ -261,7 +261,7 @@ export default [
     votes: 1000,
     address: "55Bis Quai de Valmy, 75010",
     phone: "01 42 39 69 81",
-    arr: 10,
+    arr: "10",
     openingHours: "7h30-2h",
     id: 16,
     imageUrl:
@@ -278,7 +278,7 @@ export default [
     phone: "01 44 79 03 98",
     rate: 4.3,
     votes: 250,
-    arr: 10,
+    arr: "10",
     openingHours: "12h-14h30 / 19h30-23h",
     id: 17,
     imageUrl:
@@ -296,7 +296,7 @@ export default [
     votes: 100,
     address: "32 Avenue de la République, 75011",
     phone: "01 47 00 19 65",
-    arr: 11,
+    arr: "11",
     openingHours: "12h-15h / 19h-23h",
     imageUrl:
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
@@ -312,7 +312,7 @@ export default [
     votes: 2000,
     address: "49-51 Avenue George V, 75008",
     phone: "01 53 67 84 60",
-    arr: 8,
+    arr: "8",
     openingHours: "12h-3h",
     id: 19,
     imageUrl:
@@ -329,7 +329,7 @@ export default [
     votes: 500,
     address: "66 Rue du Faubourg Poissonnière, 75010",
     phone: "09 86 40 42 42",
-    arr: 10,
+    arr: "10",
     openingHours: "12h-14h / 20h-22h30",
     id: 20,
     imageUrl:
@@ -346,7 +346,7 @@ export default [
     votes: 1500,
     address: "17 Rue des Écoles, 75005",
     phone: "01 43 54 50 28",
-    arr: 5,
+    arr: "5",
     openingHours: "8h30-23h",
     id: 21,
     imageUrl:
@@ -363,7 +363,7 @@ export default [
     votes: 1000,
     address: "27 Rue Meslay, 75003",
     phone: null,
-    arr: 3,
+    arr: "3",
     openingHours: "12h-14h / 19h-23h",
     id: 22,
     imageUrl:
@@ -381,7 +381,7 @@ export default [
     votes: 1000,
     address: "35 Rue de Montholon, 75009",
     phone: "01 48 78 45 94",
-    arr: 9,
+    arr: "9",
     openingHours: "12h-14h30 / 19h-23h",
     imageUrl:
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
@@ -398,7 +398,7 @@ export default [
     votes: 500,
     address: "2 Rue Marie et Louise, 75010",
     phone: "01 44 84 04 01",
-    arr: 10,
+    arr: "10",
     openingHours: "12h-14h30 / 19h-23h",
     imageUrl:
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
@@ -415,7 +415,7 @@ export default [
     votes: 500,
     address: "12 Rue de Caumartin, 75009",
     phone: "01 42 65 31 53",
-    arr: 9,
+    arr: "9",
     openingHours: "12h-14h30 / 19h-22h30",
     imageUrl:
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
@@ -432,7 +432,7 @@ export default [
     votes: 250,
     address: "18 Rue du Pont aux Choux, 75003",
     phone: "09 86 70 77 00",
-    arr: 3,
+    arr: "3",
     openingHours: "13h30-18h",
     imageUrl:
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
@@ -449,7 +449,7 @@ export default [
     votes: 2500,
     address: "11bis Rue Sainte-Anne, 75001",
     phone: "01 42 97 54 27",
-    arr: 1,
+    arr: "1",
     openingHours: "11h30-22h30",
     imageUrl:
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
@@ -466,7 +466,7 @@ export default [
     votes: 3000,
     address: "24 Rue Saint-Augustin, 75002",
     phone: "01 47 42 13 14",
-    arr: 2,
+    arr: "2",
     openingHours: "11h30-22h30",
     imageUrl:
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
@@ -483,7 +483,7 @@ export default [
     votes: 3500,
     address: "29 Rue Mazarine, 75006",
     phone: "09 70 91 12 41",
-    arr: 6,
+    arr: "6",
     openingHours: "12h-14h30 / 18h30-22h30",
     imageUrl:
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
@@ -500,7 +500,7 @@ export default [
     votes: 500,
     address: "74 Rue du Faubourg Saint-Denis, 75010",
     phone: "01 48 24 98 05",
-    arr: 10,
+    arr: "10",
     openingHours: "11h-15h / 18h-00h",
     imageUrl:
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
@@ -517,7 +517,7 @@ export default [
     votes: 3000,
     address: "55 Rue des Archives, 75003",
     phone: "09 72 44 03 99",
-    arr: 3,
+    arr: "3",
     openingHours: "12h-22h",
     imageUrl:
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
@@ -534,7 +534,7 @@ export default [
     votes: 500,
     address: "98 Rue des Martyrs, 75018",
     phone: "01 42 58 39 20",
-    arr: 18,
+    arr: "18",
     openingHours: "12h-23h30",
     imageUrl:
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
@@ -551,7 +551,7 @@ export default [
     votes: 500,
     address: "95 Rue Oberkampf, 75011",
     phone: "01 77 14 73 24",
-    arr: 11,
+    arr: "11",
     openingHours: "11h30-22h",
     imageUrl:
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
@@ -568,7 +568,7 @@ export default [
     votes: 2500,
     address: "8-12 Rue Boissy d'Anglas, 75008",
     phone: "01 53 05 90 00",
-    arr: 8,
+    arr: "8",
     openingHours: "18-2h",
     imageUrl:
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
@@ -585,7 +585,7 @@ export default [
     votes: 500,
     address: "8 Rue de Navarin, 75009",
     phone: "01 48 78 31 80",
-    arr: 9,
+    arr: "9",
     openingHours: "18-2h",
     imageUrl:
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
@@ -602,7 +602,7 @@ export default [
     votes: 1500,
     address: "19 Chaussée de la Muette, 75016",
     phone: "01 42 15 15 31",
-    arr: 16,
+    arr: "16",
     openingHours: "12-15h / 19h-23h",
     imageUrl:
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
@@ -619,7 +619,7 @@ export default [
     votes: 250,
     address: "41 Rue Oberkampf, 75011",
     phone: "01 43 57 82 33",
-    arr: 11,
+    arr: "11",
     openingHours: "7h30-20h30",
     imageUrl:
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
@@ -636,7 +636,7 @@ export default [
     votes: 2500,
     address: "111 Boulevard Beaumarchais, 75003",
     phone: "01 42 77 00 33",
-    arr: 3,
+    arr: "3",
     openingHours: "10-19h",
     imageUrl:
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
@@ -653,7 +653,7 @@ export default [
     votes: 1000,
     address: "227 Rue Saint-Martin, 75003",
     phone: "07 82 75 23 00",
-    arr: 3,
+    arr: "3",
     openingHours: "17h30-1h",
     imageUrl:
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
@@ -670,7 +670,7 @@ export default [
     votes: 250,
     address: "25 Rue Bichat, 75010",
     phone: "01 40 34 23 18",
-    arr: 10,
+    arr: "10",
     openingHours: "11h30-23h",
     imageUrl:
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
@@ -687,7 +687,7 @@ export default [
     votes: 250,
     address: "16 Rue Beaurepaire, 75010",
     phone: "09 81 26 88 53",
-    arr: 10,
+    arr: "10",
     openingHours: "12h-23h",
     imageUrl:
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
@@ -704,7 +704,7 @@ export default [
     votes: 1500,
     address: "20 Rue Alibert, 75010",
     phone: "01 42 45 80 88",
-    arr: 10,
+    arr: "10",
     openingHours: "11h30-23h",
     imageUrl:
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
@@ -721,7 +721,7 @@ export default [
     votes: 1000,
     address: "62 Rue Mazarine, 75006",
     phone: "01 53 10 19 99",
-    arr: 6,
+    arr: "6",
     openingHours: "12h-15h / 19h-2h",
     imageUrl:
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
@@ -738,7 +738,7 @@ export default [
     votes: 1000,
     address: "1 Rue Perrée, 75003",
     phone: null,
-    arr: 3,
+    arr: "3",
     openingHours: "12h-15h / 19h-23h",
     imageUrl:
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
@@ -755,7 +755,7 @@ export default [
     votes: 500,
     address: "48 Rue de l'Échiquier, 75010",
     phone: null,
-    arr: 10,
+    arr: "10",
     openingHours: "12h-14h30 / 18h-00h",
     imageUrl:
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
@@ -772,7 +772,7 @@ export default [
     votes: 500,
     address: "86 Rue Réaumur, 75002",
     phone: "01 42 33 07 71",
-    arr: 2,
+    arr: "2",
     openingHours: "12h-14h30 / 18h30-1h",
     imageUrl:
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
@@ -789,7 +789,7 @@ export default [
     votes: 1000,
     address: "14 Rue Bachaumont, 75002",
     phone: "09 80 88 58 05",
-    arr: 2,
+    arr: "2",
     openingHours: "12h-23h30",
     imageUrl:
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
@@ -806,7 +806,7 @@ export default [
     votes: 2000,
     address: "14 Rue Montmartre, 75001",
     phone: "01 40 26 83 94",
-    arr: 1,
+    arr: "1",
     openingHours: "12h-15h / 19h-23h",
     imageUrl:
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
@@ -823,7 +823,7 @@ export default [
     votes: 100,
     address: "158 Boulevard Haussmann, 75008",
     phone: null,
-    arr: 8,
+    arr: "8",
     openingHours: "11h45-17h30",
     imageUrl:
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
@@ -840,7 +840,7 @@ export default [
     votes: 1500,
     address: "16 Rue Sainte-Anne, 75001",
     phone: null,
-    arr: 1,
+    arr: "1",
     openingHours: "7h30-20h30",
     imageUrl:
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
@@ -857,7 +857,7 @@ export default [
     votes: 1500,
     address: "2 Place de l'École Militaire, 75007",
     phone: "01 45 55 00 02",
-    arr: 7,
+    arr: "7",
     openingHours: "7h30-1h30",
     imageUrl:
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
@@ -874,7 +874,7 @@ export default [
     votes: 500,
     address: "228 Rue de Charenton, 75012",
     phone: "01 43 07 68 49",
-    arr: 12,
+    arr: "12",
     openingHours: "12h-14h30 / 19h-22h30",
     imageUrl:
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
@@ -891,7 +891,7 @@ export default [
     votes: 500,
     address: "72 Rue Didot, 75014",
     phone: "01 45 39 39 13",
-    arr: 14,
+    arr: "14",
     openingHours: "12h-14h / 19h30-22h",
     imageUrl:
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
@@ -908,7 +908,7 @@ export default [
     votes: 250,
     address: "116 Rue de la Convention, 75015",
     phone: "01 45 54 31 16",
-    arr: 15,
+    arr: "15",
     openingHours: "12h-14h30 / 19h-21h",
     imageUrl:
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
@@ -925,7 +925,7 @@ export default [
     votes: 100,
     address: "1 Rue d'Eupatoria, 75020",
     phone: "09 53 56 24 14",
-    arr: 20,
+    arr: "20",
     openingHours: "12h-14h30 / 19h30-22h30",
     imageUrl:
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
@@ -942,7 +942,7 @@ export default [
     votes: 100,
     address: "9 Rue du Liban, 75020",
     phone: "09 81 26 97 10",
-    arr: 20,
+    arr: "20",
     openingHours: "19h-22h30",
     imageUrl:
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
@@ -959,7 +959,7 @@ export default [
     votes: 250,
     address: "2 Rue Marie et Louise, 75010",
     phone: "01 42 08 34 86",
-    arr: 10,
+    arr: "10",
     openingHours: "12h-14h30 / 19h-23h",
     imageUrl:
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
@@ -976,7 +976,7 @@ export default [
     votes: 250,
     address: "7 Rue du Général Blaise, 75011",
     phone: "01 43 55 94 73",
-    arr: 11,
+    arr: "11",
     openingHours: "12h-21h",
     imageUrl:
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
@@ -993,7 +993,7 @@ export default [
     votes: 1000,
     address: "81 Rue Réaumur, 75002",
     phone: "01 42 61 13 73",
-    arr: 2,
+    arr: "2",
     openingHours: "12h-15h30 / 19h-22h30",
     imageUrl:
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
@@ -1010,7 +1010,7 @@ export default [
     votes: 500,
     address: "174 Rue de la Roquette, 75011",
     phone: "01 73 71 51 55",
-    arr: 11,
+    arr: "11",
     openingHours: "9h-18h",
     imageUrl:
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
@@ -1027,7 +1027,7 @@ export default [
     votes: 500,
     address: "15 Avenue Montaigne, 75008",
     phone: "01 82 28 00 15",
-    arr: 8,
+    arr: "8",
     openingHours: "11h30-14h15 / 19h-2h",
     imageUrl:
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
@@ -1042,9 +1042,9 @@ export default [
     type: "Français",
     rate: 4.7,
     votes: 500,
-    address: "25 Rue Guy Môquet, 75017 Paris",
+    address: "25 Rue Guy Môquet, 75017",
     phone: "09 53 75 67 71",
-    arr: 17,
+    arr: "17",
     openingHours: "12h-14h30 / 19h30-22h30",
     imageUrl:
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
@@ -1052,5 +1052,22 @@ export default [
     price_digit: 2,
     lat: 48.8920597,
     lng: 2.322423
+  },
+  {
+    name: "Dai Dai",
+    id: 63,
+    type: "Italien",
+    rate: 4.5,
+    votes: 250,
+    address: "25 Rue Oberkampf, 75011",
+    phone: null,
+    arr: "11",
+    openingHours: "12h-14h30 / 16h30-23h",
+    imageUrl:
+      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+    price: "€€",
+    price_digit: 2,
+    lat: 48.8635571,
+    lng: 2.369366
   }
 ];

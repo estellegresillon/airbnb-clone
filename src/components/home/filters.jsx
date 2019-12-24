@@ -6,43 +6,16 @@ import Autocomplete from '@material-ui/lab/Autocomplete';
 import Select from 'react-select';
 
 import { setFlats, searchFlat, sortFlats, toggleMap } from "../../actions";
+import { initArrOptions, initTypeOptions } from "../../constants/filter_options";
 
-const typeOptions = [
-  { label: "Japonais", value: "Japonais"},
-  { label: "Français", value: "Français"},
-  { label: "Coréen", value: "Coréen"},
-  { label: "Américain", value: "Américain"},
-  { label: "Brunch", value: "Brunch"},
-  { label: "Irlandais", value: "Irlandais"},
-  { label: "Café", value: "Café"},
-  { label: "Italien", value: "Italien"},
-  { label: "Vegan", value: "Vegan"},
-  { label: "Burger", value: "Burger"},
-  { label: "Méxicain", value: "Méxicain"},
-  { label: "Inclassable", value: "Inclassable"},
-  { label: "Pâtisserie", value: "Pâtisserie"},
-  { label: "Poké", value: "Poké"},
-  { label: "Jeux de société", value: "Jeux de société"},
-  { label: "Allemand", value: "Allemand"},
-  { label: "Cambodgien", value: "Cambodgien"},
-  { label: "Brésilien", value: "Brésilien"},
-  { label: "Péruvien", value: "Péruvien"},
-  { label: "Thaï", value: "Thaï"},
-  { label: "Colombien", value: "Colombien"},
-  { label: "Algérien", value: "Algérien"},
-  { label: "Scandinave", value: "Scandinave"},
-  { label: "Sicilien", value: "Sicilien"},
-]
-
-const arrOptions = [...Array(20)].map((e, i) => (
-    { label: `${i + 1}`, value: `${i + 1}` }
-  ));
 
 const SearchByName = props => {
   const { flats, searchFlat, sortFlats, toggleMap, showMap } = props;
-  const [arr, setArr] = useState("");
-  const [type, setType] = useState("");
+  const [arr, setArr] = useState("Tous les arr.");
+  const [type, setType] = useState("Toutes les cuisines");
   const [searchedFlat, setSearchedFlat] = useState(null);
+  const [typeOptions, setTypeOptions] = useState(initTypeOptions);
+  const [arrOptions, setArrOptions] = useState(initArrOptions);
 
   const handleSearchChange = (event, value) => {
     setSearchedFlat(value)
@@ -60,16 +33,30 @@ const SearchByName = props => {
     setSearchedFlat(null);
     searchFlat(null);
 
+    // sort flats according to location
     const sortedFlats = [...flats].filter(val => {
       if (val.arr) {
-        return val.arr.toString() === arr;
+        return val.arr === arr;
       } else return null;
     });
 
-    if (type) {
+    // we want to show only available cuisine type in the list
+    const typeOptions = [];
+    sortedFlats.forEach(flat => {
+      typeOptions.push(flat.type);
+    });
+    const uniqueItems = [...new Set(typeOptions)]
+    uniqueItems.sort();
+    const newTypeOptions = [];
+    uniqueItems.forEach(itm => {
+      newTypeOptions.push({ label: itm, value: itm });
+    });
+    setTypeOptions(newTypeOptions);
+
+    if (type !== "Toutes les cuisines") {
       const sortFlatsByType = [...sortedFlats].filter(val => {
         if (val.type) {
-          return val.type.toString() === type;
+          return val.type === type;
         } else return null;
       });
       sortFlats(sortFlatsByType);
@@ -82,16 +69,30 @@ const SearchByName = props => {
     setSearchedFlat(null);
     searchFlat(null);
 
+    // sort flats according to type
     const sortedFlats = [...flats].filter(val => {
       if (val.type) {
-        return val.type.toString() === type
+        return val.type === type
       } else return null;
     });
 
-    if (arr) {
+    // we want to show only available location in the list
+    const arrOptions = [];
+    sortedFlats.forEach(flat => {
+      arrOptions.push(flat.arr);
+    });
+    const uniqueItems = [...new Set(arrOptions)]
+    uniqueItems.sort((a, b) => a - b);
+    const newArrOptions = [];
+    uniqueItems.forEach(itm => {
+      newArrOptions.push({ label: itm, value: itm });
+    });
+    setArrOptions(newArrOptions);
+
+    if (arr !== "Tous les arr.") {
       const sortFlatsByArr = [...sortedFlats].filter(val => {
         if (val.arr) {
-          return val.arr.toString()=== arr;
+          return val.arr === arr;
         } else return null;
       });
       sortFlats(sortFlatsByArr);
@@ -117,14 +118,21 @@ const SearchByName = props => {
   }
 
   const reinitializeFilters = () => {
+    // empty autocomplete input
     searchFlat(null);
     setSearchedFlat(null);
 
+    // resort flats by rate
     sortFlats([]);
-    setArr("")
-    setType("")
-
+    // display all flats
     setFlats()
+
+    // reinit filter options
+    setTypeOptions(initTypeOptions);
+    setArrOptions(initArrOptions);
+    // set default values
+    setArr("Tous les arr.")
+    setType("Toutes les cuisines")
   }
 
   return (
@@ -145,14 +153,14 @@ const SearchByName = props => {
           value={arr}
           options={arrOptions}
           onChange={handleArrChange}
-          placeholder={arr || "Filtrer par arr."}
+          placeholder={arr}
           className="filters-react-select filter-arr"
         />
         <Select
           value={type}
           options={typeOptions} 
           onChange={handleTypeChange} 
-          placeholder={type || "Filtrer par type"}
+          placeholder={type}
           className="filters-react-select filter-type"
         />
       </div>
