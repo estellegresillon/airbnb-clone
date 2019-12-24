@@ -163,9 +163,10 @@ const SearchByName = props => {
           placeholder={type}
           className="filters-react-select filter-type"
         />
-      </div>
-      <div className="filters-right">
         <button className="button-filter-reinitialize" onClick={reinitializeFilters}>Réinitialiser</button>
+      </div>
+
+      <div className="filters-right">
         <div className="button-toggle-map" onClick={handleToggleMap}>
           {showMap ? "Cacher la carte" : "Afficher la carte"}
           <div 
