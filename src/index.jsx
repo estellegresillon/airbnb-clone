@@ -13,6 +13,7 @@ import flatsReducer from "./reducers/flats_reducer";
 import selectedFlatReducer from "./reducers/selected_flat_reducer";
 import searchFlatReducer from "./reducers/search_flat_reducer";
 import sortFlatsReducer from "./reducers/sort_flats_reducer";
+import centerMapWithLocationReducer from "./reducers/center_map_with_location";
 import toggleMapReducer from "./reducers/toggle_map_reducer";
 
 const reducers = combineReducers({
@@ -21,6 +22,7 @@ const reducers = combineReducers({
   searchedFlat: searchFlatReducer,
   sortedFlats: sortFlatsReducer,
   showMap: toggleMapReducer,
+  selectedLocation: centerMapWithLocationReducer,
 });
 
 const App = () => (

@@ -13,18 +13,20 @@ import {
 
 import { selectFlat } from "../../actions";
 import googleMapCustomSkin from "../../constants/google_map_skin";
+import { setCoordinatesWithLocation } from "../../constants/locations_coordinates";
 
 const MapContainer = props =>{
-  const { selectFlat, selectedFlat, listedFlats, showMap } = props;
+  const { selectFlat, selectedFlat, listedFlats, showMap, selectedLocation } = props;
 
   const onClick = marker => {
-    selectFlat(marker)
-  }
+    selectFlat(marker);
+  };
 
   return showMap ? (
     <div className="google-map">
       <MapView
         selectedMarker={selectedFlat}
+        selectedLocation={selectedLocation}
         markers={listedFlats}
         onClick={onClick}
         googleMapURL={process.env.REACT_APP_GOOGLE_API_KEY}
@@ -37,17 +39,21 @@ const MapContainer = props =>{
 };
 
 const MapView = compose(withScriptjs, withGoogleMap)(props => {
-  const { markers, onClick, selectedMarker } = props;
-  const [newCenter, setNewCenter] = useState({ lat: 48.868614, lng: 2.362222 })
+  const { markers, onClick, selectedMarker, selectedLocation } = props;
+  const [newCenter, setNewCenter] = useState({ lat: 48.868614, lng: 2.362222 });
 
   // center on pin if only one flat is selected, else center to whole paris area
   useEffect(() => {
     if (markers.length === 1) {
-      setNewCenter({ lat: markers[0].lat, lng: markers[0].lng })
+      setNewCenter({ lat: markers[0].lat, lng: markers[0].lng });
     } else {
-      setNewCenter({ lat: 48.868614, lng: 2.362222 })
-    }
-  }, [markers]);
+      if (selectedLocation) {
+        setCoordinatesWithLocation(selectedLocation, setNewCenter);
+      } else {
+        setNewCenter({ lat: 48.868614, lng: 2.362222 });
+      };
+    };
+  }, [markers, selectedLocation]);
 
   return (
     <GoogleMap 
@@ -56,8 +62,7 @@ const MapView = compose(withScriptjs, withGoogleMap)(props => {
       center={newCenter}
       defaultCenter={{ lat: 48.868614, lng: 2.362222 }}>
       {markers.map(marker => {
-        const onMarkerClick = onClick.bind(this, marker)
-
+        const onMarkerClick = onClick.bind(this, marker);
         return (
           <Marker
             key={marker.id}
@@ -89,6 +94,7 @@ const mapStateToProps = state => {
   return {
     selectedFlat: state.selectedFlat,
     showMap: state.showMap,
+    selectedLocation: state.selectedLocation,
   };
 };
 

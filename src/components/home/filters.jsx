@@ -5,12 +5,18 @@ import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import Select from 'react-select';
 
-import { setFlats, searchFlat, sortFlats, toggleMap } from "../../actions";
+import { 
+  setFlats,
+  searchFlat, 
+  sortFlats,
+  toggleMap,
+  centerMapWithLocation,
+} from "../../actions";
 import { initArrOptions, initTypeOptions } from "../../constants/filter_options";
 
 
 const SearchByName = props => {
-  const { flats, searchFlat, sortFlats, toggleMap, showMap } = props;
+  const { flats, searchFlat, centerMapWithLocation, sortFlats, toggleMap, showMap } = props;
   const [arr, setArr] = useState("Tous les arr.");
   const [type, setType] = useState("Toutes les cuisines");
   const [searchedFlat, setSearchedFlat] = useState(null);
@@ -33,6 +39,7 @@ const SearchByName = props => {
   const filterByArr = (arr) => {
     setSearchedFlat(null);
     searchFlat(null);
+    centerMapWithLocation(arr);
 
     // sort flats according to location
     const sortedFlats = [...flats].filter(val => {
@@ -70,11 +77,12 @@ const SearchByName = props => {
   const filterByType = (type) => {
     setSearchedFlat(null);
     searchFlat(null);
+    centerMapWithLocation(null);
 
     // sort flats according to type
     const sortedFlats = [...flats].filter(val => {
       if (val.type) {
-        return val.type === type
+        return val.type === type;
       } else return null;
     });
 
@@ -83,7 +91,7 @@ const SearchByName = props => {
     sortedFlats.forEach(flat => {
       arrOptions.push(flat.arr);
     });
-    const uniqueItems = [...new Set(arrOptions)]
+    const uniqueItems = [...new Set(arrOptions)];
     uniqueItems.sort((a, b) => a - b);
     const newArrOptions = [];
     uniqueItems.forEach(itm => {
@@ -102,23 +110,23 @@ const SearchByName = props => {
     } else {
       sortFlats(sortedFlats);
     };
-  }
+  };
 
   const handleArrChange = e => {
     const selectedArr = e.value;
     setArr(selectedArr);
     filterByArr(selectedArr);
-  }
+  };
 
   const handleTypeChange = e => {
     const selectedType = e.value;
     setType(selectedType);
     filterByType(selectedType);
-  }
+  };
 
   const handleToggleMap = () => {
     toggleMap(showMap)
-  }
+  };
 
   const reinitializeFilters = () => {
     // empty autocomplete input
@@ -128,15 +136,18 @@ const SearchByName = props => {
     // resort flats by rate
     sortFlats([]);
     // display all flats
-    setFlats()
+    setFlats();
 
     // reinit filter options
     setTypeOptions(initTypeOptions);
     setArrOptions(initArrOptions);
     // set default values
-    setArr("Tous les arr.")
-    setType("Toutes les cuisines")
-  }
+    setArr("Tous les arr.");
+    setType("Toutes les cuisines");
+
+    // reset map location
+    centerMapWithLocation(null);
+  };
 
   return (
     <div className="filters">
@@ -195,7 +206,7 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => {
-  return bindActionCreators({ setFlats, searchFlat, sortFlats, toggleMap }, dispatch);
+  return bindActionCreators({ setFlats, searchFlat, sortFlats, toggleMap, centerMapWithLocation }, dispatch);
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(SearchByName);

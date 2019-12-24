@@ -81,8 +81,8 @@ export default [
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat5.jpg",
     price: "€",
     price_digit: 1,
-    lat: 48.8660381,
-    lng: 2.394347
+    lat: 48.8596072,
+    lng: 2.3490559
   },
   {
     name: "Café de l'Industrie",
@@ -132,8 +132,8 @@ export default [
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat3.jpg",
     price: "€€",
     price_digit: 2,
-    lat: 48.885312,
-    lng: 2.341225
+    lat: 48.8581643,
+    lng: 2.356082
   },
   {
     name: "Starbucks - Echelle",
@@ -166,8 +166,8 @@ export default [
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat5.jpg",
     price: "€€",
     price_digit: 2,
-    lat: 48.906114699999996,
-    lng: 2.3842931
+    lat: 48.846881,
+    lng: 2.3453893
   },
   {
     name: "Galway Irish Pub",
@@ -353,8 +353,8 @@ export default [
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat4.jpg",
     price: "€",
     price_digit: 1,
-    lat: 48.8657664,
-    lng: 2.3736588
+    lat: 48.8478135,
+    lng: 2.3511126
   },
   {
     name: "The Beast",
@@ -506,8 +506,8 @@ export default [
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
     price: "€",
     price_digit: 1,
-    lat: 48.882642399999995,
-    lng: 2.3738259
+    lat: 48.8731098,
+    lng: 2.3547136
   },
   {
     name: "Hank Burger - Archives",
@@ -557,8 +557,8 @@ export default [
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
     price: "€",
     price_digit: 1,
-    lat: 48.875854,
-    lng: 2.3783156
+    lat: 48.8654426,
+    lng: 2.3760905
   },
   {
     name: "Buddha Bar",
@@ -727,8 +727,8 @@ export default [
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
     price: "€€€",
     price_digit: 3,
-    lat: 48.8655057,
-    lng: 2.2476549
+    lat: 48.8546237,
+    lng: 2.3379059
   },
   {
     name: "Paris New York - Marais",
@@ -914,8 +914,8 @@ export default [
       "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
     price: "€€€",
     price_digit: 3,
-    lat: 48.8815105,
-    lng: 2.3578639999999997
+    lat: 48.8406227,
+    lng: 2.2886894
   },
   {
     name: "Dilia",

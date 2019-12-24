@@ -28,6 +28,13 @@ export function sortFlats(flats) {
   };
 };
 
+export function centerMapWithLocation(location) {
+  return {
+    type: "CENTER_MAP_WITH_LOCATION",
+    payload: location
+  };
+};
+
 export function toggleMap(boolean) {
   return {
     type: "TOGGLE_MAP",
