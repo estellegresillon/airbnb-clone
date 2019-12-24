@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 import ScrollIntoView from 'react-scroll-into-view'
 
 import Badge from "../common/badge";
@@ -29,14 +30,15 @@ const keyList = [
   { selector: "#fa-mug-hot", icon: "fas fas fa-mug-hot", description: "Le meilleur torréfacteur" },
 ]
 
-const Keys = () => {
+const Keys = props => {
+  const { showListingAwards } = props;
   // hook to click outside div to close it
   const { ref, isComponentVisible, setIsComponentVisible } = useComponentVisible(false);
 
-  return (
+  return showListingAwards ? (
     <div className="keys-wrapper">
       <div className="selection-button" onClick={() => setIsComponentVisible(true)}> 
-        Sélection <i className="fas fa-chevron-down" />
+        Awards <i className="fas fa-chevron-down" />
       </div>
       {isComponentVisible &&
         <div ref={ref} className="filter-selection-wrapper">
@@ -49,7 +51,13 @@ const Keys = () => {
           })}
         </div>}
     </div>
-  )
+  ) : null
 }
 
-export default Keys;
+const mapStateToProps = state => {
+  return { 
+    showListingAwards: state.showListingAwards,
+  };
+};
+
+export default connect(mapStateToProps)(Keys);

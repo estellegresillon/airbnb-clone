@@ -35,6 +35,13 @@ export function centerMapWithLocation(location) {
   };
 };
 
+export function toggleListingAwards(boolean) {
+  return {
+    type: "TOGGLE_LISTING_AWARDS",
+    payload: boolean
+  };
+};
+
 export function toggleMap(boolean) {
   return {
     type: "TOGGLE_MAP",

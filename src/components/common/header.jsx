@@ -11,8 +11,8 @@ const Header = () => (
       </Link>
     </div>
     <div className="header-right">
-      <div className="our-selection">Notre sélection</div>
-      <div className="newsletter">Newsletter</div>
+      <div className="our-selection">Les awards</div>
+      <div className="newsletter">La newsletter</div>
       <div className="subscribe-pro">Ajouter un resto</div>
       <div className="about">Le lab</div>
     </div>

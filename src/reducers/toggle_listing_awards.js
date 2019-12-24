@@ -4,8 +4,8 @@ export default function(state, action) {
   };
 
   switch (action.type) {
-    case "TOGGLE_MAP":
-      return !action.payload;
+    case "TOGGLE_LISTING_AWARDS":
+      return action.payload;
     default:
       return state;
   };

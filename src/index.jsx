@@ -15,6 +15,7 @@ import searchFlatReducer from "./reducers/search_flat_reducer";
 import sortFlatsReducer from "./reducers/sort_flats_reducer";
 import centerMapWithLocationReducer from "./reducers/center_map_with_location";
 import toggleMapReducer from "./reducers/toggle_map_reducer";
+import toggleListingAwardsReducer from "./reducers/toggle_listing_awards";
 
 const reducers = combineReducers({
   flats: flatsReducer,
@@ -23,6 +24,7 @@ const reducers = combineReducers({
   sortedFlats: sortFlatsReducer,
   showMap: toggleMapReducer,
   selectedLocation: centerMapWithLocationReducer,
+  showListingAwards: toggleListingAwardsReducer,
 });
 
 const App = () => (

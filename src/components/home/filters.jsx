@@ -11,12 +11,13 @@ import {
   sortFlats,
   toggleMap,
   centerMapWithLocation,
+  toggleListingAwards,
 } from "../../actions";
 import { initArrOptions, initTypeOptions } from "../../constants/filter_options";
 
 
 const SearchByName = props => {
-  const { flats, searchFlat, centerMapWithLocation, sortFlats, toggleMap, showMap } = props;
+  const { flats, searchFlat, centerMapWithLocation, toggleListingAwards, sortFlats, toggleMap, showMap } = props;
   const [arr, setArr] = useState("Tous les arr.");
   const [type, setType] = useState("Toutes les cuisines");
   const [searchedFlat, setSearchedFlat] = useState(null);
@@ -24,15 +25,16 @@ const SearchByName = props => {
   const [arrOptions, setArrOptions] = useState(initArrOptions);
 
   const handleSearchChange = (event, value) => {
-    setSearchedFlat(value)
+    setSearchedFlat(value);
     setArr("Tous les arr.");
     setType("Toutes les cuisines");
+    toggleListingAwards(false);
     if (value) {
       // put in an array to map on it on other components
       searchFlat([value]);
     } else {
-      searchFlat(null)
-      setFlats()
+      searchFlat(null);
+      setFlats();
     }
   }
 
@@ -40,6 +42,7 @@ const SearchByName = props => {
     setSearchedFlat(null);
     searchFlat(null);
     centerMapWithLocation(arr);
+    toggleListingAwards(false);
 
     // sort flats according to location
     const sortedFlats = [...flats].filter(val => {
@@ -78,6 +81,7 @@ const SearchByName = props => {
     setSearchedFlat(null);
     searchFlat(null);
     centerMapWithLocation(null);
+    toggleListingAwards(false);
 
     // sort flats according to type
     const sortedFlats = [...flats].filter(val => {
@@ -147,6 +151,9 @@ const SearchByName = props => {
 
     // reset map location
     centerMapWithLocation(null);
+
+    // show awards selection again
+    toggleListingAwards(true);
   };
 
   return (
@@ -206,7 +213,7 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => {
-  return bindActionCreators({ setFlats, searchFlat, sortFlats, toggleMap, centerMapWithLocation }, dispatch);
+  return bindActionCreators({ setFlats, searchFlat, sortFlats, toggleMap, centerMapWithLocation, toggleListingAwards }, dispatch);
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(SearchByName);

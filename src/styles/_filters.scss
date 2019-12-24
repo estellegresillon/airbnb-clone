@@ -126,7 +126,7 @@
   font-size: 14px;
 
   i { 
-    margin-left: 10px;
+    margin-left: 2px;
     cursor: pointer;
 
     &:hover { opacity: 0.6; }
@@ -139,21 +139,27 @@
     margin-right: 20px;
 
     .selection-button {
-      padding: 10px;
+      padding: 3px 6px;
       border-radius: 5px;
       cursor: pointer;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      font-size: 12px;
+      background-color: #ffb0be;
+      color: #fff;
 
       &:hover {
         transition: all 0.7s ease;
-        background-color: #f7f7f7;
+        background-color: #ff8fbe;
       }
     }
   }
 
   .filter-selection-wrapper {
     position: absolute;
-    right: 40px;
-    top: 40px;
+    right: 20px;
+    top: 43px;
     z-index: 998;
     display: flex;
     flex-wrap: wrap;
