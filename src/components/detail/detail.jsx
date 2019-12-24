@@ -29,8 +29,19 @@ const Detail = props => {
   }, [location.flat, flats, match.params.id])
 
   return flat ? (
-    <div>
-      {flat.name}
+    <div className="detail-page-wrapper">
+      <div 
+        className="detail-page-big-img"
+        style={{ 
+          background: `url(${flat.imageUrl})`,
+          marginRight: "20px",
+        }}
+      />
+      <div className="detail-page-content">
+        <div className="detail-page-title">
+          {flat.name}
+        </div>
+      </div>
     </div>
   ) :
   <div>no flat corresponding</div>

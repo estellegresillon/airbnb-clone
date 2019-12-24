@@ -1,0 +1,17 @@
+.detail-page-wrapper {
+  position: relative;
+  display: flex;
+
+  .detail-page-big-img {
+    width: 20%;
+    height: calc(100vh - 60px);
+  }
+
+  .detail-page-title {
+    position: absolute;
+    left: 17%;
+    margin-top: 20px;
+    font-size: 48px;
+    font-weight: 700;
+  }
+}
