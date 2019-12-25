@@ -40,11 +40,14 @@
     justify-content: flex-end;
     text-align: end;
 
-    .about { margin-left: 20px; }
-
     div {
-      margin-left: 20px;
+      margin-left: 30px;
       cursor: pointer;
+      font-size: 10px;
+      text-transform: uppercase;
+      font-weight: 700;
+      opacity: 0.5;
+      letter-spacing: 1px;
       
       &:hover { color: #ffb0be; }
     }

@@ -159,6 +159,7 @@ const SearchByName = props => {
   return (
     <div className="filters">
       <div className="filters-left">
+        <i className="fas fa-search" />
         <Autocomplete
           id="search-by-name"
           options={flats}
