@@ -14,11 +14,11 @@ const Detail = props => {
     if (!location.restaurant) {
       setRestaurants(); 
     }
-  }, [location.restaurant, setRestaurants])
+  }, [location.restaurant, setRestaurants]);
 
   useEffect(() => {
     if (location.restaurant) {
-      setRestaurant(location.restaurant)
+      setRestaurant(location.restaurant);
     } else {
       const detailRestaurant = [...restaurants].filter(val => {
         if (val.id) {
@@ -28,7 +28,7 @@ const Detail = props => {
   
       setRestaurant(detailRestaurant[0]);
     }
-  }, [location.restaurant, restaurants, match.params.id])
+  }, [location.restaurant, restaurants, match.params.id]);
 
   return restaurant ? (
     <div className="detail-page-wrapper">

@@ -1,0 +1,14 @@
+.awards-page-wrapper {
+  position: relative;
+  display: flex;
+
+  .awards-page-big-img {
+    width: 45%;
+    height: calc(100vh - 60px);
+  }
+
+  .awards-listing {
+    position: relative;
+    width: 55%;
+  }
+}
