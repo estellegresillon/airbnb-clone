@@ -11,7 +11,9 @@ const Header = () => (
       </Link>
     </div>
     <div className="header-right">
-      <div className="our-selection">Les awards</div>
+      <Link to="/awards">
+        <div className="our-selection">Les awards</div>
+      </Link>
       <div className="newsletter">La newsletter</div>
       <div className="subscribe-pro">Ajouter un resto</div>
       <div className="about">Le lab</div>

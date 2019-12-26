@@ -8,6 +8,7 @@ import "./styles/application.scss";
 import Home from "./components/home";
 import Header from "./components/common/header";
 import Detail from "./components/detail";
+import Awards from "./components/awards";
 
 import restaurantsReducer from "./reducers/restaurants_reducer";
 import selectedRestaurantReducer from "./reducers/selected_restaurant_reducer";
@@ -30,6 +31,7 @@ const App = () => (
     <React.Fragment>
       <Header />
       <Route exact path="/" render={() => <Redirect to="/restaurants" />} />
+      <Route exact path="/awards" component={Awards} />
       <Route exact path="/restaurants" component={Home} />
       <Route exact path="/restaurants/:id" component={Detail} />
     </React.Fragment>

@@ -47,7 +47,7 @@ const Detail = props => {
     </div>
   ) :
   <div>no restaurant corresponding</div>
-}
+};
 
 const mapStateToProps = state => {
   return {
