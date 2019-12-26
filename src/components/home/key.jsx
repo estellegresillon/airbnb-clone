@@ -1,27 +1,31 @@
-import React from "react";
-import { connect } from "react-redux";
+import React, { useState, useEffect } from "react";
 import ScrollIntoView from 'react-scroll-into-view';
 
 import Badge from "../common/badge";
 import { useComponentVisible } from "../../hooks/useRef";
-import { keyList } from "../../constants/key_list";
 
+// key = légende
 const Key = props => {
-  const { showListingAwards } = props;
-  // hook to click outside div to close it
+  const { listedFlats } = props;
   const { ref, isComponentVisible, setIsComponentVisible } = useComponentVisible(false);
+  const [flatsWithAward, setFlatsWithAward] = useState([]);
 
-  return showListingAwards ? (
+  useEffect(() => {
+    const awards = listedFlats.filter(flat => flat.award);
+    setFlatsWithAward(awards);
+  }, [listedFlats]);
+
+  return flatsWithAward.length > 0 ? (
     <div className="keys-wrapper">
       <div className="selection-button" onClick={() => setIsComponentVisible(true)}> 
         Awards <i className="fas fa-chevron-down" />
       </div>
       {isComponentVisible &&
         <div ref={ref} className="filter-selection-wrapper">
-          {keyList.map(key => {
+          {flatsWithAward.map((flat, i) => {
             return (
-              <ScrollIntoView key={key.selector} selector={key.selector}>
-                <Badge icon={key.icon} description={key.description} />
+              <ScrollIntoView key={i} selector={flat.award.selector}>
+                <Badge icon={flat.award.icon} description={flat.award.description} />
               </ScrollIntoView>
             )
           })}
@@ -30,10 +34,4 @@ const Key = props => {
   ) : null;
 };
 
-const mapStateToProps = state => {
-  return { 
-    showListingAwards: state.showListingAwards,
-  };
-};
-
-export default connect(mapStateToProps)(Key);
+export default Key;

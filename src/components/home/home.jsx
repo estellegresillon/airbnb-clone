@@ -45,7 +45,7 @@ const Home = props => {
           {listNumber}
           {listNumber === 1 ? " résultat correspond à votre recherche." : " résultats correspondent à votre recherche."}
         </div>
-        <Key />
+        <Key listedFlats={listedFlats} />
       </div>
       <div className="main-view">
         <FlatList listedFlats={listedFlats} />
