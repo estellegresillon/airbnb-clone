@@ -6,26 +6,26 @@ import { useComponentVisible } from "../../hooks/useRef";
 
 // key = légende
 const Key = props => {
-  const { listedFlats } = props;
+  const { listedRestaurants } = props;
   const { ref, isComponentVisible, setIsComponentVisible } = useComponentVisible(false);
-  const [flatsWithAward, setFlatsWithAward] = useState([]);
+  const [restaurantsWithAward, setRestaurantsWithAward] = useState([]);
 
   useEffect(() => {
-    const awards = listedFlats.filter(flat => flat.award);
-    setFlatsWithAward(awards);
-  }, [listedFlats]);
+    const awards = listedRestaurants.filter(restaurant => restaurant.award);
+    setRestaurantsWithAward(awards);
+  }, [listedRestaurants]);
 
-  return flatsWithAward.length > 0 ? (
+  return restaurantsWithAward.length > 0 ? (
     <div className="keys-wrapper">
       <div className="selection-button" onClick={() => setIsComponentVisible(true)}> 
         Awards <i className="fas fa-chevron-down" />
       </div>
       {isComponentVisible &&
         <div ref={ref} className="filter-selection-wrapper">
-          {flatsWithAward.map((flat, i) => {
+          {restaurantsWithAward.map(restaurant => {
             return (
-              <ScrollIntoView key={i} selector={flat.award.selector}>
-                <Badge icon={flat.award.icon} description={flat.award.description} />
+              <ScrollIntoView key={restaurant.award.scroll} selector={`#${restaurant.award.scroll}`}>
+                <Badge icon={restaurant.award.icon} description={restaurant.award.description} />
               </ScrollIntoView>
             )
           })}

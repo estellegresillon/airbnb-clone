@@ -3,8 +3,8 @@ export default function(state, action) {
     return [];
   };
 
-  const sortByRate = (flats) => {
-    const sortedByRate = [...flats].sort((a, b) => {
+  const sortByRate = (restaurants) => {
+    const sortedByRate = [...restaurants].sort((a, b) => {
       if (a.rate < b.rate) return 1;
       if (a.rate > b.rate) return -1;
       return 0;
@@ -14,7 +14,7 @@ export default function(state, action) {
   }
   
   switch (action.type) {
-    case "SET_FLATS":
+    case "SET_RESTAURANTS":
       return sortByRate(action.payload);
     default:
       return state;

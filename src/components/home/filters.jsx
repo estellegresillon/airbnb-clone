@@ -6,9 +6,9 @@ import Autocomplete from '@material-ui/lab/Autocomplete';
 import Select from 'react-select';
 
 import { 
-  setFlats,
-  searchFlat, 
-  sortFlats,
+  setRestaurants,
+  searchRestaurant, 
+  sortRestaurants,
   toggleMap,
   centerMapWithLocation,
   toggleListingAwards,
@@ -17,35 +17,35 @@ import { initArrOptions, initTypeOptions } from "../../constants/filter_options"
 
 
 const SearchByName = props => {
-  const { flats, searchFlat, centerMapWithLocation, toggleListingAwards, sortFlats, toggleMap, showMap } = props;
+  const { restaurants, searchRestaurant, centerMapWithLocation, toggleListingAwards, sortRestaurants, toggleMap, showMap } = props;
   const [arr, setArr] = useState("Tous les arr.");
   const [type, setType] = useState("Toutes les cuisines");
-  const [searchedFlat, setSearchedFlat] = useState(null);
+  const [searchedRestaurant, setSearchedRestaurant] = useState(null);
   const [typeOptions, setTypeOptions] = useState(initTypeOptions);
   const [arrOptions, setArrOptions] = useState(initArrOptions);
 
   const handleSearchChange = (event, value) => {
-    setSearchedFlat(value);
+    setSearchedRestaurant(value);
     setArr("Tous les arr.");
     setType("Toutes les cuisines");
     toggleListingAwards(false);
     if (value) {
       // put in an array to map on it on other components
-      searchFlat([value]);
+      searchRestaurant([value]);
     } else {
-      searchFlat(null);
-      setFlats();
+      searchRestaurant(null);
+      setRestaurants();
     }
   }
 
   const filterByArr = (arr) => {
-    setSearchedFlat(null);
-    searchFlat(null);
+    setSearchedRestaurant(null);
+    searchRestaurant(null);
     centerMapWithLocation(arr);
     toggleListingAwards(false);
 
-    // sort flats according to location
-    const sortedFlats = [...flats].filter(val => {
+    // sort Restaurants according to location
+    const sortedRestaurants = [...restaurants].filter(val => {
       if (val.arr) {
         return val.arr === arr;
       } else return null;
@@ -53,8 +53,8 @@ const SearchByName = props => {
 
     // we want to show only available cuisine type in the list
     const typeOptions = [];
-    sortedFlats.forEach(flat => {
-      typeOptions.push(flat.type);
+    sortedRestaurants.forEach(restaurant => {
+      typeOptions.push(restaurant.type);
     });
     const uniqueItems = [...new Set(typeOptions)]
     uniqueItems.sort();
@@ -66,25 +66,25 @@ const SearchByName = props => {
 
     // filter only the available locations
     if (type !== "Toutes les cuisines") {
-      const sortFlatsByType = [...sortedFlats].filter(val => {
+      const sortRestaurantsByType = [...sortedRestaurants].filter(val => {
         if (val.type) {
           return val.type === type;
         } else return null;
       });
-      sortFlats(sortFlatsByType);
+      sortRestaurants(sortRestaurantsByType);
     } else {
-      sortFlats(sortedFlats);
+      sortRestaurants(sortedRestaurants);
     };
   }
 
   const filterByType = (type) => {
-    setSearchedFlat(null);
-    searchFlat(null);
+    setSearchedRestaurant(null);
+    searchRestaurant(null);
     centerMapWithLocation(null);
     toggleListingAwards(false);
 
-    // sort flats according to type
-    const sortedFlats = [...flats].filter(val => {
+    // sort Restaurants according to type
+    const sortedRestaurants = [...restaurants].filter(val => {
       if (val.type) {
         return val.type === type;
       } else return null;
@@ -92,8 +92,8 @@ const SearchByName = props => {
 
     // we want to show only available location in the list
     const arrOptions = [];
-    sortedFlats.forEach(flat => {
-      arrOptions.push(flat.arr);
+    sortedRestaurants.forEach(restaurant => {
+      arrOptions.push(restaurant.arr);
     });
     const uniqueItems = [...new Set(arrOptions)];
     uniqueItems.sort((a, b) => a - b);
@@ -105,14 +105,14 @@ const SearchByName = props => {
 
     // filter only the available cuisine types
     if (arr !== "Tous les arr.") {
-      const sortFlatsByArr = [...sortedFlats].filter(val => {
+      const sortRestaurantsByArr = [...sortedRestaurants].filter(val => {
         if (val.arr) {
           return val.arr === arr;
         } else return null;
       });
-      sortFlats(sortFlatsByArr);
+      sortRestaurants(sortRestaurantsByArr);
     } else {
-      sortFlats(sortedFlats);
+      sortRestaurants(sortedRestaurants);
     };
   };
 
@@ -134,13 +134,13 @@ const SearchByName = props => {
 
   const reinitializeFilters = () => {
     // empty autocomplete input
-    searchFlat(null);
-    setSearchedFlat(null);
+    searchRestaurant(null);
+    setSearchedRestaurant(null);
 
-    // resort flats by rate
-    sortFlats([]);
-    // display all flats
-    setFlats();
+    // resort Restaurants by rate
+    sortRestaurants([]);
+    // display all Restaurants
+    setRestaurants();
 
     // reinit filter options
     setTypeOptions(initTypeOptions);
@@ -162,13 +162,13 @@ const SearchByName = props => {
         <i className="fas fa-search" />
         <Autocomplete
           id="search-by-name"
-          options={flats}
+          options={restaurants}
           getOptionLabel={option => option.name}
           style={{ width: "300px", marginRight: "10px"}}
-          value={searchedFlat}
+          value={searchedRestaurant}
           onChange={handleSearchChange}
           renderInput={params => (
-            <TextField {...params} style={{ width: "100%", marginRight: "20px", padding: "0px"}} value={searchedFlat} placeholder="Rechercher un nom de restaurant..." variant="outlined" fullWidth />
+            <TextField {...params} style={{ width: "100%", marginRight: "20px", padding: "0px"}} value={searchedRestaurant} placeholder="Rechercher un nom de restaurant..." variant="outlined" fullWidth />
           )}
         />
         <Select
@@ -208,13 +208,13 @@ const SearchByName = props => {
 
 const mapStateToProps = state => {
   return { 
-    flats: state.flats,
+    restaurants: state.restaurants,
     showMap: state.showMap,
   };
 };
 
 const mapDispatchToProps = dispatch => {
-  return bindActionCreators({ setFlats, searchFlat, sortFlats, toggleMap, centerMapWithLocation, toggleListingAwards }, dispatch);
+  return bindActionCreators({ setRestaurants, searchRestaurant, sortRestaurants, toggleMap, centerMapWithLocation, toggleListingAwards }, dispatch);
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(SearchByName);

@@ -1,30 +1,30 @@
-import flats from "../constants/flats";
+import restaurants from "../constants/restaurants";
 
-export function setFlats() {
+export function setRestaurants() {
   return {
-    type: "SET_FLATS",
-    payload: flats
+    type: "SET_RESTAURANTS",
+    payload: restaurants
   };
 };
 
-export function selectFlat(flat) {
+export function selectRestaurant(restaurant) {
   return {
-    type: "SELECT_FLAT",
-    payload: flat
+    type: "SELECT_RESTAURANT",
+    payload: restaurant
   };
 };
 
-export function searchFlat(flat) {
+export function searchRestaurant(restaurant) {
   return {
-    type: "SEARCH_FLAT",
-    payload: flat
+    type: "SEARCH_RESTAURANT",
+    payload: restaurant
   };
 };
 
-export function sortFlats(flats) {
+export function sortRestaurants(restaurants) {
   return {
-    type: "SORT_FLATS",
-    payload: flats
+    type: "SORT_RESTAURANTS",
+    payload: restaurants
   };
 };
 

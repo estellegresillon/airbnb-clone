@@ -9,22 +9,20 @@ import Home from "./components/home";
 import Header from "./components/common/header";
 import Detail from "./components/detail";
 
-import flatsReducer from "./reducers/flats_reducer";
-import selectedFlatReducer from "./reducers/selected_flat_reducer";
-import searchFlatReducer from "./reducers/search_flat_reducer";
-import sortFlatsReducer from "./reducers/sort_flats_reducer";
+import restaurantsReducer from "./reducers/restaurants_reducer";
+import selectedRestaurantReducer from "./reducers/selected_restaurant_reducer";
+import searchRestaurantReducer from "./reducers/search_restaurant_reducer";
+import sortRestaurantsReducer from "./reducers/sort_restaurants_reducer";
 import centerMapWithLocationReducer from "./reducers/center_map_with_location";
 import toggleMapReducer from "./reducers/toggle_map_reducer";
-import toggleListingAwardsReducer from "./reducers/toggle_listing_awards";
 
 const reducers = combineReducers({
-  flats: flatsReducer,
-  selectedFlat: selectedFlatReducer,
-  searchedFlat: searchFlatReducer,
-  sortedFlats: sortFlatsReducer,
+  restaurants: restaurantsReducer,
+  selectedRestaurant: selectedRestaurantReducer,
+  searchedRestaurant: searchRestaurantReducer,
+  sortedRestaurants: sortRestaurantsReducer,
   showMap: toggleMapReducer,
   selectedLocation: centerMapWithLocationReducer,
-  showListingAwards: toggleListingAwardsReducer,
 });
 
 const App = () => (

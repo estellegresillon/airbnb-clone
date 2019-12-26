@@ -2,54 +2,54 @@ import React, { useState, useEffect } from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 
-import FlatList from "./flat-list";
+import RestaurantList from "./restaurant-list";
 import Map from "./map";
 import Filters from "./filters";
 import Key from "./key";
 
-import { setFlats } from "../../actions";
+import { setRestaurants } from "../../actions";
 
 const Home = props => {
-  const { flats, setFlats, sortedFlats, searchedFlat } = props;
+  const { restaurants, setRestaurants, sortedRestaurants, searchedRestaurant } = props;
   const [listNumber, setListNumber] = useState(null);
-  const [listedFlats, setListedFlats] = useState(flats);
+  const [listedRestaurants, setListedRestaurants] = useState(restaurants);
 
-  // load flats and sort them
-  useEffect(() => { setFlats(); }, [setFlats]);
+  // load restaurants and sort them
+  useEffect(() => { setRestaurants(); }, [setRestaurants]);
 
-  // filters flats
+  // filters restaurants
   useEffect(() => {
-    // 1 - priority on autocomplete, displays only one flat
-    // 2 -  if not any flat is searched, display the filtered flats
-    // 3 - if not any flat is searched nor filtered, displays all flats
-    // never display 0 flats
-    if (searchedFlat) {
+    // 1 - priority on autocomplete, displays only one restaurant
+    // 2 -  if not any restaurant is searched, display the filtered Restaurants
+    // 3 - if not any restaurant is searched nor filtered, displays all Restaurants
+    // never display 0 Restaurants
+    if (searchedRestaurant) {
       setListNumber(1)
-      setListedFlats(searchedFlat)
+      setListedRestaurants(searchedRestaurant)
     } else {
-      if (sortedFlats.length) {
-        setListNumber(sortedFlats.length)
-        setListedFlats(sortedFlats)
+      if (sortedRestaurants.length) {
+        setListNumber(sortedRestaurants.length)
+        setListedRestaurants(sortedRestaurants)
       } else {
-        setListNumber(flats.length)
-        setListedFlats(flats)
+        setListNumber(restaurants.length)
+        setListedRestaurants(restaurants)
       }
     }
-  }, [flats, sortedFlats, searchedFlat]);
+  }, [restaurants, sortedRestaurants, searchedRestaurant]);
 
   return (
     <>
       <Filters />
       <div className="counter-keys-wrapper">
-        <div className="flat-counter">
+        <div className="restaurant-counter">
           {listNumber}
-          {listNumber === 1 ? " résultat correspond à votre recherche." : " résultats correspondent à votre recherche."}
+          {listNumber === 1 ? " restaurant correspond à votre recherche." : " restaurants correspondent à votre recherche."}
         </div>
-        <Key listedFlats={listedFlats} />
+        <Key listedRestaurants={listedRestaurants} />
       </div>
       <div className="main-view">
-        <FlatList listedFlats={listedFlats} />
-        <Map listedFlats={listedFlats} />
+        <RestaurantList listedRestaurants={listedRestaurants} />
+        <Map listedRestaurants={listedRestaurants} />
       </div>
     </>
   );
@@ -57,14 +57,14 @@ const Home = props => {
 
 const mapStateToProps = state => {
   return { 
-    flats: state.flats,
-    searchedFlat: state.searchedFlat,
-    sortedFlats: state.sortedFlats
+    restaurants: state.restaurants,
+    searchedRestaurant: state.searchedRestaurant,
+    sortedRestaurants: state.sortedRestaurants
   };
 };
 
 const mapDispatchToProps = dispatch => {
-  return bindActionCreators({ setFlats }, dispatch);
+  return bindActionCreators({ setRestaurants }, dispatch);
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

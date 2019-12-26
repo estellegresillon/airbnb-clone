@@ -11,23 +11,23 @@ import {
   InfoWindow
 } from "react-google-maps"
 
-import { selectFlat } from "../../actions";
+import { selectRestaurant } from "../../actions";
 import googleMapCustomSkin from "../../constants/google_map_skin";
 import { setCoordinatesWithLocation } from "../../constants/locations_coordinates";
 
 const MapContainer = props =>{
-  const { selectFlat, selectedFlat, listedFlats, showMap, selectedLocation } = props;
+  const { selectRestaurant, selectedRestaurant, listedRestaurants, showMap, selectedLocation } = props;
 
   const onClick = marker => {
-    selectFlat(marker);
+    selectRestaurant(marker);
   };
 
   return showMap ? (
     <div className="google-map">
       <MapView
-        selectedMarker={selectedFlat}
+        selectedMarker={selectedRestaurant}
         selectedLocation={selectedLocation}
-        markers={listedFlats}
+        markers={listedRestaurants}
         onClick={onClick}
         googleMapURL={process.env.REACT_APP_GOOGLE_API_KEY}
         loadingElement={<div style={{ height: `100%` }} />}
@@ -42,7 +42,7 @@ const MapView = compose(withScriptjs, withGoogleMap)(props => {
   const { markers, onClick, selectedMarker, selectedLocation } = props;
   const [newCenter, setNewCenter] = useState({ lat: 48.868614, lng: 2.362222 });
 
-  // center on pin if only one flat is selected, else center to whole paris area
+  // center on pin if only one restaurant is selected, else center to whole paris area
   useEffect(() => {
     if (markers.length === 1) {
       setNewCenter({ lat: markers[0].lat, lng: markers[0].lng });
@@ -71,15 +71,15 @@ const MapView = compose(withScriptjs, withGoogleMap)(props => {
           >
             {selectedMarker === marker &&
               <InfoWindow style={{ padding: 0 }}>
-                <Link to={{pathname: `/restaurants/${marker.id}`, flat: marker}} target="_blank">
+                <Link to={{pathname: `/restaurants/${marker.id}`, restaurant: marker}} target="_blank">
                   <div className="marker-info-window">
-                    <img src={marker.imageUrl} alt="flat-preview" />
+                    <img src={marker.imageUrl} alt="restaurant-preview" />
                     <div className="marker-header">
                       <i className="fas fa-star" />
                       <span className="marker-rating">{marker.rate} ({marker.votes}+)</span>
                     </div>
-                    <div className="marker-flat-name">{marker.name}</div>
-                    <div className="marker-flat-type">{marker.type}</div>
+                    <div className="marker-restaurant-name">{marker.name}</div>
+                    <div className="marker-restaurant-type">{marker.type}</div>
                   </div>
                 </Link>
               </InfoWindow>}
@@ -92,14 +92,14 @@ const MapView = compose(withScriptjs, withGoogleMap)(props => {
 
 const mapStateToProps = state => {
   return {
-    selectedFlat: state.selectedFlat,
+    selectedRestaurant: state.selectedRestaurant,
     showMap: state.showMap,
     selectedLocation: state.selectedLocation,
   };
 };
 
 const mapDispatchToProps = dispatch => {
-  return bindActionCreators({ selectFlat }, dispatch);
+  return bindActionCreators({ selectRestaurant }, dispatch);
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(MapContainer);

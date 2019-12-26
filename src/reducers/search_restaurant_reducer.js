@@ -4,7 +4,7 @@ export default function(state, action) {
   };
 
   switch (action.type) {
-    case "SELECT_FLAT":
+    case "SEARCH_RESTAURANT":
       return action.payload;
     default:
       return state;

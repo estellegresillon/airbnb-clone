@@ -1,12 +1,12 @@
 ////////// ROWS
-.flat-list-with-rows {
+.restaurant-list-with-rows {
   position: relative;
   overflow: scroll;
   width: 45%;
 
   .grid-see-infos { display: none; }
 
-  .flat {
+  .restaurant {
     width: 100%;
     cursor: pointer;
   }
@@ -85,7 +85,7 @@
       margin-top: 10px;
     }
 
-    .card-flat-address {
+    .card-restaurant-address {
       font-size: 14px;
       margin-bottom: 25px;
     }
@@ -129,14 +129,14 @@
 }
 
 ////////// GRID
-.flat-list-with-grid {
+.restaurant-list-with-grid {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   padding: 20px;
   margin-top: -25px;
 
-  .flat {
+  .restaurant {
     position: relative;
     display: flex;
     background: #fff;
@@ -230,7 +230,7 @@
       // color: #ff4667;
     }
 
-    .card-flat-address {
+    .card-restaurant-address {
       position: absolute;
       font-size: 12px;
       margin: 0 8px;

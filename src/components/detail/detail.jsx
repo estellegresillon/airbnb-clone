@@ -2,61 +2,61 @@ import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
-import { setFlats } from "../../actions";
+import { setRestaurants } from "../../actions";
 
 const Detail = props => {
-  const { setFlats, flats, match, location } = props;
-  const [flat, setFlat] = useState({})
+  const { setRestaurants, restaurants, match, location } = props;
+  const [restaurant, setRestaurant] = useState({})
   
   // if a user arrives on the pageId directly 
-  // he doesn't get the flat object in the props so we execute these 2 hooks
+  // he doesn't get the restaurant object in the props so we execute these 2 hooks
   useEffect(() => { 
-    if (!location.flat) {
-      setFlats(); 
+    if (!location.restaurant) {
+      setRestaurants(); 
     }
-  }, [location.flat, setFlats])
+  }, [location.restaurant, setRestaurants])
 
   useEffect(() => {
-    if (location.flat) {
-      setFlat(location.flat)
+    if (location.restaurant) {
+      setRestaurant(location.restaurant)
     } else {
-      const detailFlat = [...flats].filter(val => {
+      const detailRestaurant = [...restaurants].filter(val => {
         if (val.id) {
           return val.id.toString() === match.params.id;
         } else return null;
       });
   
-      setFlat(detailFlat[0]);
+      setRestaurant(detailRestaurant[0]);
     }
-  }, [location.flat, flats, match.params.id])
+  }, [location.restaurant, restaurants, match.params.id])
 
-  return flat ? (
+  return restaurant ? (
     <div className="detail-page-wrapper">
       <div 
         className="detail-page-big-img"
         style={{ 
-          background: `url(${flat.imageUrl})`,
+          background: `url(${restaurant.imageUrl})`,
           marginRight: "20px",
         }}
       />
       <div className="detail-page-content">
         <div className="detail-page-title">
-          {flat.name}
+          {restaurant.name}
         </div>
       </div>
     </div>
   ) :
-  <div>no flat corresponding</div>
+  <div>no restaurant corresponding</div>
 }
 
 const mapStateToProps = state => {
   return {
-    flats: state.flats,
+    restaurants: state.restaurants,
   };
 };
 
 const mapDispatchToProps = dispatch => {
-  return bindActionCreators({ setFlats }, dispatch);
+  return bindActionCreators({ setRestaurants }, dispatch);
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Detail);
