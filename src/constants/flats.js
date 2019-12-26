@@ -133,7 +133,12 @@ export default [
     price: "€€",
     price_digit: 2,
     lat: 48.8581643,
-    lng: 2.356082
+    lng: 2.356082,
+    award: {
+      scroll: "fa-bacon",
+      icon: "fas fa-bacon",
+      description: "Le meilleur brunch",
+    }
   },
   {
     name: "Starbucks - Echelle",
@@ -201,7 +206,12 @@ export default [
     price: "€€",
     price_digit: 2,
     lat: 48.832321877319025,
-    lng: 2.373285810707961
+    lng: 2.373285810707961,
+    award: {
+      scroll: "fa-medal",
+      icon: "fas fa-medal",
+      description: "Le plus populaire"
+    }
   },
   {
     name: "Le Pavillon des Canaux",
@@ -456,7 +466,12 @@ export default [
     price: "€",
     price_digit: 1,
     lat: 48.866141,
-    lng: 2.3352886
+    lng: 2.3352886,
+    award: {
+      scroll: "fa-torii-gate",
+      icon: "fas fa-torii-gate",
+      description: "Le meilleur japonais",
+    }
   },
   {
     name: "Kintaro",
@@ -507,7 +522,12 @@ export default [
     price: "€",
     price_digit: 1,
     lat: 48.8731098,
-    lng: 2.3547136
+    lng: 2.3547136,
+    award: {
+      scroll: "fa-pizza-slice",
+      icon: "fas fa-pizza-slice",
+      description: "La meilleure pizza",
+    }
   },
   {
     name: "Hank Burger - Archives",
@@ -524,7 +544,12 @@ export default [
     price: "€",
     price_digit: 1,
     lat: 48.8778864,
-    lng: 2.3740273999999997
+    lng: 2.3740273999999997,
+    award: {
+      scroll: "fa-carrot",
+      icon: "fas fa-carrot",
+      description: "Le meilleur vegan",
+    }
   },
   {
     name: "B&M - Montmartre",
@@ -541,7 +566,12 @@ export default [
     price: "€",
     price_digit: 1,
     lat: 48.88458267731903,
-    lng: 2.3401479963116176
+    lng: 2.3401479963116176,
+    award: {
+      scroll: "fa-hamburger",
+      icon: "fas fa-hamburger",
+      description: "Le meilleur burger",
+    }
   },
   {
     name: "Bocamexa - Oberkampf",
@@ -558,7 +588,12 @@ export default [
     price: "€",
     price_digit: 1,
     lat: 48.8654426,
-    lng: 2.3760905
+    lng: 2.3760905,
+    award: {
+      scroll: "fa-pepper-hot",
+      icon: "fas fa-pepper-hot",
+      description: "Le meilleur méxicain",
+    }
   },
   {
     name: "Buddha Bar",
@@ -575,7 +610,12 @@ export default [
     price: "€€€",
     price_digit: 3,
     lat: 48.8679501,
-    lng: 2.3191997
+    lng: 2.3191997,
+    award: {
+      scroll: "fa-heart",
+      icon: "fas fa-heart",
+      description: "Notre coup de coeur",
+    }
   },
   {
     name: "L'Hôtel Amour",
@@ -592,7 +632,12 @@ export default [
     price: "€€€",
     price_digit: 3,
     lat: 48.8796402,
-    lng: 2.3372404
+    lng: 2.3372404,
+    award: {
+      scroll: "fa-umbrella-beach",
+      icon: "fas fa-umbrella-beach",
+      description: "La meilleure terrasse",
+    }
   },
   {
     name: "La Gare",
@@ -609,7 +654,12 @@ export default [
     price: "€€€",
     price_digit: 3,
     lat: 48.8581178,
-    lng: 2.2700956
+    lng: 2.2700956,
+    award: {
+      scroll: "fa-instagram",
+      icon: "fab fa-instagram",
+      description: "Le plus instagrammable",
+    }
   },
   {
     name: "Maison Landemaine - Oberkampf",
@@ -626,7 +676,12 @@ export default [
     price: "€€",
     price_digit: 2,
     lat: 48.8644638,
-    lng: 2.3693428
+    lng: 2.3693428,
+    award: {
+      scroll: "fa-birthday-cake",
+      icon: "fas fa-birthday-cake",
+      description: "La meilleure pâtisserie",
+    }
   },
   {
     name: "The Used Book Café (Merci)",
@@ -643,7 +698,12 @@ export default [
     price: "€€€",
     price_digit: 3,
     lat: 48.86081,
-    lng: 2.3647998
+    lng: 2.3647998,
+    award: {
+      scroll: "fa-book",
+      icon: "fas fa-book",
+      description: "Pour bouquiner ou travailler",
+    }
   },
   {
     name: "Le Nid - Cocon Ludique",
@@ -660,7 +720,12 @@ export default [
     price: "€",
     price_digit: 1,
     lat: 48.8644416,
-    lng: 2.3508495
+    lng: 2.3508495,
+    award: {
+      scroll: "fa-chess",
+      icon: "fas fa-chess",
+      description: "Jeux de sociétés",
+    }
   },
   {
     name: "Canal Poké - Saint-Martin",
@@ -677,7 +742,12 @@ export default [
     price: "€",
     price_digit: 1,
     lat: 48.8707991,
-    lng: 2.3662136
+    lng: 2.3662136,
+    award: {
+      scroll: "fa-leaf",
+      icon: "fas fa-leaf",
+      description: "Le meilleur poké",
+    }
   },
   {
     name: "Wunderbär",
@@ -694,7 +764,12 @@ export default [
     price: "€",
     price_digit: 1,
     lat: 48.8702946,
-    lng: 2.3617447
+    lng: 2.3617447,
+    award: {
+      scroll: "fa-hotdog",
+      icon: "fas fa-hotdog",
+      description: "Le meilleur de l'Allemagne",
+    }
   },
   {
     name: "Le Petit Cambodge",
@@ -762,7 +837,12 @@ export default [
     price: "€€",
     price_digit: 2,
     lat: 48.872055,
-    lng: 2.3481171
+    lng: 2.3481171,
+    award: {
+      scroll: "fa-sun",
+      icon: "fas fa-sun",
+      description: "Le meilleur brésilien",
+    }
   },
   {
     name: "Uma Nota",
@@ -796,7 +876,12 @@ export default [
     price: "€€",
     price_digit: 2,
     lat: 48.880912099999996,
-    lng: 2.3567792
+    lng: 2.3567792,
+    award: {
+      scroll: "fa-fish",
+      icon: "fas fa-fish",
+      description: "Le meilleur poisson",
+    }
   },
   {
     name: "Presto Fresco",
@@ -813,7 +898,12 @@ export default [
     price: "€€",
     price_digit: 2,
     lat: 48.863828,
-    lng: 2.345823
+    lng: 2.345823,
+    award: {
+      scroll: "fa-utensils",
+      icon: "fas fa-utensils",
+      description: "Le meilleur italien",
+    }
   },
   {
     name: "Café du Musée Jacquemart André",
@@ -830,7 +920,12 @@ export default [
     price: "€€€",
     price_digit: 3,
     lat: 48.8755313,
-    lng: 2.3103462
+    lng: 2.3103462,
+    award: {
+      scroll: "fa-crown",
+      icon: "fas fa-crown",
+      description: "Le plus chic",
+    }
   },
   {
     name: "Aki Boulangerie",
@@ -898,7 +993,12 @@ export default [
     price: "€€€",
     price_digit: 3,
     lat: 48.8290777,
-    lng: 2.3169412
+    lng: 2.3169412,
+    award: {
+      scroll: "fa-frog",
+      icon: "fas fa-frog",
+      description: "La meilleure cuisine française" 
+    }
   },
   {
     name: "Autour du Saumon",
@@ -932,7 +1032,12 @@ export default [
     price: "€€€",
     price_digit: 3,
     lat: 48.8686439,
-    lng: 2.3862279
+    lng: 2.3862279,
+    award: {
+      scroll: "fa-award",
+      icon: "fas fa-award",
+      description: "Le mieux noté",
+    }
   },
   {
     name: "An Di An Di",
@@ -983,7 +1088,12 @@ export default [
     price: "€€",
     price_digit: 2,
     lat: 48.8615741,
-    lng: 2.3782561
+    lng: 2.3782561,
+    award: {
+      scroll: "fa-mug-hot",
+      icon: "fas fa-mug-hot",
+      description: "Le meilleur torréfacteur",
+    }
   },
   {
     name: "Les Amis des Messina",
