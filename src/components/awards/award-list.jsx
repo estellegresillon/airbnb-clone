@@ -3,8 +3,9 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
 import { setRestaurants } from "../../actions";
+import AwardListItem from "./award-list-item";
 
-const Awards = props => {
+const AwardList = props => {
   const { setRestaurants, restaurants } = props;
   const [awardedRestaurants, setAwardedRestaurants] = useState([]);
   const [bg, setBg] = useState("https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg");
@@ -32,17 +33,16 @@ const Awards = props => {
           backgroundImage: `url(${bg})`,
           backgroundPosition: "center",
           transition: "0.5s all ease-in",
-          marginRight: "50px",
         }}
       />
       <div className="awards-listing">
-        {awardedRestaurants.map(restaurant => {
+        {awardedRestaurants.map((restaurant, i) => {
           return (
             <div 
               key={restaurant.id} 
               onMouseEnter={() => handleListItemHover(restaurant.imageUrl)}
               className="awarded-restaurant">
-              {restaurant.name}
+              <AwardListItem restaurant={restaurant} tabIndex={i} />
             </div>
           )
         })}
@@ -61,4 +61,4 @@ const mapDispatchToProps = dispatch => {
   return bindActionCreators({ setRestaurants }, dispatch);
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Awards);
+export default connect(mapStateToProps, mapDispatchToProps)(AwardList);
