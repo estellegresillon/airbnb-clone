@@ -24,6 +24,10 @@ const SearchByName = props => {
   const [typeOptions, setTypeOptions] = useState(initTypeOptions);
   const [arrOptions, setArrOptions] = useState(initArrOptions);
 
+  const scrollToTop = () => {
+    document.querySelector(".tab-number-0").scrollIntoView();
+  };
+
   const handleSearchChange = (event, value) => {
     setSearchedRestaurant(value);
     setArr("Tous les arr.");
@@ -36,6 +40,8 @@ const SearchByName = props => {
       searchRestaurant(null);
       setRestaurants();
     }
+
+    scrollToTop();
   }
 
   const filterByArr = (arr) => {
@@ -75,6 +81,8 @@ const SearchByName = props => {
     } else {
       sortRestaurants(sortedRestaurants);
     };
+
+    scrollToTop();
   }
 
   const filterByType = (type) => {
@@ -114,6 +122,8 @@ const SearchByName = props => {
     } else {
       sortRestaurants(sortedRestaurants);
     };
+
+    scrollToTop();
   };
 
   const handleArrChange = e => {
@@ -154,6 +164,9 @@ const SearchByName = props => {
 
     // show awards selection again
     toggleListingAwards(true);
+
+    // scroll to top only after the list is re-rendered
+    scrollToTop();
   };
 
   return (

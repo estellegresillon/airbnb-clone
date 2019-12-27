@@ -16,7 +16,7 @@ const Restaurant = props => {
   return (
     <>
       <div 
-        className={`restaurant card-container ${restaurant === selectedRestaurant ? "selected" : null}`}
+        className={`tab-number-${tabIndex} restaurant ${restaurant === selectedRestaurant ? "selected" : null}`}
         onClick={handleClick}
         role="link"
         id={`${restaurant.award ? restaurant.award.scroll : ""}`}
