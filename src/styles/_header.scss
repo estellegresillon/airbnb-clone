@@ -40,21 +40,23 @@
     justify-content: flex-end;
     text-align: end;
 
-    a { 
+    .menu-link { 
       text-decoration: none;
       color: grey;
-    }
-
-    div {
       margin-left: 30px;
       cursor: pointer;
       font-size: 10px;
       text-transform: uppercase;
       font-weight: 700;
-      color: grey;
       letter-spacing: 1px;
-      
-      &:hover { color: #ffb0be; }
+    }
+
+    .menu-link:hover { 
+      color: #ffb0be;
+    }
+
+    .selected-menu-item { 
+      color: #ffb0be;
     }
   }
 }

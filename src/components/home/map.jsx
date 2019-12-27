@@ -40,7 +40,7 @@ const MapContainer = props =>{
 
 const MapView = compose(withScriptjs, withGoogleMap)(props => {
   const { markers, onClick, selectedMarker, selectedLocation } = props;
-  const [newCenter, setNewCenter] = useState({ lat: 48.868614, lng: 2.362222 });
+  const [newCenter, setNewCenter] = useState({ lat: 48.863, lng: 2.34 });
 
   // center on pin if only one restaurant is selected, else center to whole paris area
   useEffect(() => {
@@ -50,17 +50,16 @@ const MapView = compose(withScriptjs, withGoogleMap)(props => {
       if (selectedLocation) {
         setCoordinatesWithLocation(selectedLocation, setNewCenter);
       } else {
-        setNewCenter({ lat: 48.868614, lng: 2.362222 });
+        setNewCenter({ lat: 48.863, lng: 2.34 });
       };
     };
   }, [markers, selectedLocation]);
 
   return (
     <GoogleMap 
-      defaultZoom={14}
+      defaultZoom={13}
       defaultOptions={{ styles: googleMapCustomSkin }}
-      center={newCenter}
-      defaultCenter={{ lat: 48.868614, lng: 2.362222 }}>
+      center={newCenter}>
       {markers.map(marker => {
         const onMarkerClick = onClick.bind(this, marker);
         return (

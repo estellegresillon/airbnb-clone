@@ -38,13 +38,7 @@ const Restaurant = props => {
               </div>
               <div className="card-header-rate"><i className="fas fa-star"></i> {restaurant.rate} ({restaurant.votes}+)</div>
             </div>
-            <h2>
-              {restaurant.name}
-              <span className="grid-see-infos">
-                Voir infos
-                <i className="fas fa-chevron-right" />
-              </span>
-            </h2>
+            <h2>{restaurant.name}</h2>
             <div className="card-restaurant-address">{restaurant.address}</div>
             {showMap && 
               <Link to={{pathname: `/restaurants/${restaurant.id}`, restaurant: restaurant}} target="_blank">
