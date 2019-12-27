@@ -1,7 +1,7 @@
 import React from "react";
 
 const Badge = props => {
-  const { icon, description, scroll } = props;
+  const { icon, description } = props;
 
   const setColor = icon => {
     if (icon === "fas fa-award") {
@@ -57,7 +57,7 @@ const Badge = props => {
   }
 
   return (
-    <div className="badge-wrapper" id={scroll || ""}>
+    <div className="badge-wrapper">
       <div className="icon-wrapper" style={iconWrapper}>
         <i className={icon} style={{ color: setColor(icon)}} />
       </div>

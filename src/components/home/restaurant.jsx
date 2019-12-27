@@ -19,7 +19,7 @@ const Restaurant = props => {
         className={`restaurant card-container ${restaurant === selectedRestaurant ? "selected" : null}`}
         onClick={handleClick}
         role="link"
-        id={`restaurant-${restaurant.id}`}
+        id={`${restaurant.award ? restaurant.award.scroll : ""}`}
         tabIndex={tabIndex + 1}
       >
         {!showMap && <Link to={{pathname: `/restaurants/${restaurant.id}`, restaurant: restaurant}} target="_blank"></Link>}
@@ -28,7 +28,6 @@ const Restaurant = props => {
           <img src={restaurant.imageUrl} alt="restaurant-overview" width="200" />
           {restaurant.award &&
             <Badge 
-              scroll={restaurant.award.scroll}
               icon={restaurant.award.icon}
               description={restaurant.award.description} />}
           <div className="card-description">
