@@ -12,8 +12,8 @@ import {
 } from "react-google-maps"
 
 import { selectRestaurant } from "../../actions";
-import googleMapCustomSkin from "../../constants/google_map_skin";
-import { setCoordinatesWithLocation } from "../../constants/locations_coordinates";
+import googleMapCustomSkin from "../../constants/google-map-skin";
+import { setCoordinatesWithLocation } from "../../constants/locations-coordinates";
 
 const MapContainer = props =>{
   const { selectRestaurant, selectedRestaurant, listedRestaurants, showMap, selectedLocation } = props;

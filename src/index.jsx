@@ -4,18 +4,18 @@ import { Provider } from "react-redux";
 import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
 import { createStore, combineReducers } from "redux";
 
-import "./styles/application.scss";
+import "./styles/index.scss";
 import Home from "./components/home";
 import Header from "./components/common/header";
 import Detail from "./components/detail";
 import Awards from "./components/awards";
 
-import restaurantsReducer from "./reducers/restaurants_reducer";
-import selectedRestaurantReducer from "./reducers/selected_restaurant_reducer";
-import searchRestaurantReducer from "./reducers/search_restaurant_reducer";
-import sortRestaurantsReducer from "./reducers/sort_restaurants_reducer";
-import centerMapWithLocationReducer from "./reducers/center_map_with_location";
-import toggleMapReducer from "./reducers/toggle_map_reducer";
+import restaurantsReducer from "./reducers/restaurants-reducer";
+import selectedRestaurantReducer from "./reducers/selected-restaurant-reducer";
+import searchRestaurantReducer from "./reducers/search-restaurant-reducer";
+import sortRestaurantsReducer from "./reducers/sort-restaurants-reducer";
+import centerMapWithLocationReducer from "./reducers/center-map-with-location";
+import toggleMapReducer from "./reducers/toggle-map-reducer";
 
 const reducers = combineReducers({
   restaurants: restaurantsReducer,

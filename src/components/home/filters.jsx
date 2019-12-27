@@ -13,7 +13,7 @@ import {
   centerMapWithLocation,
   toggleListingAwards,
 } from "../../actions";
-import { initArrOptions, initTypeOptions } from "../../constants/filter_options";
+import { initArrOptions, initTypeOptions } from "../../constants/filter-options";
 
 
 const SearchByName = props => {
