@@ -12,7 +12,7 @@
     width: 65%;
     height: calc(100vh - 60px);
     overflow: scroll;
-
+    
     .title-and-key {
       position: relative;
       display: flex;
@@ -30,10 +30,8 @@
     .awarded-restaurant {
       width: 100%;
       cursor: pointer;
-    }
-  
-    &:first-child {
-      border-top: 1px solid #f3f3f3;
+
+      &:nth-child(2) { border-top: 1px solid #f3f3f3; }
     }
   
     .awarded-restaurant:hover {
