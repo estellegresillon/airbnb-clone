@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import RestaurantList from "./restaurant-list";
 import Map from "./map";
 import Filters from "./filters";
-import Key from "./key";
+import Key from "../common/key";
 
 import { setRestaurants } from "../../actions";
 

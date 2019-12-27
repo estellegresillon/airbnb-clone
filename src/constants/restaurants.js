@@ -27,11 +27,16 @@ export default [
     votes: 500,
     id: 2,
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat2.jpg",
+      "http://www.infrarouge.fr/wp-content/uploads/2014/01/Justine-Table-%C2%A9Roberta-Valerio-3-INSTA.jpg",
     price: "€€",
     price_digit: 2,
     lat: 48.86586377731903,
-    lng: 2.378128593918682
+    lng: 2.378128593918682,
+    award: {
+      scroll: "fa-frog",
+      icon: "fas fa-frog",
+      description: "La meilleure cuisine française" 
+    }
   },
   {
     name: "Guilo Guilo",
@@ -994,11 +999,6 @@ export default [
     price_digit: 3,
     lat: 48.8290777,
     lng: 2.3169412,
-    award: {
-      scroll: "fa-frog",
-      icon: "fas fa-frog",
-      description: "La meilleure cuisine française" 
-    }
   },
   {
     name: "Autour du Saumon",

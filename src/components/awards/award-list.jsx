@@ -4,6 +4,7 @@ import { bindActionCreators } from "redux";
 
 import { setRestaurants } from "../../actions";
 import AwardListItem from "./award-list-item";
+import Key from "../common/key";
 
 const AwardList = props => {
   const { setRestaurants, restaurants } = props;
@@ -31,11 +32,16 @@ const AwardList = props => {
         className="awards-page-big-img"
         style={{ 
           backgroundImage: `url(${bg})`,
+          backgroundSize: "1100px",
           backgroundPosition: "center",
-          transition: "0.5s all ease-in",
+          transition: "0.5s all ease",
         }}
       />
       <div className="awards-listing">
+        <div className="title-and-key">
+          <h2 className="awards-listing-title">Les restaurants primés</h2>
+          <Key listedRestaurants={awardedRestaurants} />
+        </div>
         {awardedRestaurants.map((restaurant, i) => {
           return (
             <div 

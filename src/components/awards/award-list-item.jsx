@@ -10,13 +10,14 @@ const AwardListItem = props => {
     <div 
       className={`tab-number-${tabIndex} awarded-restaurant`}
       tabIndex={tabIndex + 1}
+      id={`${restaurant.award.scroll}`}
     >
       <div className="card">
         <img src={restaurant.imageUrl} alt="awarded-restaurant-overview" width="200" />
-        {restaurant.award &&
-          <Badge 
-            icon={restaurant.award.icon}
-            description={restaurant.award.description} />}
+        <Badge 
+          icon={restaurant.award.icon}
+          description={restaurant.award.description}
+        />
         <div className="card-description">
           <div className="card-header">
             <div className="card-header-type">
