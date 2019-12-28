@@ -91,14 +91,13 @@
       display: flex;
       width: 100%;
       align-items: center;
-      margin-left: 35px;
 
       .foodlab-review {
-        width: calc(35% - 70px);
-        font-size: 18px;
+        width: calc(32% - 70px);
+        font-size: 16px;
         font-weight: 100;
-        line-height: 38px;
-        margin: 35px;
+        line-height: 32px;
+        margin: 50px;
 
         .foodlab-review-title {
           font-size: 13px;
@@ -110,9 +109,10 @@
       }
 
       .customers-reviews {
-        width: 43%;
+        width: 30%;
         list-style: none;
         font-size: 14px;
+        padding: 0;
 
         li {
           margin-bottom: 20px;
@@ -135,9 +135,9 @@
       position: absolute;
       right: 0;
       bottom: 0;
-      width: 10%;
-      height: 40%;
-      background-color: #ffb0be;
+      width: 32%;
+      height: 58%;
+      background-color: #000;
       opacity: 0.3;
       z-index: 1;
     }
@@ -146,8 +146,8 @@
       position: absolute;
       right: 0;
       bottom: 0;
-      width: 10%;
-      height: 40%;
+      width: 32%;
+      height: 58%;
     }
   }
 }

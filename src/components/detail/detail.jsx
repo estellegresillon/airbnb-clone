@@ -41,8 +41,8 @@ const Detail = props => {
           style={{ 
             backgroundImage: `url(${restaurant.imageUrl})`,
             marginRight: "30px",
-            backgroundPosition: "center",
-            backgroundSize: "800px",
+            backgroundPosition: "left",
+            backgroundSize: "1000px",
           }}
         />
         <div className="detail-page-content">
@@ -75,7 +75,7 @@ const Detail = props => {
             {restaurant.reviews ? restaurant.reviews.map((review, i) => {
               return (
                 <li key={i}>
-                  <div className="review-date">- le {review.date} par anonyme :</div>
+            <div className="review-date">Review utilisateur {i + 1} - le {review.date} :</div>
                   <div className="review-comment">"{review.comment}"</div>
                 </li>
               )
@@ -87,8 +87,8 @@ const Detail = props => {
           className="detail-page-cropped-img"
           style={{ 
             backgroundImage: `url(${restaurant.imageUrl})`,
-            backgroundPosition: "center",
-            backgroundSize: "800px",
+            backgroundPosition: "right",
+            backgroundSize: "1000px",
           }}
         />
       </div>

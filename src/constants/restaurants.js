@@ -131,7 +131,7 @@ export default [
     address: "19 Rue Sainte-Croix de la Bretonnerie, 75004",
     phone: "01 42 76 91 37",
     arr: "4",
-    openingHours: "12h-5h / 19h-23h",
+    openingHours: "12h-15h / 19h-23h",
     id: 8,
     imageUrl:
       "http://benedict-paris.com/img/lightbox/plats/B-17.jpg",
@@ -1309,5 +1309,23 @@ export default [
     price_digit: 3,
     lat: 48.862451,
     lng: 2.363821,
+  },
+  {
+    name: "La Pâtisserie du Meurice par Cédric Grolet",
+    id: 71,
+    type: "Pâtisserie",
+    rate: 4.6,
+    votes: 500,
+    address: "6 Rue de Castiglione, 75001",
+    phone: "01 44 58 69 19",
+    arr: "1",
+    openingHours: "12h-15h",
+    menuLink: "https://www.dorchestercollection.com/wp-content/uploads/paris-le-meurice-patisserie-cedric-grolet-francais.pdf",
+    imageUrl:
+      "https://assets.letemps.ch/sites/default/files/styles/share/public/media/2018/05/25/file709hhtc8y0oabuqmgsh.jpg.jpeg?itok=qCTHjPAd",
+    price: "€€€€",
+    price_digit: 4,
+    lat: 48.8657239,
+    lng: 2.3279848
   },
 ];
