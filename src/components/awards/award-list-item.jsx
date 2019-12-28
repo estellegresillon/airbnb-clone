@@ -28,7 +28,7 @@ const AwardListItem = props => {
           </div>
           <h2>{restaurant.name}</h2>
           <div className="card-restaurant-address">{restaurant.address}</div>
-          <Link to={{pathname: `/restaurants/${restaurant.id}`, restaurant: restaurant}} target="_blank">
+          <Link to={{pathname: `/restaurants/${restaurant.id}`, restaurant: restaurant}}>
             <div className="card-see-infos">Voir infos</div>
           </Link>
         </div>

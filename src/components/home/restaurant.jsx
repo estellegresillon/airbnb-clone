@@ -21,7 +21,7 @@ const Restaurant = props => {
       id={`${restaurant.award ? restaurant.award.scroll : ""}`}
       tabIndex={tabIndex + 1}
     >
-      {!showMap && <Link to={{pathname: `/restaurants/${restaurant.id}`, restaurant: restaurant}} target="_blank"></Link>}
+      {!showMap && <Link to={{pathname: `/restaurants/${restaurant.id}`, restaurant: restaurant}}></Link>}
       <div className="card">
         {!showMap && <div className="grid-img-overlay" />}
         <img src={restaurant.imageUrl} alt="restaurant-overview" width="200" />
@@ -40,7 +40,7 @@ const Restaurant = props => {
           <h2>{restaurant.name}</h2>
           <div className="card-restaurant-address">{restaurant.address}</div>
           {showMap && 
-            <Link to={{pathname: `/restaurants/${restaurant.id}`, restaurant: restaurant}} target="_blank">
+            <Link to={{pathname: `/restaurants/${restaurant.id}`, restaurant: restaurant}}>
               <div className="card-see-infos">Voir infos</div>
             </Link>}
         </div>

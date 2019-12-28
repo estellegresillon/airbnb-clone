@@ -20,6 +20,9 @@ const Header = () => (
       <NavLink activeClassName="selected-menu-item" className="menu-link" to="/add-restaurant">
         <div>Proposer un resto</div>
       </NavLink>
+      <NavLink activeClassName="selected-menu-item" className="menu-link" to="/about">
+        <div>Foodlab ?</div>
+      </NavLink>
     </div>
   </div>
 );

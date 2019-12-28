@@ -10,8 +10,8 @@ const AwardList = props => {
   const { setRestaurants, restaurants } = props;
   const [awardedRestaurants, setAwardedRestaurants] = useState([]);
   const [bg, setBg] = useState("http://benedict-paris.com/img/lightbox/plats/B-17.jpg");
-  const [title, setImageTitle] = useState("");
-  const [subtitle, setImageSubtitle] = useState("");
+  const [title, setImageTitle] = useState("Les restaurants primés");
+  const [subtitle, setImageSubtitle] = useState("chaque semaine");
 
   useEffect(() => { setRestaurants(); }, [setRestaurants]);
   useEffect(() => {

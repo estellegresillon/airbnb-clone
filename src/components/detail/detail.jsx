@@ -32,17 +32,35 @@ const Detail = props => {
 
   return restaurant ? (
     <div className="detail-page-wrapper">
-      <div 
-        className="detail-page-big-img"
-        style={{ 
-          background: `url(${restaurant.imageUrl})`,
-          marginRight: "20px",
-        }}
-      />
-      <div className="detail-page-content">
-        <div className="detail-page-title">
-          {restaurant.name}
+      <div className="top-section">
+        <div 
+          className="detail-page-big-img"
+          style={{ 
+            backgroundImage: `url(${restaurant.imageUrl})`,
+            marginRight: "30px",
+            backgroundPosition: "right",
+            backgroundSize: "800px",
+          }}
+        />
+        <div className="detail-page-content">
+          <div className="detail-page-title">{restaurant.name}</div>
+          <div>{restaurant.type}</div>
         </div>
+      </div>
+
+      <div className="bottom-section">
+        <div className="detail-page-menu">
+          Avis
+        </div>
+        <div className="cropped-img-overlay" />
+        <div 
+          className="detail-page-cropped-img"
+          style={{ 
+            backgroundImage: `url(${restaurant.imageUrl})`,
+            backgroundPosition: "center",
+            backgroundSize: "800px",
+          }}
+        />
       </div>
     </div>
   ) :

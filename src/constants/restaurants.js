@@ -139,6 +139,22 @@ export default [
     price_digit: 2,
     lat: 48.8581643,
     lng: 2.356082,
+    menuLink: "http://benedict-paris.com/menus/jpg/menu-2018-2-fr.png",
+    foodlabreview: "Très bonne ambiance, personnel sympathique, souriant et professionnel au coeur du Marais. Large choix d'oeufs, burger, salades et viandes, tous aussi beaux que bons. Restaurant bien tenu et serveurs souriants. Les salles étaient pleines, ce qui indique un restaurant apprécié.",
+    reviews: [
+      { 
+        date: "12/2019",
+        comment: "Superbe endroit avec de très bons plats. Si vous aimez les œufs Benedict c’est un must-try, le service est très sympathique et le prix plutôt abordable. En plus ils font une formule le midi qui est très intéressante en terme de rapport qualité/prix."
+      },
+      { 
+        date: "10/2019",
+        comment: "Superbe « Benedict burger » à l’escalope de foie gras poêlé !"
+      },
+      { 
+        date: "07/2019",
+        comment: "Super endroit !! Plats magnifiques et délicieux à un prix raisonnable, snacking haut de gamme, présentations soignées. Un peu de monde en week-end parfois de l’attente mais cela vaut le détour!"
+      }
+    ],
     award: {
       scroll: "fa-bacon",
       icon: "fas fa-bacon",
