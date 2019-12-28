@@ -280,7 +280,7 @@ export default [
     openingHours: "7h30-2h",
     id: 16,
     imageUrl:
-      "https://fridg-front.s3.amazonaws.com/media/products/burrata_parme_y9Dlme5.JPG",
+      "https://www.discotheque-avignon.com/wp-content/uploads/2019/01/poisson-2.jpg",
     price: "€€",
     price_digit: 2,
     lat: 48.8706029,
@@ -454,7 +454,12 @@ export default [
     price: "€",
     price_digit: 1,
     lat: 48.8613189,
-    lng: 2.3650928
+    lng: 2.3650928,
+    award: {
+      scroll: "fa-award",
+      icon: "fas fa-award",
+      description: "Le restaurant de la semaine",
+    }
   },
   {
     name: "Aki",
@@ -467,7 +472,7 @@ export default [
     arr: "1",
     openingHours: "11h30-22h30",
     imageUrl:
-      "http://www.vanguardvoyager.com/wp-content/uploads/2015/11/IMG_8705.jpg",
+      "https://www.papillesetpupilles.fr/wp-content/uploads/2019/01/Okonomiyaki-%C2%A9-K321-shutterstock.jpg",
     price: "€",
     price_digit: 1,
     lat: 48.866141,
@@ -489,7 +494,7 @@ export default [
     arr: "2",
     openingHours: "11h30-22h30",
     imageUrl:
-      "https://resize-elle.ladmedia.fr/rcrop/1024,1024/img/var/plain_site/storage/images/elle-a-table/les-dossiers-de-la-redaction/news-de-la-redaction/ramen-soupe-3021633/60210679-3-fre-FR/Tout-savoir-sur-le-ramen.jpg",
+      "https://lh3.googleusercontent.com/xq-p3O14FX-mMHEEQGJcFrJlWKl6R_skVMF-yMli_3nbQLtlforrB5ZtFp3OMJ4-ouQtueYW=w1080-h608-p-no-v0",
     price: "€",
     price_digit: 1,
     lat: 48.8689453,
@@ -523,7 +528,7 @@ export default [
     arr: "10",
     openingHours: "11h-15h / 18h-00h",
     imageUrl:
-      "https://4.bp.blogspot.com/-8OdBwyFkTqQ/Wm4EVHXeDdI/AAAAAAAA1fk/Ais8QfnqI0kDuR2D-nqkXwypYwCpveQ-gCLcBGAs/s1600/cocina%2Bitaliana.jpg",
+      "https://blog.ninaah.com/wp-content/uploads/2015/03/papelli.jpg",
     price: "€",
     price_digit: 1,
     lat: 48.8731098,
@@ -540,7 +545,7 @@ export default [
     arr: "3",
     openingHours: "12h-22h",
     imageUrl:
-      "https://f.roocdn.com/images/menus/66042/header-image.jpg?width=1200&height=630&auto=webp&format=jpg&fit=crop&v=1527525791",
+      "https://voyagir.org/img/etb/hank_burger.jpg",
     price: "€",
     price_digit: 1,
     lat: 48.8778864,
@@ -677,11 +682,6 @@ export default [
     price_digit: 2,
     lat: 48.8644638,
     lng: 2.3693428,
-    award: {
-      scroll: "fa-birthday-cake",
-      icon: "fas fa-birthday-cake",
-      description: "La meilleure pâtisserie",
-    }
   },
   {
     name: "The Used Book Café (Merci)",
@@ -694,7 +694,7 @@ export default [
     arr: "3",
     openingHours: "10-19h",
     imageUrl:
-      "https://www.discoverwalks.com/blog/wp-content/uploads/2019/01/photo-1518373714866-3f1478910cc0-1280x720.jpg",
+      "https://www.danstapub.com/wp-content/uploads/2017/01/used-book-cafe-1440x1080.jpg",
     price: "€€€",
     price_digit: 3,
     lat: 48.86081,
@@ -716,7 +716,7 @@ export default [
     arr: "3",
     openingHours: "17h30-1h",
     imageUrl:
-      "https://sortir.telerama.fr/sites/tr_master/files/styles/m_plus_640x360/public/assets/images/place/67/10/2/originale.jpg?itok=8EnZYi7m",
+      "https://metoostorage.blob.core.windows.net/static/place/1500px/5b6d124e-cfc3-4024-9b02-d456a404b8e5-635930436657302213/f585d950-4652-4788-ad26-0b0b325da688-636076425440747500.jpg",
     price: "€",
     price_digit: 1,
     lat: 48.8644416,
@@ -724,7 +724,7 @@ export default [
     award: {
       scroll: "fa-chess",
       icon: "fas fa-chess",
-      description: "Jeux de sociétés",
+      description: "Jeux de société",
     }
   },
   {
@@ -759,12 +759,7 @@ export default [
     price: "€",
     price_digit: 1,
     lat: 48.8702946,
-    lng: 2.3617447,
-    award: {
-      scroll: "fa-hotdog",
-      icon: "fas fa-hotdog",
-      description: "Le meilleur de l'Allemagne",
-    }
+    lng: 2.3617447
   },
   {
     name: "Le Petit Cambodge",
@@ -1001,7 +996,7 @@ export default [
     arr: "15",
     openingHours: "12h-14h30 / 19h-21h",
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "https://i0.wp.com/silencio.fr/wp-content/uploads/etoiles/Restaurant-Diane-Fouquets-Barriere-Paris-Silencio-saumon-01.jpg",
     price: "€€€",
     price_digit: 3,
     lat: 48.8406227,
@@ -1022,12 +1017,7 @@ export default [
     price: "€€€",
     price_digit: 3,
     lat: 48.8686439,
-    lng: 2.3862279,
-    award: {
-      scroll: "fa-award",
-      icon: "fas fa-award",
-      description: "Le mieux noté",
-    }
+    lng: 2.3862279
   },
   {
     name: "An Di An Di",
@@ -1074,7 +1064,7 @@ export default [
     arr: "11",
     openingHours: "12h-21h",
     imageUrl:
-      "https://s3.eu-central-1.amazonaws.com/uberall-userpics-prod/403480/w5ozaFKLvV.jpg",
+      "https://fraeuleinanker.de/wp-content/uploads/2016/08/2-The-beans-on-fire-Sandwiches-b.jpg",
     price: "€€",
     price_digit: 2,
     lat: 48.8615741,
@@ -1220,7 +1210,7 @@ export default [
     arr: "9",
     openingHours: "12h-14h / 19h-22h30",
     imageUrl:
-      "https://blog.staycation.co/wp-content/uploads/2018/07/infatuation_paris-Abri-Soba-1080x759.jpg",
+      "http://le-polyedre.com/wp-content/uploads/2016/10/abri-soba-restaurant-paris-japon-7-1024x683.jpg",
     price: "€€",
     price_digit: 2,
     lat: 48.8750429,
@@ -1247,5 +1237,61 @@ export default [
       icon: "fas fa-leaf",
       description: "Le meilleur poké",
     }
-  }
+  },
+  {
+    name: "Bontemps",
+    id: 68,
+    type: "Pâtisserie",
+    rate: 4.5,
+    votes: 250,
+    address: "57 Rue de Bretagne, 75003",
+    phone: "01 42 74 10 68",
+    arr: "3",
+    openingHours: "10h-19h30",
+    imageUrl:
+      "https://www.oubruncher.com/photos1/9967_1.jpg",
+    price: "€€",
+    price_digit: 2,
+    lat: 48.8638169,
+    lng: 2.3606901,
+    award: {
+      scroll: "fa-birthday-cake",
+      icon: "fas fa-birthday-cake",
+      description: "La meilleure pâtisserie",
+    }
+  },
+  {
+    name: "Yann Couvreur - Rue des Rosiers",
+    id: 69,
+    type: "Pâtisserie",
+    rate: 4.4,
+    votes: 500,
+    address: "23bis Rue des Rosiers, 75004",
+    phone: "06 05 97 63 01",
+    arr: "4",
+    openingHours: "10h-20h",
+    imageUrl:
+      "http://untitledmag.fr/wp-content/uploads/2018/04/YANN-COUVREUR-26-BASSE-DEF.jpg",
+    price: "€€",
+    price_digit: 2,
+    lat: 48.857506,
+    lng: 2.358768,
+  },
+  {
+    name: "Popelini",
+    id: 70,
+    type: "Pâtisserie",
+    rate: 4.5,
+    votes: 250,
+    address: "29 Rue Debelleyme, 75003",
+    phone: "01 44 61 31 44",
+    arr: "3",
+    openingHours: "11h-19h30",
+    imageUrl:
+      "https://popelini.com/wp-content/uploads/2015/06/landing.jpg",
+    price: "€€€",
+    price_digit: 3,
+    lat: 48.862451,
+    lng: 2.363821,
+  },
 ];
