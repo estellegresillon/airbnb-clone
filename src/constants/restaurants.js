@@ -10,7 +10,7 @@ export default [
     votes: 1000,
     id: 1,
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat1.jpg",
+      "https://i0.wp.com/rocknfool.net/wp-content/uploads/2016/10/IMG_0219x.jpg?fit=3456%2C2304",
     price: "€",
     price_digit: 1,
     lat: 48.87243227731903,
@@ -49,7 +49,7 @@ export default [
     openingHours: "19h-00h",
     id: 3,
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat3.jpg",
+      "https://sortir.telerama.fr/sites/tr_master/files/styles/m_plus_640x360/public/assets/images/place/25/66/originale.jpg?itok=4x1s6Kws",
     price: "€€€",
     price_digit: 3,
     lat: 48.88621817731902,
@@ -66,7 +66,7 @@ export default [
     openingHours: "12h-15h / 19h-23h",
     id: 4,
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat4.jpg",
+      "https://pierresang.com/wp-content/uploads/2019/01/Pierre-Sang-in-Oberkampf.jpg",
     price: "€€€",
     price_digit: 3,
     lat: 48.864920777319035,
@@ -83,7 +83,7 @@ export default [
     openingHours: "12h-00h",
     id: 5,
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat5.jpg",
+      "https://www.exoticca.fr/blog/wp-content/uploads/2019/06/Journee-internationale-du-sushi.jpg",
     price: "€",
     price_digit: 1,
     lat: 48.8596072,
@@ -100,7 +100,7 @@ export default [
     openingHours: "9h-2h",
     id: 6,
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "https://media.abcsalles.com/images/1/salles/1440x960/8136/cafe-de-industrie.png",
     price: "€",
     price_digit: 1,
     lat: 48.855846977319025,
@@ -117,7 +117,7 @@ export default [
     openingHours: "8h-22h30",
     id: 7,
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat2.jpg",
+      "https://static.wixstatic.com/media/19b892_a24e5e6309ec4932a1c6c9ae5052eb4f~mv2_d_2808_1638_s_2.jpg/v1/fit/w_2500,h_1330,al_c/19b892_a24e5e6309ec4932a1c6c9ae5052eb4f~mv2_d_2808_1638_s_2.jpg",
     price: "€€",
     price_digit: 2,
     lat: 48.851373977319035,
@@ -134,7 +134,7 @@ export default [
     openingHours: "12h-5h / 19h-23h",
     id: 8,
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat3.jpg",
+      "http://benedict-paris.com/img/lightbox/plats/B-17.jpg",
     price: "€€",
     price_digit: 2,
     lat: 48.8581643,
@@ -146,21 +146,21 @@ export default [
     }
   },
   {
-    name: "Starbucks - Echelle",
-    type: "Café",
-    rate: 3.9,
-    votes: 1000,
-    address: "2 Rue de l'Échelle, 75001",
-    phone: "01 47 03 06 21",
-    arr: "1",
-    openingHours: "8h-20h",
+    name: "Maison Sauvage",
     id: 9,
+    type: "Brunch",
+    rate: 3.8,
+    votes: 1000,
+    address: "5 Rue de Buci, 75006",
+    phone: "01 46 34 26 26",
+    arr: "6",
+    openingHours: "7h-2h",
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat4.jpg",
+      "http://www.maison-sauvage.fr/images/03.jpg",
     price: "€€",
     price_digit: 2,
-    lat: 48.86364227731902,
-    lng: 2.3345044817740352
+    lat: 48.8536424,
+    lng: 2.3380628
   },
   {
     name: "Le Bombardier",
@@ -173,7 +173,7 @@ export default [
     openingHours: "12h-2h",
     id: 10,
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat5.jpg",
+      "https://i.f1g.fr/media/figaro/orig/2015/05/11/XVMa7941c0e-f4c3-11e4-8948-7bd2a5a8f385.jpg",
     price: "€€",
     price_digit: 2,
     lat: 48.846881,
@@ -190,7 +190,7 @@ export default [
     openingHours: "12h-5h",
     id: 11,
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "http://www.galwayirishpub.com/assets/images/content/galway/slide1b.jpg",
     price: "€€",
     price_digit: 2,
     lat: 48.85414577731903,
@@ -207,7 +207,7 @@ export default [
     openingHours: "12h-22h",
     id: 12,
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat1.jpg",
+      "https://media.vogue.fr/photos/5c2f45f062d3e16f22a5920e/master/pass/la_felicit____le_nouveau_restaurant_big_mamma_a__enfin__ouvert_ses_portes____paris_2303.png",
     price: "€€",
     price_digit: 2,
     lat: 48.832321877319025,
@@ -229,7 +229,7 @@ export default [
     openingHours: "10h-1h",
     id: 13,
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat2.jpg",
+      "http://www.lespetitscuistots.fr/wp-content/uploads/2019/03/1.jpg",
     price: "€€",
     price_digit: 2,
     lat: 48.887603577319034,
@@ -246,7 +246,7 @@ export default [
     openingHours: "10h-14h / 19h-23h30",
     id: 14,
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat3.jpg",
+      "https://www.oubruncher.com/photos1/x9946_4.jpg.pagespeed.ic.w8kvhCNfHT.jpg",
     price: "€€",
     price_digit: 2,
     lat: 48.8650928,
@@ -263,7 +263,7 @@ export default [
     openingHours: "10h-22h",
     id: 15,
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat4.jpg",
+      "https://sortir.telerama.fr/sites/tr_master/files/styles/m_plus_640x360/public/assets/images/place/81/94/7/originale.jpg?itok=t1QZiH8K",
     price: "€€",
     price_digit: 2,
     lat: 48.8714372,
@@ -280,7 +280,7 @@ export default [
     openingHours: "7h30-2h",
     id: 16,
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat5.jpg",
+      "https://fridg-front.s3.amazonaws.com/media/products/burrata_parme_y9Dlme5.JPG",
     price: "€€",
     price_digit: 2,
     lat: 48.8706029,
@@ -297,7 +297,7 @@ export default [
     openingHours: "12h-14h30 / 19h30-23h",
     id: 17,
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "https://img.over-blog-kiwi.com/2/55/12/01/20181103/ob_d5e8ca_20181102-123251.jpg",
     price: "€€€",
     price_digit: 3,
     lat: 48.8772256,
@@ -314,7 +314,7 @@ export default [
     arr: "11",
     openingHours: "12h-15h / 19h-23h",
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "https://neogarden-mursvegetaux.com/wp-content/uploads/2019/05/IMG_5699.jpg",
     price: "€€",
     price_digit: 2,
     lat: 48.8657335,
@@ -331,7 +331,7 @@ export default [
     openingHours: "12h-3h",
     id: 19,
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat2.jpg",
+      "https://www.miss-ko.com/restaurant-paris/diner-paris.jpg",
     price: "€€€",
     price_digit: 3,
     lat: 48.870914,
@@ -348,7 +348,7 @@ export default [
     openingHours: "12h-14h / 20h-22h30",
     id: 20,
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat3.jpg",
+      "http://www.popinpaname.com/wp-content/uploads/2019/05/YouShould-1140x700.jpg",
     price: "€€",
     price_digit: 2,
     lat: 48.8758535,
@@ -365,7 +365,7 @@ export default [
     openingHours: "8h30-23h",
     id: 21,
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat4.jpg",
+      "https://d2ghx89bmumb3r.cloudfront.net/news-upload/2513/2-breakfast-in-america-3-bia-sentier-restaurant-burger-creditphoto-fannyb-parisbouge.jpg",
     price: "€",
     price_digit: 1,
     lat: 48.8478135,
@@ -382,7 +382,7 @@ export default [
     openingHours: "12h-14h / 19h-23h",
     id: 22,
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat5.jpg",
+      "https://1dc3f33f6d-3.optimicdn.com/gaultmillau.com/photos/b1ed1fb2553adbb03249e0080290471ea3e58422/detail.jpg?1507890314",
     price: "€€",
     price_digit: 2,
     lat: 48.8677008,
@@ -399,7 +399,7 @@ export default [
     arr: "9",
     openingHours: "12h-14h30 / 19h-23h",
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "https://uniiti.com/images/shops/slides/8ab88e2064088026e00a06db2f9af15e3be53c78.jpeg",
     price: "€",
     price_digit: 1,
     lat: 48.876457,
@@ -416,7 +416,7 @@ export default [
     arr: "10",
     openingHours: "12h-14h30 / 19h-23h",
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "https://1dc3f33f6d-3.optimicdn.com/gaultmillau.com/photos/69e9b76ba706f4ffa7b639c5aba95d797261238e/detail.jpg?1507854514",
     price: "€€",
     price_digit: 2,
     lat: 48.871868,
@@ -433,7 +433,7 @@ export default [
     arr: "9",
     openingHours: "12h-14h30 / 19h-22h30",
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "https://restaurant.michelin.fr/sites/mtpb2c_fr/files/AO%20IZAKAYA_171.jpg",
     price: "€€€",
     price_digit: 3,
     lat: 48.8710109,
@@ -450,7 +450,7 @@ export default [
     arr: "3",
     openingHours: "13h30-18h",
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "https://somanyparis.files.wordpress.com/2018/10/pontochoux-7.jpg",
     price: "€",
     price_digit: 1,
     lat: 48.8613189,
@@ -467,7 +467,7 @@ export default [
     arr: "1",
     openingHours: "11h30-22h30",
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "http://www.vanguardvoyager.com/wp-content/uploads/2015/11/IMG_8705.jpg",
     price: "€",
     price_digit: 1,
     lat: 48.866141,
@@ -489,7 +489,7 @@ export default [
     arr: "2",
     openingHours: "11h30-22h30",
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "https://resize-elle.ladmedia.fr/rcrop/1024,1024/img/var/plain_site/storage/images/elle-a-table/les-dossiers-de-la-redaction/news-de-la-redaction/ramen-soupe-3021633/60210679-3-fre-FR/Tout-savoir-sur-le-ramen.jpg",
     price: "€",
     price_digit: 1,
     lat: 48.8689453,
@@ -506,7 +506,7 @@ export default [
     arr: "6",
     openingHours: "12h-14h30 / 18h30-22h30",
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "https://www.sortiraparis.com/images/80/68604/289785-kodawari-ramen-le-specialiste-du-ramen-a-paris-18.jpg",
     price: "€",
     price_digit: 1,
     lat: 48.8546132,
@@ -523,16 +523,11 @@ export default [
     arr: "10",
     openingHours: "11h-15h / 18h-00h",
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "https://4.bp.blogspot.com/-8OdBwyFkTqQ/Wm4EVHXeDdI/AAAAAAAA1fk/Ais8QfnqI0kDuR2D-nqkXwypYwCpveQ-gCLcBGAs/s1600/cocina%2Bitaliana.jpg",
     price: "€",
     price_digit: 1,
     lat: 48.8731098,
     lng: 2.3547136,
-    award: {
-      scroll: "fa-pizza-slice",
-      icon: "fas fa-pizza-slice",
-      description: "La meilleure pizza",
-    }
   },
   {
     name: "Hank Burger - Archives",
@@ -545,7 +540,7 @@ export default [
     arr: "3",
     openingHours: "12h-22h",
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "https://f.roocdn.com/images/menus/66042/header-image.jpg?width=1200&height=630&auto=webp&format=jpg&fit=crop&v=1527525791",
     price: "€",
     price_digit: 1,
     lat: 48.8778864,
@@ -567,7 +562,7 @@ export default [
     arr: "18",
     openingHours: "12h-23h30",
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "http://www.magazine-mint.fr/wp-content/uploads/2016/09/IMG_0933.jpg",
     price: "€",
     price_digit: 1,
     lat: 48.88458267731903,
@@ -589,7 +584,7 @@ export default [
     arr: "11",
     openingHours: "11h30-22h",
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "https://d1ralsognjng37.cloudfront.net/907ea84e-4c2f-4b6a-8588-4194d19f8c66.jpeg",
     price: "€",
     price_digit: 1,
     lat: 48.8654426,
@@ -611,7 +606,7 @@ export default [
     arr: "8",
     openingHours: "18-2h",
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "https://www.hotelhorsetopera.com/images/stories/activites/night-life/caveau-de-la-huchette1-700x465.jpg",
     price: "€€€",
     price_digit: 3,
     lat: 48.8679501,
@@ -633,7 +628,7 @@ export default [
     arr: "9",
     openingHours: "18-2h",
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "https://d1vp8nomjxwyf1.cloudfront.net/wp-content/uploads/sites/365/2018/02/25100827/Hotel-Amour-v%C3%A9randa-11.jpg",
     price: "€€€",
     price_digit: 3,
     lat: 48.8796402,
@@ -655,7 +650,7 @@ export default [
     arr: "16",
     openingHours: "12-15h / 19h-23h",
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "http://www.yonder.fr/sites/default/files/yonderpic/restau-paris-ete-2019/06-la-gare-gaston-acurio_%C2%A9_Jules-Prunet.jpg",
     price: "€€€",
     price_digit: 3,
     lat: 48.8581178,
@@ -677,7 +672,7 @@ export default [
     arr: "11",
     openingHours: "7h30-20h30",
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "http://painrisien.com/wp-content/uploads/2012/04/20120423_133633.jpg",
     price: "€€",
     price_digit: 2,
     lat: 48.8644638,
@@ -699,7 +694,7 @@ export default [
     arr: "3",
     openingHours: "10-19h",
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "https://www.discoverwalks.com/blog/wp-content/uploads/2019/01/photo-1518373714866-3f1478910cc0-1280x720.jpg",
     price: "€€€",
     price_digit: 3,
     lat: 48.86081,
@@ -721,7 +716,7 @@ export default [
     arr: "3",
     openingHours: "17h30-1h",
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "https://sortir.telerama.fr/sites/tr_master/files/styles/m_plus_640x360/public/assets/images/place/67/10/2/originale.jpg?itok=8EnZYi7m",
     price: "€",
     price_digit: 1,
     lat: 48.8644416,
@@ -743,7 +738,7 @@ export default [
     arr: "10",
     openingHours: "11h30-23h",
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "https://canalpoke.com/wp-content/uploads/2019/05/header.jpg",
     price: "€",
     price_digit: 1,
     lat: 48.8707991,
@@ -765,7 +760,7 @@ export default [
     arr: "10",
     openingHours: "12h-23h",
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "https://somanyparis.files.wordpress.com/2016/06/wunderbacc88r-8.jpg",
     price: "€",
     price_digit: 1,
     lat: 48.8702946,
@@ -787,7 +782,7 @@ export default [
     arr: "10",
     openingHours: "11h30-23h",
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "https://4.bp.blogspot.com/-8OdBwyFkTqQ/Wm4EVHXeDdI/AAAAAAAA1fk/Ais8QfnqI0kDuR2D-nqkXwypYwCpveQ-gCLcBGAs/s1600/cocina%2Bitaliana.jpg",
     price: "€€",
     price_digit: 2,
     lat: 48.8703465,
@@ -804,7 +799,7 @@ export default [
     arr: "6",
     openingHours: "12h-15h / 19h-2h",
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "https://www.benoe.fr/media/salles/s344/alcazar-be-noe-dejeuner.jpg",
     price: "€€€",
     price_digit: 3,
     lat: 48.8546237,
@@ -821,7 +816,7 @@ export default [
     arr: "3",
     openingHours: "12h-15h / 19h-23h",
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "https://parisboutik.com/wp-content/uploads/2016/05/large-full-paris-new-york-marais-1@2x.jpg",
     price: "€€",
     price_digit: 2,
     lat: 48.8637941,
@@ -838,7 +833,7 @@ export default [
     arr: "10",
     openingHours: "12h-14h30 / 18h-00h",
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "https://metoostorage.blob.core.windows.net/static/place/1500px/0712d0de-6786-49e8-8711-86b87ee9e327-636507633395316115/a54270e6-d0ac-4026-9ea9-aa398d41c2eb-636516950713062758.jpg",
     price: "€€",
     price_digit: 2,
     lat: 48.872055,
@@ -860,7 +855,7 @@ export default [
     arr: "2",
     openingHours: "12h-14h30 / 18h30-1h",
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "https://www.sortiraparis.com/images/80/79820/374282-uma-nota-a-paris-cuisine-nippo-bresilienne-et-cocktails-exotiques-8.jpg",
     price: "€€",
     price_digit: 2,
     lat: 48.8669091,
@@ -877,7 +872,7 @@ export default [
     arr: "2",
     openingHours: "12h-23h30",
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "https://d1ralsognjng37.cloudfront.net/9306ef6f-786b-44d3-a550-b99ce1fa7d40",
     price: "€€",
     price_digit: 2,
     lat: 48.880912099999996,
@@ -899,7 +894,7 @@ export default [
     arr: "1",
     openingHours: "12h-15h / 19h-23h",
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "https://www.relaisdulouvre.com/images/actualites/1-Traiteur.jpg",
     price: "€€",
     price_digit: 2,
     lat: 48.863828,
@@ -921,7 +916,7 @@ export default [
     arr: "8",
     openingHours: "11h45-17h30",
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "https://www.musee-jacquemart-andre.com/sites/default/files/styles/galerie_node/public/01_-_dl_mja_218_005_s_lloyd_2.jpg?itok=eymBCKKa",
     price: "€€€",
     price_digit: 3,
     lat: 48.8755313,
@@ -943,28 +938,28 @@ export default [
     arr: "1",
     openingHours: "7h30-20h30",
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "https://www.sortiraparis.com/images/80/77153/379398-aki-boulanger-le-boulangerie-franco-japonaise-super-gourmande.jpg",
     price: "€€",
     price_digit: 2,
     lat: 48.8660699,
     lng: 2.3355837
   },
   {
-    name: "La Terrasse du 7e",
+    name: "Les Parisiennes",
     id: 51,
     type: "Français",
-    rate: 4.1,
-    votes: 1500,
-    address: "2 Place de l'École Militaire, 75007",
-    phone: "01 45 55 00 02",
+    rate: 4.2,
+    votes: 500,
+    address: "17 Avenue de la Motte-Picquet, 75007",
+    phone: "01 47 05 07 37",
     arr: "7",
-    openingHours: "7h30-1h30",
+    openingHours: "8h-23h",
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "http://www.lesparisiennescafe.com/themes/les-parisiennes-wedding-en/img/bg-restaurant.jpg",
     price: "€€",
     price_digit: 2,
-    lat: 48.8547323,
-    lng: 2.3057214
+    lat: 48.8559104,
+    lng: 2.3082717
   },
   {
     name: "Le Touareg",
@@ -977,7 +972,7 @@ export default [
     arr: "12",
     openingHours: "12h-14h30 / 19h-22h30",
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "https://uniiti.com/images/shops/slides/94a4cba2bac24a277d363db494b1c067c57273c5.jpeg",
     price: "€€",
     price_digit: 2,
     lat: 48.8397485,
@@ -994,7 +989,7 @@ export default [
     arr: "14",
     openingHours: "12h-14h / 19h30-22h",
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "https://metoostorage.blob.core.windows.net/static/place/1500px/ebc4bfe8-e7cb-4e8d-9ac4-2dd446a5c579-636018725614596852/aee0cde5-9134-4766-9c11-7fa6dc26e597-636031779786483907.jpg",
     price: "€€€",
     price_digit: 3,
     lat: 48.8290777,
@@ -1028,7 +1023,7 @@ export default [
     arr: "20",
     openingHours: "12h-14h30 / 19h30-22h30",
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "https://admin-blogs.lalibre.be/app/uploads/sites/4/2018/08/Dilia.jpg",
     price: "€€€",
     price_digit: 3,
     lat: 48.8686439,
@@ -1050,7 +1045,7 @@ export default [
     arr: "20",
     openingHours: "19h-22h30",
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "https://otg.imgix.net/assets/grid/paris/menilmontant/an-di-an-di/MG_1495.jpg?auto=format%2Ccompress&crop=focalpoint&fit=min&fm=jpg&fp-x=0.5&fp-y=0.5&ixlib=php-1.1.0&q=80&w=1200&s=335cc6f7f2419b43c1be0e5f754c8372",
     price: "€€",
     price_digit: 2,
     lat: 48.8686776,
@@ -1067,7 +1062,7 @@ export default [
     arr: "10",
     openingHours: "12h-14h30 / 19h-23h",
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "https://uniiti.com/images/shops/slides/6fe8b0e55c2485057651e51117ab2271c2d4dddd.jpeg",
     price: "€€",
     price_digit: 2,
     lat: 48.8718848,
@@ -1084,7 +1079,7 @@ export default [
     arr: "11",
     openingHours: "12h-21h",
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "https://s3.eu-central-1.amazonaws.com/uberall-userpics-prod/403480/w5ozaFKLvV.jpg",
     price: "€€",
     price_digit: 2,
     lat: 48.8615741,
@@ -1106,7 +1101,7 @@ export default [
     arr: "2",
     openingHours: "12h-15h30 / 19h-22h30",
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "https://sortir.telerama.fr/sites/tr_master/files/styles/m_plus_640x360/public/assets/images/place/74/25/5/originale.jpg?itok=nNojZ_jK",
     price: "€€",
     price_digit: 2,
     lat: 48.8668704,
@@ -1123,7 +1118,7 @@ export default [
     arr: "11",
     openingHours: "9h-18h",
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "https://img3.parisbouge.com/RjuPFd8FhhJz9GCwPPvbYHQ7S0wEfzdDK8zOTNOPtLo/rs:fill:1200:800:1/g:ce/wm:1:soea:12:12:0.12/MWI4NDQ0YzAtMDQxMi00YzYyLTk2ZTctYTI1OTRmMGQ1N2M3LmpwZw.jpg",
     price: "€€",
     price_digit: 2,
     lat: 48.8591592,
@@ -1140,7 +1135,7 @@ export default [
     arr: "8",
     openingHours: "11h30-14h15 / 19h-2h",
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "https://www.infosbar.com/photo/art/grande/8922651-14145113.jpg?v=1455033802",
     price: "€€€",
     price_digit: 3,
     lat: 48.8655753,
@@ -1157,7 +1152,7 @@ export default [
     arr: "17",
     openingHours: "12h-14h30 / 19h30-22h30",
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "https://www.restofolio.fr/media/W1siZiIsIjIwMTYvMDgvMzEvOXExNjYxbWxybF8xNDEwMjgxOV8xMTA0OTcxMzg2MjYyODk1Xzc1NzkzOTczNDkwNjkxNTA4ODRfby5qcGciXSxbInAiLCJlbmNvZGUiLCJqcGciLCItcXVhbGl0eSA0MCJdLFsicCIsInRodW1iIiwiMTI0MHgiXV0/14102819_1104971386262895_7579397349069150884_o.jpg?sha=ad543ee646beda37",
     price: "€€",
     price_digit: 2,
     lat: 48.8920597,
@@ -1174,10 +1169,66 @@ export default [
     arr: "11",
     openingHours: "12h-14h30 / 16h30-23h",
     imageUrl:
-      "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg",
+      "https://www.sortiraparis.com/images/80/87701/476342-dai-dai-paris-10-9.jpg",
     price: "€€",
     price_digit: 2,
     lat: 48.8635571,
-    lng: 2.369366
+    lng: 2.369366,
+    award: {
+      scroll: "fa-pizza-slice",
+      icon: "fas fa-pizza-slice",
+      description: "La meilleure pizza",
+    }
+  },
+  {
+    name: "Café Angelina",
+    id: 64,
+    type: "Café",
+    rate: 4.3,
+    votes: 6000,
+    address: "226 Rue de Rivoli, 75001",
+    phone: "01 42 60 82 00",
+    arr: "1",
+    openingHours: "8h30-19h30",
+    imageUrl:
+      "https://www.angelina-paris.fr/sites/default/files/pictures/ANGE_RIVOLI_CHOCOLAT_CHAUD_VERSION_TABLE-redim_0.jpg",
+    price: "€€€",
+    price_digit: 3,
+    lat: 48.8650898,
+    lng: 2.3284434
+  },
+  {
+    name: "Ice Kube",
+    id: 65,
+    type: "Français",
+    rate: 4.1,
+    votes: 500,
+    address: "5 Passage Ruelle, 75018",
+    phone: "01 42 05 20 00",
+    arr: "18",
+    openingHours: "18h30-1h",
+    imageUrl:
+      "https://www.kubehotel-paris.com/_files/_media/37/Apres%20Restaurant/SHOOTING%20ZENCHEF%202019/Apres-restaurant-Kube-Paris-18eme.jpg",
+    price: "€€€",
+    price_digit: 3,
+    lat: 48.8865207,
+    lng: 2.35881
+  },
+  {
+    name: "Abri Soba",
+    id: 66,
+    type: "Japonais",
+    rate: 4.6,
+    votes: 500,
+    address: "10 Rue Saulnier, 75009",
+    phone: "01 45 23 51 68",
+    arr: "9",
+    openingHours: "12h-14h / 19h-22h30",
+    imageUrl:
+      "https://blog.staycation.co/wp-content/uploads/2018/07/infatuation_paris-Abri-Soba-1080x759.jpg",
+    price: "€€",
+    price_digit: 2,
+    lat: 48.8750429,
+    lng: 2.3445439
   }
 ];

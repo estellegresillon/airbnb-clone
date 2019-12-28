@@ -32,9 +32,8 @@ const AwardList = props => {
         className="awards-page-big-img"
         style={{ 
           backgroundImage: `url(${bg})`,
-          backgroundSize: "1100px",
+          backgroundSize: "cover",
           backgroundPosition: "center",
-          transition: "0.5s all ease",
         }}
       />
       <div className="awards-listing">
