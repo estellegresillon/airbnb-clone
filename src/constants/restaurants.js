@@ -144,11 +144,11 @@ export default [
     reviews: [
       { 
         date: "12/2019",
-        comment: "Superbe endroit avec de très bons plats. Si vous aimez les œufs Benedict c’est un must-try, le service est très sympathique et le prix plutôt abordable. En plus ils font une formule le midi qui est très intéressante en terme de rapport qualité/prix."
+        comment: "Superbe endroit avec de très bons plats. Si vous aimez les œufs bénédictes c’est un must-try, le service est très sympathique et le prix plutôt abordable. En plus ils font une formule le midi qui est très intéressante en terme de rapport qualité/prix."
       },
       { 
         date: "10/2019",
-        comment: "Superbe « Benedict burger » à l’escalope de foie gras poêlé !"
+        comment: "Superbe «benedict burger» à l’escalope de foie gras poêlé !"
       },
       { 
         date: "07/2019",

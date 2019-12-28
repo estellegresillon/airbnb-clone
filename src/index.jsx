@@ -9,7 +9,7 @@ import Home from "./components/home";
 import Header from "./components/common/header";
 import Detail from "./components/detail";
 import Awards from "./components/awards";
-// import MessageButton from "./components/common/contact";
+import MessageButton from "./components/common/contact";
 
 import restaurantsReducer from "./reducers/restaurants-reducer";
 import selectedRestaurantReducer from "./reducers/selected-restaurant-reducer";
@@ -35,7 +35,7 @@ const App = () => (
       <Route exact path="/awards" component={Awards} />
       <Route exact path="/restaurants" component={Home} />
       <Route exact path="/restaurants/:id" component={Detail} />
-      {/* <MessageButton /> */}
+      <MessageButton />
     </React.Fragment>
   </Router>
 )
