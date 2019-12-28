@@ -135,6 +135,7 @@ export default [
     id: 8,
     imageUrl:
       "http://benedict-paris.com/img/lightbox/plats/B-17.jpg",
+    imageUrl2: "http://benedict-paris.com/img/lightbox/plats/B-44.jpg",
     price: "€€",
     price_digit: 2,
     lat: 48.8581643,
@@ -1323,6 +1324,7 @@ export default [
     menuLink: "https://www.dorchestercollection.com/wp-content/uploads/paris-le-meurice-patisserie-cedric-grolet-francais.pdf",
     imageUrl:
       "https://assets.letemps.ch/sites/default/files/styles/share/public/media/2018/05/25/file709hhtc8y0oabuqmgsh.jpg.jpeg?itok=qCTHjPAd",
+    imageUrl2: "https://resofrance.eu/wp-content/uploads/2018/12/buche-noel-buche-marrons-cedric-grolet.jpg",
     price: "€€€€",
     price_digit: 4,
     lat: 48.8657239,

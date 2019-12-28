@@ -82,11 +82,11 @@ const Detail = props => {
             }) : <li>Pas de reviews enregistrées</li>}
           </ul>
         </div>
-        <div className="cropped-img-overlay" />
+        {!restaurant.imageUrl2 && <div className="cropped-img-overlay" />}
         <div 
           className="detail-page-cropped-img"
           style={{ 
-            backgroundImage: `url(${restaurant.imageUrl})`,
+            backgroundImage: `url(${restaurant.imageUrl2 || restaurant.imageUrl})`,
             backgroundPosition: "right",
             backgroundSize: "1000px",
           }}
