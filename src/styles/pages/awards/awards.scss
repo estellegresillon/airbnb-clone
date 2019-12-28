@@ -3,13 +3,35 @@
   display: flex;
 
   .awards-page-big-img {
-    width: 35%;
+    width: 45%;
     height: calc(100vh - 60px);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .awards-image-title {
+      margin-top: 40%;
+      margin-left: 10%;
+      font-weight: 100;
+      background-color: #ffb0be;
+      padding: 5px 10px;
+      font-size: 32px;
+    }
+
+    .awards-image-subtitle {
+      margin-left: 10%;
+      background-color: #ffb0be;
+      padding: 5px 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
   }
 
   .awards-listing {
     position: relative;
-    width: 65%;
+    width: 55%;
     height: calc(100vh - 60px);
     overflow: scroll;
     
@@ -23,7 +45,7 @@
     }
     
     .awards-listing-title {
-      font-weight: 300;
+      font-weight: 100;
       font-size: 24px;
     }
 

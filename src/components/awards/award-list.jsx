@@ -10,6 +10,8 @@ const AwardList = props => {
   const { setRestaurants, restaurants } = props;
   const [awardedRestaurants, setAwardedRestaurants] = useState([]);
   const [bg, setBg] = useState("http://benedict-paris.com/img/lightbox/plats/B-17.jpg");
+  const [title, setImageTitle] = useState("");
+  const [subtitle, setImageSubtitle] = useState("");
 
   useEffect(() => { setRestaurants(); }, [setRestaurants]);
   useEffect(() => {
@@ -22,8 +24,10 @@ const AwardList = props => {
     });
   }, [restaurants]);
 
-  const handleListItemHover = image => {
-    setBg(image);
+  const handleListItemHover = restaurant => {
+    setBg(restaurant.imageUrl);
+    setImageTitle(restaurant.award.description);
+    setImageSubtitle(restaurant.name);
   };
   
   return awardedRestaurants.length > 0 ? (
@@ -35,7 +39,10 @@ const AwardList = props => {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
-      />
+      >
+        <h1 className="awards-image-title">{title}</h1>
+        <div className="awards-image-subtitle">{subtitle}</div>
+      </div>
       <div className="awards-listing">
         <div className="title-and-key">
           <h2 className="awards-listing-title">Les restaurants primés</h2>
@@ -45,7 +52,7 @@ const AwardList = props => {
           return (
             <div 
               key={restaurant.id} 
-              onMouseEnter={() => handleListItemHover(restaurant.imageUrl)}
+              onMouseEnter={() => handleListItemHover(restaurant)}
               className="awarded-restaurant">
               <AwardListItem restaurant={restaurant} tabIndex={i} />
             </div>
