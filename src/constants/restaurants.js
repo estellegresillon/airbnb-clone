@@ -742,12 +742,7 @@ export default [
     price: "€",
     price_digit: 1,
     lat: 48.8707991,
-    lng: 2.3662136,
-    award: {
-      scroll: "fa-leaf",
-      icon: "fas fa-leaf",
-      description: "Le meilleur poké",
-    }
+    lng: 2.3662136
   },
   {
     name: "Wunderbär",
@@ -1230,5 +1225,27 @@ export default [
     price_digit: 2,
     lat: 48.8750429,
     lng: 2.3445439
+  },
+  {
+    name: "Pokawa",
+    id: 67,
+    type: "Poké",
+    rate: 4.1,
+    votes: 500,
+    address: "36 Rue Poissonnière, 75002",
+    phone: "01 40 26 38 85",
+    arr: "2",
+    openingHours: "12h-16h / 18h30-22h30",
+    imageUrl:
+      "https://static.youmiam.com/images/recipe/1500x1000/pokebowl-signature-saumon-mangue-1303407?placeholder=web_recipe&sig=41e3506e5ff69bc43e9d904e4f8f3956d11eef26&v3",
+    price: "€€",
+    price_digit: 2,
+    lat: 48.8657478,
+    lng: 2.3439625,
+    award: {
+      scroll: "fa-leaf",
+      icon: "fas fa-leaf",
+      description: "Le meilleur poké",
+    }
   }
 ];

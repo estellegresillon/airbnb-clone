@@ -9,7 +9,7 @@ import Key from "../common/key";
 const AwardList = props => {
   const { setRestaurants, restaurants } = props;
   const [awardedRestaurants, setAwardedRestaurants] = useState([]);
-  const [bg, setBg] = useState("https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg");
+  const [bg, setBg] = useState("http://benedict-paris.com/img/lightbox/plats/B-17.jpg");
 
   useEffect(() => { setRestaurants(); }, [setRestaurants]);
   useEffect(() => {
