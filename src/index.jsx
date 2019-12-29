@@ -10,6 +10,7 @@ import Header from "./components/common/header";
 import Detail from "./components/detail";
 import Awards from "./components/awards";
 import MessageButton from "./components/common/contact";
+import { useWindowSize } from "./hooks/useWindowSize";
 
 import restaurantsReducer from "./reducers/restaurants-reducer";
 import selectedRestaurantReducer from "./reducers/selected-restaurant-reducer";
@@ -27,18 +28,22 @@ const reducers = combineReducers({
   selectedLocation: centerMapWithLocationReducer,
 });
 
-const App = () => (
-  <Router>
-    <React.Fragment>
-      <Header />
-      <Route exact path="/" render={() => <Redirect to="/restaurants" />} />
-      <Route exact path="/awards" component={Awards} />
-      <Route exact path="/restaurants" component={Home} />
-      <Route exact path="/restaurants/:id" component={Detail} />
-      <MessageButton />
-    </React.Fragment>
-  </Router>
-)
+const App = () => {
+  const windowSize = useWindowSize();
+
+  return (
+    <Router>
+      <React.Fragment>
+        <Header />
+        <Route exact path="/" render={() => <Redirect to="/restaurants" />} />
+        <Route exact path="/awards" component={Awards} />
+        <Route exact path="/restaurants" component={Home} />
+        <Route exact path="/restaurants/:id" component={Detail} />
+        {windowSize.width > 728 && <MessageButton />}
+      </React.Fragment>
+    </Router>
+  );
+};
 
 ReactDOM.render(
   <Provider store={createStore(reducers)}>
