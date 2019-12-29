@@ -15,7 +15,12 @@ const Header = () => (
     <div className="header-right">
       {menuItems.map(link => {
         return (
-          <NavLink activeClassName="selected-menu-item" className="menu-link" to={link.path}>
+          <NavLink 
+            activeClassName="selected-menu-item"
+            className="menu-link"
+            to={link.path}
+            key={link.name}
+          >
             <div>{link.name}</div>
           </NavLink>
         )

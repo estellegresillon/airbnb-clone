@@ -25,6 +25,7 @@ const HeaderMobile = () => {
                 <NavLink 
                   className="menu-link"
                   to={link.path}
+                  key={link.name}
                   onClick={() => setIsComponentVisible(false)}
                 >
                   <div>{link.name}</div>

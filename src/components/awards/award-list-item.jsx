@@ -13,7 +13,7 @@ const AwardListItem = props => {
       id={`${restaurant.award.scroll}`}
     >
       <div className="card">
-        <img src={restaurant.imageUrl} alt="awarded-restaurant-overview" width="200" />
+        <img src={restaurant.imageUrl} alt="awarded-restaurant-overview" />
         <Badge 
           icon={restaurant.award.icon}
           description={restaurant.award.description}
