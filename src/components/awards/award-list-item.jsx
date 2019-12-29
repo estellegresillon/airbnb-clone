@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { LazyLoadImage, trackWindowScroll }
+  from 'react-lazy-load-image-component';
 
 import Badge from "../common/badge";
 
 const AwardListItem = props => {
-  const { restaurant, tabIndex } = props;
+  const { scrollPosition, restaurant, tabIndex } = props;
 
   return (
     <div 
@@ -13,7 +15,12 @@ const AwardListItem = props => {
       id={`${restaurant.award.scroll}`}
     >
       <div className="card">
-        <img src={restaurant.imageUrl} alt="awarded-restaurant-overview" />
+        <LazyLoadImage
+          alt="rawarded-restaurant-overview"
+          scrollPosition={scrollPosition}
+          src={restaurant.imageUrl}
+          threshold={500}
+        />
         <Badge 
           icon={restaurant.award.icon}
           description={restaurant.award.description}
@@ -37,4 +44,4 @@ const AwardListItem = props => {
   );
 };
 
-export default AwardListItem;
+export default trackWindowScroll(AwardListItem);

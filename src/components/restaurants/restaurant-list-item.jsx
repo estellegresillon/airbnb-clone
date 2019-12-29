@@ -2,12 +2,13 @@ import React from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import { LazyLoadImage, trackWindowScroll } from 'react-lazy-load-image-component';
 
 import { selectRestaurant } from "../../actions";
 import Badge from "../common/badge";
 
 const RestaurantListItem = props => {
-  const { selectRestaurant, selectedRestaurant, restaurant, tabIndex, showMap } = props;
+  const { scrollPosition, selectRestaurant, selectedRestaurant, restaurant, tabIndex, showMap } = props;
 
   const handleClick = () => {
     selectRestaurant(restaurant);
@@ -24,7 +25,12 @@ const RestaurantListItem = props => {
       {!showMap && <Link to={{pathname: `/restaurants/${restaurant.id}`, restaurant: restaurant}}></Link>}
       <div className="card">
         {!showMap && <div className="grid-img-overlay" />}
-        <img src={restaurant.imageUrl} alt="restaurant-overview" width="200" />
+        <LazyLoadImage
+          alt="restaurant-overview"
+          scrollPosition={scrollPosition}
+          src={restaurant.imageUrl}
+          threshold={500}
+        />
         {restaurant.award &&
           <Badge 
             icon={restaurant.award.icon}
@@ -60,4 +66,4 @@ const mapDispatchToProps = dispatch => {
   return bindActionCreators({ selectRestaurant }, dispatch);
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(RestaurantListItem);
+export default connect(mapStateToProps, mapDispatchToProps)(trackWindowScroll(RestaurantListItem));
