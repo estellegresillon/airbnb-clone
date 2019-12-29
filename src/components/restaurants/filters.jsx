@@ -14,6 +14,7 @@ import {
   toggleListingAwards,
 } from "../../actions";
 import { initArrOptions, initTypeOptions } from "../../constants/filter-options";
+import { useWindowSize } from "../../hooks/useWindowSize";
 
 
 const SearchByName = props => {
@@ -23,6 +24,7 @@ const SearchByName = props => {
   const [searchedRestaurant, setSearchedRestaurant] = useState(null);
   const [typeOptions, setTypeOptions] = useState(initTypeOptions);
   const [arrOptions, setArrOptions] = useState(initArrOptions);
+  const windowSize = useWindowSize();
 
   const scrollToTop = () => {
     document.querySelector(".tab-number-0").scrollIntoView();
@@ -41,7 +43,9 @@ const SearchByName = props => {
       setRestaurants();
     }
 
-    scrollToTop();
+    if (windowSize.width > 728) {
+      scrollToTop();
+    }
   }
 
   const filterByArr = (arr) => {
@@ -82,7 +86,9 @@ const SearchByName = props => {
       sortRestaurants(sortedRestaurants);
     };
 
-    scrollToTop();
+    if (windowSize.width > 728) {
+      scrollToTop();
+    }
   }
 
   const filterByType = (type) => {
@@ -123,7 +129,9 @@ const SearchByName = props => {
       sortRestaurants(sortedRestaurants);
     };
 
-    scrollToTop();
+    if (windowSize.width > 728) {
+      scrollToTop();
+    }
   };
 
   const handleArrChange = e => {
@@ -166,7 +174,9 @@ const SearchByName = props => {
     toggleListingAwards(true);
 
     // scroll to top only after the list is re-rendered
-    scrollToTop();
+    if (windowSize.width > 728) {
+      scrollToTop();
+    }
   };
 
   return (

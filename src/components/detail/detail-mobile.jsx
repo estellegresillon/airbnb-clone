@@ -13,7 +13,7 @@ const DetailMobile = props => {
   useEffect(() => { 
     if (!location.restaurant) {
       setRestaurants(); 
-    }
+    };
   }, [location.restaurant, setRestaurants]);
 
   useEffect(() => {
@@ -27,8 +27,13 @@ const DetailMobile = props => {
       });
   
       setRestaurant(detailRestaurant[0]);
-    }
+    };
   }, [location.restaurant, restaurants, match.params.id]);
+
+  // go to top because it keeps the same scroll position as the previous page
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return restaurant ? (
     <div className="detail-page-wrapper-mobile">
