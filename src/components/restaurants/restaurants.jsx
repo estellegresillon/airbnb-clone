@@ -6,13 +6,15 @@ import RestaurantList from "./restaurant-list";
 import Map from "./map";
 import Filters from "./filters";
 import Key from "../common/key";
+import { useWindowSize } from "../../hooks/useWindowSize";
 
 import { setRestaurants } from "../../actions";
 
-const Home = props => {
+const Restaurants = props => {
   const { restaurants, setRestaurants, sortedRestaurants, searchedRestaurant } = props;
   const [listNumber, setListNumber] = useState(null);
   const [listedRestaurants, setListedRestaurants] = useState(restaurants);
+  const windowSize = useWindowSize();
 
   // load restaurants and sort them
   useEffect(() => { setRestaurants(); }, [setRestaurants]);
@@ -38,7 +40,7 @@ const Home = props => {
   }, [restaurants, sortedRestaurants, searchedRestaurant]);
 
   return (
-    <>
+    <div className={`restaurants-page-wrapper ${windowSize.width > 728 ? "" : "mobile-view"}`}>
       <Filters />
       <div className="counter-keys-wrapper">
         <div className="restaurant-counter">
@@ -51,7 +53,7 @@ const Home = props => {
         <RestaurantList listedRestaurants={listedRestaurants} />
         <Map listedRestaurants={listedRestaurants} />
       </div>
-    </>
+    </div>
   );
 };
 
@@ -67,4 +69,4 @@ const mapDispatchToProps = dispatch => {
   return bindActionCreators({ setRestaurants }, dispatch);
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(Restaurants);

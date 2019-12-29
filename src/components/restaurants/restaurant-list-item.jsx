@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { selectRestaurant } from "../../actions";
 import Badge from "../common/badge";
 
-const Restaurant = props => {
+const RestaurantListItem = props => {
   const { selectRestaurant, selectedRestaurant, restaurant, tabIndex, showMap } = props;
 
   const handleClick = () => {
@@ -60,4 +60,4 @@ const mapDispatchToProps = dispatch => {
   return bindActionCreators({ selectRestaurant }, dispatch);
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Restaurant);
+export default connect(mapStateToProps, mapDispatchToProps)(RestaurantListItem);
