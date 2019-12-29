@@ -9,12 +9,27 @@ export default [
     rate: 4.6,
     votes: 1000,
     id: 1,
-    imageUrl:
-      "https://i0.wp.com/rocknfool.net/wp-content/uploads/2016/10/IMG_0219x.jpg?fit=3456%2C2304",
+    imageUrl: "https://i0.wp.com/rocknfool.net/wp-content/uploads/2016/10/IMG_0219x.jpg?fit=3456%2C2304",
+    imageUrl2: "https://i1.wp.com/www.latrentaineparisienne.com/wp-content/uploads/2016/02/Siseng_1.jpg?fit=1200%2C875",
     price: "€",
     price_digit: 1,
     lat: 48.87243227731903,
-    lng: 2.365430729836519
+    lng: 2.365430729836519,
+    foodlabreview: "Les baos burgers avec leur pain ultra moelleux sont délicieux. En accompagnement les frites de patate douce et leur sauce au sésame sont au top. Par contre il faut venir entre 19h et 19h30 car l'endroit est vite rempli.",
+    reviews: [
+      { 
+        date: "12/2019",
+        comment: "Super restaurant super bon. Concept original que ce soit pour la nourriture mais aussi les boissons ! Personnel super sympathique. Seul petit bémol, il n'y a pas beaucoup de place dans le restaurant qui est souvent complet mais ça ils n'y peuvent rien."
+      },
+      { 
+        date: "10/2019",
+        comment: "Toujours une belle expérience gustative lorsque nous venons chez Siseng. L'accueil est chaleureux, les plats sont originaux et savoureux, le pain est juste parfait et la sauce des frites de patate douce est exquise!"
+      },
+      { 
+        date: "07/2019",
+        comment: "Un restau asiatique pas comme les autres ! Plein de saveurs avec un service tout en simplicité ! Je recommande"
+      }
+    ],
   },
   {
     name: "Chez Justine",
@@ -26,12 +41,28 @@ export default [
     rate: 4.1,
     votes: 500,
     id: 2,
-    imageUrl:
-      "http://www.infrarouge.fr/wp-content/uploads/2014/01/Justine-Table-%C2%A9Roberta-Valerio-3-INSTA.jpg",
+    imageUrl: "https://3.bp.blogspot.com/-lIRP6p8z9BY/WddzLlwxRLI/AAAAAAAAZBE/9zeKkrX3yV8_xXgDiySBh9qamnYLHNHewCLcBGAs/s1600/Justine%2B-%2BSalle%2B-Roberta%2BValerio%2B1.jpg",
+    imageUrl2: "http://www.infrarouge.fr/wp-content/uploads/2014/01/Justine-Table-%C2%A9Roberta-Valerio-3-INSTA.jpg",
     price: "€€",
     price_digit: 2,
     lat: 48.86586377731903,
     lng: 2.378128593918682,
+    menuLink: "https://www.trinity-group.fr/wp-content/uploads/2019/08/JUSTINE-FOOD.pdf",
+    foodlabreview: "Très bonne brasserie qui propose des produits de bonne qualité. Une formule du midi à prix raisonnable pour le quartier (entrée/plat ou plat/dessert café inclus pour 12€). Le soir l'ambiance est plus tamisée et chaleureuse. Mention spéciale pour le filet de canette, la salade césar et leurs pizzas qui sont divines.",
+    reviews: [
+      { 
+        date: "12/2019",
+        comment: "Lieu vraiment convivial. Bon service et surtout plats délicieux ! Les pizzas sont excellentes et le côté brasserie est lui aussi parfait ! Le petit bémol c'est qu'il y a souvent du monde, mais c'est normal à ce niveau là ! Je recommande, la semaine comme le week-end !"
+      },
+      { 
+        date: "10/2019",
+        comment: "Restaurant très sympathique. Une équipe de serveurs jeunes et dynamique. Très bonne ambiance. Et surtout des plats délicieux. J'y ai passé un très bon moment."
+      },
+      { 
+        date: "07/2019",
+        comment: "Resto/Bar à la décoration très cosy, l’endroit est très agréable et la nourriture est bonne! Parfait pour un repas entre amis (possibilité de réserver pour un groupe) ou pour un brunch!"
+      }
+    ],
     award: {
       scroll: "fa-frog",
       icon: "fas fa-frog",
@@ -48,12 +79,27 @@ export default [
     votes: 250,
     openingHours: "19h-00h",
     id: 3,
-    imageUrl:
-      "https://sortir.telerama.fr/sites/tr_master/files/styles/m_plus_640x360/public/assets/images/place/25/66/originale.jpg?itok=4x1s6Kws",
+    imageUrl: "https://sortir.telerama.fr/sites/tr_master/files/styles/m_plus_640x360/public/assets/images/place/25/66/originale.jpg?itok=4x1s6Kws",
+    imageUrl2: "http://www.foodreporter.fr/upload/original/2/j/g/6/i/1204382.jpg",
     price: "€€€",
     price_digit: 3,
     lat: 48.88621817731902,
-    lng: 2.3373565052628793
+    lng: 2.3373565052628793,
+    foodlabreview: "Une véritable adresse de cuisine japonaise. Un menu unique en 7 plats, deux services le soir, un à 19h et un deuxième à 21h. Le chef Eiichi Edakuni navigue entre Paris et Kyoto pour notre plus grand plaisir.",
+    reviews: [
+      { 
+        date: "12/2019",
+        comment: "Une super soirée pleine de surprises gustatives. Une ambiance très agréable ! J'y retournerai prochainement."
+      },
+      { 
+        date: "10/2019",
+        comment: "Deuxième expérience dans ce restaurant fabuleux. Tout est exceptionnel du début à la fin. Les plats sont originaux, très jolis et délicieux. Le cadre est génial : on mange autour du bar et le chef dresse devant nous. Il faut réserver pour dîner. Je recommande plus que vivement ce restaurant. A tester de toute urgence si vous aimez la cuisine japonaise"
+      },
+      { 
+        date: "07/2019",
+        comment: "Là bas, le terme d'art culinaire prend tout son sens. On y va pour manger, mais aussi pour déguster, voir, sentir, apprendre... Les chefs expliquent parfaitement les enjeux de chaque plat, la composition, l'équilibre. Je ne regrette pas d'y être allée"
+      }
+    ],
   },
   {
     name: "Pierre Sang in Oberkampf",
@@ -65,29 +111,57 @@ export default [
     arr: "11",
     openingHours: "12h-15h / 19h-23h",
     id: 4,
-    imageUrl:
-      "https://pierresang.com/wp-content/uploads/2019/01/Pierre-Sang-in-Oberkampf.jpg",
+    imageUrl: "https://pierresang.com/wp-content/uploads/2019/01/Pierre-Sang-in-Oberkampf.jpg",
+    imageUrl2: "https://www.yonder.fr/sites/default/files/contenu/news/pierre-sang-gambey-03_0.jpg",
     price: "€€€",
     price_digit: 3,
     lat: 48.864920777319035,
-    lng: 2.372643288763244
+    lng: 2.372643288763244,
+    menuLink: "https://pierresang.com/in-oberkampf/",
+    foodlabreview: "Une bien belle adresse où l'on trouve des plats mêlant influences coréennes et classiques de la gastronomie française. Le concept de plat mystère est amusant : une succession de 6 plats surprises plus délicieux les uns que les autres sur lesquels le serveur vient vous interroger entre chaque service !",
+    reviews: [
+      { 
+        date: "12/2019",
+        comment: "Concept excellent ! On apprécie vraiment les plats qui y sont proposés. Non seulement grâce aux différentes saveurs présentes mais aussi par l'amabilité des serveurs. Concept : on a un menu en 6 services imposés avec possibilité de signaler ses allergènes. À chaque fin de repas le serveur discute avec vous du plat dégusté. Décor très sobre mais simple et efficace."
+      },
+      { 
+        date: "10/2019",
+        comment: "Une ambiance atypique et un service de qualité. Un restaurant à faire entre amis ou en amoureux ! Vous dites au serveur les ingrédients que vous n'aimez pas où dont vous êtes allergiques. Et on vous sert des plats. A vous de deviner ! Super concept. Petit plus : en sortant du restaurant,nous avons vu Pierre Sang  arriver en trottinette ! La classe"
+      },
+    ],
   },
   {
-    name: "Sun Café",
-    type: "Japonais",
-    rate: 3.9,
-    votes: 250,
-    address: "14 Boulevard de Sébastopol, 75004",
-    phone: "01 48 04 89 88",
-    arr: "4",
-    openingHours: "12h-00h",
+    name: "La Pâtisserie du Meurice par Cédric Grolet",
     id: 5,
-    imageUrl:
-      "https://www.exoticca.fr/blog/wp-content/uploads/2019/06/Journee-internationale-du-sushi.jpg",
-    price: "€",
-    price_digit: 1,
-    lat: 48.8596072,
-    lng: 2.3490559
+    type: "Pâtisserie",
+    rate: 4.6,
+    votes: 500,
+    address: "6 Rue de Castiglione, 75001",
+    phone: "01 44 58 69 19",
+    arr: "1",
+    openingHours: "12h-15h",
+    imageUrl: "https://assets.letemps.ch/sites/default/files/styles/share/public/media/2018/05/25/file709hhtc8y0oabuqmgsh.jpg.jpeg?itok=qCTHjPAd",
+    imageUrl2: "https://resofrance.eu/wp-content/uploads/2018/12/buche-noel-buche-marrons-cedric-grolet.jpg",
+    price: "€€€€",
+    price_digit: 4,
+    lat: 48.8657239,
+    lng: 2.3279848,
+    menuLink: "https://www.dorchestercollection.com/wp-content/uploads/paris-le-meurice-patisserie-cedric-grolet-francais.pdf",
+    foodlabreview: "Derrière le charme très discret et sobre de la vitrine on retrouve des pâtisseries exceptionnelles de gourmandises qui nous surprennent d'abord par leur esthétique puis, une fois la porte franchie, par leur odeur enivrante. Une adresse à ne manquer sous aucun prétexte pour les fans de pâtisserie.",
+    reviews: [
+      { 
+        date: "12/2019",
+        comment: "Vraiment une expérience gustative incroyable. Je n'ai jamais mangé de gâteaux pareil. C'est bon, c'est beau. Le détail est poussé dans les moindres détails. Ils sont mêmes pensées aux toilettes !  Comme un gastro mais pour le goûter."
+      },
+      { 
+        date: "10/2019",
+        comment: "En bref, il s’agit certainement de la pâtisserie la plus connue de Paris, le travail est très impressionnant, les créations sont exposées comme de vrais bijoux"
+      },
+      {
+        date: "07/2019",
+        comment: "Belle expérience que celle des célèbres pâtisseries Grolet. Les pâtisseries sont merveilleusement belles et délicieuses. Concernant le trompe l’œil, nous avons testé la Fraise, en effet plus beau que bon car il manquait du biscuit à mon goût. Mention spéciale au Paris Brest et tartelette pistache: une tuerie"
+      }
+    ],
   },
   {
     name: "Café de l'Industrie",
@@ -99,12 +173,28 @@ export default [
     arr: "11",
     openingHours: "9h-2h",
     id: 6,
-    imageUrl:
-      "https://media.abcsalles.com/images/1/salles/1440x960/8136/cafe-de-industrie.png",
+    imageUrl: "https://uniiti.com/images/shops/slides/48034ba83595a0edf6df2670a00a44ac6da345de.jpeg",
+    imageUrl2: "https://2.bp.blogspot.com/-XhDq8cI20PI/VyM64kaklbI/AAAAAAAAjaE/h5TXyEY76skThBVR4OVO6QoubUsX2itUQCLcB/s1600/cafe-de-lindustrie-paris-11-1.JPG",
     price: "€",
     price_digit: 1,
     lat: 48.855846977319025,
-    lng: 2.372100939169941
+    lng: 2.372100939169941,
+    menuLink: "https://cafedelindustrieparis.fr/fr/services",
+    foodlabreview: "La cuisine est bonne, les prix largement acceptables, le service est souriant et chaleureux, et l'ambiance générale est excellent. Avec sa déco ambiance colonialiste le café de l'industrie est une institution dans le quartier.",
+    reviews: [
+      { 
+        date: "12/2019",
+        comment: "Vraiment une bonne ambiance à magasin et pour y manger c'est un régal. Je ressors rassasié à chaque fois et l'addition ne s'enflamme pas même si on prend une boisson et un dessert. Les prix sont convenables et les serveurs sont admirable."
+      },
+      { 
+        date: "10/2019",
+        comment: "Super ambiance dans ce bistrot typiquement parisien. Bon choix de carte et bonne qualité des plats. Bémol sur le bruit, difficile de discuter quand la salle est pleine et il faisait très chaud."
+      },
+      {
+        date: "07/2019",
+        comment: "Lieu chaleureux, convivial, toujours rempli et sans prétentions. Les brunchs sont bons et le personnel sympa. Je recommande !"
+      }
+    ],
   },
   {
     name: "Le Loulou",
@@ -116,12 +206,28 @@ export default [
     arr: "5",
     openingHours: "8h-22h30",
     id: 7,
-    imageUrl:
-      "https://static.wixstatic.com/media/19b892_a24e5e6309ec4932a1c6c9ae5052eb4f~mv2_d_2808_1638_s_2.jpg/v1/fit/w_2500,h_1330,al_c/19b892_a24e5e6309ec4932a1c6c9ae5052eb4f~mv2_d_2808_1638_s_2.jpg",
+    imageUrl: "https://static.wixstatic.com/media/19b892_a24e5e6309ec4932a1c6c9ae5052eb4f~mv2_d_2808_1638_s_2.jpg/v1/fit/w_2500,h_1330,al_c/19b892_a24e5e6309ec4932a1c6c9ae5052eb4f~mv2_d_2808_1638_s_2.jpg",
+    imageUrl2: "https://www.oubruncher.com/photos1/625_4.jpg",
     price: "€€",
     price_digit: 2,
     lat: 48.851373977319035,
-    lng: 2.3450795147316774
+    lng: 2.3450795147316774,
+    menuLink: "https://www.louloufriendlydiner.com/menu",
+    foodlabreview: "Toujours un bonheur d'aller manger là bas ! Tout le monde y trouve son compte: cœliaques, gourmands, végétarien, tout à la fois. Un accueil toujours chaleureux quel que soit le moment de la journée et pourtant le service est en continu et le succès au rendez-vous !",
+    reviews: [
+      { 
+        date: "12/2019",
+        comment: "Un décor agréable fait de bric et de broc, un accueil souriant et chaleureux. Une carte originale avec des produits frais. Nous nous sommes régalés et pas étouffés avec la note. Je recommande et il y a un menu enfant qui est bien."
+      },
+      { 
+        date: "10/2019",
+        comment: "Super restaurant, les plats sont exquis. Je me souviens encore de leurs tartines au saumon avec un oeuf poché qui était super bon. La carte change, c'est plutôt pas mal et leur café : super bon ! Je recommande !"
+      },
+      {
+        date: "07/2019",
+        comment: "Cadre sympa, on y mange très bien et le personnel est très agréable, quoi de mieux pour être ravi ! Les vins sont très bons aussi. Je le recommande vivement."
+      }
+    ],
   },
   {
     name: "Benedict",
@@ -1310,24 +1416,5 @@ export default [
     price_digit: 3,
     lat: 48.862451,
     lng: 2.363821,
-  },
-  {
-    name: "La Pâtisserie du Meurice par Cédric Grolet",
-    id: 71,
-    type: "Pâtisserie",
-    rate: 4.6,
-    votes: 500,
-    address: "6 Rue de Castiglione, 75001",
-    phone: "01 44 58 69 19",
-    arr: "1",
-    openingHours: "12h-15h",
-    menuLink: "https://www.dorchestercollection.com/wp-content/uploads/paris-le-meurice-patisserie-cedric-grolet-francais.pdf",
-    imageUrl:
-      "https://assets.letemps.ch/sites/default/files/styles/share/public/media/2018/05/25/file709hhtc8y0oabuqmgsh.jpg.jpeg?itok=qCTHjPAd",
-    imageUrl2: "https://resofrance.eu/wp-content/uploads/2018/12/buche-noel-buche-marrons-cedric-grolet.jpg",
-    price: "€€€€",
-    price_digit: 4,
-    lat: 48.8657239,
-    lng: 2.3279848
   },
 ];
