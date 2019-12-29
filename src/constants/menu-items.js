@@ -4,3 +4,11 @@ export const menuItems = [
   { name: "Proposer un resto", path: "/add-restaurant"},
   { name: "Foolab ?", path: "/about"},
 ];
+
+export const menuItemsMobile = [
+  { name: "Home", path: "/"},
+  { name: "Les restos", path: "/restaurants"},
+  { name: "Les awards", path: "/awards"},
+  { name: "Proposer un resto", path: "/add-restaurant"},
+  { name: "Foolab ?", path: "/about"},
+];

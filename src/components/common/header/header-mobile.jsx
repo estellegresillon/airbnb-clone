@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link, NavLink } from "react-router-dom";
 
-import { menuItems } from "../../../constants/menu-items";
+import { menuItemsMobile } from "../../../constants/menu-items";
 import { useComponentVisible } from "../../../hooks/useRef";
 
 const HeaderMobile = () => {
   const { ref, isComponentVisible, setIsComponentVisible } = useComponentVisible(false);
-
+  
   return (
     <div className="header-mobile">
       <div className="header-left">
@@ -20,10 +20,9 @@ const HeaderMobile = () => {
         <i className="fas fa-hamburger" onClick={() => setIsComponentVisible(true)} />
         {isComponentVisible &&
           <div ref={ref} className="dropdown-menu-mobile">
-            {menuItems.map(link => {
+            {menuItemsMobile.map(link => {
               return (
                 <NavLink 
-                  activeClassName="selected-menu-item"
                   className="menu-link"
                   to={link.path}
                   onClick={() => setIsComponentVisible(false)}
