@@ -189,6 +189,7 @@ const SearchByName = props => {
           options={arrOptions}
           onChange={handleArrChange}
           placeholder={arr}
+          isSearchable={false}
           className="filters-react-select filter-arr"
         />
         <Select
@@ -196,6 +197,7 @@ const SearchByName = props => {
           options={typeOptions} 
           onChange={handleTypeChange} 
           placeholder={type}
+          isSearchable={false}
           className="filters-react-select filter-type"
         />
         <button className="button-filter-reinitialize" onClick={reinitializeFilters}>Réinitialiser</button>
