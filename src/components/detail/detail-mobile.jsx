@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
@@ -7,6 +7,29 @@ import { setRestaurants } from "../../actions";
 const DetailMobile = props => {
   const { setRestaurants, restaurants, match, location } = props;
   const [restaurant, setRestaurant] = useState({})
+  const nextRestaurantRef = useRef(null); // 
+  const previousRestaurantRef = useRef(null);//
+  const yDown = useRef(null)//
+  const xDown = useRef(null)//
+  
+  const setNavigation = (restaurantList) => {//
+    let previous;
+    let next;
+
+    restaurantList.forEach((val, i) => {
+      if (val.id.toString() === match.params.id) {
+        previous = restaurantList[i - 1];
+        next = restaurantList[i + 1];
+      };
+    });
+
+    if (previous) {
+      previousRestaurantRef.current = previous.id
+    };
+    if (next) {
+      nextRestaurantRef.current = next.id
+    };
+  };
   
   // if a user arrives on the pageId directly 
   // he doesn't get the restaurant object in the props so we execute these 2 hooks
@@ -17,6 +40,12 @@ const DetailMobile = props => {
   }, [location.restaurant, setRestaurants]);
 
   useEffect(() => {
+    if (location.listedRestaurants) {//
+      setNavigation(location.listedRestaurants);//
+    } else {//
+      setNavigation(restaurants);//
+    };
+
     if (location.restaurant) {
       setRestaurant(location.restaurant);
     } else {
@@ -33,6 +62,52 @@ const DetailMobile = props => {
   // go to top because it keeps the same scroll position as the previous page
   useEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+
+  function getTouches(evt) {//
+    return evt.touches ||             // browser API
+           evt.originalEvent.touches; // jQuery
+  }                                                     
+  
+  function handleTouchStart(evt) {//
+      const firstTouch = getTouches(evt)[0];                                      
+      xDown.current = firstTouch.clientX;                                      
+      yDown.current = firstTouch.clientY;                                      
+  }; 
+
+  function handleTouchMove(evt) {//
+    if ( ! xDown.current || ! yDown.current ) {
+        return;
+    }
+
+    var xUp = evt.touches[0].clientX;                                    
+    var yUp = evt.touches[0].clientY;
+
+    var xDiff = xDown.current - xUp;
+    var yDiff = yDown.current - yUp;
+
+    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
+        if ( xDiff > 0 ) {
+            /* left swipe */ 
+        } else {
+            /* right swipe */
+        }                       
+    } else {
+        if ( yDiff > 0 ) {
+            /* up swipe */ 
+        } else { 
+            /* down swipe */
+        }                                                                 
+    }
+    /* reset values */
+    xDown.current = null;
+    yDown.current = null;                                             
+  };
+
+  useEffect(() => { //
+    document.addEventListener('touchstart', handleTouchStart, false);        
+    document.addEventListener('touchmove', handleTouchMove, false);
+  // eslint-disable-next-line
   }, []);
 
   return restaurant ? (
