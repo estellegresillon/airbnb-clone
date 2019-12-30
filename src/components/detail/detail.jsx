@@ -49,18 +49,23 @@ const Detail = props => {
           <div className="detail-page-title">{restaurant.name}</div>
           <ul className="detail-page-resume">
             <li><span className="bolder">Type :</span> {restaurant.type} ({restaurant.price})</li>
-            <li><span className="bolder">Note :</span> {restaurant.rate}/5 (+ de {restaurant.votes} votes Google)</li>
+            <li>
+              <span className="bolder">Note : </span>
+              <span className="resume-rate">{restaurant.rate}/5 </span>
+              (+ de {restaurant.votes} votes Google)
+            </li>
             <li>{restaurant.address}</li>
             <li><span className="bolder">Horaires :</span> {restaurant.openingHours}</li>
             <li><span className="bolder">Téléphone :</span> {restaurant.phone || "Non communiqué"}</li>
-            <li>
-              <a 
-                href={restaurant.menuLink}
-                target="_blank"
-                className="see-menu"
-                rel="noopener noreferrer"
-              >Voir le menu</a>
-            </li>
+            {restaurant.menuLink && 
+              <li>
+                <a 
+                  href={restaurant.menuLink}
+                  target="_blank"
+                  className="see-menu"
+                  rel="noopener noreferrer"
+                >Voir le menu</a>
+              </li>}
           </ul>
         </div>
       </div>
