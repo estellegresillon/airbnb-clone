@@ -7,12 +7,12 @@ import { setRestaurants } from "../../actions";
 const DetailMobile = props => {
   const { setRestaurants, restaurants, match, location } = props;
   const [restaurant, setRestaurant] = useState({})
-  const nextRestaurantRef = useRef(null); // 
-  const previousRestaurantRef = useRef(null);//
-  const yDown = useRef(null)//
-  const xDown = useRef(null)//
+  const nextRestaurantRef = useRef(null);
+  const previousRestaurantRef = useRef(null);
+  const yDown = useRef(null)
+  const xDown = useRef(null)
   
-  const setNavigation = (restaurantList) => {//
+  const setNavigation = (restaurantList) => {
     let previous;
     let next;
 
@@ -40,10 +40,10 @@ const DetailMobile = props => {
   }, [location.restaurant, setRestaurants]);
 
   useEffect(() => {
-    if (location.listedRestaurants) {//
-      setNavigation(location.listedRestaurants);//
+    if (location.listedRestaurants) {
+      setNavigation(location.listedRestaurants);
     } else {//
-      setNavigation(restaurants);//
+      setNavigation(restaurants);
     };
 
     if (location.restaurant) {
@@ -64,19 +64,18 @@ const DetailMobile = props => {
     window.scrollTo(0, 0);
   }, []);
 
-  function getTouches(evt) {//
+  function getTouches(evt) {
     return evt.touches ||             // browser API
            evt.originalEvent.touches; // jQuery
   }                                                     
   
-  function handleTouchStart(evt) {//
+  function handleTouchStart(evt) {
       const firstTouch = getTouches(evt)[0];                                      
       xDown.current = firstTouch.clientX;                                      
-      yDown.current = firstTouch.clientY;  
-      setRestaurant({})                                    
+      yDown.current = firstTouch.clientY;                                    
   }; 
 
-  function handleTouchMove(evt) {//
+  function handleTouchMove(evt) {
     if ( ! xDown.current || ! yDown.current ) {
         return;
     }
@@ -105,11 +104,11 @@ const DetailMobile = props => {
     yDown.current = null;                                             
   };
 
-  useEffect(() => { //
-    document.addEventListener('touchstart', handleTouchStart, false);        
-    document.addEventListener('touchmove', handleTouchMove, false);
-  // eslint-disable-next-line
-  }, []);
+  // useEffect(() => {
+  //   document.addEventListener('touchstart', handleTouchStart, false);        
+  //   document.addEventListener('touchmove', handleTouchMove, false);
+  // // eslint-disable-next-line
+  // }, []);
 
   return restaurant ? (
     <div className="detail-page-wrapper-mobile">
