@@ -838,12 +838,28 @@ export default [
     phone: "09 86 70 77 00",
     arr: "3",
     openingHours: "13h30-18h",
-    imageUrl:
-      "https://somanyparis.files.wordpress.com/2018/10/pontochoux-7.jpg",
+    imageUrl2: "https://somanyparis.files.wordpress.com/2018/10/pontochoux-7.jpg",
+    imageUrl: "https://somanyparis.files.wordpress.com/2018/10/pontochoux-6.jpg",
     price: "€",
     price_digit: 1,
     lat: 48.8613189,
     lng: 2.3650928,
+    menuLink: "https://lacarte.menu/restaurants/paris/pontochoux",
+    foodlabreview: "C'est bon, c'est frais, c'est copieux et c'est abordable. Que demander de plus ? En revanche ne comptez pas y rester des heures pour de longs debriefs. On mange (bien) et on part. La queue est là et on nous le dit, mais gentiment bien sûr !",
+    reviews: [
+      { 
+        date: "12/2019",
+        comment: "Restaurant microscopique mais j'ai eu la chance de ne pas attendre le jour où j'y ai mangé. L'accueil et le lieu sont chaleureux. Et surtout, les plats sont délicieux ! Moi qui suis habituellement vite écoeurée par le curry japonais, là j'ai vraiment aimé. Il est savoureux, pas trop sucré et les accompagnements sont très bons aussi."
+      },
+      { 
+        date: "10/2019",
+        comment: "Le curry y est absolument délicieux. L'établissement à aussi de quoi manger pour les végétariens ce qui est un bon point."
+      },
+      {
+        date: "07/2019",
+        comment: "L'accueil est chaleureux et agréable ! Le curry épicé comme il faut et la qualité des produits vous réchauffe l'estomac. Vivement une extension à Marseille. Vous êtes chanceux les parisiens d'avoir cette perle de restauration !"
+      }
+    ],
     award: {
       scroll: "fa-award",
       icon: "fas fa-award",
@@ -860,12 +876,27 @@ export default [
     phone: "01 42 97 54 27",
     arr: "1",
     openingHours: "11h30-22h30",
-    imageUrl:
-      "https://www.papillesetpupilles.fr/wp-content/uploads/2019/01/Okonomiyaki-%C2%A9-K321-shutterstock.jpg",
+    imageUrl: "https://www.papillesetpupilles.fr/wp-content/uploads/2019/01/Okonomiyaki-%C2%A9-K321-shutterstock.jpg",
     price: "€",
     price_digit: 1,
     lat: 48.866141,
     lng: 2.3352886,
+    menuLink: "https://www.akirestaurant.fr/alacarte/",
+    foodlabreview: "Le meilleur de Saint-Anne : après 19h, il faut avoir un peu de patience pour pouvoir y dîner et c'est impossible de réserver. Le mieux est d'être dans la salle du bas pour voir les chefs faire les okonomiyakis, spécialité du lieu. Vous y reviendrez pour goûter les sobas, katsudon, shake ikura don, et surtout les currys. Service très rapide.",
+    reviews: [
+      { 
+        date: "12/2019",
+        comment: "Délicieux ! Copieux, pas trop cher, personnel agréable. Arriver soit tôt soit tard car sinon il faut faire la queue dehors ! (victime de son succès)."
+      },
+      { 
+        date: "10/2019",
+        comment: "Réel cuisine japonaise traditionnelle ! Que de plats surprenant pour les yeux et les papilles. De plus non plus, nous pouvons voir les chefs à la tâche rien de plus pour apprécier davantage leur carte !"
+      },
+      {
+        date: "07/2019",
+        comment: "Véritable cuisine japonaise, et lorsque vous pouvez manger au comptoir les plats sont préparés sous vos yeux. Les mets sont délicieux, un véritable régal, quelque soit votre choix. Et vue la qualité les prix sont plus que corrects."
+      }
+    ],
     award: {
       scroll: "fa-torii-gate",
       icon: "fas fa-torii-gate",
@@ -882,8 +913,7 @@ export default [
     phone: "01 47 42 13 14",
     arr: "2",
     openingHours: "11h30-22h30",
-    imageUrl:
-      "https://lh3.googleusercontent.com/xq-p3O14FX-mMHEEQGJcFrJlWKl6R_skVMF-yMli_3nbQLtlforrB5ZtFp3OMJ4-ouQtueYW=w1080-h608-p-no-v0",
+    imageUrl: "https://lh3.googleusercontent.com/xq-p3O14FX-mMHEEQGJcFrJlWKl6R_skVMF-yMli_3nbQLtlforrB5ZtFp3OMJ4-ouQtueYW=w1080-h608-p-no-v0",
     price: "€",
     price_digit: 1,
     lat: 48.8689453,
@@ -899,8 +929,7 @@ export default [
     phone: "09 70 91 12 41",
     arr: "6",
     openingHours: "12h-14h30 / 18h30-22h30",
-    imageUrl:
-      "https://www.sortiraparis.com/images/80/68604/289785-kodawari-ramen-le-specialiste-du-ramen-a-paris-18.jpg",
+    imageUrl: "https://www.sortiraparis.com/images/80/68604/289785-kodawari-ramen-le-specialiste-du-ramen-a-paris-18.jpg",
     price: "€",
     price_digit: 1,
     lat: 48.8546132,
