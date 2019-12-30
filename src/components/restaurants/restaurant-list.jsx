@@ -9,7 +9,15 @@ const RestaurantList = props => {
   
   return (
     <div className={showMap ? "restaurant-list-with-rows" : "restaurant-list-with-grid"}>
-      {listedRestaurants.map((restaurant, i) => <RestaurantListItem key={restaurant.id} restaurant={restaurant} tabIndex={i} />)}
+      {listedRestaurants.map((restaurant, i) => {
+        return (
+          <RestaurantListItem 
+            key={restaurant.id} 
+            listedRestaurants={listedRestaurants}
+            restaurant={restaurant} 
+            tabIndex={i} 
+          />)
+      })}
     </div>
   );
 };

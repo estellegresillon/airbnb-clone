@@ -6,7 +6,7 @@ import { LazyLoadImage, trackWindowScroll }
 import Badge from "../common/badge";
 
 const AwardListItem = props => {
-  const { scrollPosition, restaurant, tabIndex } = props;
+  const { scrollPosition, restaurant, listedRestaurants, tabIndex } = props;
 
   return (
     <div 
@@ -35,7 +35,7 @@ const AwardListItem = props => {
           </div>
           <h2>{restaurant.name}</h2>
           <div className="card-restaurant-address">{restaurant.address}</div>
-          <Link to={{pathname: `/restaurants/${restaurant.id}`, restaurant: restaurant}}>
+          <Link to={{ pathname: `/restaurants/${restaurant.id}`, restaurant, listedRestaurants }}>
             <div className="card-see-infos">Voir infos</div>
           </Link>
         </div>

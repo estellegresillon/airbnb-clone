@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
@@ -8,8 +8,30 @@ const Detail = props => {
   const { setRestaurants, restaurants, match, location } = props;
   const [restaurant, setRestaurant] = useState({})
   
+  const nextRef = useRef(null);
+  const previousRef = useRef(null);
+  
+  const setNavigation = (restaurantList) => {
+    let previous;
+    let next;
+
+    restaurantList.forEach((val, i) => {
+      if (val.id.toString() === match.params.id) {
+        previous = restaurantList[i - 1];
+        next = restaurantList[i + 1];
+      };
+    });
+
+    if (previous) {
+      previousRef.current = previous.id
+    };
+    if (next) {
+      nextRef.current = next.id
+    };
+  };
+
   // if a user arrives on the pageId directly 
-  // he doesn't get the restaurant object in the props so we execute these 2 hooks
+  // he doesn't get the restaurantS or listedRestaurantS objects in the props
   useEffect(() => { 
     if (!location.restaurant) {
       setRestaurants(); 
@@ -19,6 +41,7 @@ const Detail = props => {
   useEffect(() => {
     if (location.restaurant) {
       setRestaurant(location.restaurant);
+      setNavigation(location.listedRestaurants);
     } else {
       const detailRestaurant = [...restaurants].filter(val => {
         if (val.id) {
@@ -27,8 +50,29 @@ const Detail = props => {
       });
   
       setRestaurant(detailRestaurant[0]);
+      setNavigation(restaurants);
     }
+  // eslint-disable-next-line
   }, [location.restaurant, restaurants, match.params.id]);
+
+  const handleKeyDown = (e) => {
+    // 37 arrow left / 39 arrow right
+    if (e.keyCode === 37) {
+      if (previousRef.current) {
+        props.history.push(`/restaurants/${previousRef.current}`)
+      }
+    } else if (e.keyCode === 39) {
+      if (nextRef.current) {
+        props.history.push(`/restaurants/${nextRef.current}`)
+      }
+    }
+  }
+
+  useEffect(() => { 
+    document.addEventListener("keydown", handleKeyDown, true);
+    return () => document.removeEventListener("keydown", handleKeyDown, true);
+  // eslint-disable-next-line
+  }, []);
 
   return restaurant ? (
     <div className="detail-page-wrapper">

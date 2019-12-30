@@ -54,7 +54,7 @@ const AwardList = props => {
               key={restaurant.id} 
               onMouseEnter={() => handleListItemHover(restaurant)}
               className="awarded-restaurant">
-              <AwardListItem restaurant={restaurant} tabIndex={i} />
+              <AwardListItem listedRestaurants={awardedRestaurants} restaurant={restaurant} tabIndex={i} />
             </div>
           )
         })}

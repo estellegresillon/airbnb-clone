@@ -8,7 +8,15 @@ import { selectRestaurant } from "../../actions";
 import Badge from "../common/badge";
 
 const RestaurantListItem = props => {
-  const { scrollPosition, selectRestaurant, selectedRestaurant, restaurant, tabIndex, showMap } = props;
+  const { 
+    scrollPosition,
+    selectRestaurant,
+    selectedRestaurant,
+    restaurant,
+    listedRestaurants,
+    tabIndex,
+    showMap
+  } = props;
 
   const handleClick = () => {
     selectRestaurant(restaurant);
@@ -22,7 +30,8 @@ const RestaurantListItem = props => {
       id={`${restaurant.award ? restaurant.award.scroll : ""}`}
       tabIndex={tabIndex + 1}
     >
-      {!showMap && <Link to={{pathname: `/restaurants/${restaurant.id}`, restaurant: restaurant}}></Link>}
+      {!showMap && 
+        <Link to={{ pathname: `/restaurants/${restaurant.id}`, restaurant, listedRestaurants }} />}
       <div className="card">
         {!showMap && <div className="grid-img-overlay" />}
         <LazyLoadImage
@@ -46,7 +55,7 @@ const RestaurantListItem = props => {
           <h2>{restaurant.name}</h2>
           <div className="card-restaurant-address">{restaurant.address}</div>
           {showMap && 
-            <Link to={{pathname: `/restaurants/${restaurant.id}`, restaurant: restaurant}}>
+            <Link to={{ pathname: `/restaurants/${restaurant.id}`, restaurant, listedRestaurants }}>
               <div className="card-see-infos">Voir infos</div>
             </Link>}
         </div>
