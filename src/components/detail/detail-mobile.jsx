@@ -72,7 +72,8 @@ const DetailMobile = props => {
   function handleTouchStart(evt) {//
       const firstTouch = getTouches(evt)[0];                                      
       xDown.current = firstTouch.clientX;                                      
-      yDown.current = firstTouch.clientY;                                      
+      yDown.current = firstTouch.clientY;  
+      setRestaurant({})                                    
   }; 
 
   function handleTouchMove(evt) {//
