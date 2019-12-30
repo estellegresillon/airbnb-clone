@@ -1226,22 +1226,21 @@ export default [
     }
   },
   {
-    name: "Maison Landemaine - Oberkampf",
+    name: "Yann Couvreur - Rue des Rosiers",
     id: 37,
     type: "Pâtisserie",
-    rate: 4.1,
-    votes: 250,
-    address: "41 Rue Oberkampf, 75011",
-    phone: "01 43 57 82 33",
-    arr: "11",
-    openingHours: "7h30-20h30",
-    imageUrl: "http://painrisien.com/wp-content/uploads/2012/04/20120423_133633.jpg",
-    imageUrl2: "http://www.maisonlandemaine.com/uploads/9/9/5/3/99530470/11_orig.jpg",
+    rate: 4.4,
+    votes: 500,
+    address: "23bis Rue des Rosiers, 75004",
+    phone: "06 05 97 63 01",
+    arr: "4",
+    openingHours: "10h-20h",
+    imageUrl: "http://untitledmag.fr/wp-content/uploads/2018/04/YANN-COUVREUR-26-BASSE-DEF.jpg",
     price: "€€",
     price_digit: 2,
-    lat: 48.8644638,
-    lng: 2.3693428,
-    menuLink: "http://www.maisonlandemaine.com/nos-patisseries.html",
+    lat: 48.857506,
+    lng: 2.358768,
+    menuLink: "https://yanncouvreur.com/28-tous-nos-produits",
     foodlabreview: "Le détour à cette boulangerie-patisserie vaut le coup. Original, succulent, appétissant, diététique, ultra-frais, fait maison,... Que dire de plus ! Les tartelettes, elles sont trop jolies et bonnes! Le pain est un régal, on ne trouve pas ça ailleurs.",
     reviews: [
       { 
@@ -2016,7 +2015,7 @@ export default [
       },
       { 
         date: "10/2019",
-        comment: "Super découverte ! Les plats sont copieux et délicieux, notamment les pancakes  que je recommande sincèrement ! Sinon, juste un peu d'attente le dimanche matin mais une fois installée, on oublie cela ! "
+        comment: "Super découverte ! Les plats sont copieux et délicieux, notamment les pancakes que je recommande sincèrement ! Sinon, juste un peu d'attente le dimanche matin mais une fois installée, on oublie cela ! "
       },
       { 
         date: "07/2019",
@@ -2027,19 +2026,34 @@ export default [
   {
     name: "Le Manko",
     id: 61,
-    type: "Français",
+    type: "Péruvien",
     rate: 4.1,
-    votes: 500,
+    votes: 1000,
     address: "15 Avenue Montaigne, 75008",
     phone: "01 82 28 00 15",
     arr: "8",
     openingHours: "11h30-14h15 / 19h-2h",
-    imageUrl:
-      "https://www.infosbar.com/photo/art/grande/8922651-14145113.jpg?v=1455033802",
+    imageUrl: "https://www.infosbar.com/photo/art/grande/8922651-14145113.jpg?v=1455033802",
     price: "€€€",
     price_digit: 3,
     lat: 48.8655753,
-    lng: 2.3030293
+    lng: 2.3030293,
+    menuLink: "http://manko-paris.com/wp-content/uploads/2019/12/MENU_MANKO_EXTERIEUR-1.pdf",
+    foodlabreview: "Tout en classe, fraîcheur et exotisme. Manko fait honneur au quartier dans lequel il s'est installé. Un accueil des plus chaleureux, une ambiance raffinée, moderne et intimiste qui a pour effet direct de vous mettre très a l'aise. La cuisine ouverte est un bonus qui ne dérange a aucun moment et entendre l'équipe s'exprimer en espagnol rajoute une dose d'authenticité. Les serveurs sont très disponible et à l'écoute sans jamais se montrer envahissants.", 
+    reviews: [
+      { 
+        date: "12/2019",
+        comment: "Le cadre est magnifique, l'ambiance chaleureuse. Un endroit idéale pour un anniversaire. En semaine plutôt calme, plus intime. Les plats sont délicieux, découverte de nouvelle saveurs ! Le service très satisfaisant."
+      },
+      { 
+        date: "10/2019",
+        comment: "Très bon accueil. De bons conseils pour les plats! Une déco de dingue et une ambiance de folie!!! Super lieu même pour juste un verre!"
+      },
+      { 
+        date: "07/2019",
+        comment: "Chic et de bon goût, ambiance tamisée en dorures contemporaines avec une pointe de prohibition. Bon dans l'assiette et le service est accueillant... Et super musique"
+      },
+    ],
   },
   {
     name: "Le 975",
@@ -2051,12 +2065,28 @@ export default [
     phone: "09 53 75 67 71",
     arr: "17",
     openingHours: "12h-14h30 / 19h30-22h30",
-    imageUrl:
-      "https://www.restofolio.fr/media/W1siZiIsIjIwMTYvMDgvMzEvOXExNjYxbWxybF8xNDEwMjgxOV8xMTA0OTcxMzg2MjYyODk1Xzc1NzkzOTczNDkwNjkxNTA4ODRfby5qcGciXSxbInAiLCJlbmNvZGUiLCJqcGciLCItcXVhbGl0eSA0MCJdLFsicCIsInRodW1iIiwiMTI0MHgiXV0/14102819_1104971386262895_7579397349069150884_o.jpg?sha=ad543ee646beda37",
+    imageUrl: "https://www.restofolio.fr/media/W1siZiIsIjIwMTYvMDgvMzEvOXExNjYxbWxybF8xNDEwMjgxOV8xMTA0OTcxMzg2MjYyODk1Xzc1NzkzOTczNDkwNjkxNTA4ODRfby5qcGciXSxbInAiLCJlbmNvZGUiLCJqcGciLCItcXVhbGl0eSA0MCJdLFsicCIsInRodW1iIiwiMTI0MHgiXV0/14102819_1104971386262895_7579397349069150884_o.jpg?sha=ad543ee646beda37",
+    imageUrl2: "https://i1.wp.com/www.le-975.com/wp-content/uploads/2015/11/poisson.jpg?fit=1200%2C800",
     price: "€€",
     price_digit: 2,
     lat: 48.8920597,
-    lng: 2.322423
+    lng: 2.322423,
+    menuLink: "http://www.le-975.com/on-mange/",
+    foodlabreview: "Une décoration simple mais soignée, une carte courte assurant des produits frais, des assiettes toutes très graphiques et des saveurs justes incroyables. Quant à la cuisson de la volaille, moelleuse et fondante, nous ne l'avions connue à ce niveau que dans les restaurants étoilés. Ajouté à tout ça un service souriant, chaleureux, très sympa et je ne vois pas comment vous convaincre davantage de vite réserver. ", 
+    reviews: [
+      { 
+        date: "12/2019",
+        comment: "Super accueil, super atmosphère, excellente nourriture pour un bon rapport qualité prix dans un lieu simple manquant peut être de chaleur dans la deco ! Prévoir de venir le midi et pas le soir car toujours blindé.. Vin proposé en osmose avec nos plats"
+      },
+      { 
+        date: "10/2019",
+        comment: "Les coquilles saint-Jacques étaient délicieuses et pour moi qui ne suis d'habitude pas trop dessert, le cheesecake à la mangue à la fin m'a marquée tellement il était bon. Les serveurs sont très sympas, en toute simplicité. Le 975 propose vraiment des produits de qualité, des assiettes joliment présentées pour des prix qui n'explosent pas"
+      },
+      { 
+        date: "07/2019",
+        comment: "Menu découverte à 39€ digne d'un étoilé, l'équipe est vraiment au top aussi, bonne ambiance, bon conseil sur le vin et des assiettes aussi délicieuses que bien dressées."
+      },
+    ],
   },
   {
     name: "Dai Dai",
@@ -2068,12 +2098,28 @@ export default [
     phone: null,
     arr: "11",
     openingHours: "12h-14h30 / 16h30-23h",
-    imageUrl:
-      "https://www.sortiraparis.com/images/80/87701/476342-dai-dai-paris-10-9.jpg",
+    imageUrl: "https://www.sortiraparis.com/images/80/87701/476333-dai-dai-paris-10-6.jpg",
+    imageUrl2: "http://www.ofive.tv/wp-content/uploads/2018/04/313879-dai-dai-25-27-rue-oberkampf-75011-pari-article_diapo-1.jpg",
     price: "€€",
     price_digit: 2,
     lat: 48.8635571,
     lng: 2.369366,
+    menuLink: "http://www.dai-dai.fr/",
+    foodlabreview: "Cadre très sympathique avec ce magnifique four qui trône en plein milieu de la salle. Service impeccable - les serveurs sont très sympas - et superbes pizzas. Les produit sélectionnés sont de grande qualité et niveau goût et quantité les salades proposées à la carte ne sont pas en reste.", 
+    reviews: [
+      { 
+        date: "12/2019",
+        comment: "Pizza excellente. Le service est aussi au top, les serveurs sont très agréables ! Je recommande :)"
+      },
+      { 
+        date: "10/2019",
+        comment: "C'était délicieux, les serveurs (surtout le barbu) sont adorables ! J'ai passé un très bon moment en plus de bien mangé"
+      },
+      { 
+        date: "07/2019",
+        comment: "Très bonnes pizza napolitaines. Les ingrédients sont bien sourcés ça se sent dans l'assiette. Les serveurs sont dynamiques et souriants. La déco est sympa. Je recommande. Petit plus: on peut réserver"
+      },
+    ],
     award: {
       scroll: "fa-pizza-slice",
       icon: "fas fa-pizza-slice",
@@ -2095,7 +2141,22 @@ export default [
     price: "€€€",
     price_digit: 3,
     lat: 48.8650898,
-    lng: 2.3284434
+    lng: 2.3284434,
+    foodlabreview: "Véritable institution à Rivoli, mythique pour son chocolat chaud dit 'Le Choc Africain' et son Mont Blanc 'Griotte'. Cadre magnifique style belle époque et service au top, malgré la file d’attente parfois très longue en week-end. Le secret est de s'y rendre avant 15h car l'enseigne est victime de son succès !", 
+    reviews: [
+      { 
+        date: "12/2019",
+        comment: "La nouvelle déclinaison à la pistache de son célèbre Mont Blanc est à déguster en priorité (de couleur verte sur la photo). Si vous préférez une pause gourmande sur place, vous serez plongez dans une cadre luxueux avec les décorations Belle Époque et la jolie vaisselle."
+      },
+      { 
+        date: "10/2019",
+        comment: "Étant allé pour les journées du Mont-blanc, ou certaines pâtisseries sont en édition limitée, j'ai beaucoup apprécié les produits et l'attente n'était pas longue à emporter. Le prix est assez élevé mais la qualité est là. La vendeuse était souriante et agréable, rien à redire."
+      },
+      { 
+        date: "07/2019",
+        comment: "Très bon moment passé dans cet établissement. Le chocolat est somptueux les pâtisseries également. Bémol pour le temps d'attente dehors et le prix un peu excessif même si on s'y attend compte tenu du lieu"
+      },
+    ],
   },
   {
     name: "Ice Kube",
@@ -2107,12 +2168,28 @@ export default [
     phone: "01 42 05 20 00",
     arr: "18",
     openingHours: "18h30-1h",
-    imageUrl:
-      "https://www.kubehotel-paris.com/_files/_media/37/Apres%20Restaurant/SHOOTING%20ZENCHEF%202019/Apres-restaurant-Kube-Paris-18eme.jpg",
+    imageUrl: "https://www.kubehotel-paris.com/_files/_media/37/Apres%20Restaurant/SHOOTING%20ZENCHEF%202019/Apres-restaurant-Kube-Paris-18eme.jpg",
+    imageUrl2: "https://www.kubehotel-paris.com/_files/_media/37/Ice%20Bar/2019%202020/KUB_5833ae.jpg",
     price: "€€€",
     price_digit: 3,
     lat: 48.8865207,
-    lng: 2.35881
+    lng: 2.35881,
+    menuLink: "https://www.kubehotel-paris.com/_files/_media/37/Apres%20Restaurant/Menu%20Automne%202019/CARTE_APRES_FR.pdf",
+    foodlabreview: "Lieu extraordinaire, très original, coupure assurée hors du tumulte de la vie Parisienne. On a d'abord accès 30mn au bar glacé à -25° à l'étage avec une sélection de plusieurs cocktails, puis ensuite le restaurant 'Après' aussi époustouflant et dépaysant que le bar gelé par sa déco végétale exotique. Toute l'équipe du personnel est merveilleuse disponible. Cuisine raffinée, cet endroit est un vrai ravissement.", 
+    reviews: [
+      { 
+        date: "12/2019",
+        comment: "On a mangé une fois au restaurant, et plusieurs fois visité le bar de glace, une expérience qu'il est possible de renouveler plusieurs fois car le thème change tout les X temps. Un lieu qui fait toujours plaisirs aux personnes qui ne connaissent pas !"
+      },
+      { 
+        date: "10/2019",
+        comment: "Lieu d'exception où l'on mange bien dans une décoration sublime. Le personnel est très souriant. Le son du DJ est super. Lieu propre avec sa touche d'authenticité dans le bar Ice Kube qui fait de délicieux cocktails"
+      },
+      { 
+        date: "07/2019",
+        comment: "Nous avons été accueillis chaleureusement dans cet igloo et nous nous sommes régalés! Cuisine gourmande et étonnante!"
+      },
+    ],
   },
   {
     name: "Abri Soba",
@@ -2124,12 +2201,27 @@ export default [
     phone: "01 45 23 51 68",
     arr: "9",
     openingHours: "12h-14h / 19h-22h30",
-    imageUrl:
-      "http://le-polyedre.com/wp-content/uploads/2016/10/abri-soba-restaurant-paris-japon-7-1024x683.jpg",
+    imageUrl: "http://le-polyedre.com/wp-content/uploads/2016/10/abri-soba-restaurant-paris-japon-7-1024x683.jpg",
+    imageUrl2: "http://atelier-soba.com/wp-content/uploads/2017/11/cropped-Soba-froides.jpg",
     price: "€€",
     price_digit: 2,
     lat: 48.8750429,
-    lng: 2.3445439
+    lng: 2.3445439,
+    foodlabreview: "Un délicieux restaurant, fidèle aux goûts du Japon. Les amoureux de la gastronomie japonaise y retrouveront les saveurs et la délicatesse du pays. Personnel très accueillant et attentif. Allez y en petit groupe pour goûter un maximum de tapas, les saveurs sont riches et les textures variées ! Mention spéciale pour le canard, la cuisson délicate lui donne un goût de foie gras. Gardez une petite place pour le dessert et goûter la crème brûlée au sarrasin, simple mais étonnant.", 
+    reviews: [
+      { 
+        date: "12/2019",
+        comment: "Le lieu est assez cosy et vous mangerez japonais une nourriture de très grande qualité. Mais soyez les premiers, les places sont « chères ». Pas de réservation possible mais vous ne le regretterez pas !"
+      },
+      { 
+        date: "10/2019",
+        comment: "Les soba sont des pâtes de sarrasin très consommées au Japon. Elles sont ici les stars de ce restaurant toujours blindé et qui ne prend pas de réservation. On mange au comptoir ou sur des tables étroites et serrées des soba mais aussi plusieurs autres spécialités japonaises."
+      },
+      { 
+        date: "07/2019",
+        comment: "C'est un vrai et typique restaurant japonais. Avec l'ambiance unique comme au pays. Les plats sont très bons et très raffinés. Il faut aller tôt, avant 19h si on veut une table car il y a peu de places. Le personnel est gentil, souriant et poli."
+      },
+    ],
   },
   {
     name: "Pokawa",
@@ -2141,12 +2233,27 @@ export default [
     phone: "01 40 26 38 85",
     arr: "2",
     openingHours: "12h-16h / 18h30-22h30",
-    imageUrl:
-      "https://static.youmiam.com/images/recipe/1500x1000/pokebowl-signature-saumon-mangue-1303407?placeholder=web_recipe&sig=41e3506e5ff69bc43e9d904e4f8f3956d11eef26&v3",
+    imageUrl: "https://static.youmiam.com/images/recipe/1500x1000/pokebowl-signature-saumon-mangue-1303407?placeholder=web_recipe&sig=41e3506e5ff69bc43e9d904e4f8f3956d11eef26&v3",
     price: "€€",
     price_digit: 2,
     lat: 48.8657478,
     lng: 2.3439625,
+    menuLink: "https://pokawa.com/",
+    foodlabreview: "Le meilleur poké de Paris. Les ingrédients sont de bonne qualité et leur succès est amplement mérité. Les bols sont très colorés, healthy et extrêmement apétissants. Le personnel est au petit soin : en livraison, on a toujours le droit à un mot gentil avec notre commande.", 
+    reviews: [
+      { 
+        date: "12/2019",
+        comment: "C'était excellent !! Amoureux des petit plats healthy colorés et gourmands, ce petit coin chaleureux est fait pour vous. Service au petit soin, à l'écoute, rapide, et l'ambiance est au top ! Leur playlist musicale est très sympa. Ps: je suis un gros mangeur et la tall size du super proteiné est bien rassasiante "
+      },
+      { 
+        date: "10/2019",
+        comment: "J'ai adoré ! D'abord l'équipe est super sympa et la nourriture est trop bonne ! Le pudding au coco et graine de chia une vrai tuerie ! Je vous le recommande sans hésiter et on y retournera bientôt !"
+      },
+      { 
+        date: "07/2019",
+        comment: "Parce que l'équipe est adorable, les produits frais et le pudding coco chia à mourir de bonheur, vous ne serez jamais déçu de ce restaurant ! Un service excellent et un repas excellent... Pour un prix très correct, je recommande !"
+      },
+    ],
     award: {
       scroll: "fa-leaf",
       icon: "fas fa-leaf",
@@ -2163,33 +2270,31 @@ export default [
     phone: "01 42 74 10 68",
     arr: "3",
     openingHours: "10h-19h30",
-    imageUrl:
-      "https://www.oubruncher.com/photos1/9967_1.jpg",
+    imageUrl: "https://www.oubruncher.com/photos1/9967_1.jpg",
+    imageUrl2: "http://glose.fr/wp-content/uploads/2017/07/patisserie-bontemps-11.jpg",
     price: "€€",
     price_digit: 2,
     lat: 48.8638169,
     lng: 2.3606901,
+    foodlabreview: "Agréable moment avec un service à l’écoute dans un lieu raffiné et élégant. Le chocolat chaud est très bon, léger, avec un arrière goût d’épices orientales. Les pâtisseries sont divines et le cadre enchanté. Que demander de mieux pour une pause sucrée. Mis à part le tarif un peu élevé, c'est un lieu hors du temps à recommander", 
+    reviews: [
+      { 
+        date: "12/2019",
+        comment: "Le lieu est ravissant décoré de fleurs fraîches, des petits fauteuils douillets... Un vrai cocon. J'ai pris un chocolat chaud divin, un Bontemps aux noisettes du piémont très léger et parfumé, un cake au citron de Sicile à se damner et une part de tarte aux figues avec un vrai goût de fruit de qualité."
+      },
+      { 
+        date: "10/2019",
+        comment: "Raffinement, originalité, de la pâtisserie haute couture, des créations que vous ne verrez jamais ailleurs car Fiona a le magnifique don d’allier l’esthétique au bon goût. Elle est entourée de sa sœur et de son mari qui sont aussi adorables!"
+      },
+      { 
+        date: "07/2019",
+        comment: "Gâteaux, tartes et thé délicieux. Dommage sur le cadre ne soit pas un peu plus cosy et les prix un peu mieux ajustés."
+      },
+    ],
     award: {
       scroll: "fa-birthday-cake",
       icon: "fas fa-birthday-cake",
       description: "La meilleure pâtisserie",
     }
-  },
-  {
-    name: "Yann Couvreur - Rue des Rosiers",
-    id: 69,
-    type: "Pâtisserie",
-    rate: 4.4,
-    votes: 500,
-    address: "23bis Rue des Rosiers, 75004",
-    phone: "06 05 97 63 01",
-    arr: "4",
-    openingHours: "10h-20h",
-    imageUrl:
-      "http://untitledmag.fr/wp-content/uploads/2018/04/YANN-COUVREUR-26-BASSE-DEF.jpg",
-    price: "€€",
-    price_digit: 2,
-    lat: 48.857506,
-    lng: 2.358768,
-  },
+  }
 ];
