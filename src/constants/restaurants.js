@@ -1777,12 +1777,24 @@ export default [
     phone: "01 45 39 39 13",
     arr: "14",
     openingHours: "12h-14h / 19h30-22h",
-    imageUrl:
-      "https://metoostorage.blob.core.windows.net/static/place/1500px/ebc4bfe8-e7cb-4e8d-9ac4-2dd446a5c579-636018725614596852/aee0cde5-9134-4766-9c11-7fa6dc26e597-636031779786483907.jpg",
+    imageUrl2: "https://s3-eu-west-1.amazonaws.com/privateaser-media/etab_photos/11980/1500x750/102426.jpg",
+    imageUrl: "https://metoostorage.blob.core.windows.net/static/place/1500px/ebc4bfe8-e7cb-4e8d-9ac4-2dd446a5c579-636018725614596852/aee0cde5-9134-4766-9c11-7fa6dc26e597-636031779786483907.jpg",
     price: "€€€",
     price_digit: 3,
     lat: 48.8290777,
     lng: 2.3169412,
+    menuLink: "http://www.lejeroboam.fr/menus-carte/",
+    foodlabreview: "Une très bonne adresse de quartier. La cuisine est constituée de plats de brasserie d’excellente facture, rehaussés de touches gastronomiques telles que la truffe sur le veau ultra-fondant. On apprécie également les desserts gourmands, les portions généreuses et le cadre intimiste. Un service impeccable et à la hauteur de la cuisine. L'équipe est passionnée et enthousiaste et saura vous assurer un repas divin. Mention spéciale aux saints jacques et à la brioche façon pain perdu.",
+    reviews: [
+      { 
+        date: "12/2019",
+        comment: "On avait réservé samedi soir pour 6 personnes et on a passé un très agréable moment dans ce restaurant grâce à l’accueil mais surtout la qualité des plats servis. Un vrai délice mais surtout un vrai travail de professionnel. Je pense que le prix (50 euros par personne) est justifié tant tous les ingrédients était la pour passer une belle soirée."
+      },
+      { 
+        date: "10/2019",
+        comment: "Un bon petit restaurent de quartier. Les plats sont simples très bons et gourmands. Je n'ai jamais mangé de burger aussi bon dans un restaurant ! Les frites de patate douce sont délicieuses. Il est demandé de 'réserver' son dessert au moment de la prise de commande, mais le serveur repasse juste avant la fin du plat pour vérifier si on a toujours de la place pour le dessert ou pas, si non, alors ils annulent tout simplement le dessert. C'est bien pensé !"
+      },
+    ],
   },
   {
     name: "Autour du Saumon",
@@ -1794,12 +1806,26 @@ export default [
     phone: "01 45 54 31 16",
     arr: "15",
     openingHours: "12h-14h30 / 19h-21h",
-    imageUrl:
-      "https://i0.wp.com/silencio.fr/wp-content/uploads/etoiles/Restaurant-Diane-Fouquets-Barriere-Paris-Silencio-saumon-01.jpg",
+    imageUrl: "https://i0.wp.com/silencio.fr/wp-content/uploads/etoiles/Restaurant-Diane-Fouquets-Barriere-Paris-Silencio-saumon-01.jpg",
     price: "€€€",
     price_digit: 3,
     lat: 48.8406227,
-    lng: 2.2886894
+    lng: 2.2886894,
+    foodlabreview: "Restaurant confidentiel d'une exceptionnelle qualité. Tout y est, l'accueil (même au téléphone), le service de Pierre, classe, respectueux avec une fine pointe de bonne humeur, professionnel lorsqu'il s'agit de présenter les plats. Et le principal, les plats : une valse de noblesse, caviar, saumons et autres produits de la mer froids ou chauds. Ce lieu est à la fois un traiteur et un restaurant. Mention spéciale pour le fondant remarquable du cœur de saumon.",
+    reviews: [
+      { 
+        date: "12/2019",
+        comment: "On avait réservé samedi soir pour 6 personnes et on a passé un très agréable moment dans ce restaurant grâce à l’accueil mais surtout la qualité des plats servis. Un vrai délice mais surtout un vrai travail de professionnel. Je pense que le prix (50 euros par personne) est justifié tant tous les ingrédients était la pour passer une belle soirée."
+      },
+      { 
+        date: "10/2019",
+        comment: "J'aime leur saumon sauvage qui lui n'est pas rose mais pêche. On voit qu'il n'a pas ingurgité de colorants. Des vrais blinis. Je n'ai pas goûté à leurs spécialités style tarama à la truffe. Leur tarama nature est lui aussi sans colorants. Leur aquavit au cumin est une tuerie, dans le bon sens du terme."
+      },
+      { 
+        date: "07/2019",
+        comment: "Etant amatrice de saumon, j'encourage la découverte de ce lieu. Des plats variés, délicieux et originaux toujours autour du saumon, et un service plus que correct."
+      },
+    ],
   },
   {
     name: "Dilia",
@@ -1811,12 +1837,27 @@ export default [
     phone: "09 53 56 24 14",
     arr: "20",
     openingHours: "12h-14h30 / 19h30-22h30",
-    imageUrl:
-      "https://admin-blogs.lalibre.be/app/uploads/sites/4/2018/08/Dilia.jpg",
+    imageUrl: "https://admin-blogs.lalibre.be/app/uploads/sites/4/2018/08/Dilia.jpg",
     price: "€€€",
     price_digit: 3,
     lat: 48.8686439,
-    lng: 2.3862279
+    lng: 2.3862279,
+    menuLink: "http://www.dilia.fr/?page_id=1798",
+    foodlabreview: "Du menu en 4 plats agrémenté de petits amuse-bouches en passant par les vins de Toscane on se régale sincèrement. Les plats sont bien équilibrés avec des accords simples mais riches en bouche et des produits de qualité. Le cadre est agréable, le service naturel et la musique éclectique. On prend l'habitude d'y retourner.",
+    reviews: [
+      { 
+        date: "12/2019",
+        comment: "Très bon restaurant italien dans ce quartier qui manque d'adresses de genre. On oublie les pizzas et autre, Dilia propose une cuisine créative et savoureuse."
+      },
+      { 
+        date: "10/2019",
+        comment: "Excellent repas, beaucoup de recherche et de travail pour proposer des associations détonantes. Ça vaut vraiment le détour ! Bravo et merci"
+      },
+      { 
+        date: "07/2019",
+        comment: "Très Bon! Raffiné! Que du fait maison mais ça a un prix. Menu de départ à 49 euros sans le vin mais c'est justifié. Spéciale dédicace à la vaisselle qui est à la fois sobre, authentique et raffiné. Et le service est impeccable."
+      },
+    ],
   },
   {
     name: "An Di An Di",
@@ -1828,12 +1869,26 @@ export default [
     phone: "09 81 26 97 10",
     arr: "20",
     openingHours: "19h-22h30",
-    imageUrl:
-      "https://otg.imgix.net/assets/grid/paris/menilmontant/an-di-an-di/MG_1495.jpg?auto=format%2Ccompress&crop=focalpoint&fit=min&fm=jpg&fp-x=0.5&fp-y=0.5&ixlib=php-1.1.0&q=80&w=1200&s=335cc6f7f2419b43c1be0e5f754c8372",
+    imageUrl: "https://static.lexpress.fr/medias_10188/w_1000,c_fill,g_north/plat-signature-an-di-an-di-boeuf-sauce-pho_5216299.jpg",
     price: "€€",
     price_digit: 2,
     lat: 48.8686776,
-    lng: 2.3831888
+    lng: 2.3831888,
+    foodlabreview: "Dans ce coin qui manque cruellement d'adresse dans le genre, An Di An Di est toujours le bon plan. Cuisine frenchie avec des supers twists vietnamiens ou plus largement asiatiques, on s'installe dans une petite salle sans prétention mais avec un service attentionné. Côté plats, déments accras de tofu soyeux avec sa mayonnaise (un must !), poulpe grillé et joue de boeuf à la citronnelle.",
+    reviews: [
+      { 
+        date: "12/2019",
+        comment: "On est venu à 3 pour un repas d'anniversaire, et on a beaucoup aimé. Nos plats préférés : le porc farci aux aubergines, le boeuf épicé, et tous les desserts !"
+      },
+      { 
+        date: "10/2019",
+        comment: "Je recommande chaudement pour cette cuisine inventive et delicieuse entre la France et l'Asie, le service sympa et la déco délicate. C'est petit, il est donc conseillé de réserver."
+      },
+      { 
+        date: "07/2019",
+        comment: "Ce resto est pour nous une excellente surprise : la petite équipe (familiale) est adorable, les plats sont originaux, délicieux et (vraiment) faits maison, les prix sont totalement abordables pour cette qualité à Paris. On recommande à 100%. Ne manquez pas de tester les desserts, on a adoré le cheesecake (et aussi le sablé mousse au chocolat). Bravo à l’équipe, continuez comme ça !"
+      },
+    ],
   },
   {
     name: "Le bistro des oies",
@@ -1845,29 +1900,59 @@ export default [
     phone: "01 42 08 34 86",
     arr: "10",
     openingHours: "12h-14h30 / 19h-23h",
-    imageUrl:
-      "https://uniiti.com/images/shops/slides/6fe8b0e55c2485057651e51117ab2271c2d4dddd.jpeg",
+    imageUrl: "https://uniiti.com/images/shops/slides/6fe8b0e55c2485057651e51117ab2271c2d4dddd.jpeg",
     price: "€€",
     price_digit: 2,
     lat: 48.8718848,
-    lng: 2.3673579
+    lng: 2.3673579,
+    menuLink: "https://lebistrodesoies.fr/fr/services",
+    foodlabreview: "Une ambiance conviviale et chaleureuse dûe en grande partie à son patron jovial et de bon conseil. Une belle carte des vins et un choix infini de plats typiquement français goûteux. En entrée : escargots, poulpe frais, foies de volailles rosés à souhait. En plat : confit et magret de canard, boeuf d'aubrac aux cuissons maîtrisées. Il y a aussi des choix végétariens.",
+    reviews: [
+      { 
+        date: "12/2019",
+        comment: "Que dire de l’accueil ? Toujours souriant et chaleureux. Que dire de la cuisine ? Des classiques parfois oubliés et toujours préparés avec générosité et saveur. Que dire des vins ? Des découvertes à déguster avec ou sans modération. En conclusion : allez-y les yeux fermés et la fleur à la fourchette."
+      },
+      { 
+        date: "10/2019",
+        comment: "Génial. Cuisine authentique, lieu chaleureux et personnel très sympa. Prix cohérents."
+      },
+      { 
+        date: "07/2019",
+        comment: "Excellent restaurant, tout est bon, fait maison avec des produits de qualité. L'équipe est au petit soin. Je recommande, je viens très souvent et je ne suis jamais déçu."
+      },
+    ],
   },
   {
     name: "The Beans on Fire",
     id: 58,
-    type: "Français",
+    type: "Café",
     rate: 4.3,
     votes: 250,
     address: "7 Rue du Général Blaise, 75011",
     phone: "01 43 55 94 73",
     arr: "11",
     openingHours: "12h-21h",
-    imageUrl:
-      "https://fraeuleinanker.de/wp-content/uploads/2016/08/2-The-beans-on-fire-Sandwiches-b.jpg",
+    imageUrl: "https://fraeuleinanker.de/wp-content/uploads/2016/08/2-The-beans-on-fire-Sandwiches-b.jpg",
+    imageUrl2: "http://4.bp.blogspot.com/-6tW7rUlkgM0/Vgv0QB36TpI/AAAAAAAANUc/AkFfiezIguM/s1600/IMG_20150929_135238.jpg",
     price: "€€",
     price_digit: 2,
     lat: 48.8615741,
     lng: 2.3782561,
+    foodlabreview: "Un bel endroit pour venir prendre un café, que ce soit le matin ou durant la journée. Le cadre est agréable avec le parc à côté, c'est reposant de prendre son café ou son petit-déjeuner en terrasse. Le staff est plutôt cool et les prix corrects. Les cafés sont fait sur place dans un énorme torréfacteur en cuivre, à voir ! Il y a un brunch très beau et bon et peu copieux.",
+    reviews: [
+      { 
+        date: "12/2019",
+        comment: "Très bon spot pour venir prendre un café sur place ou à emporter. Très belle petite terrasse idéale quand il fait beau. Vous êtes éloignés des voitures et c’est tant mieux. Et le parc a deux pas est idéal pour envoyer votre progéniture jouer tandis que vous sirotez un café."
+      },
+      { 
+        date: "10/2019",
+        comment: "Très bon café. Endroit qui montre une vraie passion pour le café. À partir de 18h la carte changé et des plats, bières et vins y sont proposés. Je recommande le ceviche de légumes, on retrouve les vrais saveurs du Pérou."
+      },
+      { 
+        date: "07/2019",
+        comment: "Le café est très bon, sur place ou à emporter, la salle et la terrasse sont très agréables, comme l'ambiance musicale, et surtout le service est extrêmement sympathique et efficace. Il y a beaucoup de places assises pour ceux qui souhaitent travailler."
+      },
+    ],
     award: {
       scroll: "fa-mug-hot",
       icon: "fas fa-mug-hot",
@@ -1884,12 +1969,27 @@ export default [
     phone: "01 42 61 13 73",
     arr: "2",
     openingHours: "12h-15h30 / 19h-22h30",
-    imageUrl:
-      "https://sortir.telerama.fr/sites/tr_master/files/styles/m_plus_640x360/public/assets/images/place/74/25/5/originale.jpg?itok=nNojZ_jK",
+    imageUrl: "https://sortir.telerama.fr/sites/tr_master/files/styles/m_plus_640x360/public/assets/images/place/74/25/5/originale.jpg?itok=nNojZ_jK",
     price: "€€",
     price_digit: 2,
     lat: 48.8668704,
-    lng: 2.3482997
+    lng: 2.3482997,
+    menuLink: "https://www.lesamisdesmessina.com/",
+    foodlabreview: "Un petit paradis sicilien ! Cuisine du voyage, hospitalité, repas excellent et pour finir avec ces fameuses glaces pistache bacio, un régal. L'accueil est jovial et l'ambiance familiale, les serveurs d'une grande gentillesse. Une vraie cuisine italienne authentique comme là-bas, pleine de goût et de saveurs. Vous pouvez y aller les yeux fermés ! Goûtez le gâteau courgette, ricotta de la Mama, un délice. Prix très corrects.",
+    reviews: [
+      { 
+        date: "12/2019",
+        comment: "Nous étions loin d'imaginer que l'on puisse prendre autant de plaisir dans ce restaurant sicilien. Le cadre est également très beau et reposant et le personnel est adorable."
+      },
+      { 
+        date: "10/2019",
+        comment: "La déco, de brique et de bois sous la verrière, renvoie une chaude atmosphère. Le service est souriant, sympathique, rapide et efficace. Quant à la cuisine, véritable cuisine sicilienne, dont la carte est renouvelée chaque jour, déborde d'imagination."
+      },
+      { 
+        date: "07/2019",
+        comment: "Une adresse dont on ne se lasse pas ! C'est bon, c'est frais, c'est bien servi ! Le lieu est joliment décoré. On est en Italie, chez la Mama, l espace d un déjeuner ! Le personnel est hyper sympa et on aime leur accent chantant ! La carte change assez souvent, pas de lassitude donc et toujours de belles surprises !"
+      },
+    ],
   },
   {
     name: "Le Clint",
@@ -1901,12 +2001,28 @@ export default [
     phone: "01 73 71 51 55",
     arr: "11",
     openingHours: "9h-18h",
-    imageUrl:
-      "https://img3.parisbouge.com/RjuPFd8FhhJz9GCwPPvbYHQ7S0wEfzdDK8zOTNOPtLo/rs:fill:1200:800:1/g:ce/wm:1:soea:12:12:0.12/MWI4NDQ0YzAtMDQxMi00YzYyLTk2ZTctYTI1OTRmMGQ1N2M3LmpwZw.jpg",
+    imageUrl: "https://img3.parisbouge.com/RjuPFd8FhhJz9GCwPPvbYHQ7S0wEfzdDK8zOTNOPtLo/rs:fill:1200:800:1/g:ce/wm:1:soea:12:12:0.12/MWI4NDQ0YzAtMDQxMi00YzYyLTk2ZTctYTI1OTRmMGQ1N2M3LmpwZw.jpg",
+    imageUrl2: "https://i0.wp.com/aunjourpres.fr/wp-content/uploads/2017/11/PA290070.jpg?resize=1080%2C810",
     price: "€€",
     price_digit: 2,
     lat: 48.8591592,
-    lng: 2.3864681
+    lng: 2.3864681,
+    menuLink: "http://www.clint-paris.fr/menus-carte/",
+    foodlabreview: "Établissement très mignon et cosy. Le brunch est savoureux et les prix ne sont pas excessifs au vu des portions généreuses. Le Chai Latte est très réconfortant. Un bon brunch à base d'avocado toast, oeufs bénédictes au saumon et pancakes. Attention établissement très populaire, il faut souvent faire la queue pour avoir une place.",
+    reviews: [
+      { 
+        date: "12/2019",
+        comment: "Restaurant de quartier dont on se ne lasse pas. Super cuisine et le personnel est adorable. On recommande et surtout on y retourne chaque semaine!"
+      },
+      { 
+        date: "10/2019",
+        comment: "Super découverte ! Les plats sont copieux et délicieux, notamment les pancakes  que je recommande sincèrement ! Sinon, juste un peu d'attente le dimanche matin mais une fois installée, on oublie cela ! "
+      },
+      { 
+        date: "07/2019",
+        comment: "Superbe café, lieu très bien décoré et services au top. Ils servent à manger et à boire, les café lattés sont excellents!"
+      },
+    ],
   },
   {
     name: "Le Manko",
