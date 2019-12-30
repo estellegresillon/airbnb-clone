@@ -7,9 +7,8 @@ import { setRestaurants } from "../../actions";
 const Detail = props => {
   const { setRestaurants, restaurants, match, location } = props;
   const [restaurant, setRestaurant] = useState({})
-  
-  const nextRef = useRef(null);
-  const previousRef = useRef(null);
+  const nextRestaurantRef = useRef(null);
+  const previousRestaurantRef = useRef(null);
   
   const setNavigation = (restaurantList) => {
     let previous;
@@ -23,10 +22,10 @@ const Detail = props => {
     });
 
     if (previous) {
-      previousRef.current = previous.id
+      previousRestaurantRef.current = previous.id
     };
     if (next) {
-      nextRef.current = next.id
+      nextRestaurantRef.current = next.id
     };
   };
 
@@ -39,9 +38,14 @@ const Detail = props => {
   }, [location.restaurant, setRestaurants]);
 
   useEffect(() => {
+    if (location.listedRestaurants) {
+      setNavigation(location.listedRestaurants);
+    } else {
+      setNavigation(restaurants);
+    };
+
     if (location.restaurant) {
       setRestaurant(location.restaurant);
-      setNavigation(location.listedRestaurants);
     } else {
       const detailRestaurant = [...restaurants].filter(val => {
         if (val.id) {
@@ -50,23 +54,23 @@ const Detail = props => {
       });
   
       setRestaurant(detailRestaurant[0]);
-      setNavigation(restaurants);
-    }
+    };
   // eslint-disable-next-line
   }, [location.restaurant, restaurants, match.params.id]);
 
   const handleKeyDown = (e) => {
+    const listedRestaurants = location.listedRestaurants
     // 37 arrow left / 39 arrow right
     if (e.keyCode === 37) {
-      if (previousRef.current) {
-        props.history.push(`/restaurants/${previousRef.current}`)
-      }
+      if (previousRestaurantRef.current) {
+        props.history.push({ pathname: `/restaurants/${previousRestaurantRef.current}`, listedRestaurants });
+      };
     } else if (e.keyCode === 39) {
-      if (nextRef.current) {
-        props.history.push(`/restaurants/${nextRef.current}`)
-      }
-    }
-  }
+      if (nextRestaurantRef.current) {
+        props.history.push({ pathname: `/restaurants/${nextRestaurantRef.current}`, listedRestaurants });
+      };
+    };
+  };
 
   useEffect(() => { 
     document.addEventListener("keydown", handleKeyDown, true);
