@@ -22,6 +22,18 @@
     &:hover { background-color: #ff7a92; }
   }
 
+  .detail-page-award {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    max-width: 50%;
+    color: #fff;
+    background-color: rgba(239, 139, 139, 0.8);
+    padding: 5px 10px;
+    font-style: italic;
+    font-size: 13px;
+  }
+
   .detail-page-big-img {
     height: 250px;
   }

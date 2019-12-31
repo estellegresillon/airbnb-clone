@@ -21,3 +21,9 @@
   95% { color: #ff6b6b; }
   100% { color: #ffb0be; }
 }
+
+@keyframes suggestionGlow {
+  0% { box-shadow: 0px 0px 10px rgba(255, 122, 146, 0.5); }
+  50% { box-shadow:0px 0px 20px rgba(255, 122, 146, 1); }
+  100% { box-shadow: 0px 0px 10px rgba(255, 122, 146, 0.5); }
+}
