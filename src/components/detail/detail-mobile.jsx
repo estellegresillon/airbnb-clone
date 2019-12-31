@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
@@ -8,10 +8,31 @@ import { setRestaurants } from "../../actions";
 const DetailMobile = props => {
   const { setRestaurants, restaurants, match, location } = props;
   const [restaurant, setRestaurant] = useState({})
-  // const nextRestaurantRef = useRef(null);
-  // const previousRestaurantRef = useRef(null);
+  const [similarRestaurants, setSimilarRestaurants] = useState([])
+  const nextRestaurantRef = useRef(null);
+  const previousRestaurantRef = useRef(null);
+  const listedRestaurants = location.listedRestaurants;
   // const yDown = useRef(null);
   // const xDown = useRef(null);
+
+  const setNavigation = restaurantList => {
+    let previous;
+    let next;
+
+    restaurantList.forEach((val, i) => {
+      if (val.id.toString() === match.params.id) {
+        previous = restaurantList[i - 1];
+        next = restaurantList[i + 1];
+      };
+    });
+
+    if (previous) {
+      previousRestaurantRef.current = previous.id;
+    };
+    if (next) {
+      nextRestaurantRef.current = next.id;
+    };
+  };
   
   // if a user arrives on the pageId directly 
   // he doesn't get the restaurant object in the props so we execute these 2 hooks
@@ -22,14 +43,22 @@ const DetailMobile = props => {
   }, [location.restaurant, setRestaurants]);
 
   useEffect(() => {
-    // if (location.listedRestaurants) {
-    //   setNavigation(location.listedRestaurants);
-    // } else {//
-    //   setNavigation(restaurants);
-    // };
+    if (location.listedRestaurants) {
+      setNavigation(location.listedRestaurants);
+    } else {//
+      setNavigation(restaurants);
+    };
 
     if (location.restaurant) {
       setRestaurant(location.restaurant);
+
+      const filterByType = [...restaurants].filter(val => {
+        if (val.type && val.name !== location.restaurant.name) {
+          return val.type === location.restaurant.type;
+        } else return null;
+      });
+  
+      setSimilarRestaurants(filterByType.slice(0, 6));
     } else {
       const detailRestaurant = [...restaurants].filter(val => {
         if (val.id) {
@@ -38,6 +67,14 @@ const DetailMobile = props => {
       });
   
       setRestaurant(detailRestaurant[0]);
+
+      const filterByType = [...restaurants].filter(val => {
+        if (val.type && val.name !== detailRestaurant[0].name) {
+          return val.type === detailRestaurant[0].type;
+        } else return null;
+      });
+  
+      setSimilarRestaurants(filterByType.slice(0, 6));
     };
   }, [location.restaurant, restaurants, match.params.id]);
 
@@ -51,6 +88,21 @@ const DetailMobile = props => {
   //   document.addEventListener('touchmove', handleTouchMove, false);
   // // eslint-disable-next-line
   // }, []);
+  const handleNavigation = (direction, id) => {
+    if (direction === "left") {
+      if (previousRestaurantRef.current) {
+        props.history.push({ pathname: `/restaurants/${previousRestaurantRef.current}`, listedRestaurants });
+      };
+    } else if (direction === "next-page") {
+      props.history.push({ pathname: `/restaurants/${id}`, listedRestaurants });
+    } else if (direction === "right") {
+      if (nextRestaurantRef.current) {
+        props.history.push({ pathname: `/restaurants/${nextRestaurantRef.current}`, listedRestaurants });
+      };
+    };
+
+    document.querySelector(".detail-page-big-img").scrollIntoView();
+  };
 
   return restaurant ? (
     <div className="detail-page-wrapper-mobile">
@@ -112,6 +164,40 @@ const DetailMobile = props => {
             backgroundSize: "cover",
           }}
         />}
+      {similarRestaurants.length > 0 &&
+        <div className="bottom-section">
+          <div className="bottom-section-title">Restaurants similaires :</div>
+          <div className="similar-restaurants-wrapper">
+            {similarRestaurants.map(simRest => {
+              return (
+                <div 
+                  className="similar-restaurant-card"
+                  key={simRest.id}
+                  onClick={() => handleNavigation("next-page", simRest.id)}
+                >
+                  <div className="similar-restaurant-card-name">{simRest.name}</div>
+                  <div className="similar-restaurant-card-rate">{simRest.rate}/5 ({simRest.votes}+ votes)</div>
+                  <div className="similar-restaurant-card-address">{simRest.address}</div>
+                </div>
+              )
+            })}
+          </div>
+        </div>}
+      <div className="detail-page-footer">
+        <div 
+          className="footer-button-left"
+          onClick={() => handleNavigation("left")}
+        >
+          <i className="fas fa-chevron-left" />
+        </div>
+        <div className="footer-text"></div>
+        <div 
+          className="footer-button-right"
+          onClick={() => handleNavigation("right")}
+        >
+          <i className="fas fa-chevron-right" />
+        </div>
+      </div>
     </div>
   ) :
   <div>no restaurant corresponding</div>
