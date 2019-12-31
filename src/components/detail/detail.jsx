@@ -11,6 +11,7 @@ const Detail = props => {
   const [similarRestaurants, setSimilarRestaurants] = useState([])
   const nextRestaurantRef = useRef(null);
   const previousRestaurantRef = useRef(null);
+  const goToTopRef = useRef(null);
   const listedRestaurants = location.listedRestaurants;
   
   const setNavigation = restaurantList => {
@@ -49,6 +50,13 @@ const Detail = props => {
 
     if (location.restaurant) {
       setRestaurant(location.restaurant);
+      const filterByType = [...restaurants].filter(val => {
+        if (val.type && val.name !== location.restaurant.name) {
+          return val.type === location.restaurant.type;
+        } else return null;
+      });
+  
+      setSimilarRestaurants(filterByType.slice(0, 9));
     } else {
       const detailRestaurant = [...restaurants].filter(val => {
         if (val.id) {
@@ -64,7 +72,7 @@ const Detail = props => {
         } else return null;
       });
   
-      setSimilarRestaurants(filterByType.slice(0, 8));
+      setSimilarRestaurants(filterByType.slice(0, 9));
     };
   // eslint-disable-next-line
   }, [location.restaurant, restaurants, match.params.id]);
@@ -80,19 +88,26 @@ const Detail = props => {
         props.history.push({ pathname: `/restaurants/${nextRestaurantRef.current}`, listedRestaurants });
       };
     };
+
+    document.querySelector(".detail-page-big-img").scrollIntoView();
   };
 
-  const handleClick = direction => {
+  const handleClick = (direction, id) => {
+    
     if (direction === "left") {
       if (previousRestaurantRef.current) {
         props.history.push({ pathname: `/restaurants/${previousRestaurantRef.current}`, listedRestaurants });
       };
+    } else if (direction === "next-page") {
+      props.history.push({ pathname: `/restaurants/${id}`, listedRestaurants });
     } else if (direction === "right") {
       if (nextRestaurantRef.current) {
         props.history.push({ pathname: `/restaurants/${nextRestaurantRef.current}`, listedRestaurants });
       };
     };
-  }
+
+    document.querySelector(".detail-page-big-img").scrollIntoView();
+  };
 
   useEffect(() => { 
     document.addEventListener("keydown", handleKeyDown, true);
@@ -110,13 +125,9 @@ const Detail = props => {
     localStorage.setItem('has_seen_suggestion', true);
   };
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return restaurant ? (
     <>
-      <div className="detail-page-wrapper">
+      <div ref={goToTopRef} className="detail-page-wrapper">
         {!hasSeenSuggestion &&
           <div className="popin-suggestion-navigation" onClick={() => handleCloseSuggestion()}>
             <div className="popin-text">
@@ -206,7 +217,7 @@ const Detail = props => {
                   <div 
                     className="similar-restaurant-card"
                     key={simRest.id}
-                    onClick={() => props.history.push({ pathname: `/restaurants/${simRest.id}`, listedRestaurants })}
+                    onClick={() => handleClick("next-page", simRest.id)}
                   >
                     <div className="similar-restaurant-card-name">{simRest.name}</div>
                     <div className="similar-restaurant-card-rate">{simRest.rate}/5 ({simRest.votes}+ votes)</div>
