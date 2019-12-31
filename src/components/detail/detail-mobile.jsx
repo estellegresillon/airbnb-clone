@@ -76,8 +76,10 @@ const DetailMobile = props => {
   }; 
 
   function handleTouchMove(evt) {
-    if ( ! xDown.current || ! yDown.current ) {
-        return;
+    const listedRestaurants = location.listedRestaurants
+    
+    if (!xDown.current || !yDown.current) {
+      return;
     }
 
     var xUp = evt.touches[0].clientX;                                    
@@ -89,14 +91,18 @@ const DetailMobile = props => {
     if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
         if ( xDiff > 0 ) {
             /* left swipe */ 
+            props.history.push({ pathname: `/restaurants/${previousRestaurantRef.current}`, listedRestaurants });
         } else {
             /* right swipe */
+          props.history.push({ pathname: `/restaurants/${nextRestaurantRef.current}`, listedRestaurants });
         }                       
     } else {
         if ( yDiff > 0 ) {
             /* up swipe */ 
+            console.log("up")
         } else { 
             /* down swipe */
+            console.log("down")
         }                                                                 
     }
     /* reset values */
@@ -104,11 +110,11 @@ const DetailMobile = props => {
     yDown.current = null;                                             
   };
 
-  // useEffect(() => {
-  //   document.addEventListener('touchstart', handleTouchStart, false);        
-  //   document.addEventListener('touchmove', handleTouchMove, false);
-  // // eslint-disable-next-line
-  // }, []);
+  useEffect(() => {
+    document.addEventListener('touchstart', handleTouchStart, false);        
+    document.addEventListener('touchmove', handleTouchMove, false);
+  // eslint-disable-next-line
+  }, []);
 
   return restaurant ? (
     <div className="detail-page-wrapper-mobile">
