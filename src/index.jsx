@@ -7,6 +7,7 @@ import { createStore, combineReducers } from "redux";
 import "./styles/index.scss";
 import Restaurants from "./components/restaurants";
 import Header from "./components/common/header";
+import Home from "./components/home";
 import Detail from "./components/detail";
 import Awards from "./components/awards";
 // import MessageButton from "./components/common/contact";
@@ -36,6 +37,7 @@ const App = () => {
       <React.Fragment>
         <Header />
         <Route exact path="/" render={() => <Redirect to="/restaurants" />} />
+        <Route exact path="/home" component={Home} />
         <Route exact path="/awards" component={Awards} />
         <Route exact path="/restaurants" component={Restaurants} />
         <Route exact path="/restaurants/:id" component={Detail} />

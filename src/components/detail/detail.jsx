@@ -11,7 +11,6 @@ const Detail = props => {
   const [similarRestaurants, setSimilarRestaurants] = useState([])
   const nextRestaurantRef = useRef(null);
   const previousRestaurantRef = useRef(null);
-  const goToTopRef = useRef(null);
   const listedRestaurants = location.listedRestaurants;
   
   const setNavigation = restaurantList => {
@@ -92,8 +91,7 @@ const Detail = props => {
     document.querySelector(".detail-page-big-img").scrollIntoView();
   };
 
-  const handleClick = (direction, id) => {
-    
+  const handleNavigation = (direction, id) => {
     if (direction === "left") {
       if (previousRestaurantRef.current) {
         props.history.push({ pathname: `/restaurants/${previousRestaurantRef.current}`, listedRestaurants });
@@ -127,7 +125,7 @@ const Detail = props => {
 
   return restaurant ? (
     <>
-      <div ref={goToTopRef} className="detail-page-wrapper">
+      <div className="detail-page-wrapper">
         {!hasSeenSuggestion &&
           <div className="popin-suggestion-navigation" onClick={() => handleCloseSuggestion()}>
             <div className="popin-text">
@@ -217,7 +215,7 @@ const Detail = props => {
                   <div 
                     className="similar-restaurant-card"
                     key={simRest.id}
-                    onClick={() => handleClick("next-page", simRest.id)}
+                    onClick={() => handleNavigation("next-page", simRest.id)}
                   >
                     <div className="similar-restaurant-card-name">{simRest.name}</div>
                     <div className="similar-restaurant-card-rate">{simRest.rate}/5 ({simRest.votes}+ votes)</div>
@@ -231,14 +229,14 @@ const Detail = props => {
       <div className="detail-page-footer">
         <div 
           className={`footer-button-left ${!hasSeenSuggestion ? "footer-button-shiny" : ""}`}
-          onClick={() => handleClick("left")}
+          onClick={() => handleNavigation("left")}
         >
           <i className="fas fa-chevron-left" />
         </div>
         <div className="footer-text"></div>
         <div 
           className={`footer-button-right ${!hasSeenSuggestion ? "footer-button-shiny" : ""}`}
-          onClick={() => handleClick("right")}
+          onClick={() => handleNavigation("right")}
         >
           <i className="fas fa-chevron-right" />
         </div>
