@@ -3,6 +3,7 @@ import Select from "react-select";
 
 import { initArrOptions, initTypeOptions } from "../../constants/filter-options";
 import { weeklyRestaurant } from "../../constants/weekly-restaurant";
+import { newRestaurants } from "../../constants/new-restaurants";
 
 const Home = props => {
   const { history } = props;
@@ -56,9 +57,11 @@ const Home = props => {
 
       <div className="home-weekly-new">
         <div className="home-weekly-new-title">
-          Le resto de la semaine
+          <i className="fas fa-award" />
+          <span className="home-weekly-title-text">Le resto de la semaine</span>
+          <i className="fas fa-award" />
         </div>
-        <div className="weekly-restaurant" onClick={() => props.history.push({ pathname: `/restaurants/${weeklyRestaurant.id}`, restaurant: weeklyRestaurant })}>
+        <div className="weekly-restaurant" onClick={() => history.push({ pathname: `/restaurants/${weeklyRestaurant.id}`, restaurant: weeklyRestaurant })}>
           <div className="card">
             <img alt="restaurant-overview" src={weeklyRestaurant.imageUrl} />
             <div className="card-description">
@@ -75,6 +78,58 @@ const Home = props => {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="home-foodlab-concept">
+        <div className="home-concept-step home-step-one">
+          <img src="/undraw_progress_tracking.svg" alt="step-one"></img>
+          <div className="home-concept-description">Les meilleurs lieux où manger à Paris, toujours triés par note</div>
+        </div>
+
+        <div className="home-concept-step home-step-two">
+          <img src="/undraw_progressive_app.svg" alt="step-two"></img>
+          <div className="home-concept-description">Accessible partout où vous êtes, desktop ou mobile</div>
+        </div>
+
+        <div className="home-concept-step home-step-three">
+          <img src="/undraw_wishlist.svg" alt="step-three"></img>
+          <div className="home-concept-description">Recherche simplifiée par type de cuisine et arrondissement</div>
+        </div>
+
+        <div className="home-concept-step home-step-four">
+          <img src="/undraw_winners.svg" alt="step-four"></img>
+          <div className="home-concept-description">Uniquement le meilleur du meilleur, plus besoin de chercher</div>
+        </div>
+      </div>
+
+      <div className="home-new">
+        <div className="home-new-title">
+          Les nouveaux dans le top
+        </div>
+
+        {newRestaurants.map(newRest => {
+          return (
+            <div className="new-restaurant" onClick={() => history.push({ pathname: `/restaurants/${newRest.id}`, restaurant: newRest })}>
+              <div className="card">
+                <img alt="restaurant-overview" src={newRest.imageUrl} />
+                <div className="card-description">
+                  <div className="card-header">
+                    <div className="card-header-type">
+                      {newRest.type} -{' '}
+                      <span className="card-header-budget">{newRest.price}</span>
+                    </div>
+                    <div className="card-header-rate"><i className="fas fa-star"></i> {newRest.rate} ({newRest.votes}+)</div>
+                  </div>
+                  <h2>{newRest.name}</h2>
+                  <div className="card-restaurant-address">{newRest.address}</div>
+                  <div className="card-see-infos">Voir infos</div>
+                </div>
+              </div>
+            </div>
+          )
+        })}
+        
+        
       </div>
 
       <div className="home-footer">
