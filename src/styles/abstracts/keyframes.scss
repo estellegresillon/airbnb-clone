@@ -1,5 +1,5 @@
 @keyframes colorHover {
-  0% { color: #ffb0be; }
+  0% { color: $foodlab; }
   5% { color: #ff4ac7; }
   10% { color: #6649ff; }
   15% { color: #2986ff; }
@@ -9,7 +9,7 @@
   35% { color: #ffbe29; }
   40% { color: #ff3737; }
   45% { color: #ff6b6b; }
-  50% { color: #ffb0be; }
+  50% { color: $foodlab; }
   55% { color: #ff4ac7; }
   60% { color: #6649ff; }
   65% { color: #2986ff; }
@@ -19,7 +19,7 @@
   85% { color: #ffbe29; }
   90% { color: #ff3737; }
   95% { color: #ff6b6b; }
-  100% { color: #ffb0be; }
+  100% { color: $foodlab; }
 }
 
 

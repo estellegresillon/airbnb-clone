@@ -242,7 +242,7 @@ const SearchByName = props => {
           <div 
             style={{ 
               justifyContent: showMap ? "flex-end" : "flex-start",
-              backgroundColor: showMap ? "#ea4235" : "#ffb0be"
+              backgroundColor: showMap ? "#ea4235" : "#ff6643"
             }}
             className="switch-toggle-map">
             <div className="toggle-circle" />

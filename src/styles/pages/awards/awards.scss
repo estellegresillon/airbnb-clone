@@ -6,7 +6,7 @@
   .awards-page-big-img {
     width: 45%;
     height: calc(100vh - 80px);
-    color: white;
+    color: #fff;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -15,7 +15,7 @@
       margin-top: 40%;
       margin-left: 10%;
       font-weight: 100;
-      background-color: #ffb0be;
+      background-color: $foodlab;
       padding: 5px 10px;
       font-size: 32px;
       animation: 1s slideFromLeftAwards;
@@ -23,7 +23,7 @@
 
     .awards-image-subtitle {
       margin-left: 10%;
-      background-color: #ffb0be;
+      background-color: $foodlab;
       padding: 5px 10px;
       font-weight: 700;
       text-transform: uppercase;
@@ -57,21 +57,21 @@
       width: 100%;
       cursor: pointer;
 
-      &:nth-child(2) { border-top: 1px solid #f3f3f3; }
+      &:nth-child(2) { border-top: 1px solid $grey-light; }
     }
   
     .awarded-restaurant:hover {
       transition: all 0.7s ease;
-      background-color: #f7f7f7;
+      background-color: $grey-light;
     }
     
     .card {
       position: relative;
       height: 125px;
-      color: black;
+      color: #000;
       display: flex;
       padding: 35px;
-      border-bottom: 1px solid #f3f3f3;
+      border-bottom: 1px solid $grey-light;
 
       img {
         width: 100%;
@@ -115,7 +115,7 @@
           i {
             font-size: 12px;
             margin-right: 5px;
-            color: #ffb0be;
+            color: $foodlab;
           }
         }
       }
@@ -128,7 +128,7 @@
       .card-header-budget {
         font-weight: 300;
         font-size: 13px;
-        color: #797979;
+        color: $grey-dark;
         margin-top: 10px;
       }
   
@@ -156,7 +156,7 @@
       a { 
         position: absolute;
         text-decoration: none;
-        color: black;
+        color: #000;
         width: 50px;
         bottom: 0;
       }
@@ -164,13 +164,13 @@
       .card-see-infos {
         margin-top: 10px;
         width: 50px;
-        background-color: #ececec;
+        background-color: $grey-light;
         font-size: 12px;
         padding: 5px 10px;
       }
     
       .card-see-infos:hover {
-        background-color: #d8d8d8;
+        background-color: $grey;
       }
     }
   }

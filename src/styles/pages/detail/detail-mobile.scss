@@ -7,7 +7,7 @@
 
   .button-go-back {
     position: absolute;
-    background-color: #ffb0be;
+    background-color: $foodlab;
     padding: 5px 8px;
     color: #fff;
     top: 20px;
@@ -19,7 +19,7 @@
     font-size: 11px;
     cursor: pointer;
 
-    &:hover { background-color: #ff7a92; }
+    &:hover { background-color: $foodlab-hover; }
   }
 
   .detail-page-award {
@@ -28,7 +28,7 @@
     right: 20px;
     max-width: 50%;
     color: #fff;
-    background-color: rgba(239, 139, 139, 0.8);
+    background-color: rgba(255, 103, 103, 0.8);
     padding: 5px 10px;
     font-style: italic;
     font-size: 13px;
@@ -49,7 +49,7 @@
       margin-bottom: 15px;
       font-size: 36px;
       font-weight: 100;
-      background-color: #ffb0be;
+      background-color: $foodlab;
       padding: 5px 15px;
       color: #fff;
       animation: 1s slideFromLeftMobile;
@@ -65,7 +65,7 @@
 
       .resume-rate {
         font-weight: 700;
-        color: #ffb0be;
+        color: $foodlab;
         font-size: 14px;
       }
 
@@ -81,14 +81,14 @@
         width: 50px;
         color: black;
         text-decoration: none;
-        background-color: #ececec;
+        background-color: $grey-light;
         font-size: 12px;
         padding: 5px 10px;
         cursor: pointer;
       }
 
       .see-menu:hover {
-        background-color: #d8d8d8;
+        background-color: $grey;
       }
 
       li { margin-bottom: 20px; }
@@ -152,7 +152,7 @@
     .bottom-section-title {
       font-size: 20px;
       font-weight: 100;
-      border-top: 1px solid #ececec;
+      border-top: 1px solid $grey-light;
       padding-top: 20px;
       margin-bottom: 10px;
     }
@@ -177,7 +177,7 @@
           font-size: 13px;
           margin: 1px 0 3px 0;
           font-weight: 700;
-          color: #ffb0be;
+          color: $foodlab;
         }
 
         .similar-restaurant-card-address {

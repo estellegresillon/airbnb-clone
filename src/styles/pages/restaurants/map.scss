@@ -10,7 +10,6 @@
   
   .gm-style .gm-style-iw-t:after {
     background: linear-gradient(45deg,#000, 50%,rgba(255,255,255,0) 51%,rgba(255,255,255,0) 100%);
-    //background: #ffb0be;
   }
   
   .gm-style .gm-style-iw-d {
@@ -59,7 +58,7 @@
   
   .marker-restaurant-name {
     position: absolute;
-    color: white;
+    color: #fff;
     bottom: 35px;
     left: 15px;
     font-size: 18px;
@@ -68,7 +67,7 @@
   
   .marker-restaurant-type {
     position: absolute;
-    color: white;
+    color: #fff;
     bottom: 15px;
     left: 15px;
     font-size: 14px;

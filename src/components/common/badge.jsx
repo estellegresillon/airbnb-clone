@@ -6,7 +6,7 @@ const Badge = props => {
   const setColor = icon => {
     if (icon === "fas fa-award") {
       // pink
-      return "#ffb0be"
+      return "#ff8d73"
     } else if (
       icon === "fas fa-heart" || 
       icon === "fas fa-medal" || 

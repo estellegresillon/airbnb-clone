@@ -15,7 +15,7 @@
 
   .fa-search {
     margin-right: 10px;
-    color: #cecece;
+    color: $grey;
   }
 
   .button-filter-reinitialize {
@@ -26,7 +26,7 @@
     cursor: pointer;
     font-weight: 300;
     font-family: "Roboto";
-    color: rgb(128, 128, 128);
+    color: $grey-dark;
     font-size: 12px;
     -webkit-font-smoothing: antialiased;
     padding: 0 15px;
@@ -51,7 +51,7 @@
       margin-left: 20px;
       font-weight: 300;
       font-family: "Roboto";
-      color: rgb(128, 128, 128);
+      color: $grey-dark;
       font-size: 12px;
       min-width: 110px;
       -webkit-font-smoothing: antialiased;

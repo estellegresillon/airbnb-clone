@@ -12,12 +12,12 @@
     font-weight: 700;
     letter-spacing: 0.5px;
     font-size: 12px;
-    background-color: #ffb0be;
+    background-color: $foodlab;
     color: #fff;
 
     &:hover {
       transition: all 0.7s ease;
-      background-color: #ff8fbe;
+      background-color: $foodlab-hover;
     }
   }
 
@@ -28,7 +28,7 @@
     z-index: 998;
     display: flex;
     flex-wrap: wrap;
-    background-color: white;
+    background-color: #fff;
     max-width: 300px;
     padding: 10px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);

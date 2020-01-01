@@ -20,7 +20,7 @@
       font-family: "Ceviche One";
       font-size: 32px;
       margin: 0 40px;
-      color: #ffb0be;
+      color: $foodlab;
       letter-spacing: -1px;
       cursor: pointer;
 
@@ -43,7 +43,7 @@
 
     .menu-link { 
       text-decoration: none;
-      color: grey;
+      color: $grey-dark;
       margin-left: 40px;
       cursor: pointer;
       font-size: 10px;
@@ -54,11 +54,11 @@
     }
 
     .menu-link:hover { 
-      color: #ffb0be;
+      color: $foodlab;
     }
 
     .selected-menu-item { 
-      color: #ffb0be;
+      color: $foodlab;
     }
   }
 }

@@ -18,7 +18,7 @@
       font-family: "Ceviche One";
       font-size: 32px;
       margin: 0 25px;
-      color: #ffb0be;
+      color: $foodlab;
       letter-spacing: -1px;
       cursor: pointer;
 
@@ -33,7 +33,7 @@
   .header-right {
     margin-right: 30px;
     font-size: 14px;
-    color: #ffb0be;
+    color: $foodlab;
     cursor: pointer;
 
     .dropdown-menu-mobile {
@@ -61,7 +61,7 @@
 
     .menu-link { 
       text-decoration: none;
-      color: grey;
+      color: $grey-dark;
       margin-bottom: 50px;
       font-size: 11px;
       text-transform: uppercase;
@@ -71,7 +71,7 @@
     }
 
     .menu-link:hover { 
-      color: #ffb0be;
+      color: $foodlab;
     }
   }
 }
