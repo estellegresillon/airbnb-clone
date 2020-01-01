@@ -1,14 +1,82 @@
 .home-wrapper {
-  .home-slider {
+  .home-hero-scene {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    .home-hero-scene-intro {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30%;
+      height: calc(100vh - 300px);
+    }
+
+    .home-hero-scene-image {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 70%;
+      height: calc(100vh - 300px);
+      background-image: url("https://assets.letemps.ch/sites/default/files/styles/share/public/media/2018/05/25/file709hhtc8y0oabuqmgsh.jpg.jpeg?itok=qCTHjPAd");
+      background-size: cover;
+      background-position: center;
+
+      .button-home-go {
+        background-color: #ffb0be;
+        border: none;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1) !important;
+        height: 40px;
+        border-radius: 32px;
+        cursor: pointer;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-family: "Roboto";
+        color: #fff;
+        font-size: 12px;
+        -webkit-font-smoothing: antialiased;
+        padding: 0 15px;
+        transition: 0.5s all ease;
+
+        &:hover { background-color: #ff7c93; }
+      }
+    
+
+      //////// REACT-SELECTS ARR & TYPE FILTERS
+      .filters-react-select {
+        width: 150px;
+        z-index: 999;
+      }
+
+      .css-yk16xz-control, .css-1pahdxg-control {
+        border-radius: 32px !important;
+        padding-left: 8px !important;
+        font-size: 12px !important;
+        margin-right: 10px;
+        height: 40px !important;
+        border: none !important;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1) !important;
+      }
+
+      .css-26l3qy-menu {
+        font-size: 12px !important;
+      }
+
+      .css-tlfecz-indicatorContainer, .css-1okebmr-indicatorSeparator {
+        display: none;
+      } 
+    }
+  }
+
+  .home-about {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: calc(100vh - 120px);
-    background-image: url("http://benedict-paris.com/img/lightbox/plats/B-17.jpg");
-    background-size: cover;
-    background-position: center;
-    color: #fff;
+    margin-top: 100px;
+    font-size: 42px;
+    font-weight: 100;
   }
 }

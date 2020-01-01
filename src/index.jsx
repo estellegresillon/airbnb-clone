@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { createStore, combineReducers } from "redux";
 
 import "./styles/index.scss";
@@ -36,8 +36,7 @@ const App = () => {
     <Router>
       <React.Fragment>
         <Header />
-        <Route exact path="/" render={() => <Redirect to="/restaurants" />} />
-        <Route exact path="/home" component={Home} />
+        <Route exact path="/" component={Home} />
         <Route exact path="/awards" component={Awards} />
         <Route exact path="/restaurants" component={Restaurants} />
         <Route exact path="/restaurants/:id" component={Detail} />

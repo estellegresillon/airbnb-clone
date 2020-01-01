@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import TextField from '@material-ui/core/TextField';
@@ -18,9 +18,19 @@ import { useWindowSize } from "../../hooks/useWindowSize";
 
 
 const SearchByName = props => {
-  const { restaurants, searchRestaurant, centerMapWithLocation, toggleListingAwards, sortRestaurants, toggleMap, showMap } = props;
+  const { 
+    restaurants,
+    searchRestaurant,
+    centerMapWithLocation,
+    toggleListingAwards,
+    sortRestaurants,
+    toggleMap,
+    showMap,
+    homeArr,
+    homeType
+  } = props;
   const [arr, setArr] = useState("Tous les arr.");
-  const [type, setType] = useState("Toutes les cuisines");
+  const [type, setType] = useState("Tous les types");
   const [searchedRestaurant, setSearchedRestaurant] = useState(null);
   const [typeOptions, setTypeOptions] = useState(initTypeOptions);
   const [arrOptions, setArrOptions] = useState(initArrOptions);
@@ -33,7 +43,7 @@ const SearchByName = props => {
   const handleSearchChange = (event, value) => {
     setSearchedRestaurant(value);
     setArr("Tous les arr.");
-    setType("Toutes les cuisines");
+    setType("Tous les types");
     toggleListingAwards(false);
     if (value) {
       // put in an array to map on it on other components
@@ -53,7 +63,7 @@ const SearchByName = props => {
     searchRestaurant(null);
     centerMapWithLocation(arr);
     toggleListingAwards(false);
-
+    
     // sort Restaurants according to location
     const sortedRestaurants = [...restaurants].filter(val => {
       if (val.arr) {
@@ -75,7 +85,7 @@ const SearchByName = props => {
     setTypeOptions(newTypeOptions);
 
     // filter only the available locations
-    if (type !== "Toutes les cuisines") {
+    if (type !== "Tous les types") {
       const sortRestaurantsByType = [...sortedRestaurants].filter(val => {
         if (val.type) {
           return val.type === type;
@@ -86,7 +96,7 @@ const SearchByName = props => {
       sortRestaurants(sortedRestaurants);
     };
 
-    if (windowSize.width > 728) {
+    if (windowSize.width > 728 && !homeArr) {
       scrollToTop();
     }
   }
@@ -129,7 +139,7 @@ const SearchByName = props => {
       sortRestaurants(sortedRestaurants);
     };
 
-    if (windowSize.width > 728) {
+    if (windowSize.width > 728 && !homeType) {
       scrollToTop();
     }
   };
@@ -165,7 +175,7 @@ const SearchByName = props => {
     setArrOptions(initArrOptions);
     // set default values
     setArr("Tous les arr.");
-    setType("Toutes les cuisines");
+    setType("Tous les types");
 
     // reset map location
     centerMapWithLocation(null);
@@ -178,6 +188,19 @@ const SearchByName = props => {
       scrollToTop();
     }
   };
+
+  useEffect(() => {
+    if (restaurants && homeArr && homeArr !== "Tous les arr.") {
+      setArr(homeArr);
+      filterByArr(homeArr);
+    };
+
+    if (restaurants && homeType && homeType !== "Tous les types") {
+      setType(homeType);
+      filterByType(homeType);
+    };
+  // eslint-disable-next-line
+  }, [restaurants])
 
   return (
     <div className="filters">
@@ -219,7 +242,6 @@ const SearchByName = props => {
           <div 
             style={{ 
               justifyContent: showMap ? "flex-end" : "flex-start",
-              // backgroundColor: showMap ? "#c1c1c1" : "#e8e8e8"
               backgroundColor: showMap ? "#ea4235" : "#ffb0be"
             }}
             className="switch-toggle-map">

@@ -5,7 +5,7 @@ import { bindActionCreators } from "redux";
 import { setRestaurants } from "../../actions";
 
 const Detail = props => {
-  const { setRestaurants, restaurants, match, location } = props;
+  const { setRestaurants, restaurants, match, location, history } = props;
   const [restaurant, setRestaurant] = useState({})
   const [hasSeenSuggestion, setHasSeenSuggestion] = useState(false)
   const [similarRestaurants, setSimilarRestaurants] = useState([])
@@ -80,11 +80,11 @@ const Detail = props => {
     // 37 arrow left / 39 arrow right
     if (e.keyCode === 37) {
       if (previousRestaurantRef.current) {
-        props.history.push({ pathname: `/restaurants/${previousRestaurantRef.current}`, listedRestaurants });
+        history.push({ pathname: `/restaurants/${previousRestaurantRef.current}`, listedRestaurants });
       };
     } else if (e.keyCode === 39) {
       if (nextRestaurantRef.current) {
-        props.history.push({ pathname: `/restaurants/${nextRestaurantRef.current}`, listedRestaurants });
+        history.push({ pathname: `/restaurants/${nextRestaurantRef.current}`, listedRestaurants });
       };
     };
 
@@ -94,13 +94,13 @@ const Detail = props => {
   const handleNavigation = (direction, id) => {
     if (direction === "left") {
       if (previousRestaurantRef.current) {
-        props.history.push({ pathname: `/restaurants/${previousRestaurantRef.current}`, listedRestaurants });
+        history.push({ pathname: `/restaurants/${previousRestaurantRef.current}`, listedRestaurants });
       };
     } else if (direction === "next-page") {
-      props.history.push({ pathname: `/restaurants/${id}`, listedRestaurants });
+      history.push({ pathname: `/restaurants/${id}`, listedRestaurants });
     } else if (direction === "right") {
       if (nextRestaurantRef.current) {
-        props.history.push({ pathname: `/restaurants/${nextRestaurantRef.current}`, listedRestaurants });
+        history.push({ pathname: `/restaurants/${nextRestaurantRef.current}`, listedRestaurants });
       };
     };
 
@@ -134,7 +134,7 @@ const Detail = props => {
             </div>
             <i className="fas fa-times" /> 
           </div>}
-        <div className="button-go-back" onClick={() => props.history.goBack()}>
+        <div className="button-go-back" onClick={() => history.goBack()}>
           <i className="fas fa-chevron-left" /> Retour
         </div>
         {restaurant.award &&

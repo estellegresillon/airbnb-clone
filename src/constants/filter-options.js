@@ -1,5 +1,5 @@
 export const initTypeOptions = [
-  { label: "Toutes les cuisines", value: "Toutes les cuisines"},
+  { label: "Tous les types", value: "Tous les types"},
   { label: "Algérien", value: "Algérien"},
   { label: "Allemand", value: "Allemand"},
   { label: "Américain", value: "Américain"},

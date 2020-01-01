@@ -11,7 +11,7 @@ import { useWindowSize } from "../../hooks/useWindowSize";
 import { setRestaurants } from "../../actions";
 
 const Restaurants = props => {
-  const { restaurants, setRestaurants, sortedRestaurants, searchedRestaurant } = props;
+  const { restaurants, setRestaurants, sortedRestaurants, searchedRestaurant, location } = props;
   const [listNumber, setListNumber] = useState(null);
   const [listedRestaurants, setListedRestaurants] = useState(restaurants);
   const windowSize = useWindowSize();
@@ -41,7 +41,7 @@ const Restaurants = props => {
 
   return (
     <div className={`restaurants-page-wrapper ${windowSize.width > 728 ? "" : "mobile-view"}`}>
-      <Filters />
+      <Filters homeArr={location.homeArr} homeType={location.homeType} />
       <div className="counter-keys-wrapper">
         <div className="restaurant-counter">
           {listNumber}
