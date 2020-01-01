@@ -78,7 +78,10 @@ const Home = props => {
       </div>
 
       <div className="home-footer">
-        <div className="home-footer-brand">Foodlab</div>
+        <div className="home-footer-brand">
+          <i className="fas fa-copyright" />
+          Foodlab
+        </div>
       </div>
     </div>
   );

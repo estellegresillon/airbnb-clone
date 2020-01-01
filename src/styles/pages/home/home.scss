@@ -107,6 +107,7 @@
     justify-content: center;
     margin-top: 70px;
     margin-bottom: 70px;
+    animation: 1s slideFromBottomMiddleSection;
 
     .home-weekly-new-title {
       font-size: 30px;
@@ -241,14 +242,17 @@
     width: 100%;
     height: 60px;
     background-color: #f7f7f7;
+    color: #9e9e9e;
+    font-size: 12px;
 
     .home-footer-brand {
       margin: 0 40px;
-      font-size: 12px;
-      color: #d8d8d8;
       letter-spacing: 1px;
       text-transform: uppercase;
-      color: #929292;
+
+      i {
+        margin-right: 5px;
+      }
     }
   }
 }
