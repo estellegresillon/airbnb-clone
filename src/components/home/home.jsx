@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import Select from 'react-select';
+import Select from "react-select";
 
 import { initArrOptions, initTypeOptions } from "../../constants/filter-options";
+import { weeklyRestaurant } from "../../constants/weekly-restaurant";
 
 const Home = props => {
   const { history } = props;
@@ -53,8 +54,31 @@ const Home = props => {
         </div>
       </div>
 
-      <div className="home-about">
-        Hello
+      <div className="home-weekly-new">
+        <div className="home-weekly-new-title">
+          Le resto de la semaine
+        </div>
+        <div className="weekly-restaurant" onClick={() => props.history.push({ pathname: `/restaurants/${weeklyRestaurant.id}`, restaurant: weeklyRestaurant })}>
+          <div className="card">
+            <img alt="restaurant-overview" src={weeklyRestaurant.imageUrl} />
+            <div className="card-description">
+              <div className="card-header">
+                <div className="card-header-type">
+                  {weeklyRestaurant.type} -{' '}
+                  <span className="card-header-budget">{weeklyRestaurant.price}</span>
+                </div>
+                <div className="card-header-rate"><i className="fas fa-star"></i> {weeklyRestaurant.rate} ({weeklyRestaurant.votes}+)</div>
+              </div>
+              <h2>{weeklyRestaurant.name}</h2>
+              <div className="card-restaurant-address">{weeklyRestaurant.address}</div>
+              <div className="card-see-infos">Voir infos</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="home-footer">
+        <div className="home-footer-brand">Foodlab</div>
       </div>
     </div>
   );

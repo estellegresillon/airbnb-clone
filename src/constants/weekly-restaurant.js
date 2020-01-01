@@ -1,0 +1,18 @@
+export const weeklyRestaurant = {
+    name: "Pontochoux",
+    id: 26,
+    type: "Japonais",
+    rate: 4.6,
+    votes: 250,
+    address: "18 Rue du Pont aux Choux, 75003",
+    phone: "09 86 70 77 00",
+    arr: "3",
+    openingHours: "13h30-18h",
+    imageUrl2: "https://somanyparis.files.wordpress.com/2018/10/pontochoux-7.jpg",
+    imageUrl: "https://somanyparis.files.wordpress.com/2018/10/pontochoux-6.jpg",
+    price: "€",
+    price_digit: 1,
+    lat: 48.8613189,
+    lng: 2.3650928,
+    menuLink: "https://lacarte.menu/restaurants/paris/pontochoux",
+};
