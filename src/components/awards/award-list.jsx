@@ -25,15 +25,22 @@ const AwardList = props => {
   }, [restaurants]);
 
   const handleListItemHover = restaurant => {
-    setBg(restaurant.imageUrl);
-    setImageTitle(restaurant.award.description);
-    setImageSubtitle(restaurant.name);
+    if (restaurant) {
+      setBg(restaurant.imageUrl);
+      setImageTitle(restaurant.award.description);
+      setImageSubtitle(restaurant.name);
+    } else {
+      setBg("http://benedict-paris.com/img/lightbox/plats/B-17.jpg");
+      setImageTitle("Les restaurants primés");
+      setImageSubtitle("chaque semaine");
+    }
   };
   
   return awardedRestaurants.length > 0 ? (
     <div className="awards-page-wrapper">
       <div 
         className="awards-page-big-img"
+        key={bg}
         style={{ 
           backgroundImage: `url(${bg})`,
           backgroundSize: "cover",
@@ -53,6 +60,7 @@ const AwardList = props => {
             <div 
               key={restaurant.id} 
               onMouseEnter={() => handleListItemHover(restaurant)}
+              onMouseLeave={() => handleListItemHover()}
               className="awarded-restaurant">
               <AwardListItem listedRestaurants={awardedRestaurants} restaurant={restaurant} tabIndex={i} />
             </div>

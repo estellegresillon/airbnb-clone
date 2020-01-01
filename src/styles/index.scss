@@ -5,6 +5,8 @@
 @import "common/header.scss"; 
 @import "common/key.scss";
 
+@import "pages/home/home.scss";
+
 @import "pages/restaurants/filters.scss";
 @import "pages/restaurants/map.scss";
 @import "pages/restaurants/restaurant-list-mobile.scss";
@@ -25,7 +27,7 @@ body {
 }
 
 .main-view {
-  height: calc(100vh - 176px);
+  height: calc(100vh - 196px);
   width: 100%;
   display: flex;
   flex-direction: row;

@@ -89,3 +89,15 @@
     opacity: 1;
   }
 }
+
+
+@keyframes slideFromLeftAwards {
+  from { 
+    margin-left: 0%;
+    opacity: 0;
+  }
+  to { 
+    margin-left: 10%;
+    opacity: 1;
+  }
+}
