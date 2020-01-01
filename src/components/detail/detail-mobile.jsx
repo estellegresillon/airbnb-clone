@@ -7,8 +7,8 @@ import { setRestaurants } from "../../actions";
 
 const DetailMobile = props => {
   const { setRestaurants, restaurants, match, location } = props;
-  const [restaurant, setRestaurant] = useState({})
-  const [similarRestaurants, setSimilarRestaurants] = useState([])
+  const [restaurant, setRestaurant] = useState({});
+  const [similarRestaurants, setSimilarRestaurants] = useState([]);
   const nextRestaurantRef = useRef(null);
   const previousRestaurantRef = useRef(null);
   const listedRestaurants = location.listedRestaurants;
@@ -122,7 +122,7 @@ const DetailMobile = props => {
         }}
       />
       <div className="detail-page-content">
-        <div className="detail-page-title">{restaurant.name}</div>
+        <div className="detail-page-title" key={location.pathname}>{restaurant.name}</div>
         <ul className="detail-page-resume">
           <li><span className="bolder">Type :</span> {restaurant.type} ({restaurant.price})</li>
           <li><span className="bolder">Note :</span> {restaurant.rate}/5 (+ de {restaurant.votes} votes Google)</li>

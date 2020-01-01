@@ -152,9 +152,7 @@ const Detail = props => {
             }}
           />
           <div className="detail-page-content">
-              <div className="detail-page-title">
-                {restaurant.name}
-              </div>
+            <div key={location.pathname} className="detail-page-title">{restaurant.name}</div>
             <ul className="detail-page-resume">
               <li><span className="bolder">Type :</span> {restaurant.type} ({restaurant.price})</li>
               <li>

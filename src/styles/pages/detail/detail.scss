@@ -82,6 +82,7 @@
         background-color: #ffb0be;
         padding: 5px 15px;
         color: #fff;
+        animation: 1s slideInLeftDesktop;
       }
 
       .detail-page-resume {
@@ -258,7 +259,7 @@
 }
 
 .detail-page-footer {
-  position: absolute;
+  position: fixed;
   display: flex;
   bottom: 0;
   align-items: center;
