@@ -25,8 +25,12 @@ const Home = props => {
   return (
     <div className="home-wrapper">
       <div className="home-hero-scene">
-        <div className="home-hero-scene-intro">
-          Hi
+        <div className="home-hero-scene-intro-wrapper">
+          <div className="home-hero-scene-intro">
+            <div className="home-catchphrase">Foodlab, la sélection des meilleurs resto de Paris</div>
+            <div className="home-catchphrase-underline" />
+            <div className="home-subtitle">classés par note, type de cuisine et arrondissement.</div>
+          </div>
         </div>
         <div className="home-hero-scene-image">
           <Select
