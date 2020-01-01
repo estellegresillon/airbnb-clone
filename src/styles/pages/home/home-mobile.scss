@@ -1,0 +1,65 @@
+///////// DESKTOP
+.mobile-view {
+  .home-hero-scene {
+    flex-direction: column;
+
+    .home-hero-scene-intro-wrapper {
+      width: calc(100% - 80px) !important;
+      height: 0 !important;
+      padding: 0 40px !important;
+
+      .home-hero-scene-intro {
+        position: relative;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        left: 0;
+        top: 30px;
+        animation: none;
+
+        .home-catchphrase {
+          font-size: 28px;
+          text-align: center;
+        }
+
+        .home-subtitle { text-align: center; }
+      }
+    }
+  }
+
+  .home-hero-scene-image {
+    width: 100% !important;
+    flex-direction: column !important;
+
+    .filter-arr {
+      margin-top:100px;
+    }
+
+    .filters-react-select {
+      margin-bottom: 20px;
+    }
+  }
+
+  .home-weekly-new {
+    text-align: center;
+    width: calc(100% - 60px) !important;
+    padding: 30px !important;
+  }
+
+  .home-foodlab-concept {
+    display: flex !important;
+    flex-direction: column !important;
+    width: calc(100% - 60px) !important;
+    padding: 30px !important;
+    align-items: center !important;
+
+    .home-concept-step { 
+      width: 100% !important;
+      margin-bottom: 70px;
+    }
+
+    .home-concept-description {
+      margin-top: 30px !important;
+    }
+  }
+}

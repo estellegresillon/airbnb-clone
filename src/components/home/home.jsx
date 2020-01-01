@@ -4,9 +4,11 @@ import Select from "react-select";
 import { initArrOptions, initTypeOptions } from "../../constants/filter-options";
 import { weeklyRestaurant } from "../../constants/weekly-restaurant";
 import { newRestaurants } from "../../constants/new-restaurants";
+import { useWindowSize } from "../../hooks/useWindowSize";
 
 const Home = props => {
   const { history } = props;
+  const windowSize = useWindowSize();
   const [arr, setArr] = useState("Tous les arr.");
   const [type, setType] = useState("Tous les types");
 
@@ -25,11 +27,11 @@ const Home = props => {
   }
 
   return (
-    <div className="home-wrapper">
+    <div className={`home-wrapper ${windowSize.width < 728 ? "mobile-view" : ""}`}>
       <div className="home-hero-scene">
         <div className="home-hero-scene-intro-wrapper">
           <div className="home-hero-scene-intro">
-            <div className="home-catchphrase">Foodlab, la sélection des meilleurs resto de Paris</div>
+            <div className="home-catchphrase">Foodlab, la sélection des meilleurs restos de Paris</div>
             <div className="home-catchphrase-underline" />
             <div className="home-subtitle">classés par note, type de cuisine et arrondissement.</div>
           </div>
@@ -109,7 +111,7 @@ const Home = props => {
 
         {newRestaurants.map(newRest => {
           return (
-            <div className="new-restaurant" onClick={() => history.push({ pathname: `/restaurants/${newRest.id}`, restaurant: newRest })}>
+            <div key={newRest.id} className="new-restaurant" onClick={() => history.push({ pathname: `/restaurants/${newRest.id}`, restaurant: newRest })}>
               <div className="card">
                 <img alt="restaurant-overview" src={newRest.imageUrl} />
                 <div className="card-description">

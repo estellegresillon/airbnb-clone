@@ -6,6 +6,7 @@ import { LazyLoadImage, trackWindowScroll } from 'react-lazy-load-image-componen
 
 import { selectRestaurant } from "../../actions";
 import Badge from "../common/badge";
+import { useWindowSize } from "../../hooks/useWindowSize";
 
 const RestaurantListItem = props => {
   const { 
@@ -22,6 +23,8 @@ const RestaurantListItem = props => {
     selectRestaurant(restaurant);
   };
 
+  const windowSize = useWindowSize();
+
   return (
     <div 
       className={`tab-number-${tabIndex} restaurant ${restaurant === selectedRestaurant ? "selected" : null}`}
@@ -30,7 +33,7 @@ const RestaurantListItem = props => {
       id={`${restaurant.award ? restaurant.award.scroll : ""}`}
       tabIndex={tabIndex + 1}
     >
-      {!showMap && 
+      {!showMap &&
         <Link to={{ pathname: `/restaurants/${restaurant.id}`, restaurant, listedRestaurants }} />}
       <div className="card">
         {!showMap && <div className="grid-img-overlay" />}
@@ -54,7 +57,7 @@ const RestaurantListItem = props => {
           </div>
           <h2>{restaurant.name}</h2>
           <div className="card-restaurant-address">{restaurant.address}</div>
-          {showMap && 
+          {showMap && windowSize.width > 728 &&
             <Link to={{ pathname: `/restaurants/${restaurant.id}`, restaurant, listedRestaurants }}>
               <div className="card-see-infos">Voir infos</div>
             </Link>}
