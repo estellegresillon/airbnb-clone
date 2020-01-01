@@ -67,3 +67,25 @@
     opacity: 1;
   }
 }
+
+@keyframes slideFromBottomListingRow {
+  from { 
+    margin-top: 40px;
+    opacity: 0;
+  }
+  to { 
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromBottomListingGrid {
+  from { 
+    margin-top: 0px;
+    opacity: 0;
+  }
+  to { 
+    margin-top: -25px;
+    opacity: 1;
+  }
+}

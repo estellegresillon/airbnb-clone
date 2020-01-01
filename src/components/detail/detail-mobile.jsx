@@ -122,8 +122,8 @@ const DetailMobile = props => {
           backgroundSize: "cover",
         }}
       />
-      <div className="detail-page-content">
-        <div className="detail-page-title" key={location.pathname}>{restaurant.name}</div>
+      <div key={location.pathname} className="detail-page-content">
+        <div className="detail-page-title">{restaurant.name}</div>
         <ul className="detail-page-resume">
           <li><span className="bolder">Type :</span> {restaurant.type} ({restaurant.price})</li>
           <li><span className="bolder">Note :</span> {restaurant.rate}/5 (+ de {restaurant.votes} votes Google)</li>

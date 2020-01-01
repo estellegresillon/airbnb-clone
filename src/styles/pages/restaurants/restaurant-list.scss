@@ -5,6 +5,7 @@
   position: relative;
   overflow: scroll;
   width: 45%;
+  animation: 1s slideFromBottomListingRow;
 
   .restaurant {
     width: 100%;
@@ -141,6 +142,7 @@
   flex-wrap: wrap;
   padding: 20px;
   margin-top: -25px;
+  animation: 1s slideFromBottomListingGrid;
 
   .restaurant {
     position: relative;
