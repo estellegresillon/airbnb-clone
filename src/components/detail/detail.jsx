@@ -151,8 +151,8 @@ const Detail = props => {
               backgroundSize: "1000px",
             }}
           />
-          <div className="detail-page-content">
-            <div key={location.pathname} className="detail-page-title">{restaurant.name}</div>
+          <div key={location.pathname} className="detail-page-content">
+            <div className="detail-page-title">{restaurant.name}</div>
             <ul className="detail-page-resume">
               <li><span className="bolder">Type :</span> {restaurant.type} ({restaurant.price})</li>
               <li>
@@ -176,7 +176,7 @@ const Detail = props => {
           </div>
         </div>
 
-        <div className="middle-section">
+        <div key={location.pathname} className="middle-section">
           <div className="detail-page-reviews">
             <div className="foodlab-review">
               <div className="foodlab-review-title">Avis FoodLab : </div>

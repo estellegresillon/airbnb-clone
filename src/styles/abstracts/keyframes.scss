@@ -22,24 +22,48 @@
   100% { color: #ffb0be; }
 }
 
+
+//// DETAIL PAGE
 @keyframes suggestionGlow {
   from { box-shadow: 0px 0px 10px rgba(255, 122, 146, 0.5); }
   50% { box-shadow:0px 0px 20px rgb(255, 31, 72); }
   to { box-shadow: 0px 0px 10px rgba(255, 122, 146, 0.5); }
 }
 
-@keyframes slideInLeftMobile {
+@keyframes slideFromLeftMobile {
   from { margin-left: -200%; }
   to { margin-left: 0; }
 }
 
-@keyframes slideInLeftDesktop {
+@keyframes slideFromLeftDesktop {
   from { 
     margin-left: -200px;
     opacity: 0;
   }
   to { 
     margin-left: -60px;
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromBottomMiddleSection {
+  from { 
+    margin-top: 140px;
+    opacity: 0;
+  }
+  to { 
+    margin-top: 70px;
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromBottomTopSection {
+  from { 
+    margin-top: 100px;
+    opacity: 0;
+  }
+  to { 
+    margin-top: 20px;
     opacity: 1;
   }
 }

@@ -76,6 +76,7 @@ const DetailMobile = props => {
   
       setSimilarRestaurants(filterByType.slice(0, 6));
     };
+  // eslint-disable-next-line
   }, [location.restaurant, restaurants, match.params.id]);
 
   // go to top because it keeps the same scroll position as the previous page
