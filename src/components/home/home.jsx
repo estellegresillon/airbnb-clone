@@ -1,16 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Select from "react-select";
 
 import { initArrOptions, initTypeOptions } from "../../constants/filter-options";
 import { weeklyRestaurant } from "../../constants/weekly-restaurant";
 import { newRestaurants } from "../../constants/new-restaurants";
 import { useWindowSize } from "../../hooks/useWindowSize";
+import { conceptSteps } from "../../constants/concept-steps";
 
 const Home = props => {
   const { history } = props;
   const windowSize = useWindowSize();
   const [arr, setArr] = useState("Tous les arr.");
   const [type, setType] = useState("Tous les types");
+  const [isVisible, setIsVisible] = useState(false);
 
   const handleArrChange = e => {
     const selectedArr = e.value;
@@ -25,6 +27,21 @@ const Home = props => {
   const goToRestaurantsPage = () => {
     history.push({ pathname: "/restaurants", homeArr: arr, homeType: type })
   }
+
+  const triggerHotDog = e => {
+    const windowHeight = window.innerHeight;
+    const view = window.pageYOffset;
+    const hotDogIconDistance = document.querySelector(".hot-dog").offsetTop;
+    const hotDogIconHeight = document.querySelector(".hot-dog").height;
+
+    if ((windowHeight + view - hotDogIconHeight) >= hotDogIconDistance) {
+      setIsVisible(true);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", triggerHotDog, false);
+  }, [])
 
   return (
     <div className={`${windowSize.width < 728 ? "home-wrapper-mobile-view" : "home-wrapper"}`}>
@@ -83,25 +100,14 @@ const Home = props => {
       </div>
 
       <div className="home-foodlab-concept">
-        <div className="home-concept-step home-step-one">
-          <img src="/undraw_progress_tracking.svg" alt="step-one"></img>
-          <div className="home-concept-description">Les meilleurs lieux où manger à Paris, toujours triés par note</div>
-        </div>
-
-        <div className="home-concept-step home-step-two">
-          <img src="/undraw_progressive_app.svg" alt="step-two"></img>
-          <div className="home-concept-description">Accessible partout où vous êtes, desktop ou mobile</div>
-        </div>
-
-        <div className="home-concept-step home-step-three">
-          <img src="/undraw_wishlist.svg" alt="step-three"></img>
-          <div className="home-concept-description">Recherche simplifiée par type de cuisine et arrondissement</div>
-        </div>
-
-        <div className="home-concept-step home-step-four">
-          <img src="/undraw_winners.svg" alt="step-four"></img>
-          <div className="home-concept-description">Uniquement le meilleur du meilleur, plus besoin de chercher</div>
-        </div>
+        {conceptSteps.map(step => {
+          return (
+            <div key={step.nb} className={`home-concept-step home-step-${step.nb}`}>
+              <img src={step.src} alt={step.nb}></img>
+              <div className="home-concept-description">{step.description}</div>
+            </div>
+          )
+        })}
       </div>
 
       <div className="home-new">
@@ -130,10 +136,22 @@ const Home = props => {
             </div>
           )
         })}
-        
-        
       </div>
-
+      
+      <div className="footer-img">
+        <img className="fried-potatoes" src="/fried-potatoes.svg" alt="fried-potatoes" />
+        <img className="fried-chicken" src="/fried-chicken.svg" alt="fried-chicken" />
+        <img 
+          className="hot-dog"
+          src="/hot-dog.svg"
+          alt="hot-dog"
+          style={{ 
+            visibility: isVisible ? "visible" : "hidden", 
+            animation: isVisible ? "3s translateHotDog" : ""
+          }}
+        />
+        <img className="cola" src="/cola.svg" alt="cola" />
+      </div>
       <div className="home-footer">
         <div className="home-footer-brand">
           <i className="fas fa-copyright" />

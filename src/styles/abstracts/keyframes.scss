@@ -116,3 +116,62 @@
     opacity: 1;
   }
 }
+
+@keyframes rotateImageOne {
+  from {
+    top: 5px;
+    transform: rotate(-5deg);
+  }
+  50% {
+    top: 0px;
+    transform: rotate(5deg);
+  }
+  to {
+    top: 5px;
+    transform: rotate(-5deg);
+  }
+}
+
+@keyframes rotateImageTwo {
+  from {
+    top: 0px;
+    transform: rotate(5deg);
+  }
+  50% {
+    top: 5px;
+    transform: rotate(-5deg);
+  }
+  to {
+    top: 0px;
+    transform: rotate(5deg);
+  }
+}
+
+@keyframes rotateSvg {
+  from {
+    top: -5px;
+    transform: rotate(-15deg);
+  }
+  50% {
+    top: 5px;
+    transform: rotate(15deg);
+  }
+  to {
+    top: -5px;
+    transform: rotate(-15deg);
+  }
+}
+
+@keyframes translateHotDog {
+  from { 
+    right: 0;
+    transform: rotate(0deg);
+  }
+  70% { 
+    transform: rotate(10deg);
+  }
+  to { 
+    right: 18%;
+    transform: rotate(0deg);
+  }
+}
