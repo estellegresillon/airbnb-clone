@@ -41,6 +41,7 @@ const Home = props => {
 
   useEffect(() => {
     window.addEventListener("scroll", triggerHotDog, false);
+    return () => window.removeEventListener("scroll", triggerHotDog, false);
   }, [])
 
   return (
