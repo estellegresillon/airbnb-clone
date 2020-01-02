@@ -27,7 +27,7 @@ const Home = props => {
   }
 
   return (
-    <div className={`home-wrapper ${windowSize.width < 728 ? "mobile-view" : ""}`}>
+    <div className={`${windowSize.width < 728 ? "home-wrapper-mobile-view" : "home-wrapper"}`}>
       <div className="home-hero-scene">
         <div className="home-hero-scene-intro-wrapper">
           <div className="home-hero-scene-intro">
