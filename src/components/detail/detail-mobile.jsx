@@ -176,9 +176,14 @@ const DetailMobile = props => {
                   key={simRest.id}
                   onClick={() => handleNavigation("next-page", simRest.id)}
                 >
-                  <div className="similar-restaurant-card-name">{simRest.name}</div>
-                  <div className="similar-restaurant-card-rate">{simRest.rate}/5 ({simRest.votes}+ votes)</div>
-                  <div className="similar-restaurant-card-address">{simRest.address}</div>
+                  <div className="similar-restaurant-description">
+                    <div className="similar-restaurant-card-name">{simRest.name}</div>
+                    <div className="similar-restaurant-card-rate">{simRest.rate}/5 ({simRest.votes}+ votes)</div>
+                    <div className="similar-restaurant-card-address">{simRest.address}</div>
+                  </div>
+                  <div className="similar-restaurant-image">
+                    <img src={simRest.imageUrl} alt="similar-restaurant" />
+                  </div>
                 </div>
               )
             })}

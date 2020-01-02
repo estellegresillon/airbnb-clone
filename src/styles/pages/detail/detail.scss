@@ -225,20 +225,44 @@
 
       .similar-restaurant-card {
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
         background-color: #fff;
         border-radius: 5px;
         box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.07);
-        width: calc(33% - 70px);
+        width: calc(33% - 30px);
         max-height: 70px;
-        padding: 20px;
         cursor: pointer;
         margin: 15px;
         transition: 0.5s all ease;
 
+        .similar-restaurant-description {
+          display: flex;
+          flex-direction: column;
+          margin: 20px;
+          width: calc(70% - 40px);
+        }
+
+        .similar-restaurant-image {
+          height: 100%;
+          width: auto;
+          width: 30%;
+
+          img {
+            height: 100%;
+            width: 100%;
+            border-radius: 0 5px 5px 0;
+            object-fit: cover;
+          }
+        }
+
         .similar-restaurant-card-name {
           font-size: 15px;
+          width: 100%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
 
         .similar-restaurant-card-rate {
@@ -246,11 +270,19 @@
           margin: 1px 0 3px 0;
           font-weight: 700;
           color: $foodlab;
+          width: 100%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
 
         .similar-restaurant-card-address {
           font-size: 12px;
           font-style: italic;
+          width: 100%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
 
         &:hover {
