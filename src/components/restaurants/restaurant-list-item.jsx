@@ -33,7 +33,7 @@ const RestaurantListItem = props => {
       id={`${restaurant.award ? restaurant.award.scroll : ""}`}
       tabIndex={tabIndex + 1}
     >
-      {!showMap &&
+      {(!showMap || (showMap && windowSize.width < 728)) &&
         <Link to={{ pathname: `/restaurants/${restaurant.id}`, restaurant, listedRestaurants }} />}
       <div className="card">
         {!showMap && <div className="grid-img-overlay" />}

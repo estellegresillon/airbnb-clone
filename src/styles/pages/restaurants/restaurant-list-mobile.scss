@@ -34,9 +34,17 @@
 
     .restaurant-list-with-grid {
       width: 100%;
+      padding: 20px 0;
 
       .restaurant {
         width: 100%;
+        margin: 0;
+        margin-bottom: 15px;
+        padding: 0;
+
+        .card-header-type {
+          top: 105px;
+        }
       }
     }
   }
