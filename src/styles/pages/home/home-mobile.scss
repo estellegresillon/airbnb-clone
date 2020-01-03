@@ -1,4 +1,4 @@
-///////// DESKTOP
+///////// MOBILE
 .home-wrapper-mobile-view {
   .home-hero-scene {
     display: flex;
@@ -275,6 +275,10 @@
       font-size: 14px;
       text-align: center;
     }
+  }
+
+  .footer-img {
+    display: none;
   }
 
   .home-footer {
