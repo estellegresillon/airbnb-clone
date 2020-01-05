@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Select from "react-select";
 
-import { initArrOptions, initTypeOptions } from "../../constants/filter-options";
-import { weeklyRestaurant } from "../../constants/weekly-restaurant";
-import { newRestaurants } from "../../constants/new-restaurants";
+import { INIT_ARR_OPTIONS, INIT_TYPE_OPTIONS } from "../../constants/filter-options";
+import { WEEKLY_RESTAURANT } from "../../constants/weekly-restaurant";
+import { NEW_RESTAURANTS } from "../../constants/new-restaurants";
 import { useWindowSize } from "../../hooks/useWindowSize";
-import { conceptSteps } from "../../constants/concept-steps";
+import { CONCEPT_STEPS } from "../../constants/concept-steps";
 
 const Home = props => {
   const { history } = props;
@@ -57,7 +57,7 @@ const Home = props => {
         <div className="home-hero-scene-image">
           <Select
             value={arr}
-            options={initArrOptions}
+            options={INIT_ARR_OPTIONS}
             onChange={handleArrChange}
             placeholder={arr}
             isSearchable={false}
@@ -65,7 +65,7 @@ const Home = props => {
           />
           <Select
             value={type}
-            options={initTypeOptions} 
+            options={INIT_TYPE_OPTIONS} 
             onChange={handleTypeChange} 
             placeholder={type}
             isSearchable={false}
@@ -81,19 +81,19 @@ const Home = props => {
           <span className="home-weekly-title-text">Le resto de la semaine</span>
           <i className="fas fa-award" />
         </div>
-        <div className="weekly-restaurant" onClick={() => history.push({ pathname: `/restaurants/${weeklyRestaurant.id}`, restaurant: weeklyRestaurant })}>
+        <div className="weekly-restaurant" onClick={() => history.push({ pathname: `/restaurants/${WEEKLY_RESTAURANT.id}`, restaurant: WEEKLY_RESTAURANT })}>
           <div className="card">
-            <img alt="restaurant-overview" src={weeklyRestaurant.imageUrl} />
+            <img alt="restaurant-overview" src={WEEKLY_RESTAURANT.imageUrl} />
             <div className="card-description">
               <div className="card-header">
                 <div className="card-header-type">
-                  {weeklyRestaurant.type} -{' '}
-                  <span className="card-header-budget">{weeklyRestaurant.price}</span>
+                  {WEEKLY_RESTAURANT.type} -{' '}
+                  <span className="card-header-budget">{WEEKLY_RESTAURANT.price}</span>
                 </div>
-                <div className="card-header-rate"><i className="fas fa-star"></i> {weeklyRestaurant.rate} ({weeklyRestaurant.votes}+)</div>
+                <div className="card-header-rate"><i className="fas fa-star"></i> {WEEKLY_RESTAURANT.rate} ({WEEKLY_RESTAURANT.votes}+)</div>
               </div>
-              <h2>{weeklyRestaurant.name}</h2>
-              <div className="card-restaurant-address">{weeklyRestaurant.address}</div>
+              <h2>{WEEKLY_RESTAURANT.name}</h2>
+              <div className="card-restaurant-address">{WEEKLY_RESTAURANT.address}</div>
               <div className="card-see-infos">Voir infos</div>
             </div>
           </div>
@@ -101,7 +101,7 @@ const Home = props => {
       </div>
 
       <div className="home-foodlab-concept">
-        {conceptSteps.map(step => {
+        {CONCEPT_STEPS.map(step => {
           return (
             <div key={step.nb} className={`home-concept-step home-step-${step.nb}`}>
               <img src={step.src} alt={step.nb}></img>
@@ -116,7 +116,7 @@ const Home = props => {
           Les nouveaux dans le top
         </div>
 
-        {newRestaurants.map(newRest => {
+        {NEW_RESTAURANTS.map(newRest => {
           return (
             <div key={newRest.id} className="new-restaurant" onClick={() => history.push({ pathname: `/restaurants/${newRest.id}`, restaurant: newRest })}>
               <div className="card">

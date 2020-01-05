@@ -1,4 +1,4 @@
-export const weeklyRestaurant = {
+export const WEEKLY_RESTAURANT = {
     name: "Pontochoux",
     id: 26,
     type: "Japonais",

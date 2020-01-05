@@ -1,4 +1,4 @@
-export const initTypeOptions = [
+export const INIT_TYPE_OPTIONS = [
   { label: "Tous les types", value: "Tous les types"},
   { label: "Algérien", value: "Algérien"},
   { label: "Allemand", value: "Allemand"},
@@ -26,7 +26,7 @@ export const initTypeOptions = [
   { label: "Vegan", value: "Vegan"},
 ];
 
-export const initArrOptions = [
+export const INIT_ARR_OPTIONS = [
   { label: "Tous les arr.", value: "Tous les arr."},
   { label: "1", value: "1" },
   { label: "2", value: "2" },

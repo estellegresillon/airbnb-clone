@@ -12,7 +12,7 @@ import {
 } from "react-google-maps"
 
 import { selectRestaurant } from "../../actions";
-import googleMapCustomSkin from "../../constants/google-map-skin";
+import GOOGLE_MAP_CUSTOM_SKIN from "../../constants/google-map-skin";
 import { setCoordinatesWithLocation } from "../../constants/locations-coordinates";
 
 const MapContainer = props =>{
@@ -58,7 +58,7 @@ const MapView = compose(withScriptjs, withGoogleMap)(props => {
   return (
     <GoogleMap 
       defaultZoom={13}
-      defaultOptions={{ styles: googleMapCustomSkin }}
+      defaultOptions={{ styles: GOOGLE_MAP_CUSTOM_SKIN }}
       center={newCenter}>
       {markers.map(marker => {
         const onMarkerClick = onClick.bind(this, marker);

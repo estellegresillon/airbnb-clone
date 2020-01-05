@@ -13,7 +13,7 @@ import {
   centerMapWithLocation,
   toggleListingAwards,
 } from "../../actions";
-import { initArrOptions, initTypeOptions } from "../../constants/filter-options";
+import { INIT_ARR_OPTIONS, INIT_TYPE_OPTIONS } from "../../constants/filter-options";
 import { useWindowSize } from "../../hooks/useWindowSize";
 
 
@@ -32,8 +32,8 @@ const SearchByName = props => {
   const [arr, setArr] = useState("Tous les arr.");
   const [type, setType] = useState("Tous les types");
   const [searchedRestaurant, setSearchedRestaurant] = useState(null);
-  const [typeOptions, setTypeOptions] = useState(initTypeOptions);
-  const [arrOptions, setArrOptions] = useState(initArrOptions);
+  const [typeOptions, setTypeOptions] = useState(INIT_TYPE_OPTIONS);
+  const [arrOptions, setArrOptions] = useState(INIT_ARR_OPTIONS);
   const windowSize = useWindowSize();
 
   const scrollToTop = () => {
@@ -171,8 +171,8 @@ const SearchByName = props => {
     setRestaurants();
 
     // reinit filter options
-    setTypeOptions(initTypeOptions);
-    setArrOptions(initArrOptions);
+    setTypeOptions(INIT_TYPE_OPTIONS);
+    setArrOptions(INIT_ARR_OPTIONS);
     // set default values
     setArr("Tous les arr.");
     setType("Tous les types");

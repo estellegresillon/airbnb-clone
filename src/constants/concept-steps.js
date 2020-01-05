@@ -1,4 +1,4 @@
-export const conceptSteps = [
+export const CONCEPT_STEPS = [
   { 
     nb: "one",
     src: "/undraw_progress_tracking.svg",

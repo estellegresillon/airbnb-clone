@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, NavLink } from "react-router-dom";
 
-import { menuItems } from "../../../constants/menu-items";
+import { MENU_ITEMS } from "../../../constants/menu-items";
 
 const Header = () => (
   <div className="header">
@@ -13,7 +13,7 @@ const Header = () => (
       </Link>
     </div>
     <div className="header-right">
-      {menuItems.map(link => {
+      {MENU_ITEMS.map(link => {
         return (
           <NavLink 
             activeClassName="selected-menu-item"

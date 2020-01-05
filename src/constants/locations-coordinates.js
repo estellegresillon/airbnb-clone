@@ -1,4 +1,4 @@
-const coordinates = [
+const COORDINATES = [
   // default position
   { lat: 48.868614, lng: 2.362222 },
   { lat: 48.8620123, lng: 2.33 },
@@ -16,5 +16,5 @@ const coordinates = [
 ]
 
 export const setCoordinatesWithLocation = (location, setNewCenter) => {
-  setNewCenter(coordinates[location])
+  setNewCenter(COORDINATES[location])
 };

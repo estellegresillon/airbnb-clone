@@ -1,4 +1,4 @@
-export const newRestaurants = [
+export const NEW_RESTAURANTS = [
   {
     name: "Le Manko",
     id: 61,

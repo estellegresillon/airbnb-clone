@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, NavLink } from "react-router-dom";
 
-import { menuItemsMobile } from "../../../constants/menu-items";
+import { MENU_ITEMS_MOBILE } from "../../../constants/menu-items";
 import { useComponentVisible } from "../../../hooks/useRef";
 
 const HeaderMobile = () => {
@@ -20,7 +20,7 @@ const HeaderMobile = () => {
         <i className="fas fa-hamburger" onClick={() => setIsComponentVisible(true)} />
         {isComponentVisible &&
           <div ref={ref} className="dropdown-menu-mobile">
-            {menuItemsMobile.map(link => {
+            {MENU_ITEMS_MOBILE.map(link => {
               return (
                 <NavLink 
                   className="menu-link"

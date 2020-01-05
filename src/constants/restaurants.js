@@ -2296,5 +2296,101 @@ export default [
       icon: "fas fa-birthday-cake",
       description: "La meilleure pâtisserie",
     }
-  }
+  },
+  {
+    name: "Sunny",
+    id: 69,
+    type: "Brunch",
+    rate: 4.2,
+    votes: 250,
+    address: "84 Avenue Secrétan, 75019",
+    phone: "01 42 06 44 21",
+    arr: "19",
+    openingHours: "8h-20h",
+    imageUrl: "https://www.sortiraparis.com/images/80/86956/463756-brunch-du-cafe-52-a-l-hotel-grand-powers-21.jpg",
+    price: "€€",
+    price_digit: 2,
+    lat: 48.878961,
+    lng: 2.3781294,
+    foodlabreview: "Juste en face des Buttes Chaumont, la terrasse du franco-californien Sunny est idéale l'été avant d'aller au parc. Pour bruncher, leurs oeufs bénédictes aux saumon sont une tuerie, les salades sont healthy et copieuses. Le service est correct et les plats sont frais, visuellement beaux et de qualité.", 
+    reviews: [
+      { 
+        date: "12/2019",
+        comment: "Ambiance et plats chaleureux. Service aux petits soins."
+      },
+      { 
+        date: "10/2019",
+        comment: "Lieu très chaleureux, idéal pour faire un brunch (samedi ou dimanche). Le serveur était très sympa."
+      },
+      { 
+        date: "07/2019",
+        comment: "Café dont le serveur est courtois et aimable très bien situé juste en face des butte chaumont ! Bistrot sympa !"
+      },
+    ],
+  },
+  {
+    name: "Les p'tites indécises",
+    id: 70,
+    type: "Français",
+    rate: 4.1,
+    votes: 500,
+    address: "2 Rue des Trois Bornes, 75011",
+    phone: "01 43 57 26 00",
+    arr: "11",
+    openingHours: "9h-2h",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/5/58/P1250194_Paris_XI_place_de_la_Fontaine-Timbaud_cafe_rwk.jpg",
+    imageUrl2: "https://conceptualisthic.files.wordpress.com/2012/09/dsc_0206.jpg",
+    price: "€€",
+    price_digit: 2,
+    lat: 48.8664356,
+    lng: 2.3721585,
+    foodlabreview: "Aux P'tits Indécises l'ambiance est chaleureuse : le lieu est très lumineux, les serveurs sont sympathiques. C'est un petit havre de paix place Jean-Pierre Timbaud où il fait bon de venir bruncher le week-end ou pour boire un verre le soir.", 
+    reviews: [
+      { 
+        date: "12/2019",
+        comment: "Une cuisine exceptionnelle. Typiquement française tellement bonne que vous voudriez gouter tous les plats"
+      },
+      { 
+        date: "10/2019",
+        comment: "Lieu cosy, idéal pour un verre l'été en terrasse ou bien au chaud à l'intérieur lorsqu'il fait froid ! le boissons sont bonnes, les prix un peu élevés mais c'est habituel pour le quartier !"
+      },
+      { 
+        date: "07/2019",
+        comment: "Un restaurant très agréable, dans un endroit assez bucolique. Les plats sont justes délicieux et le service est très bien. On reviendra !"
+      },
+    ],
+  },
+  {
+    name: "L'Osteria Dell'Anima",
+    id: 71,
+    type: "Italien",
+    rate: 4.5,
+    votes: 250,
+    address: "37 Rue Oberkampf, 75011",
+    phone: "01 43 38 40 03",
+    arr: "11",
+    openingHours: "12h-14h30 / 19h30-23h15",
+    imageUrl: "https://dxbowaj7shf9g.cloudfront.net/uploads/user_place/image/2755/large_20141222-pasta-making-vicky-wasik-50.jpg",
+    imageUrl2: "https://i2.wp.com/www.milkandcardamom.com/wp-content/uploads/2014/08/Scallion-Pancakes-3.png?fit=1024%2C768&ssl=1",
+    price: "€€",
+    price_digit: 2,
+    lat: 48.8639709,
+    lng: 2.3704037,
+    menuLink: "http://www.osteriadellanima.com/menu/",
+    foodlabreview: "On pourrait presque louper cette petite perle rue Oberkampf tellement la façade est étroite ! Mais derrière se trouve de la cuisine italienne authentique et sans fioritures. Le restaurant ne contient que quelques places seulement, pour manger au calme en toute intimité, dans une ambiance feutrée. Il faut absolument réserver.", 
+    reviews: [
+      { 
+        date: "12/2019",
+        comment: "Peut-être le meilleur restaurant de pâtes italiennes de Paris ? Toute petite adresse, réservation quasi obligatoire. Accueil agréable et excellents produits. À ne pas manquer."
+      },
+      { 
+        date: "10/2019",
+        comment: "Excellent italien, pâtes fraîches et maison au top, attention mieux vaut réserver, peu de tables !"
+      },
+      { 
+        date: "07/2019",
+        comment: "Superbe carte, produits de très grande qualité.  Cuisine vraiment italienne, pas de pizzas, les pâtes sont faites maison. Attention restaurant très très petit."
+      },
+    ],
+  },
 ];
