@@ -2393,4 +2393,37 @@ export default [
       },
     ],
   },
+  {
+    name: "Le café des Bains",
+    id: 72,
+    type: "Italien",
+    rate: 4.2,
+    votes: 100,
+    address: "33 Rue des Blancs Manteaux, 75004",
+    phone: "01 49 29 50 50",
+    arr: "4",
+    openingHours: "12h-14h30 / 18h30-22h30",
+    imageUrl: "https://www.oubruncher.com/photos1/8458_6.jpg",
+    imageUrl2: "https://www.oubruncher.com/photos1/x8458_4.jpg.pagespeed.ic.GE_tflcUcq.jpg",
+    price: "€€",
+    price_digit: 2,
+    lat: 48.8593617,
+    lng: 2.3556314,
+    menuLink: "https://www.bainsdumarais.fr/carte-restaurant-paris",
+    foodlabreview: "Un cadre très sympa et cosy bien placé : ce petit spa/hamman se trouve rue des blancs manteaux dans le Marais. Le personnel est très pro et explique toutes les recettes de leurs plats. Ces derniers sont étant des classiques mais avec une pointe d’originalité sur le choix des ingrédients. Mention spécial pour le risotto aux cèpes et le grand tortello ricotta épinards tomates et basilic.", 
+    reviews: [
+      { 
+        date: "12/2019",
+        comment: "Bon brunch entre amis ce midi, nous avions un peu de retard, les serveurs n'en n'ont pas tenu rigueur. Serveuse très aimable, accueillante, toujours à l'écoute. Prix correct 29e, décor très sympa dans beau quartier piéton. L'odeur est très agréable avec le hammam. Je recommande"
+      },
+      { 
+        date: "10/2019",
+        comment: "Diner avec ma moitié pour fêter nos 3 ans de mariage. Bonne première expérience, avec une facture plutôt raisonnable pour un cadre sympa. On a bien mangé même s'il y a avait un petit retard, rien de méchant."
+      },
+      { 
+        date: "07/2019",
+        comment: "Déco sympatique, bonne nourriture italienne. Possibilité d'avoir des réductions avec la Fourchette"
+      },
+    ],
+  },
 ];
