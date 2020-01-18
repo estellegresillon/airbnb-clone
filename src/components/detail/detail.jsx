@@ -26,10 +26,10 @@ const Detail = props => {
 
     if (previous) {
       previousRestaurantRef.current = previous.id;
-    };
+    } else previousRestaurantRef.current = null;
     if (next) {
       nextRestaurantRef.current = next.id;
-    };
+    } else nextRestaurantRef.current = null;
   };
 
   // if a user arrives on the pageId directly 
@@ -230,19 +230,23 @@ const Detail = props => {
           </div>}
       </div>
       <div className="detail-page-footer">
-        <div 
-          className={`footer-button-left ${!hasSeenSuggestion ? "footer-button-shiny" : ""}`}
-          onClick={() => handleNavigation("left")}
-        >
-          <i className="fas fa-chevron-left" />
-        </div>
+        {previousRestaurantRef.current &&
+          <div 
+            className={`footer-button-left ${!hasSeenSuggestion ? "footer-button-shiny" : ""}`}
+            onClick={() => handleNavigation("left")}
+          >
+            <i className="fas fa-chevron-left" />
+          </div>}
+
         <div className="footer-text"></div>
-        <div 
-          className={`footer-button-right ${!hasSeenSuggestion ? "footer-button-shiny" : ""}`}
-          onClick={() => handleNavigation("right")}
-        >
-          <i className="fas fa-chevron-right" />
-        </div>
+
+        {nextRestaurantRef.current &&
+          <div 
+            className={`footer-button-right ${!hasSeenSuggestion ? "footer-button-shiny" : ""}`}
+            onClick={() => handleNavigation("right")}
+          >
+            <i className="fas fa-chevron-right" />
+          </div>}
       </div>
     </>
   ) :

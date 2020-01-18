@@ -15,4 +15,24 @@ export const WEEKLY_RESTAURANT = {
     lat: 48.8613189,
     lng: 2.3650928,
     menuLink: "https://lacarte.menu/restaurants/paris/pontochoux",
+    foodlabreview: "C'est bon, c'est frais, c'est copieux et c'est abordable. Que demander de plus ? En revanche ne comptez pas y rester des heures pour de longs debriefs. On mange (bien) et on part. La queue est là et on nous le dit, mais gentiment bien sûr !",
+    reviews: [
+      { 
+        date: "12/2019",
+        comment: "Restaurant microscopique mais j'ai eu la chance de ne pas attendre le jour où j'y ai mangé. L'accueil et le lieu sont chaleureux. Et surtout, les plats sont délicieux ! Moi qui suis habituellement vite écoeurée par le curry japonais, là j'ai vraiment aimé. Il est savoureux, pas trop sucré et les accompagnements sont très bons aussi."
+      },
+      { 
+        date: "10/2019",
+        comment: "Le curry y est absolument délicieux. L'établissement à aussi de quoi manger pour les végétariens ce qui est un bon point."
+      },
+      {
+        date: "07/2019",
+        comment: "L'accueil est chaleureux et agréable ! Le curry épicé comme il faut et la qualité des produits vous réchauffe l'estomac. Vivement une extension à Marseille. Vous êtes chanceux les parisiens d'avoir cette perle de restauration !"
+      }
+    ],
+    award: {
+      scroll: "fa-award",
+      icon: "fas fa-award",
+      description: "Le restaurant de la semaine",
+    }
 };

@@ -56,7 +56,6 @@ const Home = props => {
     const newRestaurants = document.querySelectorAll(".new-restaurant");
 
     if (count < prevCount) {
-      console.log("scroll up");
       weeklyCard.classList.remove("bg-spin-down")
       weeklyCard.classList.add("bg-spin-up")
       conceptContainer.classList.remove("bg-spin-down")
@@ -64,7 +63,6 @@ const Home = props => {
       newRestaurants.forEach(restaurant => restaurant.classList.remove("bg-spin-down"))
       newRestaurants.forEach(restaurant => restaurant.classList.add("bg-spin-up"))
     } else if (count > prevCount) {
-      console.log("scroll down");
       weeklyCard.classList.remove("bg-spin-up")
       weeklyCard.classList.add("bg-spin-down")
       conceptContainer.classList.remove("bg-spin-up")
@@ -75,8 +73,8 @@ const Home = props => {
   }, [count, prevCount]);
 
   useEffect(() => {
-    document.addEventListener("scroll", () => { setCount(window.pageYOffset) }, true);
-    return () => document.removeEventListener("scroll", () => { setCount(window.pageYOffset) }, true);
+    document.addEventListener("scroll", () => { setCount(window.pageYOffset) }, false);
+    return () => document.removeEventListener("scroll", () => { setCount(null) }, false);
   }, []);
 
   useEffect(() => {
@@ -122,7 +120,13 @@ const Home = props => {
           <span className="home-weekly-title-text">Le resto de la semaine</span>
           <i className="fas fa-award" />
         </div>
-        <div className="weekly-restaurant" onClick={() => history.push({ pathname: `/restaurants/${WEEKLY_RESTAURANT.id}`, restaurant: WEEKLY_RESTAURANT })}>
+        <div 
+          className="weekly-restaurant"
+          onClick={() => history.push({
+            pathname: `/restaurants/${WEEKLY_RESTAURANT.id}`,
+            restaurant: WEEKLY_RESTAURANT,
+            listedRestaurants: [WEEKLY_RESTAURANT],
+            })}>
           <div className="card">
             <img alt="restaurant-overview" src={WEEKLY_RESTAURANT.imageUrl} />
             <div className="card-description">
@@ -159,7 +163,14 @@ const Home = props => {
 
         {NEW_RESTAURANTS.map(newRest => {
           return (
-            <div key={newRest.id} className="new-restaurant" onClick={() => history.push({ pathname: `/restaurants/${newRest.id}`, restaurant: newRest })}>
+            <div 
+              key={newRest.id}
+              className="new-restaurant"
+              onClick={() => history.push({ 
+                pathname: `/restaurants/${newRest.id}`, 
+                restaurant: newRest,
+                listedRestaurants: NEW_RESTAURANTS,
+              })}>
               <div className="card">
                 <img alt="restaurant-overview" src={newRest.imageUrl} />
                 <div className="card-description">
