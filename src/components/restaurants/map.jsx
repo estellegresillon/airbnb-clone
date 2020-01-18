@@ -70,7 +70,7 @@ const MapView = compose(withScriptjs, withGoogleMap)(props => {
           >
             {selectedMarker === marker &&
               <InfoWindow style={{ padding: 0 }}>
-                <Link to={{pathname: `/restaurants/${marker.id}`, restaurant: marker}}>
+                <Link to={{pathname: `/detail/${marker.id}`, restaurant: marker}}>
                   <div className="marker-info-window">
                     <img src={marker.imageUrl} alt="restaurant-preview" />
                     <div className="marker-header">

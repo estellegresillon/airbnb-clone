@@ -25,10 +25,10 @@ export const handleTouchMove = evt => {
   if (Math.abs(xDiff) > Math.abs(yDiff)) {/*most significant diff*/
     if (xDiff > 0) {
       /* left swipe */ 
-      props.history.push({ pathname: `/restaurants/${previousRestaurantRef.current}`, listedRestaurants });
+      props.history.push({ pathname: `/detail/${previousRestaurantRef.current}`, listedRestaurants });
     } else {
       /* right swipe */
-      props.history.push({ pathname: `/restaurants/${nextRestaurantRef.current}`, listedRestaurants });
+      props.history.push({ pathname: `/detail/${nextRestaurantRef.current}`, listedRestaurants });
     }                       
   } else {
     if (yDiff > 0) {

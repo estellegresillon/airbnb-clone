@@ -34,7 +34,7 @@ const RestaurantListItem = props => {
       tabIndex={tabIndex + 1}
     >
       {(!showMap || (showMap && windowSize.width < 728)) &&
-        <Link to={{ pathname: `/restaurants/${restaurant.id}`, restaurant, listedRestaurants }} />}
+        <Link to={{ pathname: `/detail/${restaurant.id}`, restaurant, listedRestaurants }} />}
       <div className="card">
         {!showMap && <div className="grid-img-overlay" />}
         <LazyLoadImage
@@ -58,7 +58,7 @@ const RestaurantListItem = props => {
           <h2>{restaurant.name}</h2>
           <div className="card-restaurant-address">{restaurant.address}</div>
           {showMap && windowSize.width > 728 &&
-            <Link to={{ pathname: `/restaurants/${restaurant.id}`, restaurant, listedRestaurants }}>
+            <Link to={{ pathname: `/detail/${restaurant.id}`, restaurant, listedRestaurants }}>
               <div className="card-see-infos">Voir infos</div>
             </Link>}
         </div>

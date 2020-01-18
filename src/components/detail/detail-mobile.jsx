@@ -92,13 +92,13 @@ const DetailMobile = props => {
   const handleNavigation = (direction, id) => {
     if (direction === "left") {
       if (previousRestaurantRef.current) {
-        props.history.push({ pathname: `/restaurants/${previousRestaurantRef.current}`, listedRestaurants });
+        props.history.push({ pathname: `/detail/${previousRestaurantRef.current}`, listedRestaurants });
       };
     } else if (direction === "next-page") {
-      props.history.push({ pathname: `/restaurants/${id}`, listedRestaurants });
+      props.history.push({ pathname: `/detail/${id}`, listedRestaurants });
     } else if (direction === "right") {
       if (nextRestaurantRef.current) {
-        props.history.push({ pathname: `/restaurants/${nextRestaurantRef.current}`, listedRestaurants });
+        props.history.push({ pathname: `/detail/${nextRestaurantRef.current}`, listedRestaurants });
       };
     };
 

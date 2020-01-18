@@ -47,9 +47,23 @@
       cursor: pointer;
       font-size: 10px;
       text-transform: uppercase;
-      font-weight: 700;
+      font-weight: 900;
       letter-spacing: 1px;
       transition: 0.5s all ease;
+
+      .menu-underline {
+        margin-top: 5px;
+        border-top: 1px solid transparent;
+        width: 0px;
+      }
+  
+      &:hover {
+        .menu-underline {
+          border-top: 1px solid $foodlab;
+          animation: 1s menuUnderline;
+          animation-fill-mode: forwards;
+        }
+      }
     }
 
     .menu-link:hover { 

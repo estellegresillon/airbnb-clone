@@ -22,6 +22,7 @@ const Header = () => (
             key={link.name}
           >
             <div>{link.name}</div>
+            <div className="menu-underline" />
           </NavLink>
         )
       })}

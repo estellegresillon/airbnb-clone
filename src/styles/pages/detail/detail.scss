@@ -40,7 +40,7 @@
     left: 20px;
     cursor: pointer;
     border-radius: 4px;
-    font-weight: 700;
+    font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     font-size: 11px;
@@ -65,6 +65,11 @@
     .detail-page-big-img {
       width: 40%;
       height: 100%;
+      background-attachment: fixed;
+      margin-right: 30px;
+      background-position: left;
+      background-size: 1000px;
+      background-repeat: no-repeat;
     }
   
     .detail-page-content {
@@ -95,13 +100,13 @@
         animation: 1s slideFromBottomTopSection;
 
         .resume-rate {
-          font-weight: 700;
+          font-weight: 900;
           color: $foodlab;
           font-size: 14px;
         }
 
         .bolder { 
-          font-weight: 700;
+          font-weight: 900;
           text-transform: uppercase;
           letter-spacing: 0.5px;
           font-size: 11px;
@@ -148,7 +153,7 @@
 
         .foodlab-review-title {
           font-size: 13px;
-          font-weight: 700;
+          font-weight: 900;
           text-transform: uppercase;
           letter-spacing: 0.5px;
           margin-bottom: -5px;
@@ -196,6 +201,10 @@
       top: 350px;
       width: 30%;
       height: 40%;
+      background-attachment: fixed;
+      background-position: right;
+      background-size: 1000px;
+      background-repeat: no-repeat;
     }
   }
 
@@ -265,7 +274,7 @@
         .similar-restaurant-card-rate {
           font-size: 13px;
           margin: 1px 0 3px 0;
-          font-weight: 700;
+          font-weight: 900;
           color: $foodlab;
           width: 100%;
           white-space: nowrap;

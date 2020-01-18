@@ -80,11 +80,11 @@ const Detail = props => {
     // 37 arrow left / 39 arrow right
     if (e.keyCode === 37) {
       if (previousRestaurantRef.current) {
-        history.push({ pathname: `/restaurants/${previousRestaurantRef.current}`, listedRestaurants });
+        history.push({ pathname: `/detail/${previousRestaurantRef.current}`, listedRestaurants });
       };
     } else if (e.keyCode === 39) {
       if (nextRestaurantRef.current) {
-        history.push({ pathname: `/restaurants/${nextRestaurantRef.current}`, listedRestaurants });
+        history.push({ pathname: `/detail/${nextRestaurantRef.current}`, listedRestaurants });
       };
     };
 
@@ -94,13 +94,13 @@ const Detail = props => {
   const handleNavigation = (direction, id) => {
     if (direction === "left") {
       if (previousRestaurantRef.current) {
-        history.push({ pathname: `/restaurants/${previousRestaurantRef.current}`, listedRestaurants });
+        history.push({ pathname: `/detail/${previousRestaurantRef.current}`, listedRestaurants });
       };
     } else if (direction === "next-page") {
-      history.push({ pathname: `/restaurants/${id}`, listedRestaurants });
+      history.push({ pathname: `/detail/${id}`, listedRestaurants });
     } else if (direction === "right") {
       if (nextRestaurantRef.current) {
-        history.push({ pathname: `/restaurants/${nextRestaurantRef.current}`, listedRestaurants });
+        history.push({ pathname: `/detail/${nextRestaurantRef.current}`, listedRestaurants });
       };
     };
 
@@ -144,12 +144,7 @@ const Detail = props => {
         <div className="top-section">
           <div 
             className="detail-page-big-img"
-            style={{ 
-              backgroundImage: `url(${restaurant.imageUrl})`,
-              marginRight: "30px",
-              backgroundPosition: "left",
-              backgroundSize: "1000px",
-            }}
+            style={{ backgroundImage: `url(${restaurant.imageUrl})` }}
           />
           <div key={location.pathname} className="detail-page-content">
             <div className="detail-page-title">{restaurant.name}</div>
@@ -196,11 +191,7 @@ const Detail = props => {
           {!restaurant.imageUrl2 && <div className="cropped-img-overlay" />}
           <div 
             className="detail-page-cropped-img"
-            style={{ 
-              backgroundImage: `url(${restaurant.imageUrl2 || restaurant.imageUrl})`,
-              backgroundPosition: "right",
-              backgroundSize: "1000px",
-            }}
+            style={{ backgroundImage: `url(${restaurant.imageUrl2 || restaurant.imageUrl})` }}
           />
         </div>
 

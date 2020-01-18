@@ -221,3 +221,12 @@
     left: 180px;
   }
 }
+
+@keyframes menuUnderline {
+  from {
+    width: 0;
+  }
+  to {
+    width: 70px;
+  }
+}

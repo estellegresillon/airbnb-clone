@@ -39,7 +39,7 @@ const App = () => {
         <Route exact path="/" component={Home} />
         <Route exact path="/awards" component={Awards} />
         <Route exact path="/restaurants" component={Restaurants} />
-        <Route exact path="/restaurants/:id" component={Detail} />
+        <Route exact path="/detail/:id" component={Detail} />
         {/* {windowSize.width > 728 && <MessageButton />} */}
       </React.Fragment>
     </Router>

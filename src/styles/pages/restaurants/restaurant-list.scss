@@ -123,15 +123,19 @@
   
     .card-see-infos {
       margin-top: 10px;
-      width: 50px;
-      background-color: $grey-light;
+      width: 70px;
+      color: white;
+      background-color: $foodlab;
       font-size: 12px;
       padding: 5px 10px;
-      transition: 0.5s all ease;
+      text-transform: uppercase;
+      font-weight: 900;
+      letter-spacing: 0.5px;
+      border-radius: 3px;
     }
   
     .card-see-infos:hover {
-      background-color: $grey;
+      background-color: $foodlab-hover;
     }
   }
 }
@@ -196,7 +200,7 @@
       top: 20px;
       left: 20px;
       color: #fff;
-      font-weight: 700;
+      font-weight: 900;
     }
 
     img {
@@ -219,7 +223,7 @@
       top: 115px;
       left: 20px;
       color: #fff;
-      font-weight: 700;
+      font-weight: 900;
     }
 
     h2 {

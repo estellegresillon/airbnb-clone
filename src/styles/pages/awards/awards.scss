@@ -25,7 +25,7 @@
       margin-left: 10%;
       background-color: $foodlab;
       padding: 5px 10px;
-      font-weight: 700;
+      font-weight: 900;
       text-transform: uppercase;
       letter-spacing: 1px;
       animation: 1s slideFromLeftAwards;
@@ -56,6 +56,10 @@
     .awarded-restaurant {
       width: 100%;
       cursor: pointer;
+
+      a {
+        text-decoration: none;
+      }
 
       &:nth-child(2) { border-top: 1px solid $grey-light; }
     }
@@ -163,14 +167,19 @@
     
       .card-see-infos {
         margin-top: 10px;
-        width: 50px;
-        background-color: $grey-light;
+        width: 70px;
+        color: white;
+        background-color: $foodlab;
         font-size: 12px;
         padding: 5px 10px;
+        text-transform: uppercase;
+        font-weight: 900;
+        letter-spacing: 0.5px;
+        border-radius: 3px;
       }
     
       .card-see-infos:hover {
-        background-color: $grey;
+        background-color: $foodlab-hover;
       }
     }
   }

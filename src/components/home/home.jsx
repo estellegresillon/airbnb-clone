@@ -126,7 +126,7 @@ const Home = props => {
         <div 
           className="weekly-restaurant"
           onClick={() => history.push({
-            pathname: `/restaurants/${WEEKLY_RESTAURANT.id}`,
+            pathname: `/detail/${WEEKLY_RESTAURANT.id}`,
             restaurant: WEEKLY_RESTAURANT,
             listedRestaurants: [WEEKLY_RESTAURANT],
             })}>
@@ -170,7 +170,7 @@ const Home = props => {
               key={newRest.id}
               className="new-restaurant"
               onClick={() => history.push({ 
-                pathname: `/restaurants/${newRest.id}`, 
+                pathname: `/detail/${newRest.id}`, 
                 restaurant: newRest,
                 listedRestaurants: NEW_RESTAURANTS,
               })}>
