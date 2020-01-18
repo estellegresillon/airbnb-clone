@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Select from "react-select";
 
 import { INIT_ARR_OPTIONS, INIT_TYPE_OPTIONS } from "../../constants/filter-options";
@@ -7,12 +7,23 @@ import { NEW_RESTAURANTS } from "../../constants/new-restaurants";
 import { useWindowSize } from "../../hooks/useWindowSize";
 import { CONCEPT_STEPS } from "../../constants/concept-steps";
 
+const usePrevious = value => {
+  const ref = useRef();
+
+  useEffect(() => {
+    ref.current = value;
+  });
+  return ref.current;
+}
+
 const Home = props => {
   const { history } = props;
   const windowSize = useWindowSize();
   const [arr, setArr] = useState("Tous les arr.");
   const [type, setType] = useState("Tous les types");
   const [isVisible, setIsVisible] = useState(false);
+  const [count, setCount] = useState(0);
+  const prevCount = usePrevious(count)
 
   const handleArrChange = e => {
     const selectedArr = e.value;
@@ -40,6 +51,35 @@ const Home = props => {
   }
 
   useEffect(() => {
+    const weeklyCard = document.querySelector(".weekly-restaurant");
+    const conceptContainer = document.querySelector(".home-foodlab-concept");
+    const newRestaurants = document.querySelectorAll(".new-restaurant");
+
+    if (count < prevCount) {
+      console.log("scroll up");
+      weeklyCard.classList.remove("bg-spin-down")
+      weeklyCard.classList.add("bg-spin-up")
+      conceptContainer.classList.remove("bg-spin-down")
+      conceptContainer.classList.add("bg-spin-up")
+      newRestaurants.forEach(restaurant => restaurant.classList.remove("bg-spin-down"))
+      newRestaurants.forEach(restaurant => restaurant.classList.add("bg-spin-up"))
+    } else if (count > prevCount) {
+      console.log("scroll down");
+      weeklyCard.classList.remove("bg-spin-up")
+      weeklyCard.classList.add("bg-spin-down")
+      conceptContainer.classList.remove("bg-spin-up")
+      conceptContainer.classList.add("bg-spin-down")
+      newRestaurants.forEach(restaurant => restaurant.classList.remove("bg-spin-up"))
+      newRestaurants.forEach(restaurant => restaurant.classList.add("bg-spin-down"))
+    }
+  }, [count, prevCount]);
+
+  useEffect(() => {
+    document.addEventListener("scroll", () => { setCount(window.pageYOffset) }, true);
+    return () => document.removeEventListener("scroll", () => { setCount(window.pageYOffset) }, true);
+  }, []);
+
+  useEffect(() => {
     window.addEventListener("scroll", triggerHotDog, false);
     return () => window.removeEventListener("scroll", triggerHotDog, false);
   }, [])
@@ -54,6 +94,7 @@ const Home = props => {
             <div className="home-subtitle">classés par note, type de cuisine et arrondissement.</div>
           </div>
         </div>
+        <div className="home-hero-scene-image-overlay"></div>
         <div className="home-hero-scene-image">
           <Select
             value={arr}
@@ -105,7 +146,7 @@ const Home = props => {
           return (
             <div key={step.nb} className={`home-concept-step home-step-${step.nb}`}>
               <img src={step.src} alt={step.nb}></img>
-              <div className="home-concept-description">{step.description}</div>
+              <div className="home-concept-description"><span>{step.description}</span></div>
             </div>
           )
         })}

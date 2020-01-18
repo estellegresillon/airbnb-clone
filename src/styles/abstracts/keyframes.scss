@@ -106,6 +106,11 @@
   to { width: 50%; }
 }
 
+@keyframes overlayHome {
+  from { width: 100%; }
+  to { width: 0%; }
+}
+
 @keyframes slideFromLeftHome {
   from { 
     left: 0%;
@@ -119,31 +124,31 @@
 
 @keyframes rotateImageOne {
   from {
-    top: 5px;
-    transform: rotate(-5deg);
+    top: 20px;
+    transform: rotate(-10deg);
   }
   50% {
     top: 0px;
-    transform: rotate(5deg);
+    transform: rotate(10deg);
   }
   to {
-    top: 5px;
-    transform: rotate(-5deg);
+    top: 20px;
+    transform: rotate(-10deg);
   }
 }
 
 @keyframes rotateImageTwo {
   from {
     top: 0px;
-    transform: rotate(5deg);
+    transform: rotate(10deg);
   }
   50% {
-    top: 5px;
-    transform: rotate(-5deg);
+    top: 20px;
+    transform: rotate(-10deg);
   }
   to {
     top: 0px;
-    transform: rotate(5deg);
+    transform: rotate(10deg);
   }
 }
 
@@ -172,6 +177,38 @@
   }
   to { 
     right: 18%;
+    transform: rotate(0deg);
+  }
+}
+
+.bg-spin-up {
+  animation: bgSpinUp 4s ease;
+}
+
+@keyframes bgSpinUp {
+  from {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(-5deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.bg-spin-down {
+  animation: bgSpinDown 4s ease;
+}
+
+@keyframes bgSpinDown {
+  from {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(5deg);
+  }
+  to {
     transform: rotate(0deg);
   }
 }
