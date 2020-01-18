@@ -16,7 +16,6 @@ const RestaurantListItem = props => {
     restaurant,
     listedRestaurants,
     tabIndex,
-    // thumbnail,
     showMap,
   } = props;
 

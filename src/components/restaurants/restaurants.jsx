@@ -22,7 +22,7 @@ const Restaurants = props => {
   // filters restaurants
   useEffect(() => {
     // 1 - priority on autocomplete, displays only one restaurant
-    // 2 -  if not any restaurant is searched, display the filtered Restaurants
+    // 2 - if not any restaurant is searched, display the filtered Restaurants
     // 3 - if not any restaurant is searched nor filtered, displays all Restaurants
     // never display 0 Restaurants
     if (searchedRestaurant) {
