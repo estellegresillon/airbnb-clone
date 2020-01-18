@@ -58,16 +58,23 @@
       }
   
       &:hover {
+        color: $foodlab;
         .menu-underline {
           border-top: 1px solid $foodlab;
           animation: 1s menuUnderline;
           animation-fill-mode: forwards;
         }
       }
-    }
 
-    .menu-link:hover { 
-      color: $foodlab;
+      &:active {
+        color: $foodlab-active;
+
+        .menu-underline {
+          border-top: 1px solid $foodlab-active;
+          animation: 1s menuUnderline;
+          animation-fill-mode: forwards;
+        }
+      }
     }
 
     .selected-menu-item { 

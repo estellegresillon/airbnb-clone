@@ -91,6 +91,7 @@
         transition: 0.5s all ease;
 
         &:hover { background-color: $foodlab-hover; }
+        &:active { background-color: $foodlab-active; }
 
         .btn-first-text, .btn-second-text {
           position: absolute;
@@ -281,10 +282,14 @@
         font-weight: 900;
         letter-spacing: 0.5px;
         border-radius: 3px;
-      }
-    
-      .card-see-infos:hover {
-        background-color: $foodlab-hover;
+        
+        &:hover {
+          background-color: $foodlab-hover;
+        }
+        
+        &:active {
+          background-color: $foodlab-active;
+        }
       }
     }
   }

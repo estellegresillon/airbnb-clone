@@ -46,6 +46,7 @@
     font-size: 11px;
 
     &:hover { background-color: $foodlab-hover; }
+    &:active { background-color: $foodlab-active; }
   }
 
   .detail-page-award {

@@ -132,11 +132,16 @@
       font-weight: 900;
       letter-spacing: 0.5px;
       border-radius: 3px;
+
+      &:hover {
+        background-color: $foodlab-hover;
+      }
+
+      &:active {
+        background-color: $foodlab-active;
+      }
     }
   
-    .card-see-infos:hover {
-      background-color: $foodlab-hover;
-    }
   }
 }
 
