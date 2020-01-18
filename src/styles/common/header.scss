@@ -4,7 +4,7 @@
   align-items: center;
   position: relative;
   width: 100%;
-  height: 80px;
+  height: 100px;
   justify-content: space-between;
   z-index: 9999;
 
@@ -18,7 +18,7 @@
     .foodlab-logo {
       font-family: "Ceviche One";
       font-size: 32px;
-      margin: 0 40px;
+      margin: 0 50px;
       color: $foodlab;
       letter-spacing: -1px;
       cursor: pointer;
@@ -34,7 +34,7 @@
   .header-right {
     display: flex;
     flex-direction: row;
-    margin-right: 40px;
+    margin-right: 50px;
     font-size: 14px;
     width: 100%;
     justify-content: flex-end;
@@ -43,7 +43,7 @@
     .menu-link { 
       text-decoration: none;
       color: $grey-dark;
-      margin-left: 40px;
+      margin-left: 50px;
       cursor: pointer;
       font-size: 10px;
       text-transform: uppercase;

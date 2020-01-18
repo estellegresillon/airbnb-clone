@@ -5,7 +5,7 @@
 
   .awards-page-big-img {
     width: 45%;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 100px);
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -35,7 +35,7 @@
   .awards-listing {
     position: relative;
     width: 55%;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 100px);
     overflow: scroll;
     animation: 1s slideFromBottomListingRow;
     
@@ -45,7 +45,7 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      margin: 10px 15px 10px 35px;
+      margin: 0px 15px 10px 35px;
     }
     
     .awards-listing-title {
