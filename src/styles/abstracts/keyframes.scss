@@ -212,3 +212,12 @@
     transform: rotate(0deg);
   }
 }
+
+@keyframes slideToRightText {
+  from {
+    left: -182px;
+  }
+  to {
+    left: 180px;
+  }
+}

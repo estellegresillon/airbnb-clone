@@ -110,7 +110,10 @@ const Home = props => {
             isSearchable={false}
             className="filters-react-select filter-type"
           />
-          <button className="button-home-go" onClick={() => goToRestaurantsPage()}>Voir notre sélection</button>
+          <button className="button-home-go" onClick={() => goToRestaurantsPage()}>
+            <span className="btn-first-text">Voir notre sélection</span>
+            <span className="btn-second-text">Voir notre sélection</span>
+          </button>
         </div>
       </div>
 
