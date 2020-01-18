@@ -9,6 +9,7 @@ import Badge from "../common/badge";
 import { useWindowSize } from "../../hooks/useWindowSize";
 
 const RestaurantListItem = props => {
+  const windowSize = useWindowSize();
   const { 
     scrollPosition,
     selectRestaurant,
@@ -16,14 +17,13 @@ const RestaurantListItem = props => {
     restaurant,
     listedRestaurants,
     tabIndex,
-    showMap
+    thumbnail,
+    showMap,
   } = props;
 
   const handleClick = () => {
     selectRestaurant(restaurant);
   };
-
-  const windowSize = useWindowSize();
 
   return (
     <div 
@@ -37,12 +37,13 @@ const RestaurantListItem = props => {
         <Link to={{ pathname: `/restaurants/${restaurant.id}`, restaurant, listedRestaurants }} />}
       <div className="card">
         {!showMap && <div className="grid-img-overlay" />}
-        <LazyLoadImage
-          alt="restaurant-overview"
-          scrollPosition={scrollPosition}
-          src={restaurant.imageUrl}
-          threshold={500}
-        />
+        {thumbnail && 
+          <LazyLoadImage
+            alt="restaurant-overview"
+            scrollPosition={scrollPosition}
+            src={thumbnail.urls.thumb}
+            threshold={500}
+          />}
         {restaurant.award &&
           <Badge 
             icon={restaurant.award.icon}
