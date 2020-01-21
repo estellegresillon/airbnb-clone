@@ -1,0 +1,131 @@
+.contact-wrapper {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 100px);
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: $foodlab;
+
+  .gradient-stroke {
+    position: absolute;
+    top: 10vh;
+    background: -webkit-linear-gradient(0deg, $foodlab-light 3%, $foodlab-active 100%);
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 4px transparent;
+    color: #FFF;
+    font-size: 96px;
+    font-weight: 900;
+    width: 50vw;
+  }
+
+  .bottom-section {
+    position: absolute;
+    bottom: 20vh;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    animation: 2s slideFromBottom;
+    animation-fill-mode: forwards;
+    
+    .contact-infos {
+      border-top: 1px solid $foodlab;
+      padding: 20px 0;
+    }
+  
+    .contact-medias {
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+      color: $main;
+      font-size: 32px;
+  
+      i {
+        cursor: pointer;
+        transition: 1s all ease;
+  
+        &:hover { color: $foodlab; }
+      }
+    }
+  }
+
+  img {
+    position: absolute;
+    height: 30px;
+    width: auto;
+
+    &.contact-burger {
+      top: 5vh;
+      left: 25vh;
+      transform: rotate(42deg);
+      animation: 5s rotateDots infinite linear;
+    }
+
+    &.contact-lobster {
+      top: 38vh;
+      left: 15vh;
+      transform: rotate(2deg);
+      animation: 5s rotateDots infinite linear;
+    }
+
+    &.contact-salad {
+      top: 70vh;
+      left: 25vh;
+      transform: rotate(200deg);
+      animation: 5s rotateDots infinite linear;
+    }
+
+    &.contact-ice-cream {
+      top: 5vh;
+      right: 25vh;
+      transform: rotate(42deg);
+      animation: 5s rotateDots infinite linear;
+    }
+
+    &.contact-pizza {
+      top: 38vh;
+      right: 15vh;
+      transform: rotate(2deg);
+      animation: 5s rotateDots infinite linear;
+    }
+
+    &.contact-pasta {
+      top: 70vh;
+      right: 25vh;
+      transform: rotate(200deg);
+      animation: 5s rotateDots infinite linear;
+    }
+  }
+}
+
+@keyframes slideFromBottom {
+  from {
+    opacity: 0;
+    bottom: 0vh;
+  }
+  to {
+    opacity: 1;
+    bottom: 20vh;
+  }
+}
+
+@keyframes rotateDots {
+  from {
+    margin-top: 0px;
+    transform: rotate(0deg);
+  }
+  50% {
+    margin-top: 15px;
+    transform: rotate(180deg);
+  }
+  to {
+    margin-top: 0px;
+    transform: rotate(360deg);
+  }
+}

@@ -10,6 +10,7 @@ import Header from "./components/common/header";
 import Home from "./components/home";
 import Detail from "./components/detail";
 import Awards from "./components/awards";
+import Contact from "./components/contact";
 // import MessageButton from "./components/common/contact";
 // import { useWindowSize } from "./hooks/useWindowSize";
 
@@ -40,6 +41,7 @@ const App = () => {
         <Route exact path="/awards" component={Awards} />
         <Route exact path="/restaurants" component={Restaurants} />
         <Route exact path="/detail/:id" component={Detail} />
+        <Route exact path="/contact" component={Contact} />
         {/* {windowSize.width > 728 && <MessageButton />} */}
       </React.Fragment>
     </Router>

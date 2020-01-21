@@ -1,12 +1,12 @@
 export const MENU_ITEMS = [
-  { name: "Les restos", path: "/restaurants"},
-  { name: "Les awards", path: "/awards"},
-  // { name: "Proposer un resto", path: "/add-restaurant"},
+  { name: "Le classement", path: "/restaurants"},
+  { name: "Les primés", path: "/awards"},
+  { name: "Nous écrire", path: "/contact"},
 ];
 
 export const MENU_ITEMS_MOBILE = [
   { name: "Home", path: "/"},
-  { name: "Les restos", path: "/restaurants"},
-  { name: "Les awards", path: "/awards"},
-  // { name: "Proposer un resto", path: "/add-restaurant"},
+  { name: "Le classement", path: "/restaurants"},
+  { name: "Les primés", path: "/awards"},
+  { name: "Nous écrire", path: "/contact"},
 ];
