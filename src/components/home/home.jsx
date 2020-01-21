@@ -39,6 +39,10 @@ const Home = props => {
     history.push({ pathname: "/restaurants", homeArr: arr, homeType: type })
   }
 
+  const goToContactPage = () => {
+    history.push({ pathname: "/contact" })
+  }
+
   const triggerHotDog = e => {
     const windowHeight = window.innerHeight;
     const view = window.pageYOffset;
@@ -161,7 +165,9 @@ const Home = props => {
 
       <div className="home-new">
         <div className="home-new-title">
-          Les nouveaux dans le top
+          <i className="fas fa-rocket" />
+          <span className="home-new-title-text">Les petits nouveaux</span>
+          <i className="fas fa-rocket" />
         </div>
 
         {NEW_RESTAURANTS.map(newRest => {
@@ -192,6 +198,24 @@ const Home = props => {
             </div>
           )
         })}
+      </div>
+
+      <div className="home-contact">
+        <div className="gradient-stroke">
+          Un resto à proposer ?
+        </div>
+        <button className="go-to-contact" onClick={() => goToContactPage()}>
+          <span className="btn-first-text">Ecrivez-nous !</span>
+          <span className="btn-second-text">Ecrivez-nous !</span>
+        </button>
+
+        <img className="contact-burger" src="contact-burger.svg" alt="burger-svg" />
+        <img className="contact-lobster" src="contact-lobster.svg" alt="lobsterer-svg" />
+        <img className="contact-salad" src="contact-salad.svg" alt="dalad-svg" />
+
+        <img className="contact-ice-cream" src="contact-ice-cream.svg" alt="ice-cream-svg" />
+        <img className="contact-pizza" src="contact-pizza.svg" alt="pizza-svg" />
+        <img className="contact-pasta" src="contact-pasta.svg" alt="pasta-svg" />
       </div>
       
       <div className="footer-img">

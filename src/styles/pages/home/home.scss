@@ -30,6 +30,9 @@
       .home-catchphrase {
         font-size: 42px;
         font-weight: 900;
+        background: -webkit-linear-gradient(0deg, #3d3aa7 3%, #12105a 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
 
       .home-catchphrase-underline {
@@ -74,7 +77,7 @@
       .button-home-go {
         position: relative;
         overflow: hidden;
-        background-color: $foodlab;
+        background: -webkit-linear-gradient(0deg, #ff6242 3%, #de0505 100%);
         border: none;
         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1) !important;
         height: 40px;
@@ -91,7 +94,10 @@
         transition: 0.5s all ease;
 
         &:hover { background-color: $foodlab-hover; }
-        &:active { background-color: $foodlab-active; }
+        &:active { 
+          background-color: $foodlab-active;
+          transition: none;
+        }
 
         .btn-first-text, .btn-second-text {
           position: absolute;
@@ -157,14 +163,14 @@
       font-size: 30px;
       font-weight: 700;
       margin-bottom: 30px;
-
+  
       i { 
         position: relative;
         color: $foodlab;
         animation: 3s rotateSvg infinite;
       }
 
-      .home-weekly-title-text {
+      .home-weekly-title-text, .home-new-title-text {
         margin: 0 20px;
       }
     }
@@ -354,7 +360,7 @@
     justify-content: flex-end;
     align-items: flex-end;
     width: 100%;
-    margin-top: 30px;
+    background-color: #ffefea;
 
     img {
       width: auto;
@@ -380,8 +386,9 @@
     justify-content: flex-start;
     width: 100%;
     height: 100px;
-    background-color: #ffefea;
-    color: $foodlab;
+    background-color: $foodlab;
+    color: #fff;
+    font-weight: 900;
     font-size: 12px;
 
     .home-footer-brand {
@@ -391,6 +398,115 @@
 
       i {
         margin-right: 5px;
+      }
+    }
+  }
+
+  .home-contact {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: $foodlab;
+    background-color: #ffefea;
+  
+    .gradient-stroke {
+      background: -webkit-linear-gradient(0deg, #ff6242 3%, #de0505 100%);
+      -webkit-background-clip: text;
+      -webkit-text-stroke: 4px transparent;
+      color: #ffefea;
+      font-size: 60px;
+      font-weight: 900;
+      width: 50vw;
+    }
+
+    .go-to-contact {
+      position: relative;
+      overflow: hidden;
+      background: -webkit-linear-gradient(0deg, #ff6242 3%, #de0505 100%);
+      border: none;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1) !important;
+      height: 40px;
+      width: 200px;
+      border-radius: 32px;
+      cursor: pointer;
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-family: "Montserrat";
+      color: #fff;
+      font-size: 12px;
+      margin-top: 50px;
+      -webkit-font-smoothing: antialiased;
+      transition: 0.5s all ease;
+
+      &:hover { background-color: $foodlab-hover; }
+      &:active { 
+        background-color: $foodlab-active;
+        transition: none;
+      }
+
+      .btn-first-text, .btn-second-text {
+        position: absolute;
+        top: 13px;
+        width: 200px;
+      }
+
+      .btn-first-text {
+        left: -182px;
+        animation: slideToRightText 8s linear infinite;
+      }
+
+      .btn-second-text {
+        left: -182px;
+        animation: slideToRightText 8s linear infinite;
+        animation-delay: 4s;
+      }
+    }
+
+    img {
+      position: absolute;
+      height: 50px;
+      width: auto;
+  
+      &.contact-burger {
+        top: 15vh;
+        left: 30vh;
+        transform: rotate(42deg);
+      }
+  
+      &.contact-lobster {
+        top: 45vh;
+        left: 15vh;
+        transform: rotate(30deg);
+      }
+  
+      &.contact-salad {
+        top: 75vh;
+        left: 30vh;
+        transform: rotate(-42deg);
+      }
+  
+      &.contact-ice-cream {
+        top: 15vh;
+        right: 30vh;
+        transform: rotate(-42deg);
+      }
+  
+      &.contact-pizza {
+        top: 45vh;
+        right: 15vh;
+        transform: rotate(2deg);
+      }
+  
+      &.contact-pasta {
+        top: 75vh;
+        right: 30vh;
+        transform: rotate(42deg);
       }
     }
   }

@@ -59,7 +59,8 @@ const Contact = () => {
     <div className="contact-wrapper">
       <div id="text" className="gradient-stroke" />
         <div className="bottom-section"><div className="contact-infos">
-          <p>hello@foodlab.com</p>
+          <p>C'est par ici :</p>
+          <p className="mail-foodlab">hello@foodlab.com</p>
         </div>
         <div className="contact-medias">
           <i className="fab fa-instagram" />
