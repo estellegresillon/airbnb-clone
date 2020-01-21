@@ -38,7 +38,7 @@
       position: relative;
       display: flex;
       flex-direction: column;
-      color: #000;
+      color: $main;
       border-bottom: 1px solid $grey-light;
       
       img {
@@ -94,7 +94,7 @@
       .card-header-budget {
         font-weight: 300;
         font-size: 13px;
-        color: $grey-dark;
+        color: $main;
         margin-top: 10px;
       }
   
@@ -121,14 +121,14 @@
   
       a { 
         text-decoration: none;
-        color: #000;
+        color: $main;
         width: 50px;
         bottom: 0;
       }
     
       .card-see-infos {
         margin-top: 10px;
-        width: 70px;
+        width: 82px;
         color: white;
         background-color: $foodlab;
         font-size: 12px;

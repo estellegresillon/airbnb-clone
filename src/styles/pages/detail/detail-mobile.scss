@@ -48,7 +48,7 @@
       margin-top: -30px;
       margin-bottom: 15px;
       font-size: 36px;
-      font-weight: 100;
+      font-weight: 900;
       background-color: $foodlab;
       padding: 5px 15px;
       color: #fff;
@@ -79,16 +79,16 @@
       .see-menu {
         margin-top: 10px;
         width: 50px;
-        color: black;
+        color: $main;
         text-decoration: none;
-        background-color: $grey-light;
+        background-color: $foodlab-light;
         font-size: 12px;
         padding: 5px 10px;
         cursor: pointer;
       }
 
       .see-menu:hover {
-        background-color: $grey;
+        background-color: $foodlab;
       }
 
       li { margin-bottom: 20px; }
@@ -165,7 +165,7 @@
         justify-content: space-between;
         background-color: #fff;
         border-radius: 5px;
-        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.07);
+        box-shadow: 3px 3px 10px rgba(214, 31, 31, 0.07);
         width: calc(100% - 30px);
         height: 70px;
         cursor: pointer;
@@ -221,7 +221,7 @@
         }
 
         &:hover {
-          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 10px rgba(214, 31, 31, 0.1);
         }
       }
     }

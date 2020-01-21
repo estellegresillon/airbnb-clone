@@ -1,17 +1,17 @@
 export const CONCEPT_STEPS = [
   { 
     nb: "one",
-    src: "/undraw_progress_tracking.svg",
-    description: "Le classement des meilleurs restos parisiens"
+    src: "/search.svg",
+    description: "Le classement des meilleurs restos parisiens par notes utilisateurs"
   },
   { 
     nb: "two",
-    src: "/undraw_wishlist.svg",
-    description: "Accessible partout où vous êtes, desktop ou mobile"
+    src: "/map.svg",
+    description: "Foodlab est accessible partout où vous êtes, desktop ou mobile"
   },
   { 
     nb: "three",
-    src: "/undraw_winners.svg",
-    description: "Uniquement les meilleurs des meilleurs, triés par note"
+    src: "/mailbox.svg",
+    description: "Les nouveaux restos en avant-première dans votre mailbox"
   }
 ];

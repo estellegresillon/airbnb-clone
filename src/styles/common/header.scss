@@ -12,13 +12,14 @@
     display: flex;
     flex-direction: row;
     width: 85%;
+    margin-top: -10px;
 
     a { text-decoration: none; }
 
     .foodlab-logo {
       font-family: "Ceviche One";
-      font-size: 32px;
-      margin: 0 50px;
+      font-size: 36px;
+      margin: 0 70px;
       color: $foodlab;
       letter-spacing: -1px;
       cursor: pointer;
@@ -27,14 +28,14 @@
         animation: colorHover 4s infinite;
       }
 
-      i { font-size: 20px; }
+      i { font-size: 24px; }
     }
   }
 
   .header-right {
     display: flex;
     flex-direction: row;
-    margin-right: 50px;
+    margin-right: 70px;
     font-size: 14px;
     width: 100%;
     justify-content: flex-end;
@@ -42,13 +43,12 @@
 
     .menu-link { 
       text-decoration: none;
-      color: $grey-dark;
+      color: $main;
       margin-left: 50px;
       cursor: pointer;
-      font-size: 10px;
+      font-size: 11px;
       text-transform: uppercase;
       font-weight: 900;
-      letter-spacing: 1px;
       transition: 0.5s all ease;
 
       .menu-underline {

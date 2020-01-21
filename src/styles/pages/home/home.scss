@@ -4,12 +4,12 @@
     display: flex;
     align-items: center;
     width: 100%;
-    height: calc(100vh - 300px);
+    height: calc(100vh - 200px);
 
     .home-hero-scene-intro-wrapper {
       position: relative;
-      width: 30%;
-      height: calc(100vh - 300px);
+      width: 40%;
+      height: 100%;
     }
 
     .home-hero-scene-intro {
@@ -17,7 +17,7 @@
       position: absolute;
       width: 100%;
       left: 20%;
-      top: 36%;
+      top: 35%;
       z-index: 2;
       opacity: 0;
       flex-direction: column;
@@ -28,8 +28,8 @@
       animation-delay: 1s;
       
       .home-catchphrase {
-        font-size: 36px;
-        font-weight: 100;
+        font-size: 42px;
+        font-weight: 900;
       }
 
       .home-catchphrase-underline {
@@ -51,7 +51,7 @@
       position: absolute;
       right: 0;
       width: 100%;
-      height: calc(100vh - 300px);
+      height: 100%;
       z-index: 1;
       background-color: #fff;
       animation: 2s overlayHome;
@@ -63,8 +63,8 @@
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      width: 70%;
-      height: calc(100vh - 300px);
+      width: 65%;
+      height: 100%;
       background-image: url("/hero-scene.webp");
       background-attachment: fixed;
       background-position: right;
@@ -84,9 +84,9 @@
         font-weight: 900;
         letter-spacing: 1px;
         text-transform: uppercase;
-        font-family: "Roboto";
+        font-family: "Montserrat";
         color: #fff;
-        font-size: 12px;
+        font-size: 11px;
         -webkit-font-smoothing: antialiased;
         transition: 0.5s all ease;
 
@@ -116,6 +116,12 @@
       .filters-react-select {
         width: 150px;
         z-index: 999;
+
+        svg { fill: #9397b8; }
+      }
+
+      .css-1wa3eu0-placeholder {
+        color: #9397b8;
       }
 
       .css-yk16xz-control, .css-1pahdxg-control {
@@ -125,7 +131,8 @@
         margin-right: 10px;
         height: 40px !important;
         border: none !important;
-        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1) !important;
+        color: #12105a;
+        box-shadow: 2px 2px 10px rgba(31, 62, 214, 0.1);
       }
 
       .css-26l3qy-menu {
@@ -143,14 +150,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 70px;
-    margin-bottom: 0px;
-    padding: 70px 0;
+    padding: 150px 0;
     animation: 1s slideFromBottomMiddleSection;
 
     .home-weekly-new-title, .home-new-title {
       font-size: 30px;
-      font-weight: 100;
+      font-weight: 700;
       margin-bottom: 30px;
 
       i { 
@@ -168,18 +173,18 @@
       margin-top: 20px;
       width: 60%;
       cursor: pointer;
-      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.08)
+      box-shadow: 2px 2px 12px rgba(214, 31, 31, 0.1);
     }
 
     .weekly-restaurant:hover, .new-restaurant:hover {
       transition: all 0.7s ease;
-      box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.1);
+      box-shadow: 5px 5px 25px rgba(214, 31, 31, 0.2);
     }
     
     .card {
       position: relative;
       height: 125px;
-      color: #000;
+      color: $main;
       display: flex;
       padding: 35px;
   
@@ -238,7 +243,7 @@
       .card-header-budget {
         font-weight: 300;
         font-size: 13px;
-        color: $grey-dark;
+        color: $main;
         margin-top: 10px;
       }
   
@@ -266,15 +271,15 @@
       a { 
         position: absolute;
         text-decoration: none;
-        color: #000;
+        color: $main;
         width: 50px;
         bottom: 0;
       }
     
       .card-see-infos {
         margin-top: 10px;
-        width: 70px;
-        color: white;
+        width: 82px;
+        color: #fff;
         background-color: $foodlab;
         font-size: 12px;
         padding: 5px 10px;
@@ -300,11 +305,10 @@
     width: 100%;
     align-items: flex-end;
     justify-content: space-around;
-    margin-bottom: 120px;
-    margin-top: 120px;
     margin-left: -20%;
-    background: $foodlab-light;
+    background: #ffefeb;
     padding: 20%;
+    font-weight: 700;
 
     .home-concept-step {
       position: relative;
@@ -375,13 +379,13 @@
     align-items: center;
     justify-content: flex-start;
     width: 100%;
-    height: 60px;
-    background-color: $grey-light;
-    color: $grey-dark;
+    height: 100px;
+    background-color: #ffefea;
+    color: $foodlab;
     font-size: 12px;
 
     .home-footer-brand {
-      margin: 0 40px;
+      margin: 0 70px;
       letter-spacing: 1px;
       text-transform: uppercase;
 

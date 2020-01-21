@@ -28,7 +28,7 @@
   .card {
     position: relative;
     height: 125px;
-    color: #000;
+    color: $main;
     display: flex;
     padding: 35px;
     border-bottom: 1px solid $grey-light;
@@ -88,7 +88,7 @@
     .card-header-budget {
       font-weight: 300;
       font-size: 13px;
-      color: $grey-dark;
+      color: $main;
       margin-top: 10px;
     }
 
@@ -116,14 +116,14 @@
     a { 
       position: absolute;
       text-decoration: none;
-      color: #000;
+      color: $main;
       width: 50px;
       bottom: 0;
     }
   
     .card-see-infos {
       margin-top: 10px;
-      width: 70px;
+      width: 82px;
       color: white;
       background-color: $foodlab;
       font-size: 12px;
@@ -158,7 +158,7 @@
     position: relative;
     display: flex;
     background: #fff;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 5px 5px 15px rgba(214, 31, 31, 0.05);
     flex-direction: column;
     justify-content: space-between;
     width: calc(25% - 40px);
@@ -169,7 +169,7 @@
 
     &:hover {
       transition: all 0.7s ease;
-      box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+      box-shadow: 10px 10px 15px rgba(214, 31, 31, 0.1);
     }
 
     .badge-wrapper {
@@ -193,7 +193,7 @@
     a { 
       position: absolute;
       text-decoration: none;
-      color: #000;
+      color: $main;
       width: 100%;
       height: 100%;
       bottom: 0;

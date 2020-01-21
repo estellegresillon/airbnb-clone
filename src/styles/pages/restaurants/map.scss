@@ -27,6 +27,7 @@
   ////// MARKERS WINDOW
   .marker-info-window {
     max-height: 140px;
+    font-family: "Montserrat";
     max-width: 200px;
     cursor: pointer;
     background-color: #000;
@@ -43,7 +44,7 @@
     align-items: center;
     top: 15px;
     left: 15px;
-    font-weight: 500;
+    font-weight: 700;
     color: #fff;
   
     .marker-rating {
@@ -71,6 +72,6 @@
     bottom: 15px;
     left: 15px;
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 700;
   }
 }

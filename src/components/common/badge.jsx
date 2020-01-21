@@ -47,7 +47,7 @@ const Badge = props => {
     position: "absolute",
     backgroundColor: "#fff",
     fontSize: "12px",
-    fontFamily: "Roboto",
+    fontFamily: "Montserrat",
     borderRadius: "4px",
     padding: "6px 8px",
     whiteSpace: "nowrap",
