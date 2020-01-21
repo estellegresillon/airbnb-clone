@@ -120,7 +120,7 @@ const Home = props => {
           <div className="home-hero-scene-intro">
             <div className="home-catchphrase">Foodlab, la sélection des meilleurs restos de Paris</div>
             <div className="home-catchphrase-underline" />
-            <div className="home-subtitle">classés par note, type de cuisine et arrondissement.</div>
+            <div className="home-subtitle">classés par notes, types de cuisine et arrondissements.</div>
           </div>
         </div>
         <div className="home-hero-scene-image-overlay"></div>
