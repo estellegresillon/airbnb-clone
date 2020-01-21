@@ -54,6 +54,20 @@ const Home = props => {
     }
   }
 
+  const moveContactElements = e => {
+    const contactTitle = document.getElementById("home-contact-title");
+    const iconContainer = document.querySelector(".contact-icon-container");
+    const pageMiddleX = window.innerWidth / 2;
+    const pageMiddleY = window.innerHeight / 2;
+    const distanceFromMiddleX = e.clientX - pageMiddleX;
+    const distanceFromMiddleY = e.clientY - pageMiddleY;
+
+    iconContainer.style.transform =
+      `matrix3d(1,0,0.00,0,0.00,1,0.00,0,0,0,1,0,${distanceFromMiddleX * 0.04},${distanceFromMiddleY * 0.08},0,1)`;
+    contactTitle.style.transform = 
+      `matrix3d(1,0,0.00,${distanceFromMiddleX * 0.0000007},0.00,1,0.00,0,0,0,1,0,${distanceFromMiddleX * -0.02},${distanceFromMiddleY * -0.05},0,1)`; 
+  }
+
   useEffect(() => {
     const weeklyCard = document.querySelector(".weekly-restaurant");
     const conceptContainer = document.querySelector(".home-foodlab-concept");
@@ -84,6 +98,13 @@ const Home = props => {
   useEffect(() => {
     window.addEventListener("scroll", triggerHotDog, false);
     return () => window.removeEventListener("scroll", triggerHotDog, false);
+  }, [])
+
+  useEffect(() => {
+    const contact = document.querySelector(".home-contact");
+
+    contact.addEventListener("mousemove", moveContactElements, false);
+    return () => contact.removeEventListener("mousemove", moveContactElements, false);
   }, [])
 
   return (
@@ -201,7 +222,7 @@ const Home = props => {
       </div>
 
       <div className="home-contact">
-        <div className="gradient-stroke">
+        <div className="gradient-stroke" id="home-contact-title">
           Un resto à proposer ?
         </div>
         <button className="go-to-contact" onClick={() => goToContactPage()}>
@@ -209,13 +230,15 @@ const Home = props => {
           <span className="btn-second-text">Ecrivez-nous !</span>
         </button>
 
-        <img className="contact-burger" src="contact-burger.svg" alt="burger-svg" />
-        <img className="contact-lobster" src="contact-lobster.svg" alt="lobsterer-svg" />
-        <img className="contact-salad" src="contact-salad.svg" alt="dalad-svg" />
+        <div className="contact-icon-container">
+          <img className="contact-burger" src="contact-burger.svg" alt="burger-svg" />
+          <img className="contact-lobster" src="contact-lobster.svg" alt="lobsterer-svg" />
+          <img className="contact-salad" src="contact-salad.svg" alt="dalad-svg" />
 
-        <img className="contact-ice-cream" src="contact-ice-cream.svg" alt="ice-cream-svg" />
-        <img className="contact-pizza" src="contact-pizza.svg" alt="pizza-svg" />
-        <img className="contact-pasta" src="contact-pasta.svg" alt="pasta-svg" />
+          <img className="contact-ice-cream" src="contact-ice-cream.svg" alt="ice-cream-svg" />
+          <img className="contact-pizza" src="contact-pizza.svg" alt="pizza-svg" />
+          <img className="contact-pasta" src="contact-pasta.svg" alt="pasta-svg" />
+        </div>
       </div>
       
       <div className="footer-img">
