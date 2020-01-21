@@ -805,7 +805,7 @@ export default [
     phone: "01 42 65 31 53",
     arr: "9",
     openingHours: "12h-14h30 / 19h-22h30",
-    imageUrl: "https://restaurant.michelin.fr/sites/mtpb2c_fr/files/AO%20IZAKAYA_171.jpg",
+    imageUrl: "https://aoizakaya.com/wp-content/uploads/2018/11/17.jpg",
     imageUrl2: "https://unemanettealamain.fr/wp-content/uploads/2018/11/ao-izakaya.jpeg",
     price: "€€€",
     price_digit: 3,

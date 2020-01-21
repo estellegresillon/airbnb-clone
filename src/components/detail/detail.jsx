@@ -144,7 +144,7 @@ const Detail = props => {
         <div className="top-section">
           <div 
             className="detail-page-big-img"
-            style={{ backgroundImage: `url(${restaurant.imageUrl})` }}
+            style={{ backgroundImage: `url(${restaurant.imageUrl || restaurant.imageUrl2})` }}
           />
           <div key={location.pathname} className="detail-page-content">
             <div className="detail-page-title">{restaurant.name}</div>
