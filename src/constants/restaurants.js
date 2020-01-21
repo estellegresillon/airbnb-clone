@@ -1770,7 +1770,7 @@ export default [
     name: "Le Jeroboam",
     id: 53,
     type: "Français",
-    rate: 4.7,
+    rate: 4.6,
     votes: 500,
     address: "72 Rue Didot, 75014",
     phone: "01 45 39 39 13",
