@@ -28,9 +28,7 @@
       .home-catchphrase {
         font-size: 56px;
         font-weight: 900;
-        background: -webkit-linear-gradient(0deg, #3d3aa7 3%, #12105a 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: $main;
       }
 
       .home-catchphrase-underline {
@@ -66,7 +64,7 @@
       justify-content: center;
       width: 60%;
       height: 100%;
-      background-image: url("/hero-scene.jpg");
+      background-image: url("/hero.jpeg");
       background-attachment: fixed;
       background-position: right;
       background-repeat: no-repeat;
