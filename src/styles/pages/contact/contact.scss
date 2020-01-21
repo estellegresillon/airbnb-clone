@@ -57,47 +57,47 @@
 
   img {
     position: absolute;
-    height: 30px;
+    height: 50px;
     width: auto;
 
     &.contact-burger {
       top: 5vh;
-      left: 25vh;
+      left: 30vh;
       transform: rotate(42deg);
       animation: 5s rotateDots infinite linear;
     }
 
     &.contact-lobster {
-      top: 38vh;
+      top: 35vh;
       left: 15vh;
       transform: rotate(2deg);
       animation: 5s rotateDots infinite linear;
     }
 
     &.contact-salad {
-      top: 70vh;
-      left: 25vh;
+      top: 65vh;
+      left: 30vh;
       transform: rotate(200deg);
       animation: 5s rotateDots infinite linear;
     }
 
     &.contact-ice-cream {
       top: 5vh;
-      right: 25vh;
+      right: 30vh;
       transform: rotate(42deg);
       animation: 5s rotateDots infinite linear;
     }
 
     &.contact-pizza {
-      top: 38vh;
+      top: 35vh;
       right: 15vh;
       transform: rotate(2deg);
       animation: 5s rotateDots infinite linear;
     }
 
     &.contact-pasta {
-      top: 70vh;
-      right: 25vh;
+      top: 65vh;
+      right: 30vh;
       transform: rotate(200deg);
       animation: 5s rotateDots infinite linear;
     }
