@@ -427,6 +427,7 @@
     .go-to-contact {
       position: relative;
       overflow: hidden;
+      z-index: 999;
       background: -webkit-linear-gradient(0deg, #ff6242 3%, #de0505 100%);
       border: none;
       box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1) !important;
