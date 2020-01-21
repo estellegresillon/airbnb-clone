@@ -6,7 +6,14 @@ const Contact = () => {
     let i = message.length - 1;
 
     const interval = setInterval(function(){
-      document.getElementById(destination).innerHTML = message.substring(0, i - 1);
+      const container = document.getElementById(destination);
+      if (container) {
+        container.innerHTML = message.substring(0, i - 1);
+      } else {
+        clearInterval(interval);
+        return;
+      }
+
       i--;
 
       if (i === 0){
@@ -22,8 +29,16 @@ const Contact = () => {
 
   const printLetterByLetter = (destination, message) => {
     let i = 0;
+
     const interval = setInterval(function(){
-      document.getElementById(destination).innerHTML += message.charAt(i);
+      const container = document.getElementById(destination);
+      if (container) {
+        container.innerHTML += message.charAt(i);
+      } else {
+        clearInterval(interval);
+        return;
+      }
+
       i++;
 
       if (i === message.length){
@@ -36,7 +51,8 @@ const Contact = () => {
   }
 
   useEffect(() => {
-    printLetterByLetter("text", "Un petit coucou ?")
+    printLetterByLetter("text", "Un petit coucou ?");
+    return () => printLetterByLetter(null, null);
   }, []);
 
   return (
