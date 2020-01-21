@@ -74,7 +74,7 @@ const Home = props => {
     const newRestaurants = document.querySelectorAll(".new-restaurant");
 
     if (count < prevCount) {
-      if (prevCount - count < 30) {
+      if (prevCount - count < 40) {
         return;
       }
       weeklyCard.classList.remove("bg-spin-down")
@@ -84,7 +84,7 @@ const Home = props => {
       newRestaurants.forEach(restaurant => restaurant.classList.remove("bg-spin-down"))
       newRestaurants.forEach(restaurant => restaurant.classList.add("bg-spin-up"))
     } else if (count > prevCount) {
-      if (count - prevCount < 30) {
+      if (count - prevCount < 40) {
         return;
       }
       weeklyCard.classList.remove("bg-spin-up")
