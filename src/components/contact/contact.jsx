@@ -53,6 +53,7 @@ const Contact = () => {
   useEffect(() => {
     printLetterByLetter("text", "Un petit coucou ?");
     return () => printLetterByLetter(null, null);
+  // eslint-disable-next-line
   }, []);
 
   return (

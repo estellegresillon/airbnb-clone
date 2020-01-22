@@ -84,11 +84,6 @@ const DetailMobile = props => {
     window.scrollTo(0, 0);
   }, []);
 
-  // useEffect(() => {
-  //   document.addEventListener('touchstart', handleTouchStart, false);        
-  //   document.addEventListener('touchmove', handleTouchMove, false);
-  // // eslint-disable-next-line
-  // }, []);
   const handleNavigation = (direction, id) => {
     if (direction === "left") {
       if (previousRestaurantRef.current) {
