@@ -1,6 +1,4 @@
-///////// MOBILE
-
-.mobile-view {
+@media screen and (max-width: 728px) {
   .filters-right { display: none !important; }
   .google-map { display: none; }
 
@@ -8,6 +6,58 @@
     height: 100%;
     justify-content: center;
     margin-bottom: 0;
+    margin-top: 0px;
+
+    .fa-search { display: none; }
+
+    .filters-left { 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 0;
+      flex-wrap: wrap;
+
+      .MuiAutocomplete-root {
+        width: 100% !important;
+        margin: 10px 20px 20px 20px !important;
+      }
+
+      .filters-react-select, .button-filter-reinitialize {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .main-view {
+    height: 100%;
+
+    .restaurant-list-with-grid {
+      width: 100%;
+      padding: 20px 0;
+
+      .restaurant {
+        width: calc(50% - 20px);
+        margin-left: 10px;
+        margin-bottom: 15px;
+        padding: 0;
+
+        .card-header-type {
+          top: 105px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .filters-right { display: none !important; }
+  .google-map { display: none; }
+
+  .filters {
+    height: 100%;
+    justify-content: center;
+    margin-bottom: 0;
+    margin-top: 0px;
 
     .fa-search { display: none; }
 

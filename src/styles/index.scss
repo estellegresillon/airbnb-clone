@@ -1,24 +1,25 @@
 @import "abstracts/variables.scss";
 @import "abstracts/keyframes.scss";
 
+@import "common/card.scss";
 @import "common/contact.scss";
-@import "common/header-mobile.scss";
 @import "common/header.scss"; 
+@import "common/header-mobile.scss";
 @import "common/key.scss";
 
-@import "pages/home/home-mobile.scss";
 @import "pages/home/home.scss";
+@import "pages/home/home-mobile.scss";
 
 @import "pages/restaurants/filters.scss";
 @import "pages/restaurants/map.scss";
-@import "pages/restaurants/restaurant-list-mobile.scss";
 @import "pages/restaurants/restaurant-list.scss";
+@import "pages/restaurants/restaurant-list-mobile.scss";
 
-@import "pages/detail/detail-mobile.scss";
 @import "pages/detail/detail.scss";
+@import "pages/detail/detail-mobile.scss";
 
-@import "pages/awards/awards-mobile.scss";
 @import "pages/awards/awards.scss";
+@import "pages/awards/awards-mobile.scss";
 
 @import "pages/contact/contact.scss";
 
@@ -31,7 +32,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-#app { overflow: hidden; }
+#app .home-wrapper { overflow: hidden; }
 
 .main-view {
   height: calc(100vh - 192px);

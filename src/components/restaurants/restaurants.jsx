@@ -6,7 +6,6 @@ import RestaurantList from "./restaurant-list";
 import Map from "./map";
 import Filters from "./filters";
 import Key from "../common/key";
-import { useWindowSize } from "../../hooks/useWindowSize";
 
 import { setRestaurants } from "../../actions";
 
@@ -14,7 +13,6 @@ const Restaurants = props => {
   const { restaurants, setRestaurants, sortedRestaurants, searchedRestaurant, location } = props;
   const [listNumber, setListNumber] = useState(null);
   const [listedRestaurants, setListedRestaurants] = useState(restaurants);
-  const windowSize = useWindowSize();
 
   // load restaurants and sort them
   useEffect(() => { setRestaurants(); }, [setRestaurants]);
@@ -40,7 +38,7 @@ const Restaurants = props => {
   }, [restaurants, sortedRestaurants, searchedRestaurant]);
 
   return (
-    <div className={`restaurants-page-wrapper ${windowSize.width > 728 ? "" : "mobile-view"}`}>
+    <div className="restaurants-page-wrapper">
       <Filters homeArr={location.homeArr} homeType={location.homeType} />
       <div className="counter-keys-wrapper">
         <div className="restaurant-counter">

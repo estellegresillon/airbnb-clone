@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
 import { setRestaurants } from "../../actions";
-import AwardListItem from "./award-list-item";
+import Card from "../common/card";
 import Key from "../common/key";
 
 const AwardList = props => {
@@ -62,7 +62,7 @@ const AwardList = props => {
               onMouseEnter={() => handleListItemHover(restaurant)}
               onMouseLeave={() => handleListItemHover()}
               className="awarded-restaurant">
-              <AwardListItem listedRestaurants={awardedRestaurants} restaurant={restaurant} tabIndex={i} />
+              <Card listedRestaurants={awardedRestaurants} restaurant={restaurant} tabIndex={i} />
             </div>
           )
         })}

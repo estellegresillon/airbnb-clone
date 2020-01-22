@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
 import { setRestaurants } from "../../actions";
-import AwardListItem from "./award-list-item";
+import Card from "../common/card";
 import Key from "../common/key";
 
 const AwardListMobile = props => {
@@ -31,7 +31,7 @@ const AwardListMobile = props => {
         {awardedRestaurants.map((restaurant, i) => {
           return (
             <div key={restaurant.id} className="awarded-restaurant">
-              <AwardListItem restaurant={restaurant} tabIndex={i} />
+              <Card restaurant={restaurant} tabIndex={i} />
             </div>
           )
         })}

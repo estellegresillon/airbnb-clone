@@ -1,308 +1,140 @@
-///////// MOBILE
-.home-wrapper-mobile-view {
-  .home-hero-scene {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: calc(100vh - 90px);
-    flex-direction: column;
+@media screen and (max-width: 728px) {
+  .home-wrapper {
+    .home-hero-scene {
+      height: 100vh;
+      flex-direction: column;
+      position: relative;
 
-    .home-hero-scene-intro-wrapper {
-      width: calc(100% - 80px);
-      height: 0;
-      padding: 0 40px;
+      .home-hero-scene-image {
+        width: 100vw;
+        height: 100vh;
+        background-size: cover;
+        flex-direction: column;
 
-      .home-hero-scene-intro {
+        .filters-react-select, .button-home-go {
+          width: 80%;
+          border-radius: 32px;
+          margin-bottom: 10px;
+
+          .css-yk16xz-control, .css-yk16xz-control {
+            border-radius: 32px !important;
+          }
+        }
+      }
+
+      .home-hero-scene-intro-wrapper {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        padding: 0 40px;
+
+        .home-hero-scene-intro {
+          display: flex;
+          position: unset;
+          justify-content: flex-start;
+          align-items: center;
+          margin-top: 10vh;
+
+          .home-catchphrase {
+            font-size: 20px;
+            text-align: center;
+            font-weight: 100;
+          }
+
+          .home-catchphrase-underline {
+            background: -webkit-linear-gradient(0deg, #ff6242 3%, #de0505 100%);
+            height: 3px;
+            margin-top: 10px;
+            width: 50%;
+            text-align: center;
+          }
+    
+          .home-subtitle {
+            font-size: 14px;
+            margin-top: 10px;
+            line-height: 23px;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .home-weekly-new, .home-new {
+      margin-top: 50px;
+
+      .home-weekly-new-title, .home-new-title {
+        font-weight: 100;
+        width: 80%;
+        text-align: center;
+      }
+
+      .weekly-restaurant, .new-restaurant {
+        width: 100%;
+      }
+    }
+
+    .home-foodlab-concept {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 100px;
+
+      .home-concept-step {
         display: flex;
-        position: relative;
+        flex-direction: column;
         width: 100%;
         align-items: center;
         justify-content: center;
-        left: 0;
-        top: 30px;
-        flex-direction: column;
 
-        .home-catchphrase {
-          font-size: 20px;
-          text-align: center;
-          font-weight: 100;
-        }
-
-        .home-catchphrase-underline {
-          background: -webkit-linear-gradient(0deg, #ff6242 3%, #de0505 100%);
-          height: 3px;
-          margin-top: 10px;
-          width: 50%;
-          text-align: center;
-        }
-  
-        .home-subtitle {
-          font-size: 14px;
-          margin-top: 10px;
-          line-height: 23px;
-          text-align: center;
+        img { 
+          width: 80%;
+          height: auto;
+          max-height: 130px;
         }
       }
-    }
-  }
 
-  .home-hero-scene-image {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-direction: column;
-    width: 100%;
-    height: calc(100vh - 90px);
-    background-image: url("/hero.jpeg");
-    background-size: cover;
-    background-position: center;
-
-    .button-home-go {
-      background: -webkit-linear-gradient(0deg, #ff6242 3%, #de0505 100%);
-      border: none;
-      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1) !important;
-      height: 40px;
-      margin-bottom: 30px;
-      border-radius: 32px;
-      cursor: pointer;
-      font-weight: 900;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      font-family: "Montserrat";
-      color: #fff;
-      font-size: 12px;
-      -webkit-font-smoothing: antialiased;
-      padding: 0 15px;
-      transition: 0.5s all ease;
-
-      &:hover { background-color: $foodlab-hover; }
-    }
-  
-
-    //////// REACT-SELECTS ARR & TYPE FILTERS
-    .filters-react-select {
-      width: 150px;
-      z-index: 999;
-      margin-bottom: 10px;
-    }
-
-    .css-yk16xz-control, .css-1pahdxg-control {
-      border-radius: 32px !important;
-      padding-left: 8px !important;
-      font-size: 12px !important;
-      margin-right: 10px;
-      height: 40px !important;
-      border: none !important;
-      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1) !important;
-    }
-
-    .css-26l3qy-menu {
-      font-size: 12px !important;
-    }
-
-    .css-1okebmr-indicatorSeparator {
-      display: none;
-    } 
-  }
-
-  .home-weekly-new, .home-new {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 50px;
-
-    .home-weekly-new-title, .home-new-title {
-      font-size: 30px;
-      font-weight: 100;
-      width: 80%;
-      margin-bottom: 30px;
-      text-align: center;
-
-      i { 
-        color: $foodlab;
-      }
-
-      .home-weekly-title-text, .home-new-title-text {
-        margin: 0 20px;
-      }
-    }
-
-    .weekly-restaurant, .new-restaurant {
-      margin-top: 20px;
-      width: 100%;
-      cursor: pointer;
-      box-shadow: 2px 2px 10px rgba(214, 31, 31, 0.06);
-    }
-
-    .weekly-restaurant:hover, .new-restaurant:hover {
-      transition: all 0.7s ease;
-      box-shadow: 5px 5px 20px rgba(214, 31, 31, 0.1);
-    }
-    
-    .card {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      color: $main;
-      border-bottom: 1px solid $grey-light;
-      
-      img {
-        width: 100%;
-        height: auto;
-      }
-
-      img:hover {
-        transition: all 0.5s ease;
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-      }
-  
-      .badge-wrapper {
-        position: absolute;
-        top: 42px;
-        left: 42px;
-  
-        .tooltip-badge {
-          display: none;
-          top: 0;
-          left: 30px;
-        }
-      
-        &:hover {
-          .tooltip-badge {
-            display: block;
-          }
-        }
-      }
-    
-      .card-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 12px;
-    
-        .card-header-rate {
-          display: flex;
-          align-items: center;
-    
-          i {
-            font-size: 12px;
-            margin-right: 5px;
-            color: $foodlab;
-          }
-        }
-      }
-    
-      .card-description {
-        margin: 25px;
-      }
-    
-      .card-header-budget {
-        font-weight: 300;
-        font-size: 13px;
-        color: $main;
-        margin-top: 10px;
-      }
-  
-      .card-restaurant-address {
-        font-size: 14px;
-        margin-bottom: 15px;
-      }
-  
-      .card-description {
-        position: relative;
-      }
-      
-      .card-description h2 {
-        font-size: 22px;
-        margin: 12px 0 3px 0;
-        line-height: 22px;
-      }
-    
-      .card-description p {
-        font-size: 14px;
-        opacity: 0.7;
-        font-weight: lighter;
-      }
-  
-      a { 
-        text-decoration: none;
-        color: $main;
-        width: 50px;
-        bottom: 0;
-      }
-    
-      .card-see-infos {
-        margin-top: 10px;
-        width: 82px;
-        color: white;
-        background-color: $foodlab;
-        font-size: 12px;
-        padding: 5px 10px;
-        text-transform: uppercase;
-        font-weight: 900;
-        letter-spacing: 0.5px;
-        border-radius: 3px;
-      }
-    
-      .card-see-infos:hover {
-        background-color: $foodlab-hover;
-      }
-    }
-  }
-
-  .home-foodlab-concept {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    margin-top: 100px;
-
-    .home-concept-step {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      align-items: center;
-      justify-content: center;
-
-      img { 
+      .home-concept-description {
         width: 80%;
-        height: auto;
-        max-height: 130px;
+        margin-top: 40px;
+        margin-bottom: 80px;
+        font-size: 14px;
+        text-align: center;
       }
     }
 
-    .home-concept-description {
-      width: 80%;
-      margin-top: 40px;
-      margin-bottom: 80px;
-      font-size: 14px;
-      text-align: center;
+    .home-contact {
+      .gradient-stroke {
+        width: 80vw;
+        font-size: 50px;
+      }
+
+      .contact-pizza, .contact-lobster {
+        display: none;
+      }
     }
-  }
 
-  .footer-img {
-    display: none;
-  }
+    .footer-img {
+      display: none;
+    }
 
-  .home-footer {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-    height: 60px;
-    background-color: $foodlab-light;
-    color: $foodlab;
-    font-size: 12px;
+    .home-footer {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+      height: 60px;
+      background-color: $foodlab-light;
+      color: $foodlab;
+      font-size: 12px;
 
-    .home-footer-brand {
-      margin: 0 40px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
+      .home-footer-brand {
+        margin: 0 40px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
 
-      i {
-        margin-right: 5px;
+        i {
+          margin-right: 5px;
+        }
       }
     }
   }

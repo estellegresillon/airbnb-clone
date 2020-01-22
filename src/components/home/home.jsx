@@ -4,8 +4,8 @@ import Select from "react-select";
 import { INIT_ARR_OPTIONS, INIT_TYPE_OPTIONS } from "../../constants/filter-options";
 import { WEEKLY_RESTAURANT } from "../../constants/weekly-restaurant";
 import { NEW_RESTAURANTS } from "../../constants/new-restaurants";
-import { useWindowSize } from "../../hooks/useWindowSize";
 import { CONCEPT_STEPS } from "../../constants/concept-steps";
+import Card from "../common/card";
 
 const usePrevious = value => {
   const ref = useRef();
@@ -18,7 +18,6 @@ const usePrevious = value => {
 
 const Home = props => {
   const { history } = props;
-  const windowSize = useWindowSize();
   const [arr, setArr] = useState("Tous les arr.");
   const [type, setType] = useState("Tous les types");
   const [isVisible, setIsVisible] = useState(false);
@@ -114,7 +113,7 @@ const Home = props => {
   }, [])
 
   return (
-    <div className={`${windowSize.width < 728 ? "home-wrapper-mobile-view" : "home-wrapper"}`}>
+    <div className="home-wrapper">
       <div className="home-hero-scene">
         <div className="home-hero-scene-intro-wrapper">
           <div className="home-hero-scene-intro">
@@ -161,21 +160,8 @@ const Home = props => {
             restaurant: WEEKLY_RESTAURANT,
             listedRestaurants: [WEEKLY_RESTAURANT],
             })}>
-          <div className="card">
-            <img alt="restaurant-overview" src={WEEKLY_RESTAURANT.imageUrl} />
-            <div className="card-description">
-              <div className="card-header">
-                <div className="card-header-type">
-                  {WEEKLY_RESTAURANT.type} -{' '}
-                  <span className="card-header-budget">{WEEKLY_RESTAURANT.price}</span>
-                </div>
-                <div className="card-header-rate"><i className="fas fa-star"></i> {WEEKLY_RESTAURANT.rate} ({WEEKLY_RESTAURANT.votes}+)</div>
-              </div>
-              <h2>{WEEKLY_RESTAURANT.name}</h2>
-              <div className="card-restaurant-address">{WEEKLY_RESTAURANT.address}</div>
-              <div className="card-see-infos">Voir infos</div>
-            </div>
-          </div>
+
+          <Card restaurant={WEEKLY_RESTAURANT} />
         </div>
       </div>
 
@@ -197,7 +183,7 @@ const Home = props => {
           <i className="fas fa-rocket" />
         </div>
 
-        {NEW_RESTAURANTS.map(newRest => {
+        {NEW_RESTAURANTS.map((newRest, i) => {
           return (
             <div 
               key={newRest.id}
@@ -207,21 +193,12 @@ const Home = props => {
                 restaurant: newRest,
                 listedRestaurants: NEW_RESTAURANTS,
               })}>
-              <div className="card">
-                <img alt="restaurant-overview" src={newRest.imageUrl} />
-                <div className="card-description">
-                  <div className="card-header">
-                    <div className="card-header-type">
-                      {newRest.type} -{' '}
-                      <span className="card-header-budget">{newRest.price}</span>
-                    </div>
-                    <div className="card-header-rate"><i className="fas fa-star"></i> {newRest.rate} ({newRest.votes}+)</div>
-                  </div>
-                  <h2>{newRest.name}</h2>
-                  <div className="card-restaurant-address">{newRest.address}</div>
-                  <div className="card-see-infos">Voir infos</div>
-                </div>
-              </div>
+              <Card 
+                key={i} 
+                listedRestaurants={NEW_RESTAURANTS}
+                restaurant={newRest} 
+                tabIndex={i} 
+              />
             </div>
           )
         })}

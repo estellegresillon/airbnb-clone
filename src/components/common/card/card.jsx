@@ -4,11 +4,11 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { LazyLoadImage, trackWindowScroll } from 'react-lazy-load-image-component';
 
-import { selectRestaurant } from "../../actions";
-import Badge from "../common/badge";
-import { useWindowSize } from "../../hooks/useWindowSize";
+import { selectRestaurant } from "../../../actions";
+import Badge from "../badge";
+import { useWindowSize } from "../../../hooks/useWindowSize";
 
-const RestaurantListItem = props => {
+const Card = props => {
   const { 
     scrollPosition,
     selectRestaurant,
@@ -27,7 +27,7 @@ const RestaurantListItem = props => {
 
   return (
     <div 
-      className={`tab-number-${tabIndex} restaurant ${restaurant === selectedRestaurant ? "selected" : null}`}
+      className={`tab-number-${tabIndex} restaurant ${restaurant === selectedRestaurant ? "selected" : ""}`}
       onClick={handleClick}
       role="link"
       id={`${restaurant.award ? restaurant.award.scroll : ""}`}
@@ -78,4 +78,4 @@ const mapDispatchToProps = dispatch => {
   return bindActionCreators({ selectRestaurant }, dispatch);
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(trackWindowScroll(RestaurantListItem));
+export default connect(mapStateToProps, mapDispatchToProps)(trackWindowScroll(Card));
