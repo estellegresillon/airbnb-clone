@@ -15,9 +15,15 @@
           width: 80%;
           border-radius: 32px;
           margin-bottom: 10px;
+          height: 45px;
+
+          .btn-first-text, .btn-second-text {
+            top: 16px;
+          }
 
           .css-yk16xz-control, .css-yk16xz-control {
             border-radius: 32px !important;
+            height: 45px !important;
           }
         }
       }
@@ -61,6 +67,7 @@
 
     .home-weekly-new, .home-new {
       margin-top: 50px;
+      padding: 50px 0;
 
       .home-weekly-new-title, .home-new-title {
         font-weight: 100;

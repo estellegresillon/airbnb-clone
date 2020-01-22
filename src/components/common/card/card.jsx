@@ -24,6 +24,7 @@ const Card = props => {
   };
 
   const windowSize = useWindowSize();
+  console.log(showMap)
 
   return (
     <div 
