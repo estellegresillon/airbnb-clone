@@ -368,37 +368,37 @@
   
       &.contact-burger {
         top: 15vh;
-        left: 30vh;
+        left: 30vw;
         transform: rotate(42deg);
       }
   
       &.contact-lobster {
         top: 45vh;
-        left: 15vh;
+        left: 15vw;
         transform: rotate(30deg);
       }
   
       &.contact-salad {
         top: 75vh;
-        left: 30vh;
+        left: 30vw;
         transform: rotate(-42deg);
       }
   
       &.contact-ice-cream {
         top: 15vh;
-        right: 30vh;
+        right: 30vw;
         transform: rotate(-42deg);
       }
   
       &.contact-pizza {
         top: 45vh;
-        right: 15vh;
+        right: 15vw;
         transform: rotate(2deg);
       }
   
       &.contact-pasta {
         top: 75vh;
-        right: 30vh;
+        right: 30vw;
         transform: rotate(42deg);
       }
     }

@@ -115,6 +115,14 @@
         font-size: 50px;
       }
 
+      img.contact-burger, img.contact-salad {
+        left: -2vw;
+      }
+
+      img.contact-ice-cream, img.contact-pasta{
+        right: -2vw;
+      }
+
       .contact-pizza, .contact-lobster {
         display: none;
       }
