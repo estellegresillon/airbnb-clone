@@ -32,6 +32,11 @@ const reducers = combineReducers({
 
 const App = () => {
   // const windowSize = useWindowSize();
+  const options = { method: 'GET', mode: 'no-cors' };
+
+  setInterval(function() {
+    fetch(`http://foodlab.estellegresillon.fr`, options)
+  }, 300000);
 
   return (
     <Router>

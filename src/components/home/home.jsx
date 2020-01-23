@@ -161,7 +161,7 @@ const Home = props => {
             listedRestaurants: [WEEKLY_RESTAURANT],
             })}>
 
-          <Card restaurant={WEEKLY_RESTAURANT} />
+          <Card tabIndex={0} restaurant={WEEKLY_RESTAURANT} />
         </div>
       </div>
 
