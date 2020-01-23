@@ -154,3 +154,13 @@
     }
   }
 }
+
+@media screen and (max-width: 480px) {
+  .home-wrapper {
+    .home-hero-scene {
+      .scroll-animation {
+        display: none;
+      }
+    }
+  }
+}

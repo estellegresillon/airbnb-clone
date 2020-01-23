@@ -63,8 +63,8 @@ const Home = props => {
 
     iconContainer.style.transform =
       `matrix3d(1,0,0.00,0,0.00,1,0.00,0,0,0,1,0,${distanceFromMiddleX * 0.04},${distanceFromMiddleY * 0.08},0,1)`;
-    contactTitle.style.transform = 
-      `matrix3d(1,0,0.00,${distanceFromMiddleX * 0.0000007},0.00,1,0.00,0,0,0,1,0,${distanceFromMiddleX * -0.02},${distanceFromMiddleY * -0.05},0,1)`; 
+    contactTitle.style.transform =
+      `matrix3d(1,0,0.00,${distanceFromMiddleX * 0.0000007},0.00,1,0.00,0,0,0,1,0,${distanceFromMiddleX * -0.02},${distanceFromMiddleY * -0.05},0,1)`;
   }
 
   useEffect(() => {
@@ -134,8 +134,8 @@ const Home = props => {
           />
           <Select
             value={type}
-            options={INIT_TYPE_OPTIONS} 
-            onChange={handleTypeChange} 
+            options={INIT_TYPE_OPTIONS}
+            onChange={handleTypeChange}
             placeholder={type}
             isSearchable={false}
             className="filters-react-select filter-type"
@@ -145,6 +145,10 @@ const Home = props => {
             <span className="btn-second-text">Voir notre sélection</span>
           </button>
         </div>
+
+        <div className="scroll-animation">
+          <div className="mouse-scroll-ball" />
+        </div>
       </div>
 
       <div className="home-weekly-new">
@@ -153,13 +157,13 @@ const Home = props => {
           <span className="home-weekly-title-text">Le resto de la semaine</span>
           <i className="fas fa-award" />
         </div>
-        <div 
+        <div
           className="weekly-restaurant"
           onClick={() => history.push({
             pathname: `/detail/${WEEKLY_RESTAURANT.id}`,
             restaurant: WEEKLY_RESTAURANT,
             listedRestaurants: [WEEKLY_RESTAURANT],
-            })}>
+          })}>
 
           <Card tabIndex={0} restaurant={WEEKLY_RESTAURANT} />
         </div>
@@ -185,19 +189,19 @@ const Home = props => {
 
         {NEW_RESTAURANTS.map((newRest, i) => {
           return (
-            <div 
+            <div
               key={newRest.id}
               className="new-restaurant"
-              onClick={() => history.push({ 
-                pathname: `/detail/${newRest.id}`, 
+              onClick={() => history.push({
+                pathname: `/detail/${newRest.id}`,
                 restaurant: newRest,
                 listedRestaurants: NEW_RESTAURANTS,
               })}>
-              <Card 
-                key={i} 
+              <Card
+                key={i}
                 listedRestaurants={NEW_RESTAURANTS}
-                restaurant={newRest} 
-                tabIndex={i} 
+                restaurant={newRest}
+                tabIndex={i}
               />
             </div>
           )
@@ -223,16 +227,16 @@ const Home = props => {
           <img className="contact-pasta" src="contact-pasta.svg" alt="pasta-svg" />
         </div>
       </div>
-      
+
       <div className="footer-img">
         <img className="fried-potatoes" src="/fried-potatoes.svg" alt="fried-potatoes" />
         <img className="fried-chicken" src="/fried-chicken.svg" alt="fried-chicken" />
-        <img 
+        <img
           className="hot-dog"
           src="/hot-dog.svg"
           alt="hot-dog"
-          style={{ 
-            visibility: isVisible ? "visible" : "hidden", 
+          style={{
+            visibility: isVisible ? "visible" : "hidden",
             animation: isVisible ? "3s translateHotDog" : ""
           }}
         />
