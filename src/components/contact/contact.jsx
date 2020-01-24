@@ -1,12 +1,16 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
+
+import { CONTACT_ICONS } from "../../constants/contact-icons";
 
 const Contact = () => {
+  const textContainer = useRef(null);
+
   const deleteMessage = (destination, message) => {
     const initialMessage = message;
     let i = message.length - 1;
 
     const interval = setInterval(function(){
-      const container = document.getElementById(destination);
+      const container = destination;
       if (container) {
         container.innerHTML = message.substring(0, i - 1);
       } else {
@@ -20,8 +24,8 @@ const Contact = () => {
         clearInterval(interval);
         setTimeout(() => {
           if (initialMessage === "Un resto à proposer ?") {
-            printLetterByLetter("text", "Un petit coucou ?")
-          } else printLetterByLetter("text", "Un resto à proposer ?")
+            printLetterByLetter(textContainer.current, "Un petit coucou ?")
+          } else printLetterByLetter(textContainer.current, "Un resto à proposer ?")
         }, 1000);
       }
     }, 50);
@@ -31,7 +35,7 @@ const Contact = () => {
     let i = 0;
 
     const interval = setInterval(function(){
-      const container = document.getElementById(destination);
+      const container = destination;
       if (container) {
         container.innerHTML += message.charAt(i);
       } else {
@@ -44,21 +48,21 @@ const Contact = () => {
       if (i === message.length){
         clearInterval(interval);
         setTimeout(() => {
-          deleteMessage("text", message)
+          deleteMessage(textContainer.current, message)
         }, 1000);
       }
     }, 100);
   }
 
   useEffect(() => {
-    printLetterByLetter("text", "Un petit coucou ?");
+    printLetterByLetter(textContainer.current, "Un petit coucou ?");
     return () => printLetterByLetter(null, null);
   // eslint-disable-next-line
   }, []);
 
   return (
     <div className="contact-wrapper">
-      <div id="text" className="gradient-stroke" />
+      <div id="text-container" ref={textContainer} className="gradient-stroke" />
         <div className="bottom-section"><div className="contact-infos">
           <p>C'est par ici :</p>
           <p className="mail-foodlab">hello@foodlab.com</p>
@@ -72,13 +76,9 @@ const Contact = () => {
         </div>
       </div>
 
-      <img className="contact-burger" src="contact-burger.svg" alt="burger-svg" />
-      <img className="contact-lobster" src="contact-lobster.svg" alt="lobsterer-svg" />
-      <img className="contact-salad" src="contact-salad.svg" alt="dalad-svg" />
-
-      <img className="contact-ice-cream" src="contact-ice-cream.svg" alt="ice-cream-svg" />
-      <img className="contact-pizza" src="contact-pizza.svg" alt="pizza-svg" />
-      <img className="contact-pasta" src="contact-pasta.svg" alt="pasta-svg" />
+      {CONTACT_ICONS.map(icon => {
+        return <img className={`contact-${icon}`} src={`contact-${icon}.svg`} alt={`${icon}-animation`} />
+      })}
     </div>
   );
 };

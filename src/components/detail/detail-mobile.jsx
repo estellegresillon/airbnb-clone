@@ -11,9 +11,12 @@ const DetailMobile = props => {
   const [similarRestaurants, setSimilarRestaurants] = useState([]);
   const nextRestaurantRef = useRef(null);
   const previousRestaurantRef = useRef(null);
+  const detailPageTop = useRef(null);
   const listedRestaurants = location.listedRestaurants;
-  // const yDown = useRef(null);
-  // const xDown = useRef(null);
+
+  const scrollToDetailTop = () => {
+    detailPageTop.current.scrollIntoView();
+  }
 
   const setNavigation = restaurantList => {
     let previous;
@@ -97,7 +100,7 @@ const DetailMobile = props => {
       };
     };
 
-    document.querySelector(".detail-page-big-img").scrollIntoView();
+    scrollToDetailTop();
   };
 
   return restaurant ? (

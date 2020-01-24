@@ -198,11 +198,21 @@
       }
     }
 
+    .new-restaurants-container {
+      display: flex;
+      flex-direction: column;
+      width: 60%;
+    }
+
     .weekly-restaurant, .new-restaurant {
       margin-top: 20px;
       width: 60%;
       cursor: pointer;
       box-shadow: 2px 2px 12px rgba(214, 31, 31, 0.1);
+    }
+
+    .new-restaurant {
+      width: 100%;
     }
 
     .weekly-restaurant:hover, .new-restaurant:hover {

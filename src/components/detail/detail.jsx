@@ -11,6 +11,7 @@ const Detail = props => {
   const [similarRestaurants, setSimilarRestaurants] = useState([])
   const nextRestaurantRef = useRef(null);
   const previousRestaurantRef = useRef(null);
+  const detailPageTop = useRef(null);
   const listedRestaurants = location.listedRestaurants;
   
   const setNavigation = restaurantList => {
@@ -31,6 +32,10 @@ const Detail = props => {
       nextRestaurantRef.current = next.id;
     } else nextRestaurantRef.current = null;
   };
+
+  const scrollToDetailTop = () => {
+    detailPageTop.current.scrollIntoView();
+  }
 
   // if a user arrives on the pageId directly 
   // he doesn't get the restaurantS or listedRestaurantS objects in the props
@@ -88,7 +93,7 @@ const Detail = props => {
       };
     };
 
-    document.querySelector(".detail-page-big-img").scrollIntoView();
+    scrollToDetailTop();
   };
 
   const handleNavigation = (direction, id) => {
@@ -104,7 +109,7 @@ const Detail = props => {
       };
     };
 
-    document.querySelector(".detail-page-big-img").scrollIntoView();
+    scrollToDetailTop();
   };
 
   useEffect(() => { 
@@ -144,6 +149,7 @@ const Detail = props => {
         <div className="top-section">
           <div 
             className="detail-page-big-img"
+            ref={detailPageTop}
             style={{ backgroundImage: `url(${restaurant.imageUrl || restaurant.imageUrl2})` }}
           />
           <div key={location.pathname} className="detail-page-content">
