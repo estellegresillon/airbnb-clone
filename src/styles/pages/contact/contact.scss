@@ -71,7 +71,7 @@
       top: 35vh;
       left: 15vh;
       transform: rotate(2deg);
-      animation: 5s rotateDots infinite linear;
+      animation: 5s rotateDots infinite linear reverse;
     }
 
     &.contact-salad {
@@ -85,7 +85,7 @@
       top: 5vh;
       right: 30vh;
       transform: rotate(42deg);
-      animation: 5s rotateDots infinite linear;
+      animation: 5s rotateDots infinite linear reverse;
     }
 
     &.contact-pizza {
@@ -99,7 +99,7 @@
       top: 65vh;
       right: 30vh;
       transform: rotate(200deg);
-      animation: 5s rotateDots infinite linear;
+      animation: 5s rotateDots infinite linear reverse;
     }
   }
 
