@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
 import { setRestaurants } from "../../actions";
-// import { handleTouchMove, handleTouchStart, setNavigation } from "./navigation-mobile";
 
 const DetailMobile = props => {
   const { setRestaurants, restaurants, match, location } = props;

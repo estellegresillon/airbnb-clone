@@ -21,7 +21,7 @@ const ContactSection = props => {
 
       <div className="contact-icon-container" ref={contactIconContainer}>
       {CONTACT_ICONS.map(icon => {
-        return <img className={`contact-${icon}`} src={`contact-${icon}.svg`} alt={`${icon}-animation`} />
+        return <img key={icon} className={`contact-${icon}`} src={`contact-${icon}.svg`} alt={`${icon}-animation`} />
       })}
       </div>
     </div>

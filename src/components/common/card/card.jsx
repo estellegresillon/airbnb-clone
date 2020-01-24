@@ -35,6 +35,7 @@ const Card = props => {
     >
       {(!showMap || (showMap && windowSize.width < 728)) &&
         <Link to={{ pathname: `/detail/${restaurant.id}`, restaurant, listedRestaurants }} />}
+        
       <div className="card">
         {!showMap && <div className="grid-img-overlay" />}
         <LazyLoadImage
@@ -43,10 +44,12 @@ const Card = props => {
           src={restaurant.imageUrl}
           threshold={500}
         />
+
         {restaurant.award &&
           <Badge 
             icon={restaurant.award.icon}
             description={restaurant.award.description} />}
+
         <div className="card-description">
           <div className="card-header">
             <div className="card-header-type">
@@ -57,6 +60,7 @@ const Card = props => {
           </div>
           <h2>{restaurant.name}</h2>
           <div className="card-restaurant-address">{restaurant.address}</div>
+
           {showMap && windowSize.width > 728 &&
             <Link to={{ pathname: `/detail/${restaurant.id}`, restaurant, listedRestaurants }}>
               <div className="card-see-infos">Voir infos</div>

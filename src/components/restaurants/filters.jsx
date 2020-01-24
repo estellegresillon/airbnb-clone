@@ -15,6 +15,7 @@ import {
 } from "../../actions";
 import { INIT_ARR_OPTIONS, INIT_TYPE_OPTIONS } from "../../constants/filter-options";
 import { useWindowSize } from "../../hooks/useWindowSize";
+import { filterArrByType, filterTypeByArr } from './helper';
 
 
 const SearchByName = props => {
@@ -45,8 +46,8 @@ const SearchByName = props => {
     setArr("Tous les arr.");
     setType("Tous les types");
     toggleListingAwards(false);
+
     if (value) {
-      // put in an array to map on it on other components
       searchRestaurant([value]);
     } else {
       searchRestaurant(null);
@@ -58,102 +59,34 @@ const SearchByName = props => {
     }
   }
 
-  const filterByArr = (arr) => {
+  const filterList = (list, option) => {
     setSearchedRestaurant(null);
     searchRestaurant(null);
-    centerMapWithLocation(arr);
     toggleListingAwards(false);
-    
-    // sort Restaurants according to location
-    const sortedRestaurants = [...restaurants].filter(val => {
-      if (val.arr) {
-        return val.arr === arr;
-      } else return null;
-    });
 
-    // we want to show only available cuisine type in the list
-    const typeOptions = [];
-    sortedRestaurants.forEach(restaurant => {
-      typeOptions.push(restaurant.type);
-    });
-    const uniqueItems = [...new Set(typeOptions)]
-    uniqueItems.sort();
-    const newTypeOptions = [];
-    uniqueItems.forEach(itm => {
-      newTypeOptions.push({ label: itm, value: itm });
-    });
-    setTypeOptions(newTypeOptions);
-
-    // filter only the available locations
-    if (type !== "Tous les types") {
-      const sortRestaurantsByType = [...sortedRestaurants].filter(val => {
-        if (val.type) {
-          return val.type === type;
-        } else return null;
-      });
-      sortRestaurants(sortRestaurantsByType);
+    if (option === "type") {
+      centerMapWithLocation(null);
+      filterArrByType(list, arr, restaurants, setArrOptions, sortRestaurants);
     } else {
-      sortRestaurants(sortedRestaurants);
-    };
+      centerMapWithLocation(arr);
+      filterTypeByArr(list, type, restaurants, setTypeOptions, sortRestaurants);
+    }
 
-    if (windowSize.width > 728 && !homeArr) {
+    if ((windowSize.width > 728 && (option === "arr" && !homeArr)) || 
+      (windowSize.width > 728 && (option === "type" && !homeType))) {
       scrollToTop();
     }
   }
 
-  const filterByType = (type) => {
-    setSearchedRestaurant(null);
-    searchRestaurant(null);
-    centerMapWithLocation(null);
-    toggleListingAwards(false);
+  const handleOptionsChange = (e, option) => {
+    const selectedValue = e.value;
 
-    // sort Restaurants according to type
-    const sortedRestaurants = [...restaurants].filter(val => {
-      if (val.type) {
-        return val.type === type;
-      } else return null;
-    });
-
-    // we want to show only available location in the list
-    const arrOptions = [];
-    sortedRestaurants.forEach(restaurant => {
-      arrOptions.push(restaurant.arr);
-    });
-    const uniqueItems = [...new Set(arrOptions)];
-    uniqueItems.sort((a, b) => a - b);
-    const newArrOptions = [];
-    uniqueItems.forEach(itm => {
-      newArrOptions.push({ label: itm, value: itm });
-    });
-    setArrOptions(newArrOptions);
-
-    // filter only the available cuisine types
-    if (arr !== "Tous les arr.") {
-      const sortRestaurantsByArr = [...sortedRestaurants].filter(val => {
-        if (val.arr) {
-          return val.arr === arr;
-        } else return null;
-      });
-      sortRestaurants(sortRestaurantsByArr);
+    if (option === "type") {
+      setType(selectedValue);
     } else {
-      sortRestaurants(sortedRestaurants);
-    };
-
-    if (windowSize.width > 728 && !homeType) {
-      scrollToTop();
+      setArr(selectedValue);
     }
-  };
-
-  const handleArrChange = e => {
-    const selectedArr = e.value;
-    setArr(selectedArr);
-    filterByArr(selectedArr);
-  };
-
-  const handleTypeChange = e => {
-    const selectedType = e.value;
-    setType(selectedType);
-    filterByType(selectedType);
+    filterList(selectedValue, option);
   };
 
   const handleToggleMap = () => {
@@ -173,6 +106,7 @@ const SearchByName = props => {
     // reinit filter options
     setTypeOptions(INIT_TYPE_OPTIONS);
     setArrOptions(INIT_ARR_OPTIONS);
+
     // set default values
     setArr("Tous les arr.");
     setType("Tous les types");
@@ -192,12 +126,12 @@ const SearchByName = props => {
   useEffect(() => {
     if (restaurants && homeArr && homeArr !== "Tous les arr.") {
       setArr(homeArr);
-      filterByArr(homeArr);
+      filterList(homeArr, "arr");
     };
 
     if (restaurants && homeType && homeType !== "Tous les types") {
       setType(homeType);
-      filterByType(homeType);
+      filterList(homeType, "type");
     };
   // eslint-disable-next-line
   }, [restaurants])
@@ -209,18 +143,26 @@ const SearchByName = props => {
         <Autocomplete
           id="search-by-name"
           options={restaurants}
-          getOptionLabel={option => option.name}
+          getOptionLabel={option => `${option.name} - ${option.type}`}
           style={{ width: "300px", marginRight: "10px"}}
           value={searchedRestaurant}
           onChange={handleSearchChange}
-          renderInput={params => (
-            <TextField {...params} style={{ width: "100%", marginRight: "20px", padding: "0px"}} value={searchedRestaurant} placeholder="Rechercher un nom de restaurant..." variant="outlined" fullWidth />
-          )}
+          renderInput={params => {
+            return (
+              <TextField 
+                {...params}
+                style={{ width: "100%", marginRight: "20px", padding: "0px"}}
+                value={searchedRestaurant}
+                placeholder="Rechercher par nom ou type de restaurant"
+                variant="outlined"
+                fullWidth
+              />
+            )}}
         />
         <Select
           value={arr}
           options={arrOptions}
-          onChange={handleArrChange}
+          onChange={e => handleOptionsChange(e, "arr")}
           placeholder={arr}
           isSearchable={false}
           className="filters-react-select filter-arr"
@@ -228,7 +170,7 @@ const SearchByName = props => {
         <Select
           value={type}
           options={typeOptions} 
-          onChange={handleTypeChange} 
+          onChange={e => handleOptionsChange(e, "type")} 
           placeholder={type}
           isSearchable={false}
           className="filters-react-select filter-type"

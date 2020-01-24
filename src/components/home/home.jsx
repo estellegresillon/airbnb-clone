@@ -87,8 +87,9 @@ const Home = props => {
   }, [])
 
   useEffect(() => {
-    contactContainer.current.addEventListener("mousemove", moveContactElements, false);
-    return () => contactContainer.current.removeEventListener("mousemove", moveContactElements, false);
+    const container = contactContainer.current;
+    container.addEventListener("mousemove", moveContactElements, false);
+    return () => container.removeEventListener("mousemove", moveContactElements, false);
   }, [])
 
   return (

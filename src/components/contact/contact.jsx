@@ -1,58 +1,10 @@
 import React, { useEffect, useRef } from "react";
 
 import { CONTACT_ICONS } from "../../constants/contact-icons";
+import { printLetterByLetter } from "./helper";
 
 const Contact = () => {
   const textContainer = useRef(null);
-
-  const deleteMessage = (destination, message) => {
-    const initialMessage = message;
-    let i = message.length - 1;
-
-    const interval = setInterval(function(){
-      const container = destination;
-      if (container) {
-        container.innerHTML = message.substring(0, i - 1);
-      } else {
-        clearInterval(interval);
-        return;
-      }
-
-      i--;
-
-      if (i === 0){
-        clearInterval(interval);
-        setTimeout(() => {
-          if (initialMessage === "Un resto à proposer ?") {
-            printLetterByLetter(textContainer.current, "Un petit coucou ?")
-          } else printLetterByLetter(textContainer.current, "Un resto à proposer ?")
-        }, 1000);
-      }
-    }, 50);
-  }
-
-  const printLetterByLetter = (destination, message) => {
-    let i = 0;
-
-    const interval = setInterval(function(){
-      const container = destination;
-      if (container) {
-        container.innerHTML += message.charAt(i);
-      } else {
-        clearInterval(interval);
-        return;
-      }
-
-      i++;
-
-      if (i === message.length){
-        clearInterval(interval);
-        setTimeout(() => {
-          deleteMessage(textContainer.current, message)
-        }, 1000);
-      }
-    }, 100);
-  }
 
   useEffect(() => {
     printLetterByLetter(textContainer.current, "Un petit coucou ?");
@@ -77,7 +29,7 @@ const Contact = () => {
       </div>
 
       {CONTACT_ICONS.map(icon => {
-        return <img className={`contact-${icon}`} src={`contact-${icon}.svg`} alt={`${icon}-animation`} />
+        return <img key={icon} className={`contact-${icon}`} src={`contact-${icon}.svg`} alt={`${icon}-animation`} />
       })}
     </div>
   );
