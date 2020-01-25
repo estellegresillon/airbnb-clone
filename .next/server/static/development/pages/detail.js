@@ -4754,23 +4754,25 @@ const Detail = props => {
     // 37 arrow left / 39 arrow right
     if (e.keyCode === 37) {
       if (previousRestaurantRef.current) {
+        const id = previousRestaurantRef.current;
         next_router__WEBPACK_IMPORTED_MODULE_3___default.a.push({
-          pathname: `/detail/${previousRestaurantRef.current}`,
+          pathname: `/detail/${id}`,
           query: {
             listedRestaurants
           }
-        });
+        }, `/detail/${id}`);
       }
 
       ;
     } else if (e.keyCode === 39) {
       if (nextRestaurantRef.current) {
+        const id = nextRestaurantRef.current;
         next_router__WEBPACK_IMPORTED_MODULE_3___default.a.push({
-          pathname: `/detail/${nextRestaurantRef.current}`,
+          pathname: `/detail/${id}`,
           query: {
             listedRestaurants
           }
-        });
+        }, `/detail/${id}`);
       }
 
       ;
@@ -4783,12 +4785,13 @@ const Detail = props => {
   const handleNavigation = (direction, id) => {
     if (direction === "left") {
       if (previousRestaurantRef.current) {
+        const id = previousRestaurantRef.current;
         next_router__WEBPACK_IMPORTED_MODULE_3___default.a.push({
-          pathname: `/detail/${previousRestaurantRef.current}`,
+          pathname: `/detail/${id}`,
           query: {
             listedRestaurants
           }
-        });
+        }, `/detail/${id}`);
       }
 
       ;
@@ -4801,12 +4804,13 @@ const Detail = props => {
       });
     } else if (direction === "right") {
       if (nextRestaurantRef.current) {
+        const id = nextRestaurantRef.current;
         next_router__WEBPACK_IMPORTED_MODULE_3___default.a.push({
-          pathname: `/detail/${nextRestaurantRef.current}`,
+          pathname: `/detail/${id}`,
           query: {
             listedRestaurants
           }
-        });
+        }, `/detail/${id}`);
       }
 
       ;
@@ -4824,6 +4828,7 @@ const Detail = props => {
     const disclaimer = localStorage.getItem('has_seen_suggestion');
     disclaimer ? setHasSeenSuggestion(true) : setHasSeenSuggestion(false);
   }, []);
+  console.log(router.query);
   return restaurant ? __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("div", {
     className: "detail-page-wrapper"
   }, __jsx(_pop_in__WEBPACK_IMPORTED_MODULE_5__["default"], {

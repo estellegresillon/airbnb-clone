@@ -34,8 +34,7 @@ const Card = props => {
       tabIndex={tabIndex + 1}
     >
       {(!showMap || (showMap && windowSize.width < 728)) &&
-        <Link href="/detail/[slug]" as={`/detail/${restaurant.id}`} />}
-        {/* <Link href={{ pathname: `/detail/[${restaurant.id}]`, query: { restaurant, listedRestaurants } }} />} */}
+        <Link href={{ pathname: `/detail/[id]`, query: {restaurant: "hi", listedRestaurants: "hello" }}} as={`/detail/${restaurant.id}`} />}
         
       <div className="card">
         {!showMap && <div className="grid-img-overlay" />}
@@ -63,8 +62,7 @@ const Card = props => {
           <div className="card-restaurant-address">{restaurant.address}</div>
 
           {showMap && windowSize.width > 728 &&
-            <Link href="/detail/[slug]" as={`/detail/${restaurant.id}`}>
-            {/* <Link href={{ pathname: `/detail/[${restaurant.id}]`, query: { restaurant, listedRestaurants } }}> */}
+            <Link href={{ pathname: `/detail/[id]`, query: {restaurant: "hi", listedRestaurants: "hello" }}} as={`/detail/${restaurant.id}`}>
               <div className="card-see-infos">Voir infos</div>
             </Link>}
         </div>

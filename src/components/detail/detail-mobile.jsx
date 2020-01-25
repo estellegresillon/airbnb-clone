@@ -7,7 +7,7 @@ import { withRouter } from "next/router";
 import { setRestaurants } from "../../actions";
 
 const DetailMobile = props => {
-  const { setRestaurants, restaurants, match, router } = props;
+  const { setRestaurants, restaurants, router } = props;
   const [restaurant, setRestaurant] = useState({});
   const [similarRestaurants, setSimilarRestaurants] = useState([]);
   const nextRestaurantRef = useRef(null);
@@ -15,7 +15,7 @@ const DetailMobile = props => {
   const detailPageTop = useRef(null);
   const listedRestaurants = router.query.listedRestaurants;
 
-  const scrollToDetailTop = () => {
+  const scrollToTop = () => {
     detailPageTop.current.scrollIntoView();
   }
 
@@ -24,7 +24,7 @@ const DetailMobile = props => {
     let next;
 
     restaurantList.forEach((val, i) => {
-      if (val.id.toString() === match.params.id) {
+      if (val.id.toString() === router.query.id) {
         previous = restaurantList[i - 1];
         next = restaurantList[i + 1];
       };
@@ -66,7 +66,7 @@ const DetailMobile = props => {
     } else {
       const detailRestaurant = [...restaurants].filter(val => {
         if (val.id) {
-          return val.id.toString() === match.params.id;
+          return val.id.toString() === router.query.id;
         } else return null;
       });
   
@@ -81,7 +81,7 @@ const DetailMobile = props => {
       setSimilarRestaurants(filterByType.slice(0, 6));
     };
   // eslint-disable-next-line
-  }, [router.query.restaurant, restaurants, match.params.id]);
+  }, [router.query.restaurant, restaurants, router.query.id]);
 
   // go to top because it keeps the same scroll position as the previous page
   useEffect(() => {
@@ -91,17 +91,19 @@ const DetailMobile = props => {
   const handleNavigation = (direction, id) => {
     if (direction === "left") {
       if (previousRestaurantRef.current) {
-        Router.push({ pathname: `/detail/${previousRestaurantRef.current}`, query: { listedRestaurants } });
+        const id = previousRestaurantRef.current;
+        Router.push({ pathname: `/detail/${id}`, query: { listedRestaurants }}, `/detail/${id}`);
       };
     } else if (direction === "next-page") {
       Router.push({ pathname: `/detail/${id}`, query: { listedRestaurants } });
     } else if (direction === "right") {
       if (nextRestaurantRef.current) {
-        Router.push({ pathname: `/detail/${nextRestaurantRef.current}`, query: { listedRestaurants } });
+        const id = nextRestaurantRef.current;
+        Router.push({ pathname: `/detail/${id}`, query: { listedRestaurants }}, `/detail/${id}`);
       };
     };
 
-    scrollToDetailTop();
+    scrollToTop();
   };
 
   return restaurant ? (

@@ -19,7 +19,7 @@ const HeroScene = () => {
   };
 
   const goToRestaurantsPage = () => {
-    Router.push({ pathname: "/restaurants", query: { homeArr: arr, homeType: type }, as: "/restaurants" })
+    Router.push({ pathname: "/restaurants", query: { homeArr: arr, homeType: type }}, "/restaurants")
   }
 
   return (

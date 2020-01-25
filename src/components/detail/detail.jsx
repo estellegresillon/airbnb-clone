@@ -92,11 +92,13 @@ const Detail = props => {
     // 37 arrow left / 39 arrow right
     if (e.keyCode === 37) {
       if (previousRestaurantRef.current) {
-        Router.push({ pathname: `/detail/${previousRestaurantRef.current}`, query: { listedRestaurants } });
+        const id = previousRestaurantRef.current;
+        Router.push({ pathname: `/detail/${id}`, query: { listedRestaurants }}, `/detail/${id}`);
       };
     } else if (e.keyCode === 39) {
       if (nextRestaurantRef.current) {
-        Router.push({ pathname: `/detail/${nextRestaurantRef.current}`, query: { listedRestaurants } });
+        const id = nextRestaurantRef.current;
+        Router.push({ pathname: `/detail/${id}`, query: { listedRestaurants }}, `/detail/${id}`);
       };
     };
 
@@ -106,13 +108,15 @@ const Detail = props => {
   const handleNavigation = (direction, id) => {
     if (direction === "left") {
       if (previousRestaurantRef.current) {
-        Router.push({ pathname: `/detail/${previousRestaurantRef.current}`, query: { listedRestaurants } });
+        const id = previousRestaurantRef.current;
+        Router.push({ pathname: `/detail/${id}`, query: { listedRestaurants }}, `/detail/${id}`);
       };
     } else if (direction === "next-page") {
       Router.push({ pathname: `/detail/${id}`, query: { listedRestaurants } });
     } else if (direction === "right") {
       if (nextRestaurantRef.current) {
-        Router.push({ pathname: `/detail/${nextRestaurantRef.current}`, query: { listedRestaurants } });
+        const id = nextRestaurantRef.current;
+        Router.push({ pathname: `/detail/${id}`, query: { listedRestaurants }}, `/detail/${id}`);
       };
     };
 
@@ -129,6 +133,8 @@ const Detail = props => {
     const disclaimer = localStorage.getItem('has_seen_suggestion');
     disclaimer ? setHasSeenSuggestion(true) : setHasSeenSuggestion(false);
   }, []);
+
+  console.log(router.query)
 
   return restaurant ? (
     <>

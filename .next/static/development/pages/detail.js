@@ -12974,23 +12974,25 @@ var Detail = function Detail(props) {
     // 37 arrow left / 39 arrow right
     if (e.keyCode === 37) {
       if (previousRestaurantRef.current) {
+        var id = previousRestaurantRef.current;
         next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push({
-          pathname: "/detail/".concat(previousRestaurantRef.current),
+          pathname: "/detail/".concat(id),
           query: {
             listedRestaurants: listedRestaurants
           }
-        });
+        }, "/detail/".concat(id));
       }
 
       ;
     } else if (e.keyCode === 39) {
       if (nextRestaurantRef.current) {
+        var _id = nextRestaurantRef.current;
         next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push({
-          pathname: "/detail/".concat(nextRestaurantRef.current),
+          pathname: "/detail/".concat(_id),
           query: {
             listedRestaurants: listedRestaurants
           }
-        });
+        }, "/detail/".concat(_id));
       }
 
       ;
@@ -13003,12 +13005,13 @@ var Detail = function Detail(props) {
   var handleNavigation = function handleNavigation(direction, id) {
     if (direction === "left") {
       if (previousRestaurantRef.current) {
+        var _id2 = previousRestaurantRef.current;
         next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push({
-          pathname: "/detail/".concat(previousRestaurantRef.current),
+          pathname: "/detail/".concat(_id2),
           query: {
             listedRestaurants: listedRestaurants
           }
-        });
+        }, "/detail/".concat(_id2));
       }
 
       ;
@@ -13021,12 +13024,13 @@ var Detail = function Detail(props) {
       });
     } else if (direction === "right") {
       if (nextRestaurantRef.current) {
+        var _id3 = nextRestaurantRef.current;
         next_router__WEBPACK_IMPORTED_MODULE_4___default.a.push({
-          pathname: "/detail/".concat(nextRestaurantRef.current),
+          pathname: "/detail/".concat(_id3),
           query: {
             listedRestaurants: listedRestaurants
           }
-        });
+        }, "/detail/".concat(_id3));
       }
 
       ;
@@ -13046,6 +13050,7 @@ var Detail = function Detail(props) {
     var disclaimer = localStorage.getItem('has_seen_suggestion');
     disclaimer ? setHasSeenSuggestion(true) : setHasSeenSuggestion(false);
   }, []);
+  console.log(router.query);
   return restaurant ? __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx("div", {
     className: "detail-page-wrapper"
   }, __jsx(_pop_in__WEBPACK_IMPORTED_MODULE_6__["default"], {
