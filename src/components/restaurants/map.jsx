@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { compose } from "recompose"
@@ -29,7 +29,7 @@ const MapContainer = props =>{
         selectedLocation={selectedLocation}
         markers={listedRestaurants}
         onClick={onClick}
-        googleMapURL={process.env.REACT_APP_GOOGLE_API_KEY}
+        googleMapURL={"https://maps.googleapis.com/maps/api/js?key=AIzaSyA7UHuoPJwDSGZGiPcaR4QBZW4pno1l7JE&v=3.exp&libraries=geometry,drawing,places"}
         loadingElement={<div style={{ height: `100%` }} />}
         containerElement={<div style={{ height: `100%` }} />}
         mapElement={<div style={{ height: `100%` }} />}
@@ -70,7 +70,7 @@ const MapView = compose(withScriptjs, withGoogleMap)(props => {
           >
             {selectedMarker === marker &&
               <InfoWindow style={{ padding: 0 }}>
-                <Link to={{pathname: `/detail/${marker.id}`, restaurant: marker}}>
+                <Link href={{ pathname: `/detail/${marker.id}`, query: { restaurant: marker } }}>
                   <div className="marker-info-window">
                     <img src={marker.imageUrl} alt="restaurant-preview" />
                     <div className="marker-header">

@@ -2,7 +2,7 @@ import React from "react";
 
 const TopSection = ({ history, restaurant, detailPageTop, location }) => (
   <>
-    <div className="button-go-back" onClick={() => history.goBack()}>
+    <div className="button-go-back" onClick={() => history.back()}>
       <i className="fas fa-chevron-left" /> Retour
     </div>
     {restaurant.award &&

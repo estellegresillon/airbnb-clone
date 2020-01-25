@@ -1,12 +1,13 @@
 import React from "react";
+import Router from "next/router";
 
 import { CONTACT_ICONS } from "../../../constants/contact-icons";
 
 const ContactSection = props => {
-  const { contactIconContainer, contactContainer, contactTitle, history } = props;
+  const { contactIconContainer, contactContainer, contactTitle } = props;
 
   const goToContactPage = () => {
-    history.push({ pathname: "/contact" })
+    Router.push("/contact");
   }
 
   return (

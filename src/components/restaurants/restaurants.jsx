@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
+import { withRouter } from "next/router";
 
 import RestaurantList from "./restaurant-list";
 import Map from "./map";
@@ -10,7 +11,7 @@ import Key from "../common/key";
 import { setRestaurants } from "../../actions";
 
 const Restaurants = props => {
-  const { restaurants, setRestaurants, sortedRestaurants, searchedRestaurant, location } = props;
+  const { restaurants, setRestaurants, sortedRestaurants, searchedRestaurant, router } = props;
   const [listNumber, setListNumber] = useState(null);
   const [listedRestaurants, setListedRestaurants] = useState(restaurants);
 
@@ -39,7 +40,7 @@ const Restaurants = props => {
 
   return (
     <div className="restaurants-page-wrapper">
-      <Filters homeArr={location.homeArr} homeType={location.homeType} />
+      <Filters homeArr={router ? router.query.homeArr : "Tous les arr."} homeType={router ? router.query.homeType  : "Tous les types"} />
       <div className="counter-keys-wrapper">
         <div className="restaurant-counter">
           {listNumber}
@@ -67,4 +68,4 @@ const mapDispatchToProps = dispatch => {
   return bindActionCreators({ setRestaurants }, dispatch);
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Restaurants);
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Restaurants));

@@ -1,12 +1,11 @@
 import React from 'react';
-import { Link, NavLink } from "react-router-dom";
-
+import Link from "next/link";
 import { MENU_ITEMS } from "../../../constants/menu-items";
 
 const Header = () => (
   <div className="header">
     <div className="header-left">
-      <Link to="/">
+      <Link href="/">
         <div className="foodlab-logo">
           <i className="fas fa-award"></i>Foodlab
         </div>
@@ -15,15 +14,15 @@ const Header = () => (
     <div className="header-right">
       {MENU_ITEMS.map(link => {
         return (
-          <NavLink 
-            activeClassName="selected-menu-item"
-            className="menu-link"
-            to={link.path}
+          <Link 
+            //activeClassName="selected-menu-item"
+            //className="menu-link"
+            href={link.path}
             key={link.name}
           >
             <div>{link.name}</div>
-            <div className="menu-underline" />
-          </NavLink>
+            {/* <div className="menu-underline" /> */}
+          </Link>
         )
       })}
     </div>

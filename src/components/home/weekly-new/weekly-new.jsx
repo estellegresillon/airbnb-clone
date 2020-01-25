@@ -1,9 +1,10 @@
 import React from "react";
+import Router from "next/router";
 
 import { WEEKLY_RESTAURANT } from "../../../constants/weekly-restaurant";
 import Card from "../../common/card";
 
-const WeeklyNew = ({ history, weeklyCard }) => (
+const WeeklyNew = ({ weeklyCard }) => (
   <div className="home-weekly-new">
     <div className="home-weekly-new-title">
       <i className="fas fa-award" />
@@ -13,10 +14,12 @@ const WeeklyNew = ({ history, weeklyCard }) => (
     <div
       className="weekly-restaurant"
       ref={weeklyCard}
-      onClick={() => history.push({
+      onClick={() => Router.push({
         pathname: `/detail/${WEEKLY_RESTAURANT.id}`,
-        restaurant: WEEKLY_RESTAURANT,
-        listedRestaurants: [WEEKLY_RESTAURANT],
+        query: {
+          restaurant: WEEKLY_RESTAURANT,
+          listedRestaurants: [WEEKLY_RESTAURANT],
+        }
       })}>
 
       <Card tabIndex={0} restaurant={WEEKLY_RESTAURANT} />

@@ -1,9 +1,10 @@
 import React from "react";
+import Router from "next/router";
 
 import { NEW_RESTAURANTS } from "../../../constants/new-restaurants";
 import Card from "../../common/card";
 
-const NewRestaurants = ({ history, newRestaurantsContainer }) => (
+const NewRestaurants = ({ newRestaurantsContainer }) => (
   <div className="home-new">
     <div className="home-new-title">
       <i className="fas fa-rocket" />
@@ -17,10 +18,12 @@ const NewRestaurants = ({ history, newRestaurantsContainer }) => (
           <div
             key={newRest.id}
             className="new-restaurant"
-            onClick={() => history.push({
+            onClick={() => Router.push({
               pathname: `/detail/${newRest.id}`,
-              restaurant: newRest,
-              listedRestaurants: NEW_RESTAURANTS,
+              query: {
+                restaurant: newRest,
+                listedRestaurants: NEW_RESTAURANTS,
+              }
             })}>
             <Card
               key={i}

@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
+import Router from "next/router";
+import { withRouter } from "next/router";
 
 import { setRestaurants } from "../../actions";
 import PopIn from "./pop-in";
@@ -10,21 +12,21 @@ import BottomSection from "./bottom-section";
 import Footer from "./footer";
 
 const Detail = props => {
-  const { setRestaurants, restaurants, match, location, history } = props;
+  const { setRestaurants, restaurants, router } = props;
   const [restaurant, setRestaurant] = useState({})
   const [hasSeenSuggestion, setHasSeenSuggestion] = useState(false)
   const [similarRestaurants, setSimilarRestaurants] = useState([])
   const nextRestaurantRef = useRef(null);
   const previousRestaurantRef = useRef(null);
   const detailPageTop = useRef(null);
-  const listedRestaurants = location.listedRestaurants;
+  const listedRestaurants = router.query.listedRestaurants;
   
   const setNavigation = restaurantList => {
     let previous;
     let next;
 
     restaurantList.forEach((val, i) => {
-      if (val.id.toString() === match.params.id) {
+      if (val.id.toString() === router.query.id) {
         previous = restaurantList[i - 1];
         next = restaurantList[i + 1];
       };
@@ -45,23 +47,23 @@ const Detail = props => {
   // if a user arrives on the pageId directly 
   // he doesn't get the restaurantS or listedRestaurantS objects in the props
   useEffect(() => { 
-    if (!location.restaurant) {
+    if (!router.query.restaurant) {
       setRestaurants(); 
     }
-  }, [location.restaurant, setRestaurants]);
+  }, [router.query.restaurant, setRestaurants]);
 
   useEffect(() => {
-    if (location.listedRestaurants) {
-      setNavigation(location.listedRestaurants);
+    if (router.query.listedRestaurants) {
+      setNavigation(router.query.listedRestaurants);
     } else {
       setNavigation(restaurants);
     };
 
-    if (location.restaurant) {
-      setRestaurant(location.restaurant);
+    if (router.query.restaurant) {
+      setRestaurant(router.query.restaurant);
       const filterByType = [...restaurants].filter(val => {
-        if (val.type && val.name !== location.restaurant.name) {
-          return val.type === location.restaurant.type;
+        if (val.type && val.name !== router.query.restaurant.name) {
+          return val.type === router.query.restaurant.type;
         } else return null;
       });
   
@@ -69,7 +71,7 @@ const Detail = props => {
     } else {
       const detailRestaurant = [...restaurants].filter(val => {
         if (val.id) {
-          return val.id.toString() === match.params.id;
+          return val.id.toString() === router.query.id;
         } else return null;
       });
   
@@ -84,17 +86,17 @@ const Detail = props => {
       setSimilarRestaurants(filterByType.slice(0, 9));
     };
   // eslint-disable-next-line
-  }, [location.restaurant, restaurants, match.params.id]);
+  }, [router.query.restaurant, restaurants, router.query.id]);
 
   const handleKeyDown = e => {
     // 37 arrow left / 39 arrow right
     if (e.keyCode === 37) {
       if (previousRestaurantRef.current) {
-        history.push({ pathname: `/detail/${previousRestaurantRef.current}`, listedRestaurants });
+        Router.push({ pathname: `/detail/${previousRestaurantRef.current}`, query: { listedRestaurants } });
       };
     } else if (e.keyCode === 39) {
       if (nextRestaurantRef.current) {
-        history.push({ pathname: `/detail/${nextRestaurantRef.current}`, listedRestaurants });
+        Router.push({ pathname: `/detail/${nextRestaurantRef.current}`, query: { listedRestaurants } });
       };
     };
 
@@ -104,13 +106,13 @@ const Detail = props => {
   const handleNavigation = (direction, id) => {
     if (direction === "left") {
       if (previousRestaurantRef.current) {
-        history.push({ pathname: `/detail/${previousRestaurantRef.current}`, listedRestaurants });
+        Router.push({ pathname: `/detail/${previousRestaurantRef.current}`, query: { listedRestaurants } });
       };
     } else if (direction === "next-page") {
-      history.push({ pathname: `/detail/${id}`, listedRestaurants });
+      Router.push({ pathname: `/detail/${id}`, query: { listedRestaurants } });
     } else if (direction === "right") {
       if (nextRestaurantRef.current) {
-        history.push({ pathname: `/detail/${nextRestaurantRef.current}`, listedRestaurants });
+        Router.push({ pathname: `/detail/${nextRestaurantRef.current}`, query: { listedRestaurants } });
       };
     };
 
@@ -136,12 +138,12 @@ const Detail = props => {
           hasSeenSuggestion={hasSeenSuggestion}
         />
         <TopSection
-          history={history}
+          history={Router}
           restaurant={restaurant}
-          location={location}
+          location={router}
           detailPageTop={detailPageTop}
         />
-        <MiddleSection location={location} restaurant={restaurant} />
+        <MiddleSection location={router} restaurant={restaurant} />
         <BottomSection
           similarRestaurants={similarRestaurants}
           handleNavigation={handleNavigation}
@@ -168,4 +170,4 @@ const mapDispatchToProps = dispatch => {
   return bindActionCreators({ setRestaurants }, dispatch);
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Detail);
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Detail));

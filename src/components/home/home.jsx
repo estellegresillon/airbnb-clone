@@ -94,12 +94,11 @@ const Home = props => {
 
   return (
     <div className="home-wrapper">
-      <HeroScene history={history} />
-      <WeeklyNew history={history} weeklyCard={weeklyCard} />
+      <HeroScene />
+      <WeeklyNew weeklyCard={weeklyCard} />
       <FoodlabConcept conceptContainer={conceptContainer} />
-      <NewRestaurants history={history} newRestaurantsContainer={newRestaurantsContainer} />
+      <NewRestaurants newRestaurantsContainer={newRestaurantsContainer} />
       <ContactSection
-        history={history}
         contactContainer={contactContainer}
         contactIconContainer={contactIconContainer}
         contactTitle={contactTitle}

@@ -1,17 +1,19 @@
 import React, { useState, useEffect, useRef } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
+import Router from "next/router";
+import { withRouter } from "next/router";
 
 import { setRestaurants } from "../../actions";
 
 const DetailMobile = props => {
-  const { setRestaurants, restaurants, match, location } = props;
+  const { setRestaurants, restaurants, match, router } = props;
   const [restaurant, setRestaurant] = useState({});
   const [similarRestaurants, setSimilarRestaurants] = useState([]);
   const nextRestaurantRef = useRef(null);
   const previousRestaurantRef = useRef(null);
   const detailPageTop = useRef(null);
-  const listedRestaurants = location.listedRestaurants;
+  const listedRestaurants = router.query.listedRestaurants;
 
   const scrollToDetailTop = () => {
     detailPageTop.current.scrollIntoView();
@@ -39,24 +41,24 @@ const DetailMobile = props => {
   // if a user arrives on the pageId directly 
   // he doesn't get the restaurant object in the props so we execute these 2 hooks
   useEffect(() => { 
-    if (!location.restaurant) {
+    if (!router.query.restaurant) {
       setRestaurants(); 
     };
-  }, [location.restaurant, setRestaurants]);
+  }, [router.query.restaurant, setRestaurants]);
 
   useEffect(() => {
-    if (location.listedRestaurants) {
-      setNavigation(location.listedRestaurants);
+    if (router.query.listedRestaurants) {
+      setNavigation(router.query.listedRestaurants);
     } else {//
       setNavigation(restaurants);
     };
 
-    if (location.restaurant) {
-      setRestaurant(location.restaurant);
+    if (router.query.restaurant) {
+      setRestaurant(router.query.restaurant);
 
       const filterByType = [...restaurants].filter(val => {
-        if (val.type && val.name !== location.restaurant.name) {
-          return val.type === location.restaurant.type;
+        if (val.type && val.name !== router.query.restaurant.name) {
+          return val.type === router.query.restaurant.type;
         } else return null;
       });
   
@@ -79,7 +81,7 @@ const DetailMobile = props => {
       setSimilarRestaurants(filterByType.slice(0, 6));
     };
   // eslint-disable-next-line
-  }, [location.restaurant, restaurants, match.params.id]);
+  }, [router.query.restaurant, restaurants, match.params.id]);
 
   // go to top because it keeps the same scroll position as the previous page
   useEffect(() => {
@@ -89,13 +91,13 @@ const DetailMobile = props => {
   const handleNavigation = (direction, id) => {
     if (direction === "left") {
       if (previousRestaurantRef.current) {
-        props.history.push({ pathname: `/detail/${previousRestaurantRef.current}`, listedRestaurants });
+        Router.push({ pathname: `/detail/${previousRestaurantRef.current}`, query: { listedRestaurants } });
       };
     } else if (direction === "next-page") {
-      props.history.push({ pathname: `/detail/${id}`, listedRestaurants });
+      Router.push({ pathname: `/detail/${id}`, query: { listedRestaurants } });
     } else if (direction === "right") {
       if (nextRestaurantRef.current) {
-        props.history.push({ pathname: `/detail/${nextRestaurantRef.current}`, listedRestaurants });
+        Router.push({ pathname: `/detail/${nextRestaurantRef.current}`, query: { listedRestaurants } });
       };
     };
 
@@ -104,7 +106,7 @@ const DetailMobile = props => {
 
   return restaurant ? (
     <div className="detail-page-wrapper-mobile">
-      <div className="button-go-back" onClick={() => props.history.goBack()}>
+      <div className="button-go-back" onClick={() => Router.back()}>
         <i className="fas fa-chevron-left" /> Retour
       </div>
       {restaurant.award &&
@@ -119,7 +121,7 @@ const DetailMobile = props => {
           backgroundSize: "cover",
         }}
       />
-      <div key={location.pathname} className="detail-page-content">
+      <div key={router.pathname} className="detail-page-content">
         <div className="detail-page-title">{restaurant.name}</div>
         <ul className="detail-page-resume">
           <li><span className="bolder">Type :</span> {restaurant.type} ({restaurant.price})</li>
@@ -216,4 +218,4 @@ const mapDispatchToProps = dispatch => {
   return bindActionCreators({ setRestaurants }, dispatch);
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(DetailMobile);
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(DetailMobile));

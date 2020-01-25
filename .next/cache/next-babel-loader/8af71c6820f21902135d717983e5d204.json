@@ -1,0 +1,1 @@
+{"ast":null,"code":"export { default } from \"./middle-section\";","map":{"version":3,"sources":["/Users/estellegresillon/Code/airbnb-redux/src/components/detail/middle-section/index.js"],"names":["default"],"mappings":"AAAA,SAASA,OAAT,QAAwB,kBAAxB","sourcesContent":["export { default } from \"./middle-section\";\n"]},"metadata":{},"sourceType":"module"}

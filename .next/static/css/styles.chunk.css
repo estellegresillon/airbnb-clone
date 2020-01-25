@@ -1,0 +1,1981 @@
+@keyframes colorHover {
+  0% {
+    color: #f54c4c; }
+  5% {
+    color: #ff4ac7; }
+  10% {
+    color: #6649ff; }
+  15% {
+    color: #2986ff; }
+  20% {
+    color: #29ccff; }
+  25% {
+    color: #90ff99; }
+  30% {
+    color: #ecff85; }
+  35% {
+    color: #ffbe29; }
+  40% {
+    color: #ff3737; }
+  45% {
+    color: #ff6b6b; }
+  50% {
+    color: #f54c4c; }
+  55% {
+    color: #ff4ac7; }
+  60% {
+    color: #6649ff; }
+  65% {
+    color: #2986ff; }
+  70% {
+    color: #29ccff; }
+  75% {
+    color: #90ff99; }
+  80% {
+    color: #ecff85; }
+  85% {
+    color: #ffbe29; }
+  90% {
+    color: #ff3737; }
+  95% {
+    color: #ff6b6b; }
+  100% {
+    color: #f54c4c; } }
+
+@keyframes scrollBall {
+  from {
+    margin-top: 10px; }
+  80% {
+    margin-top: 30px; }
+  to {
+    margin-top: 10px; } }
+
+@keyframes suggestionGlow {
+  from {
+    box-shadow: 0px 0px 10px rgba(255, 122, 146, 0.5); }
+  50% {
+    box-shadow: 0px 0px 20px #ff1f48; }
+  to {
+    box-shadow: 0px 0px 10px rgba(255, 122, 146, 0.5); } }
+
+@keyframes slideFromLeftMobile {
+  from {
+    margin-left: -200%; }
+  to {
+    margin-left: 0; } }
+
+@keyframes slideFromLeftDesktop {
+  from {
+    margin-left: -200px;
+    opacity: 0; }
+  to {
+    margin-left: -60px;
+    opacity: 1; } }
+
+@keyframes slideFromBottomMiddleSection {
+  from {
+    margin-top: 140px;
+    opacity: 0; }
+  to {
+    margin-top: 70px;
+    opacity: 1; } }
+
+@keyframes slideFromBottomTopSection {
+  from {
+    margin-top: 100px;
+    opacity: 0; }
+  to {
+    margin-top: 20px;
+    opacity: 1; } }
+
+@keyframes slideFromBottomListingRow {
+  from {
+    margin-top: 40px;
+    opacity: 0; }
+  to {
+    margin-top: 0;
+    opacity: 1; } }
+
+@keyframes slideFromBottomListingGrid {
+  from {
+    margin-top: 0px;
+    opacity: 0; }
+  to {
+    margin-top: -25px;
+    opacity: 1; } }
+
+@keyframes slideFromLeftAwards {
+  from {
+    margin-left: 0%;
+    opacity: 0; }
+  to {
+    margin-left: 10%;
+    opacity: 1; } }
+
+@keyframes underlineHome {
+  from {
+    width: 0%; }
+  to {
+    width: 50%; } }
+
+@keyframes overlayHome {
+  from {
+    width: 100%; }
+  to {
+    width: 0%; } }
+
+@keyframes slideFromLeftHome {
+  from {
+    left: 0%;
+    opacity: 0; }
+  to {
+    left: 20%;
+    opacity: 1; } }
+
+@keyframes rotateImageOne {
+  from {
+    top: 20px;
+    transform: rotate(-10deg); }
+  50% {
+    top: 0px;
+    transform: rotate(10deg); }
+  to {
+    top: 20px;
+    transform: rotate(-10deg); } }
+
+@keyframes rotateImageTwo {
+  from {
+    top: 0px;
+    transform: rotate(10deg); }
+  50% {
+    top: 20px;
+    transform: rotate(-10deg); }
+  to {
+    top: 0px;
+    transform: rotate(10deg); } }
+
+@keyframes rotateSvg {
+  from {
+    top: -5px;
+    transform: rotate(-15deg); }
+  50% {
+    top: 5px;
+    transform: rotate(15deg); }
+  to {
+    top: -5px;
+    transform: rotate(-15deg); } }
+
+@keyframes translateHotDog {
+  from {
+    right: 0;
+    transform: rotate(0deg); }
+  70% {
+    transform: rotate(10deg); }
+  to {
+    right: 18%;
+    transform: rotate(0deg); } }
+
+.bg-spin-up {
+  animation: bgSpinUp 4s ease; }
+
+@keyframes bgSpinUp {
+  from {
+    transform: rotate(0deg); }
+  30% {
+    transform: rotate(-3deg); }
+  to {
+    transform: rotate(0deg); } }
+
+.bg-spin-down {
+  animation: bgSpinDown 4s ease; }
+
+@keyframes bgSpinDown {
+  from {
+    transform: rotate(0deg); }
+  30% {
+    transform: rotate(3deg); }
+  to {
+    transform: rotate(0deg); } }
+
+@keyframes slideToRightText {
+  from {
+    left: -182px; }
+  to {
+    left: 230px; } }
+
+@keyframes menuUnderline {
+  from {
+    width: 0; }
+  to {
+    width: 100%; } }
+
+.card {
+  position: relative;
+  height: 125px;
+  color: #110650;
+  display: flex;
+  padding: 35px; }
+  .card img {
+    width: 100%;
+    max-width: 200px;
+    height: auto; }
+  .card img:hover {
+    transition: all 0.5s ease;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); }
+  .card .badge-wrapper {
+    position: absolute;
+    top: 42px;
+    left: 42px; }
+    .card .badge-wrapper .tooltip-badge {
+      display: none;
+      top: 0;
+      left: 30px; }
+    .card .badge-wrapper:hover .tooltip-badge {
+      display: block; }
+  .card .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px; }
+    .card .card-header .card-header-rate {
+      display: flex;
+      align-items: center; }
+      .card .card-header .card-header-rate i {
+        font-size: 12px;
+        margin-right: 5px;
+        color: #f54c4c; }
+  .card .card-description {
+    margin-left: 25px;
+    width: 100%; }
+  .card .card-header-budget {
+    font-weight: 300;
+    font-size: 13px;
+    color: #110650;
+    margin-top: 10px; }
+  .card .card-restaurant-address {
+    font-size: 14px;
+    margin-bottom: 25px; }
+  .card .card-description {
+    position: relative; }
+  .card .card-description h2 {
+    font-size: 22px;
+    margin: 12px 0 3px 0;
+    line-height: 22px; }
+  .card .card-description p {
+    font-size: 14px;
+    opacity: 0.7;
+    font-weight: lighter; }
+  .card a {
+    position: absolute;
+    text-decoration: none;
+    color: #110650;
+    width: 50px;
+    bottom: 0; }
+  .card .card-see-infos {
+    margin-top: 10px;
+    width: 82px;
+    color: #fff;
+    background-color: #f54c4c;
+    font-size: 12px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    border-radius: 3px; }
+    .card .card-see-infos:hover {
+      background-color: #ff6643; }
+    .card .card-see-infos:active {
+      background-color: #da3333; }
+
+@media screen and (max-width: 728px) {
+  .card {
+    flex-direction: column;
+    padding: 0;
+    width: 100%;
+    height: 100%; }
+    .card img {
+      width: 100%;
+      max-width: 500px;
+      height: 110px;
+      object-fit: cover; }
+    .card .card-description {
+      width: calc(100% - 20px);
+      margin: 10px; }
+    .card h2 {
+      font-size: 15px;
+      margin: 12px 0 3px 0;
+      line-height: 22px;
+      width: 100%;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap; } }
+
+.message-button {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: 0;
+  left: 15px;
+  background-color: #f54c4c;
+  color: #fff;
+  border-radius: 4px 4px 0 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 900;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 5px 7px;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2); }
+  .message-button i {
+    font-size: 32px;
+    margin: 3px 0 10px 0; }
+    .message-button i:hover {
+      opacity: 0.7; }
+
+.header {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100px;
+  justify-content: space-between;
+  z-index: 9999; }
+  .header .header-left {
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+    margin-top: -10px; }
+    .header .header-left a {
+      text-decoration: none; }
+    .header .header-left .foodlab-logo {
+      font-family: "Ceviche One";
+      font-size: 36px;
+      margin: 0 70px;
+      color: #f54c4c;
+      letter-spacing: -1px;
+      cursor: pointer; }
+      .header .header-left .foodlab-logo:hover {
+        animation: colorHover 4s infinite; }
+      .header .header-left .foodlab-logo i {
+        font-size: 24px; }
+  .header .header-right {
+    display: flex;
+    flex-direction: row;
+    margin-right: 70px;
+    font-size: 14px;
+    width: 100%;
+    justify-content: flex-end;
+    text-align: end;
+    margin-top: 5px; }
+    .header .header-right .menu-link {
+      text-decoration: none;
+      color: #110650;
+      margin-left: 50px;
+      cursor: pointer;
+      font-size: 11px;
+      text-transform: uppercase;
+      font-weight: 900;
+      transition: 0.5s all ease; }
+      .header .header-right .menu-link .menu-underline {
+        margin-top: 5px;
+        border-top: 1px solid transparent;
+        width: 0px; }
+      .header .header-right .menu-link:hover {
+        color: #f54c4c; }
+        .header .header-right .menu-link:hover .menu-underline {
+          border-top: 1px solid #f54c4c;
+          animation: 1s menuUnderline;
+          animation-fill-mode: forwards; }
+      .header .header-right .menu-link:active {
+        color: #da3333; }
+        .header .header-right .menu-link:active .menu-underline {
+          border-top: 1px solid #da3333;
+          animation: 1s menuUnderline;
+          animation-fill-mode: forwards; }
+    .header .header-right .selected-menu-item {
+      color: #f54c4c; }
+
+.header-mobile {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 60px;
+  justify-content: space-between;
+  z-index: 9999;
+  box-shadow: 2px 2px 12px rgba(214, 31, 31, 0.1); }
+  .header-mobile .header-left {
+    display: flex;
+    flex-direction: row; }
+    .header-mobile .header-left a {
+      text-decoration: none; }
+    .header-mobile .header-left .foodlab-logo {
+      font-family: "Ceviche One";
+      font-size: 32px;
+      margin: 0 25px;
+      color: #f54c4c;
+      letter-spacing: -1px;
+      cursor: pointer; }
+      .header-mobile .header-left .foodlab-logo:hover {
+        animation: colorHover 5s infinite; }
+      .header-mobile .header-left .foodlab-logo i {
+        font-size: 20px; }
+  .header-mobile .header-right {
+    margin-right: 30px;
+    font-size: 14px;
+    color: #f54c4c;
+    cursor: pointer; }
+    .header-mobile .header-right .dropdown-menu-mobile {
+      position: absolute;
+      display: flex;
+      z-index: 999;
+      flex-direction: column;
+      top: 60px;
+      right: 0;
+      padding: 40px 40px 0 40px;
+      background-color: #fff;
+      box-shadow: -5px 15px 25px rgba(0, 0, 0, 0.3); }
+    .header-mobile .header-right .dropdown-menu-mobile-overlay {
+      position: fixed;
+      z-index: 998;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #110650;
+      opacity: 0.5; }
+    .header-mobile .header-right .menu-link {
+      text-decoration: none;
+      color: #110650;
+      margin-bottom: 50px;
+      font-size: 11px;
+      text-transform: uppercase;
+      font-weight: 900;
+      cursor: pointer; }
+    .header-mobile .header-right .menu-link:hover {
+      color: #f54c4c; }
+
+.keys-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 20px; }
+  .keys-wrapper .selection-button {
+    padding: 3px 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    font-size: 12px;
+    background-color: #f54c4c;
+    color: #fff; }
+    .keys-wrapper .selection-button:hover {
+      transition: all 0.7s ease;
+      background-color: #ff6643; }
+    .keys-wrapper .selection-button:active {
+      background-color: #da3333; }
+  .keys-wrapper .filter-selection-wrapper {
+    position: absolute;
+    right: 20px;
+    top: 43px;
+    z-index: 998;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    max-width: 300px;
+    padding: 10px;
+    box-shadow: 5px 5px 15px rgba(214, 31, 31, 0.2); }
+  .keys-wrapper .badge-wrapper {
+    position: relative;
+    cursor: pointer; }
+    .keys-wrapper .badge-wrapper .icon-wrapper {
+      box-shadow: none !important;
+      background-color: none !important;
+      padding: 8px; }
+    .keys-wrapper .badge-wrapper .tooltip-badge {
+      display: none;
+      top: 35px;
+      right: 0px; }
+    .keys-wrapper .badge-wrapper:hover .tooltip-badge {
+      display: block; }
+
+.home-wrapper .home-hero-scene {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 100px); }
+  .home-wrapper .home-hero-scene .home-hero-scene-intro-wrapper {
+    position: relative;
+    width: 40%;
+    height: 100%; }
+  .home-wrapper .home-hero-scene .home-hero-scene-intro {
+    display: flex;
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    z-index: 2;
+    opacity: 0;
+    flex-direction: column;
+    justify-content: center;
+    animation: 2s slideFromLeftHome;
+    animation-fill-mode: forwards;
+    animation-delay: 1s; }
+    .home-wrapper .home-hero-scene .home-hero-scene-intro .home-catchphrase {
+      font-size: 56px;
+      font-weight: 900;
+      color: #110650; }
+    .home-wrapper .home-hero-scene .home-hero-scene-intro .home-catchphrase-underline {
+      background: -webkit-linear-gradient(0deg, #ff6242 3%, #de0505 100%);
+      height: 3px;
+      margin-top: 30px;
+      width: 50%;
+      animation: 2s underlineHome; }
+    .home-wrapper .home-hero-scene .home-hero-scene-intro .home-subtitle {
+      font-size: 18px;
+      margin-top: 30px;
+      line-height: 23px; }
+  .home-wrapper .home-hero-scene .home-hero-scene-image-overlay {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: #fff;
+    animation: 2s overlayHome;
+    animation-fill-mode: forwards; }
+  .home-wrapper .home-hero-scene .home-hero-scene-image {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 100%;
+    background-image: url("/hero.jpeg");
+    background-attachment: fixed;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain; }
+    .home-wrapper .home-hero-scene .home-hero-scene-image .button-home-go {
+      position: relative;
+      overflow: hidden;
+      background: -webkit-linear-gradient(0deg, #ff6242 3%, #de0505 100%);
+      border: none;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1) !important;
+      height: 56px;
+      width: 25%;
+      border-radius: 0 32px 32px 0;
+      cursor: pointer;
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-family: "Montserrat";
+      color: #fff;
+      font-size: 11px;
+      -webkit-font-smoothing: antialiased;
+      transition: 0.5s all ease; }
+      .home-wrapper .home-hero-scene .home-hero-scene-image .button-home-go:hover {
+        background-color: #ff6643; }
+      .home-wrapper .home-hero-scene .home-hero-scene-image .button-home-go:active {
+        background-color: #da3333;
+        transition: none; }
+      .home-wrapper .home-hero-scene .home-hero-scene-image .button-home-go .btn-first-text, .home-wrapper .home-hero-scene .home-hero-scene-image .button-home-go .btn-second-text {
+        position: absolute;
+        top: 21px;
+        width: 200px; }
+      .home-wrapper .home-hero-scene .home-hero-scene-image .button-home-go .btn-first-text {
+        left: -182px;
+        animation: slideToRightText 8s linear infinite; }
+      .home-wrapper .home-hero-scene .home-hero-scene-image .button-home-go .btn-second-text {
+        left: -182px;
+        animation: slideToRightText 8s linear infinite;
+        animation-delay: 4s; }
+    .home-wrapper .home-hero-scene .home-hero-scene-image .filters-react-select {
+      width: 25%;
+      z-index: 999; }
+      .home-wrapper .home-hero-scene .home-hero-scene-image .filters-react-select svg {
+        fill: #9397b8; }
+    .home-wrapper .home-hero-scene .home-hero-scene-image .css-1wa3eu0-placeholder {
+      color: #9397b8; }
+    .home-wrapper .home-hero-scene .home-hero-scene-image .css-yk16xz-control, .home-wrapper .home-hero-scene .home-hero-scene-image .css-1pahdxg-control {
+      border-radius: 32px 0 0 32px !important;
+      padding-left: 12px !important;
+      padding-right: 5px !important;
+      font-size: 12px !important;
+      height: 56px !important;
+      border: none !important;
+      color: #12105a;
+      box-shadow: 2px 2px 10px rgba(31, 62, 214, 0.1); }
+    .home-wrapper .home-hero-scene .home-hero-scene-image .filter-type .css-yk16xz-control, .home-wrapper .home-hero-scene .home-hero-scene-image .filter-type .css-1pahdxg-control {
+      border-radius: 0 !important; }
+    .home-wrapper .home-hero-scene .home-hero-scene-image .css-26l3qy-menu {
+      font-size: 12px !important; }
+    .home-wrapper .home-hero-scene .home-hero-scene-image .css-1okebmr-indicatorSeparator {
+      display: none; }
+  .home-wrapper .home-hero-scene .scroll-animation {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 30px;
+    height: 60px;
+    bottom: 5vh;
+    left: calc(50vw - 15px);
+    border: 3px solid #110650;
+    border-radius: 32px; }
+    .home-wrapper .home-hero-scene .scroll-animation .mouse-scroll-ball {
+      width: 6px;
+      height: 6px;
+      margin-top: 10px;
+      border-radius: 50%;
+      background-color: #110650;
+      animation: 4s scrollBall infinite; }
+
+.home-wrapper .home-weekly-new, .home-wrapper .home-new {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 150px 0;
+  animation: 1s slideFromBottomMiddleSection; }
+  .home-wrapper .home-weekly-new .home-weekly-new-title, .home-wrapper .home-weekly-new .home-new-title, .home-wrapper .home-new .home-weekly-new-title, .home-wrapper .home-new .home-new-title {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px; }
+    .home-wrapper .home-weekly-new .home-weekly-new-title i, .home-wrapper .home-weekly-new .home-new-title i, .home-wrapper .home-new .home-weekly-new-title i, .home-wrapper .home-new .home-new-title i {
+      position: relative;
+      color: #f54c4c;
+      animation: 3s rotateSvg infinite; }
+    .home-wrapper .home-weekly-new .home-weekly-new-title .home-weekly-title-text, .home-wrapper .home-weekly-new .home-weekly-new-title .home-new-title-text, .home-wrapper .home-weekly-new .home-new-title .home-weekly-title-text, .home-wrapper .home-weekly-new .home-new-title .home-new-title-text, .home-wrapper .home-new .home-weekly-new-title .home-weekly-title-text, .home-wrapper .home-new .home-weekly-new-title .home-new-title-text, .home-wrapper .home-new .home-new-title .home-weekly-title-text, .home-wrapper .home-new .home-new-title .home-new-title-text {
+      margin: 0 20px; }
+  .home-wrapper .home-weekly-new .new-restaurants-container, .home-wrapper .home-new .new-restaurants-container {
+    display: flex;
+    flex-direction: column;
+    width: 60%; }
+  .home-wrapper .home-weekly-new .weekly-restaurant, .home-wrapper .home-weekly-new .new-restaurant, .home-wrapper .home-new .weekly-restaurant, .home-wrapper .home-new .new-restaurant {
+    margin-top: 20px;
+    width: 60%;
+    cursor: pointer;
+    box-shadow: 2px 2px 12px rgba(214, 31, 31, 0.1); }
+  .home-wrapper .home-weekly-new .new-restaurant, .home-wrapper .home-new .new-restaurant {
+    width: 100%; }
+  .home-wrapper .home-weekly-new .weekly-restaurant:hover, .home-wrapper .home-weekly-new .new-restaurant:hover, .home-wrapper .home-new .weekly-restaurant:hover, .home-wrapper .home-new .new-restaurant:hover {
+    transition: all 0.7s ease;
+    box-shadow: 5px 5px 25px rgba(214, 31, 31, 0.2); }
+
+.home-wrapper .home-foodlab-concept {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: flex-end;
+  justify-content: space-around;
+  margin-left: -20%;
+  background: #ffefeb;
+  padding: 20%;
+  font-weight: 700; }
+  .home-wrapper .home-foodlab-concept .home-concept-step {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 17%;
+    align-items: center;
+    justify-content: center; }
+    .home-wrapper .home-foodlab-concept .home-concept-step img {
+      position: relative;
+      width: 100%;
+      height: auto;
+      max-height: 130px; }
+  .home-wrapper .home-foodlab-concept .home-step-one img, .home-wrapper .home-foodlab-concept .home-step-three img {
+    animation: 5s rotateImageOne infinite; }
+  .home-wrapper .home-foodlab-concept .home-step-two img {
+    animation: 5s rotateImageTwo infinite; }
+  .home-wrapper .home-foodlab-concept .home-concept-description {
+    margin-top: 60px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 36px; }
+    .home-wrapper .home-foodlab-concept .home-concept-description span {
+      color: #fff;
+      background-color: #f54c4c;
+      box-shadow: 10px 0 0 #f54c4c, -10px 0 0 #f54c4c;
+      padding: 7px 2px; }
+
+.home-wrapper .footer-img {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  background-color: #ffefea; }
+  .home-wrapper .footer-img img {
+    width: auto;
+    margin-right: -2px; }
+  .home-wrapper .footer-img .fried-potatoes {
+    height: 20px; }
+  .home-wrapper .footer-img .fried-chicken {
+    height: 40px; }
+  .home-wrapper .footer-img .hot-dog {
+    position: absolute;
+    height: 50px;
+    right: 18%; }
+  .home-wrapper .footer-img .cola {
+    margin-right: 10%;
+    height: 30px; }
+
+.home-wrapper .home-footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100px;
+  background-color: #f54c4c;
+  color: #fff;
+  font-weight: 900;
+  font-size: 12px; }
+  .home-wrapper .home-footer .home-footer-brand {
+    margin: 0 70px;
+    letter-spacing: 1px;
+    text-transform: uppercase; }
+    .home-wrapper .home-footer .home-footer-brand i {
+      margin-right: 5px; }
+
+.home-wrapper .home-contact {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #f54c4c;
+  background-color: #ffefea; }
+  .home-wrapper .home-contact .gradient-stroke {
+    background: -webkit-linear-gradient(0deg, #ff6242 3%, #de0505 100%);
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 4px transparent;
+    color: #ffefea;
+    font-size: 60px;
+    font-weight: 900;
+    width: 50vw; }
+  .home-wrapper .home-contact .go-to-contact {
+    position: relative;
+    overflow: hidden;
+    z-index: 999;
+    background: -webkit-linear-gradient(0deg, #ff6242 3%, #de0505 100%);
+    border: none;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1) !important;
+    height: 52px;
+    width: 230px;
+    border-radius: 32px;
+    cursor: pointer;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: "Montserrat";
+    color: #fff;
+    font-size: 12px;
+    margin-top: 50px;
+    -webkit-font-smoothing: antialiased;
+    transition: 0.5s all ease; }
+    .home-wrapper .home-contact .go-to-contact:hover {
+      background-color: #ff6643; }
+    .home-wrapper .home-contact .go-to-contact:active {
+      background-color: #da3333;
+      transition: none; }
+    .home-wrapper .home-contact .go-to-contact .btn-first-text, .home-wrapper .home-contact .go-to-contact .btn-second-text {
+      position: absolute;
+      top: 19px;
+      width: 200px; }
+    .home-wrapper .home-contact .go-to-contact .btn-first-text {
+      left: -182px;
+      animation: slideToRightText 8s linear infinite; }
+    .home-wrapper .home-contact .go-to-contact .btn-second-text {
+      left: -182px;
+      animation: slideToRightText 8s linear infinite;
+      animation-delay: 4s; }
+  .home-wrapper .home-contact .contact-icon-container {
+    position: absolute;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh; }
+  .home-wrapper .home-contact img {
+    position: absolute;
+    height: 50px;
+    width: auto; }
+    .home-wrapper .home-contact img.contact-burger {
+      top: 15vh;
+      left: 30vw;
+      transform: rotate(42deg); }
+    .home-wrapper .home-contact img.contact-lobster {
+      top: 45vh;
+      left: 15vw;
+      transform: rotate(30deg); }
+    .home-wrapper .home-contact img.contact-salad {
+      top: 75vh;
+      left: 30vw;
+      transform: rotate(-42deg); }
+    .home-wrapper .home-contact img.contact-ice-cream {
+      top: 15vh;
+      right: 30vw;
+      transform: rotate(-42deg); }
+    .home-wrapper .home-contact img.contact-pizza {
+      top: 45vh;
+      right: 15vw;
+      transform: rotate(2deg); }
+    .home-wrapper .home-contact img.contact-pasta {
+      top: 75vh;
+      right: 30vw;
+      transform: rotate(42deg); }
+
+@media screen and (max-width: 728px) {
+  .home-wrapper .home-hero-scene {
+    height: 100vh;
+    flex-direction: column;
+    position: relative; }
+    .home-wrapper .home-hero-scene .home-hero-scene-image {
+      width: 100vw;
+      height: 100vh;
+      background-size: cover;
+      flex-direction: column; }
+      .home-wrapper .home-hero-scene .home-hero-scene-image .filters-react-select, .home-wrapper .home-hero-scene .home-hero-scene-image .button-home-go {
+        width: 80%;
+        border-radius: 32px;
+        margin-bottom: 10px;
+        height: 45px; }
+        .home-wrapper .home-hero-scene .home-hero-scene-image .filters-react-select .btn-first-text, .home-wrapper .home-hero-scene .home-hero-scene-image .filters-react-select .btn-second-text, .home-wrapper .home-hero-scene .home-hero-scene-image .button-home-go .btn-first-text, .home-wrapper .home-hero-scene .home-hero-scene-image .button-home-go .btn-second-text {
+          top: 16px; }
+        .home-wrapper .home-hero-scene .home-hero-scene-image .filters-react-select .css-yk16xz-control, .home-wrapper .home-hero-scene .home-hero-scene-image .filters-react-select .css-yk16xz-control, .home-wrapper .home-hero-scene .home-hero-scene-image .button-home-go .css-yk16xz-control, .home-wrapper .home-hero-scene .home-hero-scene-image .button-home-go .css-yk16xz-control {
+          border-radius: 32px !important;
+          height: 45px !important; }
+    .home-wrapper .home-hero-scene .home-hero-scene-intro-wrapper {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      padding: 0 40px; }
+      .home-wrapper .home-hero-scene .home-hero-scene-intro-wrapper .home-hero-scene-intro {
+        display: flex;
+        position: unset;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 10vh; }
+        .home-wrapper .home-hero-scene .home-hero-scene-intro-wrapper .home-hero-scene-intro .home-catchphrase {
+          font-size: 20px;
+          text-align: center;
+          font-weight: 100; }
+        .home-wrapper .home-hero-scene .home-hero-scene-intro-wrapper .home-hero-scene-intro .home-catchphrase-underline {
+          background: -webkit-linear-gradient(0deg, #ff6242 3%, #de0505 100%);
+          height: 3px;
+          margin-top: 10px;
+          width: 50%;
+          text-align: center; }
+        .home-wrapper .home-hero-scene .home-hero-scene-intro-wrapper .home-hero-scene-intro .home-subtitle {
+          font-size: 14px;
+          margin-top: 10px;
+          line-height: 23px;
+          text-align: center; }
+  .home-wrapper .home-weekly-new, .home-wrapper .home-new {
+    margin-top: 50px;
+    padding: 50px 0; }
+    .home-wrapper .home-weekly-new .new-restaurants-container, .home-wrapper .home-new .new-restaurants-container {
+      width: 100%; }
+    .home-wrapper .home-weekly-new .home-weekly-new-title, .home-wrapper .home-weekly-new .home-new-title, .home-wrapper .home-new .home-weekly-new-title, .home-wrapper .home-new .home-new-title {
+      font-weight: 100;
+      width: 80%;
+      text-align: center; }
+    .home-wrapper .home-weekly-new .weekly-restaurant, .home-wrapper .home-weekly-new .new-restaurant, .home-wrapper .home-new .weekly-restaurant, .home-wrapper .home-new .new-restaurant {
+      width: 100%; }
+  .home-wrapper .home-foodlab-concept {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px; }
+    .home-wrapper .home-foodlab-concept .home-concept-step {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      justify-content: center; }
+      .home-wrapper .home-foodlab-concept .home-concept-step img {
+        width: 80%;
+        height: auto;
+        max-height: 130px; }
+    .home-wrapper .home-foodlab-concept .home-concept-description {
+      width: 80%;
+      margin-top: 40px;
+      margin-bottom: 80px;
+      font-size: 14px;
+      text-align: center; }
+  .home-wrapper .home-contact .gradient-stroke {
+    width: 80vw;
+    font-size: 50px; }
+  .home-wrapper .home-contact img.contact-burger, .home-wrapper .home-contact img.contact-salad {
+    left: -2vw; }
+  .home-wrapper .home-contact img.contact-ice-cream, .home-wrapper .home-contact img.contact-pasta {
+    right: -2vw; }
+  .home-wrapper .home-contact .contact-pizza, .home-wrapper .home-contact .contact-lobster {
+    display: none; }
+  .home-wrapper .footer-img {
+    display: none; }
+  .home-wrapper .home-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 60px;
+    background-color: #ffe1db;
+    color: #f54c4c;
+    font-size: 12px; }
+    .home-wrapper .home-footer .home-footer-brand {
+      margin: 0 40px;
+      letter-spacing: 1px;
+      text-transform: uppercase; }
+      .home-wrapper .home-footer .home-footer-brand i {
+        margin-right: 5px; } }
+
+@media screen and (max-width: 480px) {
+  .home-wrapper .home-hero-scene .scroll-animation {
+    display: none; } }
+
+.restaurant-counter {
+  margin: 20px 35px 20px 35px;
+  font-size: 12px;
+  opacity: 0.7; }
+
+.filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  margin-bottom: -12px;
+  margin-top: -10px; }
+  .filters .fa-search {
+    margin-right: 10px;
+    color: #9397b8; }
+  .filters .button-filter-reinitialize {
+    border: none;
+    color: #9397b8;
+    box-shadow: 2px 2px 10px rgba(31, 62, 214, 0.1);
+    height: 40px;
+    border-radius: 32px;
+    cursor: pointer;
+    font-weight: 300;
+    font-family: "Montserrat";
+    font-size: 12px;
+    -webkit-font-smoothing: antialiased;
+    padding: 0 15px; }
+  .filters .filters-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 25px; }
+  .filters .filters-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 25px; }
+    .filters .filters-right .button-toggle-map {
+      display: flex;
+      align-items: center;
+      margin-left: 20px;
+      font-weight: 300;
+      font-family: "Montserrat";
+      color: #110650;
+      font-size: 12px;
+      min-width: 110px;
+      -webkit-font-smoothing: antialiased; }
+      .filters .filters-right .button-toggle-map .switch-toggle-map {
+        display: flex;
+        align-items: center;
+        height: 36px;
+        border-radius: 32px;
+        cursor: pointer;
+        padding: 0 3px;
+        margin-left: 7px;
+        min-width: 50px; }
+        .filters .filters-right .button-toggle-map .switch-toggle-map:hover {
+          opacity: 0.7; }
+        .filters .filters-right .button-toggle-map .switch-toggle-map .toggle-circle {
+          background: #fff;
+          height: 30px;
+          width: 30px;
+          border-radius: 50%; }
+  .filters .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] {
+    padding: 2px 2px 2px 4px !important;
+    border-radius: 32px;
+    margin-top: -1px;
+    font-family: "Montserrat";
+    font-size: 12px !important;
+    height: 39px;
+    color: #12105a;
+    box-shadow: 2px 2px 10px rgba(31, 62, 214, 0.1); }
+  .filters .MuiOutlinedInput-notchedOutline {
+    border: none !important; }
+  .filters .MuiAutocomplete-popupIndicator .MuiIconButton-label {
+    display: none; }
+  .filters .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] .MuiAutocomplete-input:first-child {
+    padding-left: 15px !important; }
+  .filters .filters-react-select {
+    width: 150px;
+    z-index: 999; }
+    .filters .filters-react-select svg {
+      fill: #9397b8; }
+  .filters .css-yk16xz-control, .filters .css-1pahdxg-control {
+    border-radius: 32px !important;
+    padding-left: 8px !important;
+    font-size: 12px !important;
+    margin-right: 10px;
+    height: 40px !important;
+    border: none !important;
+    box-shadow: 2px 2px 10px rgba(31, 62, 214, 0.1) !important; }
+  .filters .css-26l3qy-menu {
+    font-size: 12px !important;
+    color: #110650 !important; }
+  .filters .css-1okebmr-indicatorSeparator {
+    display: none; }
+  .filters .css-1wa3eu0-placeholder {
+    color: #9397b8; }
+
+.counter-keys-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px; }
+  .counter-keys-wrapper i {
+    margin-left: 2px;
+    cursor: pointer; }
+    .counter-keys-wrapper i:hover {
+      opacity: 0.6; }
+
+.google-map {
+  position: relative;
+  width: 55%;
+  height: 100%; }
+  .google-map .gm-style .gm-style-iw-c {
+    padding: 0 !important; }
+  .google-map .gm-style .gm-style-iw-t:after {
+    background: linear-gradient(45deg, #000, 50%, rgba(255, 255, 255, 0) 51%, rgba(255, 255, 255, 0) 100%); }
+  .google-map .gm-style .gm-style-iw-d {
+    overflow: hidden !important; }
+  .google-map .gm-ui-hover-effect {
+    margin: 5px !important; }
+  .google-map .gm-svpc, .google-map div[title="Afficher les images satellite"], .google-map div[title="Afficher un plan de ville"] {
+    display: none !important; }
+  .google-map .marker-info-window {
+    max-height: 140px;
+    font-family: "Montserrat";
+    max-width: 200px;
+    cursor: pointer;
+    background-color: #000; }
+    .google-map .marker-info-window img {
+      max-height: 140px;
+      opacity: 0.6; }
+  .google-map .marker-header {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 15px;
+    left: 15px;
+    font-weight: 700;
+    color: #fff; }
+    .google-map .marker-header .marker-rating {
+      font-size: 14px; }
+    .google-map .marker-header .fa-star {
+      margin-right: 1px;
+      font-size: 12px; }
+  .google-map .marker-restaurant-name {
+    position: absolute;
+    color: #fff;
+    bottom: 35px;
+    left: 15px;
+    font-size: 18px;
+    font-weight: 900; }
+  .google-map .marker-restaurant-type {
+    position: absolute;
+    color: #fff;
+    bottom: 15px;
+    left: 15px;
+    font-size: 14px;
+    font-weight: 700; }
+
+.restaurant-list-with-rows {
+  position: relative;
+  overflow: scroll;
+  width: 45%;
+  animation: 1s slideFromBottomListingRow; }
+  .restaurant-list-with-rows .restaurant {
+    width: 100%;
+    cursor: pointer; }
+  .restaurant-list-with-rows .selected {
+    background-color: #e6e8ff; }
+  .restaurant-list-with-rows:first-child {
+    border-top: 1px solid #e6e8ff; }
+  .restaurant-list-with-rows .restaurant:hover {
+    transition: all 0.7s ease;
+    background-color: #e6e8ff; }
+  .restaurant-list-with-rows .card {
+    position: relative;
+    height: 125px;
+    color: #110650;
+    display: flex;
+    padding: 35px;
+    border-bottom: 1px solid #e6e8ff; }
+    .restaurant-list-with-rows .card img {
+      width: 100%;
+      max-width: 200px;
+      height: auto; }
+    .restaurant-list-with-rows .card img:hover {
+      transition: all 0.5s ease;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); }
+    .restaurant-list-with-rows .card .badge-wrapper {
+      position: absolute;
+      top: 42px;
+      left: 42px; }
+      .restaurant-list-with-rows .card .badge-wrapper .tooltip-badge {
+        display: none;
+        top: 0;
+        left: 30px; }
+      .restaurant-list-with-rows .card .badge-wrapper:hover .tooltip-badge {
+        display: block; }
+    .restaurant-list-with-rows .card .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px; }
+      .restaurant-list-with-rows .card .card-header .card-header-rate {
+        display: flex;
+        align-items: center; }
+        .restaurant-list-with-rows .card .card-header .card-header-rate i {
+          font-size: 12px;
+          margin-right: 5px;
+          color: #f54c4c; }
+    .restaurant-list-with-rows .card .card-description {
+      margin-left: 25px;
+      width: 100%; }
+    .restaurant-list-with-rows .card .card-header-budget {
+      font-weight: 300;
+      font-size: 13px;
+      color: #110650;
+      margin-top: 10px; }
+    .restaurant-list-with-rows .card .card-restaurant-address {
+      font-size: 14px;
+      margin-bottom: 25px; }
+    .restaurant-list-with-rows .card .card-description {
+      position: relative; }
+    .restaurant-list-with-rows .card .card-description h2 {
+      font-size: 22px;
+      margin: 12px 0 3px 0;
+      line-height: 22px; }
+    .restaurant-list-with-rows .card .card-description p {
+      font-size: 14px;
+      opacity: 0.7;
+      font-weight: lighter; }
+    .restaurant-list-with-rows .card a {
+      position: absolute;
+      text-decoration: none;
+      color: #110650;
+      width: 50px;
+      bottom: 0; }
+    .restaurant-list-with-rows .card .card-see-infos {
+      margin-top: 10px;
+      width: 82px;
+      color: white;
+      background-color: #f54c4c;
+      font-size: 12px;
+      padding: 5px 10px;
+      text-transform: uppercase;
+      font-weight: 900;
+      letter-spacing: 0.5px;
+      border-radius: 3px; }
+      .restaurant-list-with-rows .card .card-see-infos:hover {
+        background-color: #ff6643; }
+      .restaurant-list-with-rows .card .card-see-infos:active {
+        background-color: #da3333; }
+
+.restaurant-list-with-grid {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin-top: -25px;
+  animation: 1s slideFromBottomListingGrid; }
+  .restaurant-list-with-grid .restaurant {
+    position: relative;
+    display: flex;
+    background: #fff;
+    box-shadow: 5px 5px 15px rgba(214, 31, 31, 0.05);
+    justify-content: space-between;
+    width: calc(25% - 20px);
+    margin: 7px 10px;
+    height: 210px;
+    cursor: pointer; }
+    .restaurant-list-with-grid .restaurant .card {
+      flex-direction: column;
+      padding: 0;
+      width: 100%;
+      height: 100%; }
+      .restaurant-list-with-grid .restaurant .card img {
+        width: 100%;
+        max-width: 500px;
+        height: 110px;
+        object-fit: cover; }
+      .restaurant-list-with-grid .restaurant .card .card-description {
+        width: calc(100% - 20px);
+        margin: 10px; }
+      .restaurant-list-with-grid .restaurant .card h2 {
+        font-size: 15px;
+        margin: 12px 0 3px 0;
+        line-height: 22px;
+        width: 100%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap; }
+
+@media screen and (max-width: 728px) {
+  .filters-right {
+    display: none !important; }
+  .google-map {
+    display: none; }
+  .filters {
+    height: 100%;
+    justify-content: center;
+    margin-bottom: 0;
+    margin-top: 0px; }
+    .filters .fa-search {
+      display: none; }
+    .filters .filters-left {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 0;
+      flex-wrap: wrap; }
+      .filters .filters-left .MuiAutocomplete-root {
+        width: 100% !important;
+        margin: 10px 20px 20px 20px !important; }
+      .filters .filters-left .filters-react-select, .filters .filters-left .button-filter-reinitialize {
+        margin-bottom: 20px; }
+  .main-view {
+    height: 100%; }
+    .main-view a {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      z-index: 1; }
+    .main-view .restaurant-list-with-grid {
+      width: 100%;
+      padding: 20px 0; }
+      .main-view .restaurant-list-with-grid .restaurant {
+        width: calc(50% - 20px);
+        margin-left: 10px;
+        margin-bottom: 15px;
+        padding: 0; }
+        .main-view .restaurant-list-with-grid .restaurant .card-header-type {
+          top: 105px; } }
+
+@media screen and (max-width: 480px) {
+  .filters-right {
+    display: none !important; }
+  .google-map {
+    display: none; }
+  .filters {
+    height: 100%;
+    justify-content: center;
+    margin-bottom: 0;
+    margin-top: 0px; }
+    .filters .fa-search {
+      display: none; }
+    .filters .filters-left {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 0;
+      flex-wrap: wrap; }
+      .filters .filters-left .MuiAutocomplete-root {
+        width: 100% !important;
+        margin: 10px 20px 20px 20px !important; }
+      .filters .filters-left .filters-react-select, .filters .filters-left .button-filter-reinitialize {
+        margin-bottom: 20px; }
+  .main-view {
+    height: 100%; }
+    .main-view .restaurant-list-with-grid {
+      width: 100%;
+      padding: 20px 0; }
+      .main-view .restaurant-list-with-grid .restaurant {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 15px;
+        padding: 0; }
+        .main-view .restaurant-list-with-grid .restaurant .card-header-type {
+          top: 105px; } }
+
+.detail-page-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 80px);
+  overflow: scroll; }
+  .detail-page-wrapper .popin-suggestion-navigation {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    z-index: 999;
+    bottom: 70px;
+    left: 20px;
+    max-width: 340px;
+    background-color: #f54c4c;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(214, 31, 31, 0.1);
+    padding: 15px 20px;
+    cursor: pointer;
+    line-height: 25px;
+    font-size: 14px;
+    transition: 0.5s all ease; }
+    .detail-page-wrapper .popin-suggestion-navigation i {
+      margin-left: 20px; }
+    .detail-page-wrapper .popin-suggestion-navigation:hover {
+      opacity: 0.8; }
+  .detail-page-wrapper .button-go-back {
+    position: absolute;
+    background-color: #f54c4c;
+    padding: 5px 8px;
+    color: #fff;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 11px; }
+    .detail-page-wrapper .button-go-back:hover {
+      background-color: #ff6643; }
+    .detail-page-wrapper .button-go-back:active {
+      background-color: #da3333; }
+  .detail-page-wrapper .detail-page-award {
+    position: absolute;
+    top: 220px;
+    left: 15px;
+    color: #fff;
+    background-color: rgba(255, 103, 103, 0.8);
+    padding: 5px 10px;
+    font-style: italic;
+    font-size: 13px; }
+  .detail-page-wrapper .top-section {
+    display: flex; }
+    .detail-page-wrapper .top-section .detail-page-big-img {
+      width: 40%;
+      height: 100%;
+      background-attachment: fixed;
+      margin-right: 30px;
+      background-position: left;
+      background-size: 1000px;
+      background-repeat: no-repeat; }
+    .detail-page-wrapper .top-section .detail-page-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 60%; }
+      .detail-page-wrapper .top-section .detail-page-content .detail-page-title {
+        margin-left: -60px;
+        margin-top: 65px;
+        font-size: 36px;
+        font-weight: 900;
+        background-color: #f54c4c;
+        padding: 5px 15px;
+        color: #fff;
+        animation: 1s slideFromLeftDesktop; }
+      .detail-page-wrapper .top-section .detail-page-content .detail-page-resume {
+        margin-top: 20px;
+        width: 100%;
+        column-count: 2;
+        column-gap: 20px;
+        list-style: none;
+        padding: 0;
+        font-size: 13px;
+        animation: 1s slideFromBottomTopSection; }
+        .detail-page-wrapper .top-section .detail-page-content .detail-page-resume .resume-rate {
+          font-weight: 900;
+          color: #f54c4c;
+          font-size: 14px; }
+        .detail-page-wrapper .top-section .detail-page-content .detail-page-resume .bolder {
+          font-weight: 900;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+          font-size: 11px; }
+        .detail-page-wrapper .top-section .detail-page-content .detail-page-resume .see-menu {
+          margin-top: 10px;
+          width: 50px;
+          color: #110650;
+          text-decoration: none;
+          background-color: #ffe1db;
+          font-size: 12px;
+          padding: 5px 10px;
+          cursor: pointer;
+          transition: 0.5s all ease; }
+        .detail-page-wrapper .top-section .detail-page-content .detail-page-resume .see-menu:hover {
+          background-color: #f54c4c; }
+        .detail-page-wrapper .top-section .detail-page-content .detail-page-resume li {
+          margin-bottom: 20px; }
+  .detail-page-wrapper .middle-section {
+    display: flex;
+    width: 100%;
+    margin: 70px 0 30px 0;
+    animation: 1s slideFromBottomMiddleSection; }
+    .detail-page-wrapper .middle-section .detail-page-reviews {
+      display: flex;
+      width: 100%;
+      align-items: flex-start; }
+      .detail-page-wrapper .middle-section .detail-page-reviews .foodlab-review {
+        width: calc(32% - 70px);
+        font-size: 16px;
+        font-weight: 100;
+        line-height: 32px;
+        margin: 0 50px; }
+        .detail-page-wrapper .middle-section .detail-page-reviews .foodlab-review .foodlab-review-title {
+          font-size: 13px;
+          font-weight: 900;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+          margin-bottom: -5px; }
+      .detail-page-wrapper .middle-section .detail-page-reviews .customers-reviews {
+        width: 30%;
+        list-style: none;
+        font-size: 14px;
+        padding: 0;
+        margin: 0; }
+        .detail-page-wrapper .middle-section .detail-page-reviews .customers-reviews li {
+          margin-bottom: 20px; }
+          .detail-page-wrapper .middle-section .detail-page-reviews .customers-reviews li .review-date {
+            font-size: 12px;
+            font-style: italic;
+            opacity: 0.5;
+            margin-bottom: 5px; }
+          .detail-page-wrapper .middle-section .detail-page-reviews .customers-reviews li .review-comment {
+            text-align: justify; }
+    .detail-page-wrapper .middle-section .detail-page-cropped-img {
+      position: absolute;
+      right: 0;
+      top: 350px;
+      width: 30%;
+      height: 40%;
+      background-attachment: fixed;
+      background-position: right;
+      background-size: 1000px;
+      background-repeat: no-repeat; }
+  .detail-page-wrapper .bottom-section {
+    display: flex;
+    width: calc(100% - 100px);
+    margin: 30px 50px;
+    flex-direction: column; }
+    .detail-page-wrapper .bottom-section .bottom-section-title {
+      font-size: 24px;
+      font-weight: 100;
+      border-top: 1px solid #e6e8ff;
+      padding-top: 30px;
+      margin-bottom: 20px; }
+    .detail-page-wrapper .bottom-section .similar-restaurants-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      margin-bottom: 30px; }
+      .detail-page-wrapper .bottom-section .similar-restaurants-wrapper .similar-restaurant-card {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 3px 3px 10px rgba(214, 31, 31, 0.07);
+        width: calc(33% - 30px);
+        max-height: 70px;
+        cursor: pointer;
+        margin: 15px;
+        transition: 0.5s all ease; }
+        .detail-page-wrapper .bottom-section .similar-restaurants-wrapper .similar-restaurant-card .similar-restaurant-description {
+          display: flex;
+          flex-direction: column;
+          margin: 20px;
+          width: calc(70% - 40px); }
+        .detail-page-wrapper .bottom-section .similar-restaurants-wrapper .similar-restaurant-card .similar-restaurant-image {
+          height: 100%;
+          width: auto;
+          width: 30%; }
+          .detail-page-wrapper .bottom-section .similar-restaurants-wrapper .similar-restaurant-card .similar-restaurant-image img {
+            height: 100%;
+            width: 100%;
+            border-radius: 0 5px 5px 0;
+            object-fit: cover; }
+        .detail-page-wrapper .bottom-section .similar-restaurants-wrapper .similar-restaurant-card .similar-restaurant-card-name {
+          font-size: 15px;
+          width: 100%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis; }
+        .detail-page-wrapper .bottom-section .similar-restaurants-wrapper .similar-restaurant-card .similar-restaurant-card-rate {
+          font-size: 13px;
+          margin: 1px 0 3px 0;
+          font-weight: 900;
+          color: #f54c4c;
+          width: 100%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis; }
+        .detail-page-wrapper .bottom-section .similar-restaurants-wrapper .similar-restaurant-card .similar-restaurant-card-address {
+          font-size: 12px;
+          font-style: italic;
+          width: 100%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis; }
+        .detail-page-wrapper .bottom-section .similar-restaurants-wrapper .similar-restaurant-card:hover {
+          box-shadow: 5px 5px 10px rgba(214, 31, 31, 0.1); }
+
+.detail-page-footer {
+  position: fixed;
+  display: flex;
+  bottom: 0;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100% - 40px);
+  margin: 20px; }
+  .detail-page-footer .footer-button-left, .detail-page-footer .footer-button-right {
+    height: 40px;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #f54c4c;
+    box-shadow: 2px 2px 10px rgba(214, 31, 31, 0.1);
+    transition: 0.5s all ease; }
+    .detail-page-footer .footer-button-left:hover, .detail-page-footer .footer-button-right:hover {
+      opacity: 0.5; }
+  .detail-page-footer .footer-button-shiny {
+    animation: suggestionGlow 2s infinite; }
+
+.detail-page-wrapper-mobile {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: column; }
+  .detail-page-wrapper-mobile .button-go-back {
+    position: absolute;
+    background-color: #f54c4c;
+    padding: 5px 8px;
+    color: #fff;
+    top: 20px;
+    left: 20px;
+    border-radius: 4px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 11px;
+    cursor: pointer; }
+    .detail-page-wrapper-mobile .button-go-back:hover {
+      background-color: #ff6643; }
+  .detail-page-wrapper-mobile .detail-page-award {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    max-width: 50%;
+    color: #fff;
+    background-color: rgba(255, 103, 103, 0.8);
+    padding: 5px 10px;
+    font-style: italic;
+    font-size: 13px; }
+  .detail-page-wrapper-mobile .detail-page-big-img {
+    height: 250px; }
+  .detail-page-wrapper-mobile .detail-page-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: 1s slideFromBottomListingRow; }
+    .detail-page-wrapper-mobile .detail-page-content .detail-page-title {
+      margin-top: -30px;
+      margin-bottom: 15px;
+      font-size: 36px;
+      font-weight: 900;
+      background-color: #f54c4c;
+      padding: 5px 15px;
+      color: #fff;
+      animation: 1s slideFromLeftMobile; }
+    .detail-page-wrapper-mobile .detail-page-content .detail-page-resume {
+      margin: 25px;
+      column-count: 2;
+      column-gap: 20px;
+      list-style: none;
+      padding: 0;
+      font-size: 13px; }
+      .detail-page-wrapper-mobile .detail-page-content .detail-page-resume .resume-rate {
+        font-weight: 900;
+        color: #f54c4c;
+        font-size: 14px; }
+      .detail-page-wrapper-mobile .detail-page-content .detail-page-resume .bolder {
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-size: 11px; }
+      .detail-page-wrapper-mobile .detail-page-content .detail-page-resume .see-menu {
+        margin-top: 10px;
+        width: 50px;
+        height: 32px;
+        color: #110650;
+        text-decoration: none;
+        background-color: #ffe1db;
+        font-size: 12px;
+        padding: 5px 10px;
+        cursor: pointer; }
+      .detail-page-wrapper-mobile .detail-page-content .detail-page-resume .see-menu:hover {
+        background-color: #f54c4c; }
+      .detail-page-wrapper-mobile .detail-page-content .detail-page-resume li {
+        margin-bottom: 20px; }
+  .detail-page-wrapper-mobile .detail-page-reviews {
+    display: flex;
+    align-items: center;
+    flex-direction: column; }
+    .detail-page-wrapper-mobile .detail-page-reviews .foodlab-review {
+      font-size: 16px;
+      font-weight: 100;
+      line-height: 32px;
+      margin: 20px 50px; }
+      .detail-page-wrapper-mobile .detail-page-reviews .foodlab-review .foodlab-review-title {
+        font-size: 13px;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: -5px; }
+    .detail-page-wrapper-mobile .detail-page-reviews .customers-reviews {
+      list-style: none;
+      font-size: 14px;
+      padding: 0;
+      margin: 20px 25px; }
+      .detail-page-wrapper-mobile .detail-page-reviews .customers-reviews li {
+        margin-bottom: 30px; }
+        .detail-page-wrapper-mobile .detail-page-reviews .customers-reviews li .review-date {
+          font-size: 12px;
+          font-style: italic;
+          opacity: 0.5;
+          margin-bottom: 5px; }
+        .detail-page-wrapper-mobile .detail-page-reviews .customers-reviews li .review-comment {
+          text-align: justify; }
+  .detail-page-wrapper-mobile .detail-page-cropped-img {
+    height: 250px; }
+  .detail-page-wrapper-mobile .bottom-section {
+    display: flex;
+    width: calc(100% - 60px);
+    margin: 30px;
+    flex-direction: column;
+    justify-content: center; }
+    .detail-page-wrapper-mobile .bottom-section .bottom-section-title {
+      font-size: 20px;
+      font-weight: 100;
+      border-top: 1px solid #e6e8ff;
+      padding-top: 20px;
+      margin-bottom: 10px; }
+    .detail-page-wrapper-mobile .bottom-section .similar-restaurants-wrapper .similar-restaurant-card {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 3px 3px 10px rgba(214, 31, 31, 0.07);
+      width: 100%;
+      height: 70px;
+      cursor: pointer;
+      margin: 15px 0;
+      transition: 0.5s all ease; }
+      .detail-page-wrapper-mobile .bottom-section .similar-restaurants-wrapper .similar-restaurant-card .similar-restaurant-description {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+        width: calc(70% - 40px); }
+      .detail-page-wrapper-mobile .bottom-section .similar-restaurants-wrapper .similar-restaurant-card .similar-restaurant-image {
+        height: 100%;
+        width: auto;
+        width: 30%; }
+        .detail-page-wrapper-mobile .bottom-section .similar-restaurants-wrapper .similar-restaurant-card .similar-restaurant-image img {
+          height: 100%;
+          width: 100%;
+          border-radius: 0 5px 5px 0;
+          object-fit: cover; }
+      .detail-page-wrapper-mobile .bottom-section .similar-restaurants-wrapper .similar-restaurant-card .similar-restaurant-card-name {
+        font-size: 15px;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+      .detail-page-wrapper-mobile .bottom-section .similar-restaurants-wrapper .similar-restaurant-card .similar-restaurant-card-rate {
+        font-size: 13px;
+        margin: 1px 0 3px 0;
+        font-weight: 900;
+        color: #f54c4c;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+      .detail-page-wrapper-mobile .bottom-section .similar-restaurants-wrapper .similar-restaurant-card .similar-restaurant-card-address {
+        font-size: 12px;
+        font-style: italic;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+      .detail-page-wrapper-mobile .bottom-section .similar-restaurants-wrapper .similar-restaurant-card:hover {
+        box-shadow: 5px 5px 10px rgba(214, 31, 31, 0.1); }
+
+.awards-page-wrapper {
+  position: relative;
+  display: flex; }
+  .awards-page-wrapper .awards-page-big-img {
+    width: 45%;
+    height: calc(100vh - 100px);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
+    .awards-page-wrapper .awards-page-big-img .awards-image-title {
+      margin-top: 40%;
+      margin-left: 10%;
+      font-weight: 100;
+      background-color: #f54c4c;
+      padding: 5px 10px;
+      font-size: 32px;
+      animation: 1s slideFromLeftAwards; }
+    .awards-page-wrapper .awards-page-big-img .awards-image-subtitle {
+      margin-left: 10%;
+      background-color: #f54c4c;
+      padding: 5px 10px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      animation: 1s slideFromLeftAwards; }
+  .awards-page-wrapper .awards-listing {
+    position: relative;
+    width: 55%;
+    height: calc(100vh - 100px);
+    overflow: scroll;
+    animation: 1s slideFromBottomListingRow; }
+    .awards-page-wrapper .awards-listing .title-and-key {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0px 15px 10px 35px; }
+    .awards-page-wrapper .awards-listing .awards-listing-title {
+      font-weight: 100;
+      font-size: 24px; }
+    .awards-page-wrapper .awards-listing .awarded-restaurant {
+      width: 100%;
+      cursor: pointer; }
+      .awards-page-wrapper .awards-listing .awarded-restaurant a {
+        text-decoration: none; }
+      .awards-page-wrapper .awards-listing .awarded-restaurant:nth-child(2) {
+        border-top: 1px solid #e6e8ff; }
+    .awards-page-wrapper .awards-listing .awarded-restaurant:hover {
+      transition: all 0.7s ease;
+      background-color: #e6e8ff; }
+
+.awards-page-wrapper-mobile {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center; }
+  .awards-page-wrapper-mobile .awards-listing {
+    position: relative;
+    width: 100%;
+    animation: 1s slideFromBottomListingRow; }
+    .awards-page-wrapper-mobile .awards-listing a {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      z-index: 1; }
+    .awards-page-wrapper-mobile .awards-listing .title-and-key {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin: 10px 15px 10px 35px; }
+    .awards-page-wrapper-mobile .awards-listing .awards-listing-title {
+      font-weight: 100;
+      font-size: 24px; }
+    .awards-page-wrapper-mobile .awards-listing .awarded-restaurant {
+      cursor: pointer; }
+      .awards-page-wrapper-mobile .awards-listing .awarded-restaurant:nth-child(2) {
+        border-top: 1px solid #e6e8ff; }
+      .awards-page-wrapper-mobile .awards-listing .awarded-restaurant .restaurant {
+        position: relative;
+        display: flex;
+        background: #fff;
+        box-shadow: 5px 5px 15px rgba(214, 31, 31, 0.05);
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 10px;
+        height: 210px;
+        cursor: pointer; }
+    .awards-page-wrapper-mobile .awards-listing .awarded-restaurant:hover {
+      transition: all 0.7s ease;
+      background-color: #e6e8ff; }
+
+.contact-wrapper {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 100px);
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #f54c4c; }
+  .contact-wrapper .gradient-stroke {
+    position: absolute;
+    top: 10vh;
+    background: -webkit-linear-gradient(0deg, #ffe1db 3%, #da3333 100%);
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 4px transparent;
+    color: #FFF;
+    font-size: 96px;
+    font-weight: 900;
+    width: 50vw; }
+  .contact-wrapper .bottom-section {
+    position: absolute;
+    bottom: 20vh;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    animation: 2s slideFromBottom;
+    animation-fill-mode: forwards; }
+    .contact-wrapper .bottom-section .contact-infos {
+      border-top: 1px solid #f54c4c;
+      padding: 20px 0; }
+    .contact-wrapper .bottom-section .contact-medias {
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+      color: #110650;
+      font-size: 32px; }
+      .contact-wrapper .bottom-section .contact-medias i {
+        cursor: pointer;
+        transition: 1s all ease; }
+        .contact-wrapper .bottom-section .contact-medias i:hover {
+          color: #f54c4c; }
+  .contact-wrapper img {
+    position: absolute;
+    height: 50px;
+    width: auto; }
+    .contact-wrapper img.contact-burger {
+      top: 5vh;
+      left: 30vh;
+      transform: rotate(42deg);
+      animation: 5s rotateDots infinite linear; }
+    .contact-wrapper img.contact-lobster {
+      top: 35vh;
+      left: 15vh;
+      transform: rotate(2deg);
+      animation: 5s rotateDots infinite linear reverse; }
+    .contact-wrapper img.contact-salad {
+      top: 65vh;
+      left: 30vh;
+      transform: rotate(200deg);
+      animation: 5s rotateDots infinite linear; }
+    .contact-wrapper img.contact-ice-cream {
+      top: 5vh;
+      right: 30vh;
+      transform: rotate(42deg);
+      animation: 5s rotateDots infinite linear reverse; }
+    .contact-wrapper img.contact-pizza {
+      top: 35vh;
+      right: 15vh;
+      transform: rotate(2deg);
+      animation: 5s rotateDots infinite linear; }
+    .contact-wrapper img.contact-pasta {
+      top: 65vh;
+      right: 30vh;
+      transform: rotate(200deg);
+      animation: 5s rotateDots infinite linear reverse; }
+  .contact-wrapper .mail-foodlab {
+    font-size: 24px;
+    font-weight: 900; }
+
+@keyframes slideFromBottom {
+  from {
+    opacity: 0;
+    bottom: 0vh; }
+  to {
+    opacity: 1;
+    bottom: 20vh; } }
+
+@keyframes rotateDots {
+  from {
+    margin-top: 0px;
+    transform: rotate(0deg); }
+  50% {
+    margin-top: 15px;
+    transform: rotate(180deg); }
+  to {
+    margin-top: 0px;
+    transform: rotate(360deg); } }
+
+@media screen and (max-width: 480px) {
+  .contact-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%; }
+    .contact-wrapper .gradient-stroke {
+      position: relative;
+      width: 80vw;
+      font-size: 42px;
+      height: 35vh; }
+    .contact-wrapper img {
+      display: none; }
+    .contact-wrapper .bottom-section {
+      position: relative;
+      width: 80%;
+      top: 0; }
+      .contact-wrapper .bottom-section .mail-foodlab {
+        font-size: 16px; }
+      .contact-wrapper .bottom-section .contact-medias {
+        font-size: 24px; } }
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
+  font-weight: 300;
+  color: #110650;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+#app .home-wrapper {
+  overflow: hidden; }
+
+.main-view {
+  height: calc(100vh - 192px);
+  width: 100%;
+  display: flex;
+  flex-direction: row; }
+
+*,
+::after,
+::before {
+  outline: 0; }
+
+*::-webkit-scrollbar {
+  display: none; }
+
+*::selection {
+  color: #fff;
+  background-color: #f54c4c; }
+
+
+/*# sourceMappingURL=styles.chunk.css.map*/

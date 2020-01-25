@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import Select from "react-select";
+import Router from "next/router";
 
 import { INIT_ARR_OPTIONS, INIT_TYPE_OPTIONS } from "../../../constants/filter-options";
 
-const HeroScene = ({ history }) => {
+const HeroScene = () => {
   const [arr, setArr] = useState("Tous les arr.");
   const [type, setType] = useState("Tous les types");
 
@@ -18,7 +19,7 @@ const HeroScene = ({ history }) => {
   };
 
   const goToRestaurantsPage = () => {
-    history.push({ pathname: "/restaurants", homeArr: arr, homeType: type })
+    Router.push({ pathname: "/restaurants", query: { homeArr: arr, homeType: type }, as: "/restaurants" })
   }
 
   return (

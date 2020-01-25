@@ -1,0 +1,1 @@
+{"ast":null,"code":"export { default } from \"./weekly-new\";","map":{"version":3,"sources":["/Users/estellegresillon/Code/airbnb-redux/src/components/home/weekly-new/index.js"],"names":["default"],"mappings":"AAAA,SAASA,OAAT,QAAwB,cAAxB","sourcesContent":["export { default } from \"./weekly-new\";\n"]},"metadata":{},"sourceType":"module"}

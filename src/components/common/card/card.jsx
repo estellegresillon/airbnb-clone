@@ -1,7 +1,7 @@
 import React from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { LazyLoadImage, trackWindowScroll } from 'react-lazy-load-image-component';
 
 import { selectRestaurant } from "../../../actions";
@@ -34,7 +34,8 @@ const Card = props => {
       tabIndex={tabIndex + 1}
     >
       {(!showMap || (showMap && windowSize.width < 728)) &&
-        <Link to={{ pathname: `/detail/${restaurant.id}`, restaurant, listedRestaurants }} />}
+        <Link href="/detail/[slug]" as={`/detail/${restaurant.id}`} />}
+        {/* <Link href={{ pathname: `/detail/[${restaurant.id}]`, query: { restaurant, listedRestaurants } }} />} */}
         
       <div className="card">
         {!showMap && <div className="grid-img-overlay" />}
@@ -62,7 +63,8 @@ const Card = props => {
           <div className="card-restaurant-address">{restaurant.address}</div>
 
           {showMap && windowSize.width > 728 &&
-            <Link to={{ pathname: `/detail/${restaurant.id}`, restaurant, listedRestaurants }}>
+            <Link href="/detail/[slug]" as={`/detail/${restaurant.id}`}>
+            {/* <Link href={{ pathname: `/detail/[${restaurant.id}]`, query: { restaurant, listedRestaurants } }}> */}
               <div className="card-see-infos">Voir infos</div>
             </Link>}
         </div>

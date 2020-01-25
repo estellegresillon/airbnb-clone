@@ -1,0 +1,1 @@
+{"ast":null,"code":"export { default } from \"./pop-in\";","map":{"version":3,"sources":["/Users/estellegresillon/Code/airbnb-redux/src/components/detail/pop-in/index.js"],"names":["default"],"mappings":"AAAA,SAASA,OAAT,QAAwB,UAAxB","sourcesContent":["export { default } from \"./pop-in\";\n"]},"metadata":{},"sourceType":"module"}
