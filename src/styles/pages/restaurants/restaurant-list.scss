@@ -162,7 +162,7 @@
     justify-content: space-between;
     width: calc(25% - 20px);
     margin: 7px 10px;
-    height: 210px;
+    height: 220px;
     cursor: pointer;
 
     .card {
@@ -179,8 +179,8 @@
       }
 
       .card-description {
-        width: calc(100% - 20px);
-        margin: 10px;
+        width: calc(100% - 40px);
+        margin: 20px;
       }
 
       h2 {

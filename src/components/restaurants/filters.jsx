@@ -175,7 +175,7 @@ const SearchByName = props => {
           isSearchable={false}
           className="filters-react-select filter-type"
         />
-        <button className="button-filter-reinitialize" onClick={reinitializeFilters}>Réinitialiser</button>
+        <button className="button-filter-reinitialize" onClick={reinitializeFilters}>Réinitialiser les filtres</button>
       </div>
 
       <div className="filters-right">

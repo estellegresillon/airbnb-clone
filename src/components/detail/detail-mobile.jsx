@@ -113,6 +113,7 @@ const DetailMobile = props => {
         </div>}
       <div 
         className="detail-page-big-img"
+        ref={detailPageTop}
         style={{ 
           backgroundImage: `url(${restaurant.imageUrl})`,
           backgroundPosition: "center",
