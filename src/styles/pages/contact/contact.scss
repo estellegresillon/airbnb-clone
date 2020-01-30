@@ -5,28 +5,27 @@
   display: flex;
   text-align: center;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: space-between;
+  flex-direction: column;;
   color: $foodlab;
 
   .gradient-stroke {
-    position: absolute;
-    top: 10vh;
-    background: -webkit-linear-gradient(0deg, $foodlab-light 3%, $foodlab-active 100%);
+    position: relative;
+    background: -webkit-linear-gradient(0deg, #ffe1db 3%, #da3333 100%);
     -webkit-background-clip: text;
     -webkit-text-stroke: 4px transparent;
     color: #FFF;
     font-size: 96px;
     font-weight: 900;
-    width: 50vw;
+    width: 55vw;
+    height: 50vh;
   }
 
   .bottom-section {
-    position: absolute;
-    bottom: 20vh;
+    position: relative;
     display: flex;
     flex-direction: column;
-    width: 20%;
+    width: 30%;
     text-align: center;
     align-items: center;
     justify-content: center;
