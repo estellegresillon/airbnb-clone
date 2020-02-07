@@ -28,30 +28,33 @@ const HeroScene = ({ history }) => {
           <div className="home-catchphrase">Foodlab, la sélection des meilleurs restos de Paris</div>
           <div className="home-catchphrase-underline" />
           <div className="home-subtitle">classés par notes, types de cuisine et arrondissements.</div>
+          <div className="searchbar">
+            <Select
+              value={arr}
+              options={INIT_ARR_OPTIONS}
+              onChange={handleArrChange}
+              placeholder={arr}
+              isSearchable={false}
+              className="filters-react-select filter-arr"
+            />
+            <Select
+              value={type}
+              options={INIT_TYPE_OPTIONS}
+              onChange={handleTypeChange}
+              placeholder={type}
+              isSearchable={false}
+              className="filters-react-select filter-type"
+            />
+            <button className="button-home-go" onClick={() => goToRestaurantsPage()}>
+              <span className="btn-first-text">Voir notre sélection</span>
+              <span className="btn-second-text">Voir notre sélection</span>
+            </button>
+          </div>
         </div>
       </div>
       <div className="home-hero-scene-image-overlay"></div>
       <div className="home-hero-scene-image">
-        <Select
-          value={arr}
-          options={INIT_ARR_OPTIONS}
-          onChange={handleArrChange}
-          placeholder={arr}
-          isSearchable={false}
-          className="filters-react-select filter-arr"
-        />
-        <Select
-          value={type}
-          options={INIT_TYPE_OPTIONS}
-          onChange={handleTypeChange}
-          placeholder={type}
-          isSearchable={false}
-          className="filters-react-select filter-type"
-        />
-        <button className="button-home-go" onClick={() => goToRestaurantsPage()}>
-          <span className="btn-first-text">Voir notre sélection</span>
-          <span className="btn-second-text">Voir notre sélection</span>
-        </button>
+        
       </div>
 
       <div className="scroll-animation">

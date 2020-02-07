@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import { HashRouter, Route } from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 import { createStore, combineReducers } from "redux";
 
 import "./styles/index.scss";
@@ -34,7 +34,7 @@ const App = () => {
   // const windowSize = useWindowSize();
 
   return (
-    <HashRouter basename="/">
+    <BrowserRouter>
       <React.Fragment>
         <Header />
         <Route exact path="/" component={Home} />
@@ -44,7 +44,7 @@ const App = () => {
         <Route exact path="/contact" component={Contact} />
         {/* {windowSize.width > 728 && <MessageButton />} */}
       </React.Fragment>
-    </HashRouter>
+    </BrowserRouter>
   );
 };
 
