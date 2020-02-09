@@ -5,28 +5,21 @@
       flex-direction: column;
       position: relative;
 
+      .button-home-go {
+        width: 100%;
+        border-radius: 32px;
+      }
+
+      .filters-react-select, .css-yk16xz-control, .css-yk16xz-control {
+        display: none;
+      }
+
       .home-hero-scene-image {
         width: 100vw;
         height: 100vh;
         background-size: cover;
         flex-direction: column;
         border-radius: 0;
-
-        .filters-react-select, .button-home-go {
-          width: 80%;
-          border-radius: 32px;
-          margin-bottom: 10px;
-          height: 45px;
-
-          .btn-first-text, .btn-second-text {
-            top: 16px;
-          }
-
-          .css-yk16xz-control, .css-yk16xz-control {
-            border-radius: 32px !important;
-            height: 45px !important;
-          }
-        }
       }
 
       .home-hero-scene-intro-wrapper {
