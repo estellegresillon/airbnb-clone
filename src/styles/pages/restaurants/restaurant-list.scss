@@ -13,25 +13,20 @@
   }
   
   .selected {
-    background-color: $grey-light;
-  }
-
-  &:first-child {
-    border-top: 1px solid $grey-light;
+    background-color: $main-hover;
   }
 
   .restaurant:hover {
     transition: all 0.7s ease;
-    background-color: $grey-light;
+    background-color: $main-hover;
   }
   
   .card {
     position: relative;
     height: 125px;
-    color: $main;
     display: flex;
     padding: 35px;
-    border-bottom: 1px solid $grey-light;
+    border-bottom: 1px solid #e03125;
 
     img {
       width: 100%;
@@ -75,7 +70,7 @@
         i {
           font-size: 12px;
           margin-right: 5px;
-          color: $foodlab;
+          color: $secondary;
         }
       }
     }
@@ -88,7 +83,6 @@
     .card-header-budget {
       font-weight: 300;
       font-size: 13px;
-      color: $main;
       margin-top: 10px;
     }
 
@@ -116,7 +110,7 @@
     a { 
       position: absolute;
       text-decoration: none;
-      color: $main;
+      color: #fff;
       width: 50px;
       bottom: 0;
     }
@@ -125,7 +119,7 @@
       margin-top: 10px;
       width: 82px;
       color: white;
-      background-color: $foodlab;
+      background-color: $secondary;
       font-size: 12px;
       padding: 5px 10px;
       text-transform: uppercase;

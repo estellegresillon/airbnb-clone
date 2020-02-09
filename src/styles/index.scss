@@ -28,9 +28,10 @@ body {
   margin: 0;
   font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
   font-weight: 300;
-  color: $main;
+  color: #fff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: $main;
 }
 
 #app .home-wrapper { overflow: hidden; }

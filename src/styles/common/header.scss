@@ -20,13 +20,9 @@
       font-family: "Ceviche One";
       font-size: 36px;
       margin: 0 70px;
-      color: $foodlab;
+      color: #fff;
       letter-spacing: -1px;
       cursor: pointer;
-
-      &:hover {
-        animation: colorHover 4s infinite;
-      }
 
       i { font-size: 24px; }
     }
@@ -44,7 +40,7 @@
 
     .menu-link { 
       text-decoration: none;
-      color: $main;
+      color: #fff;
       margin-left: 50px;
       cursor: pointer;
       font-size: 11px;
@@ -59,19 +55,9 @@
       }
   
       &:hover {
-        color: $foodlab;
+        color: $foodlab-light;
         .menu-underline {
-          border-top: 1px solid $foodlab;
-          animation: 1s menuUnderline;
-          animation-fill-mode: forwards;
-        }
-      }
-
-      &:active {
-        color: $foodlab-active;
-
-        .menu-underline {
-          border-top: 1px solid $foodlab-active;
+          border-top: 1px solid#fff;
           animation: 1s menuUnderline;
           animation-fill-mode: forwards;
         }
@@ -79,7 +65,7 @@
     }
 
     .selected-menu-item { 
-      color: $foodlab;
+      color: $foodlab-light;
     }
   }
 }

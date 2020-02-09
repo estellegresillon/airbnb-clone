@@ -1,9 +1,10 @@
 .card {
   position: relative;
   height: 125px;
-  color: $main;
+  color: #fff;
   display: flex;
   padding: 35px;
+  background-color: $main;
 
   img {
     width: 100%;
@@ -47,7 +48,7 @@
       i {
         font-size: 12px;
         margin-right: 5px;
-        color: $foodlab;
+        color: $secondary;
       }
     }
   }
@@ -60,7 +61,6 @@
   .card-header-budget {
     font-weight: 300;
     font-size: 13px;
-    color: $main;
     margin-top: 10px;
   }
 
@@ -97,7 +97,7 @@
     margin-top: 10px;
     width: 82px;
     color: #fff;
-    background-color: $foodlab;
+    background-color: $secondary;
     font-size: 12px;
     padding: 5px 10px;
     text-transform: uppercase;
@@ -107,10 +107,6 @@
     
     &:hover {
       background-color: $foodlab-hover;
-    }
-    
-    &:active {
-      background-color: $foodlab-active;
     }
   }
 }

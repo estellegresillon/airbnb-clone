@@ -34,11 +34,11 @@
       .home-catchphrase {
         font-size: 42px;
         font-weight: 900;
-        color: $main;
+        color: #fff;
       }
 
       .home-catchphrase-underline {
-        background: -webkit-linear-gradient(0deg, #ff6242 3%, #de0505 100%);
+        background: -webkit-linear-gradient(0deg, $secondary 3%, $main 100%);
         height: 3px;
         margin-top: 30px;
         width: 50%;
@@ -86,7 +86,7 @@
       height: 40px;
       bottom: 3vh;
       left: calc(50vw - 10px);
-      border: 3px solid $main;
+      border: 3px solid #fff;
       border-radius: 32px;
 
       .mouse-scroll-ball {
@@ -94,7 +94,7 @@
         height: 6px;
         margin-top: 10px;
         border-radius: 50%;
-        background-color: $main;
+        background-color: #fff;
         animation: 4s scrollBall infinite;
       }
     }
@@ -115,7 +115,7 @@
   
       i { 
         position: relative;
-        color: $foodlab;
+        color: $secondary;
         animation: 3s rotateSvg infinite;
       }
 
@@ -134,7 +134,12 @@
       margin-top: 20px;
       width: 60%;
       cursor: pointer;
-      box-shadow: 2px 2px 12px rgba(214, 31, 31, 0.1);
+      box-shadow: 2px 2px 12px rgba(214, 31, 31, 0.8);
+
+      .card {
+        color: $main;
+        background-color: $foodlab-light;
+      }
     }
 
     .new-restaurant {
@@ -154,7 +159,7 @@
     align-items: flex-end;
     justify-content: space-around;
     margin-left: -20%;
-    background: #ffefeb;
+    background: $foodlab-light;
     padding: 20%;
     font-weight: 700;
 
@@ -190,8 +195,8 @@
 
       span {
         color: #fff;
-        background-color: $foodlab;
-        box-shadow: 10px 0 0 $foodlab, -10px 0 0 $foodlab;
+        background-color: $main;
+        box-shadow: 10px 0 0 $main, -10px 0 0 $main;
         padding: 7px 2px;
       }
     }
@@ -202,7 +207,7 @@
     justify-content: flex-end;
     align-items: flex-end;
     width: 100%;
-    background-color: #ffefea;
+    background-color: $foodlab-light;
 
     img {
       width: auto;
@@ -228,7 +233,7 @@
     justify-content: flex-start;
     width: 100%;
     height: 100px;
-    background-color: $foodlab;
+    background-color: $main;
     color: #fff;
     font-weight: 900;
     font-size: 12px;
