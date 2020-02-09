@@ -10,6 +10,7 @@
         height: 100vh;
         background-size: cover;
         flex-direction: column;
+        border-radius: 0;
 
         .filters-react-select, .button-home-go {
           width: 80%;
@@ -32,7 +33,8 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        padding: 0 40px;
+        padding: 0;
+        color: #fff;
 
         .home-hero-scene-intro {
           display: flex;
@@ -44,7 +46,8 @@
           .home-catchphrase {
             font-size: 20px;
             text-align: center;
-            font-weight: 100;
+            font-weight: 900;
+            color: #fff;
           }
 
           .home-catchphrase-underline {
@@ -144,8 +147,8 @@
       justify-content: flex-start;
       width: 100%;
       height: 60px;
-      background-color: $foodlab-light;
-      color: $foodlab;
+      color: $foodlab-light;
+      background-color: $foodlab;
       font-size: 12px;
 
       .home-footer-brand {
