@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { Link, NavLink } from "react-router-dom";
 
 import { MENU_ITEMS } from "../../../constants/menu-items";
@@ -13,18 +13,13 @@ const Header = () => (
       </Link>
     </div>
     <div className="header-right">
-      {MENU_ITEMS.map(link => {
+      {MENU_ITEMS.map((link) => {
         return (
-          <NavLink 
-            activeClassName="selected-menu-item"
-            className="menu-link"
-            to={link.path}
-            key={link.name}
-          >
+          <NavLink className="menu-link" to={link.path} key={link.name}>
             <div>{link.name}</div>
             <div className="menu-underline" />
           </NavLink>
-        )
+        );
       })}
     </div>
   </div>

@@ -1,12 +1,13 @@
 .contact-wrapper {
   position: relative;
   width: 100%;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 150px);
   display: flex;
   text-align: center;
   align-items: center;
   justify-content: space-between;
-  flex-direction: column;;
+  flex-direction: column;
+  padding-top: 50px;
   color: $foodlab;
 
   .gradient-stroke {
@@ -14,7 +15,7 @@
     background: -webkit-linear-gradient(0deg, #ffe1db 3%, #da3333 100%);
     -webkit-background-clip: text;
     -webkit-text-stroke: 4px transparent;
-    color: #FFF;
+    color: #fff;
     font-size: 96px;
     font-weight: 900;
     width: 55vw;
@@ -32,24 +33,26 @@
     opacity: 0;
     animation: 2s slideFromBottom;
     animation-fill-mode: forwards;
-    
+
     .contact-infos {
       border-top: 1px solid $foodlab;
       padding: 20px 0;
     }
-  
+
     .contact-medias {
       display: flex;
       width: 100%;
       justify-content: space-around;
       color: $main;
       font-size: 32px;
-  
+
       i {
         cursor: pointer;
         transition: 1s all ease;
-  
-        &:hover { color: $foodlab; }
+
+        &:hover {
+          color: $foodlab;
+        }
       }
     }
   }

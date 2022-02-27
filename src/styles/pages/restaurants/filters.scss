@@ -11,7 +11,7 @@
   width: 100%;
   height: 60px;
   margin-bottom: -12px;
-  margin-top: -10px;
+  margin-top: 15px;
 
   .fa-search {
     margin-right: 10px;
@@ -66,7 +66,9 @@
         margin-left: 7px;
         min-width: 50px;
 
-        &:hover { opacity: 0.7; }
+        &:hover {
+          opacity: 0.7;
+        }
 
         .toggle-circle {
           background: #fff;
@@ -93,14 +95,15 @@
   .MuiOutlinedInput-notchedOutline {
     border: none !important;
   }
-  
+
   .MuiAutocomplete-popupIndicator {
     .MuiIconButton-label {
       display: none;
     }
   }
-  
-  .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"] .MuiAutocomplete-input:first-child {
+
+  .MuiAutocomplete-inputRoot[class*="MuiOutlinedInput-root"]
+    .MuiAutocomplete-input:first-child {
     padding-left: 15px !important;
   }
 
@@ -109,10 +112,13 @@
     width: 150px;
     z-index: 999;
 
-    svg { fill: #9397b8; }
+    svg {
+      fill: #9397b8;
+    }
   }
 
-  .css-yk16xz-control, .css-1pahdxg-control {
+  .css-yk16xz-control,
+  .css-1pahdxg-control {
     border-radius: 32px !important;
     padding-left: 8px !important;
     font-size: 12px !important;
@@ -129,7 +135,7 @@
 
   .css-1okebmr-indicatorSeparator {
     display: none;
-  }  
+  }
 
   .css-1wa3eu0-placeholder {
     color: #9397b8;
@@ -143,10 +149,12 @@
   justify-content: space-between;
   font-size: 14px;
 
-  i { 
+  i {
     margin-left: 2px;
     cursor: pointer;
 
-    &:hover { opacity: 0.6; }
+    &:hover {
+      opacity: 0.6;
+    }
   }
 }

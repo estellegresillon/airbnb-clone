@@ -3,7 +3,7 @@
 
 @import "common/card.scss";
 @import "common/contact.scss";
-@import "common/header.scss"; 
+@import "common/header.scss";
 @import "common/header-mobile.scss";
 @import "common/key.scss";
 
@@ -26,17 +26,19 @@
 
 body {
   margin: 0;
-  font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
+  font-family: "Montserrat", "Helvetica Neue", sans-serif;
   font-weight: 300;
   color: $main;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#app .home-wrapper { overflow: hidden; }
+#app .home-wrapper {
+  overflow: hidden;
+}
 
 .main-view {
-  height: calc(100vh - 192px);
+  height: calc(100vh - 217px);
   width: 100%;
   display: flex;
   flex-direction: row;
