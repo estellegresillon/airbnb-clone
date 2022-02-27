@@ -14,22 +14,13 @@ const NewRestaurants = ({ history, newRestaurantsContainer }) => (
     <div className="new-restaurants-container" ref={newRestaurantsContainer}>
       {NEW_RESTAURANTS.map((newRest, i) => {
         return (
-          <div
-            key={newRest.id}
-            className="new-restaurant"
-            onClick={() => history.push({
-              pathname: `/detail/${newRest.id}`,
-              restaurant: newRest,
-              listedRestaurants: NEW_RESTAURANTS,
-            })}>
-            <Card
-              key={i}
-              listedRestaurants={NEW_RESTAURANTS}
-              restaurant={newRest}
-              tabIndex={i}
-            />
-          </div>
-        )
+          <Card
+            key={i}
+            listedRestaurants={NEW_RESTAURANTS}
+            restaurant={newRest}
+            tabIndex={i}
+          />
+        );
       })}
     </div>
   </div>

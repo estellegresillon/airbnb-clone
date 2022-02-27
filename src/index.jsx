@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter, Route } from "react-router-dom";
 import { createStore, combineReducers } from "redux";
 
 import "./styles/index.scss";
@@ -37,10 +37,10 @@ const App = () => {
     <BrowserRouter>
       <React.Fragment>
         <Header />
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" component={Restaurants} />
         <Route exact path="/awards" component={Awards} />
         <Route exact path="/restaurants" component={Restaurants} />
-        <Route exact path="/detail/:id" component={Detail} />
+        {/* <Route exact path="/detail/:id" component={Detail} /> */}
         <Route exact path="/contact" component={Contact} />
         {/* {windowSize.width > 728 && <MessageButton />} */}
       </React.Fragment>

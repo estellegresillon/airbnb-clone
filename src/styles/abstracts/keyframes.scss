@@ -1,126 +1,150 @@
-@keyframes colorHover {
-  0% { color: $foodlab; }
-  5% { color: #ff4ac7; }
-  10% { color: #6649ff; }
-  15% { color: #2986ff; }
-  20% { color: #29ccff; }
-  25% { color: #90ff99; }
-  30% { color: #ecff85; }
-  35% { color: #ffbe29; }
-  40% { color: #ff3737; }
-  45% { color: #ff6b6b; }
-  50% { color: $foodlab; }
-  55% { color: #ff4ac7; }
-  60% { color: #6649ff; }
-  65% { color: #2986ff; }
-  70% { color: #29ccff; }
-  75% { color: #90ff99; }
-  80% { color: #ecff85; }
-  85% { color: #ffbe29; }
-  90% { color: #ff3737; }
-  95% { color: #ff6b6b; }
-  100% { color: $foodlab; }
-}
+// @keyframes colorHover {
+//   0% { color: $foodlab; }
+//   5% { color: #ff4ac7; }
+//   10% { color: #6649ff; }
+//   15% { color: #2986ff; }
+//   20% { color: #29ccff; }
+//   25% { color: #90ff99; }
+//   30% { color: #ecff85; }
+//   35% { color: #ffbe29; }
+//   40% { color: #ff3737; }
+//   45% { color: #ff6b6b; }
+//   50% { color: $foodlab; }
+//   55% { color: #ff4ac7; }
+//   60% { color: #6649ff; }
+//   65% { color: #2986ff; }
+//   70% { color: #29ccff; }
+//   75% { color: #90ff99; }
+//   80% { color: #ecff85; }
+//   85% { color: #ffbe29; }
+//   90% { color: #ff3737; }
+//   95% { color: #ff6b6b; }
+//   100% { color: $foodlab; }
+// }
 
 @keyframes scrollBall {
-  from { margin-top: 10px; }
-  80% { margin-top: 30px; }
-  to { margin-top: 10px ;}
+  from {
+    margin-top: 10px;
+  }
+  80% {
+    margin-top: 30px;
+  }
+  to {
+    margin-top: 10px;
+  }
 }
 
 @keyframes suggestionGlow {
-  from { box-shadow: 0px 0px 10px rgba(255, 122, 146, 0.5); }
-  50% { box-shadow:0px 0px 20px rgb(255, 31, 72); }
-  to { box-shadow: 0px 0px 10px rgba(255, 122, 146, 0.5); }
+  from {
+    box-shadow: 0px 0px 10px rgba(255, 122, 146, 0.5);
+  }
+  50% {
+    box-shadow: 0px 0px 20px rgb(255, 31, 72);
+  }
+  to {
+    box-shadow: 0px 0px 10px rgba(255, 122, 146, 0.5);
+  }
 }
 
 @keyframes slideFromLeftMobile {
-  from { margin-left: -200%; }
-  to { margin-left: 0; }
+  from {
+    margin-left: -200%;
+  }
+  to {
+    margin-left: 0;
+  }
 }
 
 @keyframes slideFromLeftDesktop {
-  from { 
+  from {
     margin-left: -200px;
     opacity: 0;
   }
-  to { 
+  to {
     margin-left: -60px;
     opacity: 1;
   }
 }
 
 @keyframes slideFromBottomMiddleSection {
-  from { 
+  from {
     margin-top: 140px;
     opacity: 0;
   }
-  to { 
+  to {
     margin-top: 70px;
     opacity: 1;
   }
 }
 
 @keyframes slideFromBottomTopSection {
-  from { 
+  from {
     margin-top: 100px;
     opacity: 0;
   }
-  to { 
+  to {
     margin-top: 20px;
     opacity: 1;
   }
 }
 
 @keyframes slideFromBottomListingRow {
-  from { 
+  from {
     margin-top: 40px;
     opacity: 0;
   }
-  to { 
+  to {
     margin-top: 0;
     opacity: 1;
   }
 }
 
 @keyframes slideFromBottomListingGrid {
-  from { 
+  from {
     margin-top: 0px;
     opacity: 0;
   }
-  to { 
+  to {
     margin-top: -25px;
     opacity: 1;
   }
 }
 
 @keyframes slideFromLeftAwards {
-  from { 
+  from {
     margin-left: 0%;
     opacity: 0;
   }
-  to { 
+  to {
     margin-left: 10%;
     opacity: 1;
   }
 }
 
 @keyframes underlineHome {
-  from { width: 0%; }
-  to { width: 50%; }
+  from {
+    width: 0%;
+  }
+  to {
+    width: 50%;
+  }
 }
 
 @keyframes overlayHome {
-  from { width: 100%; }
-  to { width: 0%; }
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
 }
 
 @keyframes slideFromLeftHome {
-  from { 
+  from {
     left: 0%;
     opacity: 0;
   }
-  to { 
+  to {
     left: 20%;
     opacity: 1;
   }
@@ -172,14 +196,14 @@
 }
 
 @keyframes translateHotDog {
-  from { 
+  from {
     right: 0;
     transform: rotate(0deg);
   }
-  70% { 
+  70% {
     transform: rotate(10deg);
   }
-  to { 
+  to {
     right: 18%;
     transform: rotate(0deg);
   }

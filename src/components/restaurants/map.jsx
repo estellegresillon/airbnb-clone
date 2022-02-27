@@ -1,24 +1,29 @@
-import React, { useState, useEffect } from "react"
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import { compose } from "recompose"
+import { compose } from "recompose";
 import {
   withScriptjs,
   withGoogleMap,
   GoogleMap,
   Marker,
-  InfoWindow
-} from "react-google-maps"
+  InfoWindow,
+} from "react-google-maps";
 
 import { selectRestaurant } from "../../actions";
 import GOOGLE_MAP_CUSTOM_SKIN from "../../constants/google-map-skin";
 import { setCoordinatesWithLocation } from "../../constants/locations-coordinates";
 
-const MapContainer = props =>{
-  const { selectRestaurant, selectedRestaurant, listedRestaurants, showMap, selectedLocation } = props;
+const MapContainer = (props) => {
+  const {
+    selectRestaurant,
+    selectedRestaurant,
+    listedRestaurants,
+    showMap,
+    selectedLocation,
+  } = props;
 
-  const onClick = marker => {
+  const onClick = (marker) => {
     selectRestaurant(marker);
   };
 
@@ -38,7 +43,10 @@ const MapContainer = props =>{
   ) : null;
 };
 
-const MapView = compose(withScriptjs, withGoogleMap)(props => {
+const MapView = compose(
+  withScriptjs,
+  withGoogleMap
+)((props) => {
   const { markers, onClick, selectedMarker, selectedLocation } = props;
   const [newCenter, setNewCenter] = useState({ lat: 48.863, lng: 2.34 });
 
@@ -51,16 +59,17 @@ const MapView = compose(withScriptjs, withGoogleMap)(props => {
         setCoordinatesWithLocation(selectedLocation, setNewCenter);
       } else {
         setNewCenter({ lat: 48.863, lng: 2.34 });
-      };
-    };
+      }
+    }
   }, [markers, selectedLocation]);
 
   return (
-    <GoogleMap 
+    <GoogleMap
       defaultZoom={13}
       defaultOptions={{ styles: GOOGLE_MAP_CUSTOM_SKIN }}
-      center={newCenter}>
-      {markers.map(marker => {
+      center={newCenter}
+    >
+      {markers.map((marker) => {
         const onMarkerClick = onClick.bind(this, marker);
         return (
           <Marker
@@ -68,28 +77,29 @@ const MapView = compose(withScriptjs, withGoogleMap)(props => {
             onClick={onMarkerClick}
             position={{ lat: marker.lat, lng: marker.lng }}
           >
-            {selectedMarker === marker &&
+            {selectedMarker === marker && (
               <InfoWindow style={{ padding: 0 }}>
-                <Link to={{pathname: `/detail/${marker.id}`, restaurant: marker}}>
-                  <div className="marker-info-window">
-                    <img src={marker.imageUrl} alt="restaurant-preview" />
-                    <div className="marker-header">
-                      <i className="fas fa-star" />
-                      <span className="marker-rating">{marker.rate} ({marker.votes}+)</span>
-                    </div>
-                    <div className="marker-restaurant-name">{marker.name}</div>
-                    <div className="marker-restaurant-type">{marker.type}</div>
+                <div className="marker-info-window">
+                  <img src={marker.imageUrl} alt="restaurant-preview" />
+                  <div className="marker-header">
+                    <i className="fas fa-star" />
+                    <span className="marker-rating">
+                      {marker.rate} ({marker.votes}+)
+                    </span>
                   </div>
-                </Link>
-              </InfoWindow>}
+                  <div className="marker-restaurant-name">{marker.name}</div>
+                  <div className="marker-restaurant-type">{marker.type}</div>
+                </div>
+              </InfoWindow>
+            )}
           </Marker>
-        )
+        );
       })}
     </GoogleMap>
   );
 });
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     selectedRestaurant: state.selectedRestaurant,
     showMap: state.showMap,
@@ -97,7 +107,7 @@ const mapStateToProps = state => {
   };
 };
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({ selectRestaurant }, dispatch);
 };
 
