@@ -6,42 +6,46 @@ import { setRestaurants } from "../../actions";
 import Card from "../common/card";
 import Key from "../common/key";
 
-const AwardList = props => {
+const AwardList = (props) => {
   const { setRestaurants, restaurants } = props;
   const [awardedRestaurants, setAwardedRestaurants] = useState([]);
-  const [bg, setBg] = useState("http://benedict-paris.com/img/lightbox/plats/B-17.jpg");
+  const [bg, setBg] = useState(
+    "https://somanyparis.files.wordpress.com/2018/10/pontochoux-6.jpg"
+  );
   const [title, setImageTitle] = useState("Les restaurants primés");
   const [subtitle, setImageSubtitle] = useState("chaque semaine");
 
-  useEffect(() => { setRestaurants(); }, [setRestaurants]);
   useEffect(() => {
-    const sortedRestaurants = []
-    restaurants.forEach(restaurant => {
+    setRestaurants();
+  }, [setRestaurants]);
+  useEffect(() => {
+    const sortedRestaurants = [];
+    restaurants.forEach((restaurant) => {
       if (restaurant.award) {
         sortedRestaurants.push(restaurant);
-      };
+      }
       setAwardedRestaurants(sortedRestaurants);
     });
   }, [restaurants]);
 
-  const handleListItemHover = restaurant => {
+  const handleListItemHover = (restaurant) => {
     if (restaurant) {
       setBg(restaurant.imageUrl);
       setImageTitle(restaurant.award.description);
       setImageSubtitle(restaurant.name);
     } else {
-      setBg("http://benedict-paris.com/img/lightbox/plats/B-17.jpg");
+      setBg("https://somanyparis.files.wordpress.com/2018/10/pontochoux-6.jpg");
       setImageTitle("Les restaurants primés");
       setImageSubtitle("chaque semaine");
     }
   };
-  
+
   return awardedRestaurants.length > 0 ? (
     <div className="awards-page-wrapper">
-      <div 
+      <div
         className="awards-page-big-img"
         key={bg}
-        style={{ 
+        style={{
           backgroundImage: `url(${bg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
@@ -57,27 +61,32 @@ const AwardList = props => {
         </div>
         {awardedRestaurants.map((restaurant, i) => {
           return (
-            <div 
-              key={restaurant.id} 
+            <div
+              key={restaurant.id}
               onMouseEnter={() => handleListItemHover(restaurant)}
               onMouseLeave={() => handleListItemHover()}
-              className="awarded-restaurant">
-              <Card listedRestaurants={awardedRestaurants} restaurant={restaurant} tabIndex={i} />
+              className="awarded-restaurant"
+            >
+              <Card
+                listedRestaurants={awardedRestaurants}
+                restaurant={restaurant}
+                tabIndex={i}
+              />
             </div>
-          )
+          );
         })}
       </div>
     </div>
   ) : null;
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     restaurants: state.restaurants,
   };
 };
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({ setRestaurants }, dispatch);
 };
 
