@@ -1,7 +1,6 @@
 import React from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
 import {
   LazyLoadImage,
   trackWindowScroll,
@@ -9,7 +8,6 @@ import {
 
 import { selectRestaurant } from "../../../actions";
 import Badge from "../badge";
-import { useWindowSize } from "../../../hooks/useWindowSize";
 
 const Card = (props) => {
   const {
@@ -17,7 +15,6 @@ const Card = (props) => {
     selectRestaurant,
     selectedRestaurant,
     restaurant,
-    listedRestaurants,
     tabIndex,
     showMap,
   } = props;
@@ -25,8 +22,6 @@ const Card = (props) => {
   const handleClick = () => {
     selectRestaurant(restaurant);
   };
-
-  const windowSize = useWindowSize();
 
   return (
     <div

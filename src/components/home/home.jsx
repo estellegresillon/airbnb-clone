@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 
 import HeroScene from "./hero-scene";
 // import WeeklyNew from "./weekly-new";
@@ -7,14 +7,14 @@ import HeroScene from "./hero-scene";
 // import ContactSection from "./contact-section";
 // import Footer from "./footer";
 
-const usePrevious = (value) => {
-  const ref = useRef();
+// const usePrevious = (value) => {
+//   const ref = useRef();
 
-  useEffect(() => {
-    ref.current = value;
-  });
-  return ref.current;
-};
+//   useEffect(() => {
+//     ref.current = value;
+//   });
+//   return ref.current;
+// };
 
 const Home = (props) => {
   const { history } = props;
